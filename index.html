@@ -1,10 +1,80 @@
- <!DOCTYPE HTML>  
- <html>  
+ <!doctype html>  
+ <html lang="zh">  
+ <head>  
+ <meta charset="UTF-8">  
+ <meta name="Generator" content="EditPlus®">  
+ <meta name="Author" content="">  
+ <meta name="Keywords" content="">  
+ <meta name="Description" content="">  
+ <title>音乐播放器</title>  
+ <link rel="icon" href="1.ico" >  
+ <meta name="viewport" content="width=device-width, initial-scale=1">  
+   <link rel="stylesheet" href="fonts/iconfont.css">  
+ <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />  
+ <link rel="stylesheet" type="text/css" media="screen" href="css/player.css" />  
+ <link rel="stylesheet" href="css/index.css" />  
+ <link rel="stylesheet" href="css/mousestyle.css"/>  
+ <style>  
+ .boxup{  
+ position:fixed;  
+ right:10px;  
+ bottom: 10px;  
+ height:50px;  
+ width: 50px;  
+ text-align:center;  
+ padding-top:20px;  
+ background-color: black;  
+ border-radius: 20%;  
+ overflow: hidden;  
+ }  
+ .boxup:hover:before{  
+ top:50%  
+ }  
+ .boxup:hover .boxup-in{  
+ visibility: hidden;  
+ }  
+ .boxup:before{  
+ position: absolute;  
+ top: -50%;  
+ left: 50%;  
+ transform: translate(-50%,-50%);  
+ content:'回到顶部';  
+ width: 40px;  
+ color:white;  
+ font-weight:bold;  
+   }  
+ .boxup-in{  
+ visibility: visible;  
+ display:inline-block;  
+ height:20px;  
+ width: 20px;  
+ border: 3px solid black;  
+ border-color: white transparent transparent white;  
+ transform:rotate(45deg);  
+ }  
+ </style>  
+     </head>  
  <body>  
-   <audio controls="controls">  
- <source src="song.mp3" type="audio/mpeg">  
- <embed height="100" width="100" src="song.mp3" />  
- </audio>  
-   </body>  
- </html>  
-  
+     <script>  
+      if(!window.name){  
+               window.name = 'test';  
+               window.location.reload();  
+      }  
+ </script>  
+ <script src="/demos/googlegg.js"></script>  
+   <!-- 播放器 -->  
+ <div class="music-player">  
+ <!-- audio标签 -->  
+ <audio class="music-player__audio" ></audio>  
+ <!-- 播放器主体 -->  
+ <div class="music-player__main">  
+ <!-- 模糊背景 -->  
+ <div class="music-player__blur"></div>  
+ <!-- 唱片 -->  
+ <div class="music-player__disc">  
+ <!-- 唱片图片 -->  
+ <div class="music-player__image">  
+ < img width="100%" src="" alt="">  
+ </div>  
+ <!-- 指针 -->  
+ <div class="music
