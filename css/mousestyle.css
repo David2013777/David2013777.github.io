@@ -1,0 +1,13 @@
+/* 使用本文件的有：yybfq.html */
+span.pixal{
+    position: fixed;
+    left:-5px;
+    top:-5px;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius: 50%;
+}
+.main{
+ 
+}
