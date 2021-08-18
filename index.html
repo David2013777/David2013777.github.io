@@ -28,7 +28,9 @@
 		<title>网址导航</title>
 		<link rel="icon" href="123.jpg" sizes="16x16">
 		<link rel="stylesheet" href="css/index.css">
-		
+		  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
 	</head>
 	<body>
         <div>
@@ -382,7 +384,19 @@
 			</script>
 		</div>
 		
-		
+		<div id="gitalk-container"></div>
+var gitalk = new Gitalk({
+  clientID: '238e3ee587a50c618e76',
+  clientSecret: 'd39e024cf398d98bef97a8f1c1bdf89b795261e5',
+  repo: 'make comments',
+  owner: 'David2013777',
+  admin: ['David2013777'],
+  id: location.href,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+
 		<script src="js/weather.js"></script>
 		<script src="js/timeclock.js"></script>
 	</body>
