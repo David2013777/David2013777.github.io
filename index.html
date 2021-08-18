@@ -1,39 +1,25 @@
 
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--这个是网站登录验证，不需要。-->
-		<!--　 <script LANGUAGE="javascript"> 
-			
-			
-			　 function loopy(){ 
-			
-			　　 var sWord =""; 
-			
-			　　 while(sWord!="2013777"){sWord=prompt("请输入你的登录密码");} 
-			
-			　　 alert("登录成功！"); 
-			
-			　 } 
-			
-			　 loopy() 
-			
-			
-			　 </script> 
-		-->
 		<meta charset="utf-8" />
 
 		<!-- 适应手机 -->
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
 
 		<title>网址导航</title>
+
 		<link rel="icon" href="123.jpg" sizes="16x16">
 		<link rel="stylesheet" href="css/index.css">
-		  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+		<!--评论功能需要-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
 	</head>
 	<body>
+		<!--置顶的地球，天气功能-->
         <div>
 			<!-- 地球的实现 -->
             <div class="box">
@@ -54,14 +40,16 @@
 			</center>
 			
 		</div>
-		<!-- <img src="https://api.sunweihu.com/api/bing1/api.php" width="600px"/> -->
+
+
 		<!-- 走马灯 -->
 		<marquee>
 			<img src="https://v1.jinrishici.com/all.svg">
 		</marquee>
 		
-
+		<!--搜索区域 链接区域 图片 历史上的今天 -->
 		<div style="max-width:1000px; margin:10px auto;..">
+			<!-- 搜索 -->
 			<center>
 			<form action="https://www.baidu.com/s?" method="get" width="600px">
 					<form class="search_form">
@@ -70,7 +58,7 @@
 					</form>
 			</form>
 			</center>
-			<!-- 搜索 -->
+			
 			<script>
 				$(function() {
 					$('.nav a').each(function() {
@@ -95,6 +83,7 @@
 				});
 			</script>
             <br/>
+			<!--链接-->
 			<div class="nav">
 				<h3>
 					工具
@@ -358,15 +347,44 @@
 				<div class="clear">
 				</div>
 			</div>
-			<center>
+
+
+
 			
+			
+		</div>
+
+
+		<div style="max-width:1000px; margin:10px auto;..">
+		
+		<center>
 			<img src="https://api.sunweihu.com/api/bing1/api.php" height="300px"/>
-			
-			<iframe src="https://www.ipip5.com/today/" id="iframepage" frameborder=1 height="300px" scrolling="yes"  style=" overflow-x:scroll; overflow-y:hidden " ></iframe>
-				
-			</center>	
-			
-            <div id="gitalk-container"></div>
+			<iframe src="https://www.ipip5.com/today/" id="iframepage" frameborder=1 height="300px" scrolling="yes"  style=" overflow-x:scroll; overflow-y:hidden " ></iframe>	
+		</center>
+		
+		</div>
+		<!--底部的诗词区域-->
+		<div style="background-color:rgb(44, 183, 218); color:white; clear:both; text-align:center;padding:5px;">
+			<script src="js/jrsc.js" charset="utf-8"></script>
+			<div id="poem_sentence"></div>
+			<div id="poem_info"></div>
+			<script type="text/javascript">
+			jinrishici.load(function(result) {
+				var sentence = document.querySelector("#poem_sentence")
+				var info = document.querySelector("#poem_info")
+				sentence.innerHTML = result.data.content
+				info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+			});
+			</script>
+		</div>
+		
+
+		<!--js执行-->
+		<script src="js/weather.js"></script>
+		<script src="js/timeclock.js"></script>
+		<!-- 评论功能 -->
+		<div style="max-width:1000px; margin:10px auto;..">
+			<div id="gitalk-container"></div>
             <script>
             var gitalk = new Gitalk({
               clientID: '238e3ee587a50c618e76',
@@ -380,25 +398,9 @@
             
             gitalk.render('gitalk-container')
             </script>
+			
 		</div>
 
-		<div id="footer">
-			<!-- <span id="jinrishici-sentence">正在加载今日诗词....</span>
-			<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
-			<script src="js/jrsc.js" charset="utf-8"></script>
-			<div id="poem_sentence"></div>
-			<div id="poem_info"></div>
-			<script type="text/javascript">
-			jinrishici.load(function(result) {
-				var sentence = document.querySelector("#poem_sentence")
-				var info = document.querySelector("#poem_info")
-				sentence.innerHTML = result.data.content
-				info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-			});
-			</script>
-		</div>
-		<script src="js/weather.js"></script>
-		<script src="js/timeclock.js"></script>
 	</body>
 </html>
 
