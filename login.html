@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script>
 		Bmob.initialize("c010cfb4b7e57afa", "985211");
-		Bmob.debug(true);
+		//Bmob.debug(true);
 		function login(){
 			 Bmob.User.login(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
 			   location.href = "test.html";
