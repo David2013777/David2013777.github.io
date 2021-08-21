@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- 适应手机 -->
+		<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+
+		<title>网址导航</title>
+<!-- <script src="js/Bmob-2.2.4.min.js"></script>
+<script>
+	Bmob.initialize("c010cfb4b7e57afa", "985211");
+</script> -->
+	<link rel="icon" href="123.jpg" sizes="16x16">
+	<link rel="stylesheet" href="css/index.css">
+
+	<!--评论功能需要-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	</head>
+	<body background="images/background5.jfif" >
+		<!--置顶的地球，天气功能-->
+			
+		<div class="clearfix" style="height: 100px;">
+			<!-- 地球的实现 -->
+			<div style="height: 100px;float: left;">
+				<img src="images/earth.gif" />
+			</div>
+			
+			
+			<!-- 天气的实现 -->
+			<div class="weather" style="float: right;"> 
+			<iframe width="455" scrolling="no" height="75" frameborder="0" allowtransparency="true" onload="reinitIframe()"
+			src="https://i.tianqi.com/index.php?c=code&amp;id=38&amp;icon=1&amp;num=2&amp;align=left"></iframe>
+			</div>
+			
+		</div>
+			
+			
+
+		<!-- 时间的实现 -->
+        <div>
+		
+			<center>
+				<span id="time"></span>
+			</center>
+			
+		</div>
+		<div style="color:black;text-align:center;padding:5px;">
+			<script src="js/jrsc.js" charset="utf-8"></script>
+			<div id="poem_sentence"></div>
+			<div id="poem_info"></div>
+			<script type="text/javascript">
+			jinrishici.load(function(result) {
+				var sentence = document.querySelector("#poem_sentence")
+				var info = document.querySelector("#poem_info")
+				sentence.innerHTML = result.data.content
+				info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+			});
+			</script>
+		</div>
+
+
+		
+		<!-- <marquee>
+			<img src="https://v1.jinrishici.com/all.svg">
+		</marquee> -->
+		
+		<!--搜索区域 链接区域 图片 历史上的今天 -->
+		<div style="max-width:1000px; margin:10px auto;..">
+			<!-- 搜索 -->
+			<center>
+			<form action="https://www.baidu.com/s?" method="get" width="600px">
+					<form class="search_form">
+						<input type="text" name="wd" class="search_form" value="" placeholder="请输入内容：">
+						<input type="submit" value="搜索" class="input_sub">
+					</form>
+			</form>
+			</center>
+			
+			<!-- <script>
+				$(function() {
+					$('.nav a').each(function() {
+						var href = $(this).attr('href');
+						var count = window.localStorage.getItem(href);
+						count = count || 0;
+						$(this).append('<i>' + count + '</i>');
+						$(this).attr('target', '_blank');
+						$(this).click(function() {
+							var count = parseInt($(this).find('i').html()) + 1;
+							$(this).find('i').html(count);
+							window.localStorage.setItem(href, count);
+							console.log(count);
+						});
+						$(this).hover(function() {
+							$(this).parents('.nav').find('h3 i').html($(this).attr('href'));
+						},
+						function() {
+							$(this).parents('.nav').find('h3 i').html('');
+						});
+					});
+				});
+			</script> -->
+            <!-- 走马灯 -->
+		<marquee>
+			<div id="djt" style="font-size: 20px;">毒鸡汤</div>   
+		   </marquee>
+		   <script>
+			   var xmlhttp = new XMLHttpRequest();
+			   xmlhttp.onreadystatechange = function() {
+				   if (this.readyState == 4 && this.status == 200) {
+					   
+					   document.getElementById("djt").innerHTML = '毒鸡汤：'+this.responseText;
+				   }
+			   };
+			   xmlhttp.open("GET", "https://api.btstu.cn/yan/api.php", true);
+			   xmlhttp.send();
+		   </script> 
+			<!--链接-->
+			<div class="nav">
+				<h3>
+					工具
+					<i>
+					</i>
+				</h3>
+				<a href="http://www.baidu.com" target="_blank">
+					<abbr title="http://www.baidu.com" style="text-decoration:none">
+						百度
+					</abbr>
+				</a>
+				<a href="https://fanyi.baidu.com/" target="_blank">
+					<abbr title="https://fanyi.baidu.com/" style="text-decoration:none">
+						百度翻译
+					</abbr>
+				</a>
+				<a href="https://mathf.itewqq.cn/" target="_blank">
+					<abbr title="https://mathf.itewqq.cn/" style="text-decoration:none">
+						图片转公式
+					</abbr>
+				</a>
+				<a href="https://webdemo.myscript.com/views/math/index.html" target="_blank">
+					<abbr title="https://webdemo.myscript.com/views/math/index.html" style="text-decoration:none">
+						手写转公式
+					</abbr>
+				</a>
+				<a href="https://johnmacfarlane.net/texmath" target="_blank">
+					<abbr title="https://johnmacfarlane.net/texmath" style="text-decoration:none">
+						公式互转
+					</abbr>
+				</a>
+				<a href="https://www.wolframalpha.com/" target="_blank">
+					<abbr title="https://www.wolframalpha.com/" style="text-decoration:none">
+						Wolframalpha
+					</abbr>
+				</a>
+				<a href="https://www.jiumodiary.com/" target="_blank">
+					<abbr title="https://www.jiumodiary.com/" style="text-decoration:none">
+						鸠摩搜索
+					</abbr>
+				</a>
+				<a href="https://www.dute.org/" target="_blank">
+					<abbr title="https://www.dute.org/" style="text-decoration:none">
+						独特工具箱
+					</abbr>
+				</a>
+				<a href="https://web.woobx.cn/" target="_blank">
+					<abbr title="https://web.woobx.cn/" style="text-decoration:none">
+						一个木函工具箱
+					</abbr>
+				</a>
+				<a href="https://www.sciclass.cn/python" target="_blank">
+					<abbr title="https://www.sciclass.cn/python" style="text-decoration:none">
+						Python在线编程
+					</abbr>
+				</a>
+				<a href="https://www.w3school.com.cn/tiy/t.asp?f=jsrf_array_for_in" target="_blank">
+					<abbr title="https://www.w3school.com.cn/tiy/t.asp?f=jsrf_array_for_in"
+					style="text-decoration:none">
+						W3school
+					</abbr>
+				</a>
+				<a href="https://www.wanweibaike.com/" target="_blank">
+					<abbr title="https://www.wanweibaike.com/" style="text-decoration:none">
+						万维百科
+					</abbr>
+				</a>
+				<a href="https://app.xunjiepdf.com/mp32wav/" target="_blank">
+					<abbr title="https://app.xunjiepdf.com/mp32wav/" style="text-decoration:none">
+						格式转换器
+					</abbr>
+				</a>
+				<a href="https://pandao.github.io/editor.md/" target="_blank">
+					<abbr title="https://pandao.github.io/editor.md/" style="text-decoration:none">
+						Markdown编辑
+					</abbr>
+				</a>
+				<a href="https://www.remove.bg/zh" target="_blank">
+					<abbr title="https://www.remove.bg/zh" style="text-decoration:none">
+						图片去背景
+					</abbr>
+				</a>
+				<a href="https://docsmall.com/image-compress" target="_blank">
+					<abbr title="https://docsmall.com/image-compress" style="text-decoration:none">
+						图片压缩
+					</abbr>
+				</a>
+				<a href="https://wandbox.org/" target="_blank">
+					<abbr title="https://wandbox.org/" style="text-decoration:none">
+						Wandbox
+					</abbr>
+				</a>
+				<div class="clear">
+				</div>
+			</div>
+			<div class="nav">
+				<h3>
+					网课
+					<i>
+					</i>
+				</h3>
+				<a href="https://www.icourse163.org/" target="_blank">
+					<abbr title="https://www.icourse163.org/" style="text-decoration:none">
+						中国大学MOOC
+					</abbr>
+				</a>
+				<a href="https://www.zhihuishu.com/" target="_blank">
+					<abbr title="https://www.zhihuishu.com/" style="text-decoration:none">
+						智慧树
+					</abbr>
+				</a>
+				<a href="http://i.mooc.chaoxing.com/space/index?t=1619357691313" target="_blank">
+					<abbr title="http://i.mooc.chaoxing.com/space/index?t=1619357691313" style="text-decoration:none">
+						超星学习通
+					</abbr>
+				</a>
+				<a href="https://www.yuketang.cn/" target="_blank">
+					<abbr title="https://www.yuketang.cn/" style="text-decoration:none">
+						雨课堂
+					</abbr>
+				</a>
+				<div class="clear">
+				</div>
+			</div>
+			<div class="nav">
+				<h3>
+					南开
+					<i>
+					</i>
+				</h3>
+				<a href="https://www.nankai.edu.cn/" target="_blank">
+					<abbr title="https://www.nankai.edu.cn/" style="text-decoration:none">
+						南开大学
+					</abbr>
+				</a>
+				<a href="https://acm.nankai.edu.cn/nkcoj/course.php" target="_blank">
+					<abbr title="https://acm.nankai.edu.cn/nkcoj/course.php" style="text-decoration:none">
+						南开计算机课程列表
+					</abbr>
+				</a>
+				<a href="https://webvpn.nankai.edu.cn/" target="_blank">
+					<abbr title="https://webvpn.nankai.edu.cn/" style="text-decoration:none">
+						南开大学VPN登录
+					</abbr>
+				</a>
+				<div class="clear">
+				</div>
+			</div>
+			<div class="nav">
+				<h3>
+					学习
+					<i>
+					</i>
+				</h3>
+				<a href="https://www.csdn.net/" target="_blank">
+					<abbr title="https://www.csdn.net/" style="text-decoration:none">
+						CSDN
+					</abbr>
+				</a>
+				<a href="https://gitee.com/login" target="_blank">
+					<abbr title="https://gitee.com/login" style="text-decoration:none">
+						Gitee
+					</abbr>
+				</a>
+				<a href="https://github.com/" target="_blank">
+					<abbr title="https://github.com/" style="text-decoration:none">
+						Github
+					</abbr>
+				</a>
+				<a href="https://www.luogu.com.cn/" target="_blank">
+					<abbr title="https://www.luogu.com.cn/" style="text-decoration:none">
+						洛谷
+					</abbr>
+				</a>
+				<a href="https://www.zhihu.com/" target="_blank">
+					<abbr title="https://www.zhihu.com/" style="text-decoration:none">
+						知乎
+					</abbr>
+				</a>
+				<a href="http://esl-bits.net/ESL.English.Learning.Audiobooks/ESL.English.Learning.Audiobooks.html"
+				target="_blank">
+					<abbr title="http://esl-bits.net/ESL.English.Learning.Audiobooks/ESL.English.Learning.Audiobooks.html"
+					style="text-decoration:none">
+						ESL
+					</abbr>
+				</a>
+				<a href="http://www.lib.nankai.edu.cn/" target="_blank">
+					<abbr title="http://www.lib.nankai.edu.cn/" style="text-decoration:none">
+						南开大学图书馆
+					</abbr>
+				</a>
+				<a href="https://stackoverflow.com/" target="_blank">
+					<abbr title="https://stackoverflow.com/" style="text-decoration:none">
+						Stackoverflow
+					</abbr>
+				</a>
+				<a href="https://math.stackexchange.com/" target="_blank">
+					<abbr title="https://math.stackexchange.com/" style="text-decoration:none">
+						Stackexchange
+					</abbr>
+				</a>
+				<a href="https://mathoverflow.net/" target="_blank">
+					<abbr title="https://mathoverflow.net/" style="text-decoration:none">
+						Mathoverflow
+					</abbr>
+				</a>
+				<a href="https://weread.qq.com/" target="_blank">
+					<abbr title="https://weread.qq.com/" style="text-decoration:none">
+						微信读书
+					</abbr>
+				</a>
+				<div class="clear">
+				</div>
+			</div>
+			<div class="nav">
+				<h3>
+					娱乐
+					<i>
+					</i>
+				</h3>
+				<a href="https://www.bilibili.com/" target="_blank">
+					<abbr title="https://www.bilibili.com/" style="text-decoration:none">
+						B站
+					</abbr>
+				</a>
+				<a href="https://m.autopiano.cn/#/" target="_blank">
+					<abbr title="https://m.autopiano.cn/#/" style="text-decoration:none">
+						自由弹钢琴
+					</abbr>
+				</a>
+				<a href="https://useum.org/" target="_blank">
+					<abbr title="https://useum.org/" style="text-decoration:none">
+						USEUM
+					</abbr>
+				</a>
+				<a href="https://music.163.com/" target="_blank">
+					<abbr title="https://music.163.com/" style="text-decoration:none">
+						网易云音乐
+					</abbr>
+				</a>
+				<a href="https://y.qq.com/" target="_blank">
+					<abbr title="https://y.qq.com/" style="text-decoration:none">
+						QQ音乐
+					</abbr>
+				</a>
+				<a href="yybfq.html" target="_blank">
+					<abbr title="yybfq.html" style="text-decoration:none">
+						我的音乐
+					</abbr>
+				</a>
+                <a href="2048.html" target="_blank">
+					<abbr title="2048.html" style="text-decoration:none">
+						2048
+					</abbr>
+				</a>
+                <a href="bcbk.html" target="_blank">
+					<abbr title="bcbk.html" style="text-decoration:none">
+						别踩白块
+					</abbr>
+				</a>
+				<div class="clear">
+				</div>
+			</div>
+
+			<!-- <img src="https://api.sunweihu.com/api/bing1/api.php" width="1000px"/>
+			<iframe src="https://www.ipip5.com/today/" id="iframepage" frameborder=1 width="1000px" height="500px" scrolling="yes"  style=" overflow-x:scroll; overflow-y:hidden " ></iframe>
+			-->
+			
+		</div>
+
+
+		<!--底部的诗词区域-->
+		<!-- <div style="background-color:rgb(44, 183, 218); color:white; clear:both; text-align:center;padding:5px; float: left;">
+			<script src="js/jrsc.js" charset="utf-8"></script>
+			<div id="poem_sentence"></div>
+			<div id="poem_info"></div>
+			<script type="text/javascript">
+			jinrishici.load(function(result) {
+				var sentence = document.querySelector("#poem_sentence")
+				var info = document.querySelector("#poem_info")
+				sentence.innerHTML = result.data.content
+				info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+			});
+			</script>
+		</div> -->
+		
+
+		<!--js执行-->
+		<script src="js/weather.js"></script>
+		<script src="js/timeclock.js"></script>
+		<!-- 评论功能 -->
+		<div style="max-width:1000px; margin:10px auto;..">
+			<div id="gitalk-container"></div>
+            <script>
+            var gitalk = new Gitalk({
+              clientID: '238e3ee587a50c618e76',
+              clientSecret: 'd39e024cf398d98bef97a8f1c1bdf89b795261e5',
+              repo: 'comment',
+              owner: 'David2013777',
+              admin: ['David2013777'],
+              id: location.href,      // Ensure uniqueness and length less than 50
+              distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+            
+            gitalk.render('gitalk-container')
+            </script>
+			
+		</div>
+
+		<div style="color:black; clear:both; text-align:center;padding:5px; font-size: 20px;">
+			下面什么都没有了:)
+		</div>
+
+	</body>
+</html>
