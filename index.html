@@ -494,6 +494,58 @@
 		<!--js执行-->
 		<script src="js/weather.js"></script>
 		<script src="js/timeclock.js"></script>
+
+		<!-- 每日一文 -->
+		<div style="max-width:1000px; margin:10px auto;..">
+			<div style="text-align: left; font-size: 25px;font-family: '黑体';">每日一文</div>
+			<div id="doctitle" style="text-align: center; font-size: 30px;font-family: '黑体';"></div>
+			<div id="docauthor" style="text-align: center; font-size: 20px;font-family: '宋体';"></div>
+			<div id="docdigest" style="display: block;font-size: 20px;font-family: '楷体';"></div>
+			<div id="seeall"  onclick="onDocClick1()" style="display: block;text-align: center; font-size: 30px;font-family: '黑体';">查看全文</div>
+			<div id="doccontent" style="display: none;font-size: 20px;font-family: '楷体';"></div>
+			<div id="hideall" onclick="onDocClick2()" style="display: none;text-align: center; font-size: 30px;font-family: '黑体';">收起全文</div>
+			<script>
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						myObj = JSON.parse(this.responseText);
+						document.getElementById("doctitle").innerHTML =myObj.data.title;
+						document.getElementById("docauthor").innerHTML =myObj.data.author;
+						document.getElementById("docdigest").innerHTML =myObj.data.digest+'······';
+						document.getElementById("doccontent").innerHTML =myObj.data.content;
+					}
+				};
+				xmlhttp.open("GET", "https://interface.meiriyiwen.com/article/today?dev=1", true);
+				xmlhttp.send();
+			</script>
+			<script>
+				var content1 = document.getElementById("docdigest");
+				var content2 = document.getElementById("doccontent");
+				var see =document.getElementById("seeall");
+				var hide=document.getElementById("hideall");
+				function onDocClick1()
+				{
+					if(content1.style.display=="block")
+					{
+						content1.style.display="none"
+						see.style.display="none"
+						content2.style.display="block"
+						hide.style.display="block";
+					}
+				}
+				function onDocClick2()
+				{
+					if(content1.style.display=="none")
+					{
+						content1.style.display="block"
+						see.style.display="block"
+						content2.style.display="none"
+						hide.style.display="none";
+					}
+				}
+			</script>
+		
+		</div>
 		<!-- 评论功能 -->
 
 		<div style="max-width:1000px; margin:10px auto;..">
