@@ -2,63 +2,60 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-
 		<!-- 适应手机 -->
 		<meta name="viewport" content="width=device-width, initial-scale=0.5" />
 
 		<title>网址导航</title>
-<!-- <script src="js/Bmob-2.2.4.min.js"></script>
-<script>
-	Bmob.initialize("c010cfb4b7e57afa", "985211");
-</script> -->
-	<link rel="icon" href="123.jpg" sizes="16x16">
-	<link rel="stylesheet" href="css/index.css">
+		<!-- <script src="js/Bmob-2.2.4.min.js"></script>
+			<script>
+				Bmob.initialize("c010cfb4b7e57afa", "985211");
+			</script> -->
+		<link rel="icon" href="123.jpg" sizes="16x16">
+		<link rel="stylesheet" href="css/index.css">
 
-	<!--评论功能需要-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-	<style>
-		.boxup{
-		position:fixed;
-		right:10px;
-		bottom: 10px;
-		height:50px;
-		width: 50px;    
-		text-align:center;
-		padding-top:20px;    
-		/* background-color: white; */
-		border-radius: 20%;
-		overflow: hidden;
-	}
-	.boxup:hover:before{
-		top:50%
-	}
-	.boxup:hover .boxup-in{
-		visibility: hidden;
-	}
-	.boxup:before{
-		position: absolute;
-		top: -50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		content:'回到顶部';
-		width: 40px;
-		color:black;
-		font-weight:bold;
-	
-	}    
-	.boxup-in{
-		visibility: visible;
-		display:inline-block;
-		height:20px;
-		width: 20px;
-		border: 3px solid /*white*/;
-		border-color: black transparent transparent black;
-		transform:rotate(45deg);
-	}
-	</style>
-
-	
+		<!--评论功能需要-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<style>
+			.boxup{
+			position:fixed;
+			right:10px;
+			bottom: 10px;
+			height:50px;
+			width: 50px;    
+			text-align:center;
+			padding-top:20px;    
+			/* background-color: white; */
+			border-radius: 20%;
+			overflow: hidden;
+		}
+		.boxup:hover:before{
+			top:50%
+		}
+		.boxup:hover .boxup-in{
+			visibility: hidden;
+		}
+		.boxup:before{
+			position: absolute;
+			top: -50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			content:'回到顶部';
+			width: 40px;
+			color:black;
+			font-weight:bold;
+		
+		}    
+		.boxup-in{
+			visibility: visible;
+			display:inline-block;
+			height:20px;
+			width: 20px;
+			border: 3px solid /*white*/;
+			border-color: black transparent transparent black;
+			transform:rotate(45deg);
+		}
+		</style>
 	</head>
 	<body background="images/background7.jfif" >
 		<!--置顶的地球，天气功能-->
@@ -584,9 +581,30 @@
 			
 		</div>
 
+		<!-- 英文名言 -->
+		<div style="max-width:1000px; margin:10px auto;..">
+			<div id="quobody" style="text-align: left;font-size: 20px;font-family: 'Times New Roman', Times, serif;"></div>
+  			<div id="quoauthor" style="text-align: right;"></div>
+			<script>
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						myObj = JSON.parse(this.responseText);
+						document.getElementById("quobody").innerHTML =myObj.quote.body;
+						document.getElementById("quoauthor").innerHTML ="————"+myObj.quote.author;
+					}
+				};
+				xmlhttp.open("GET", "https://favqs.com/api/qotd", true);
+				xmlhttp.send();
+			</script>
+		</div>
+
+		<!-- 底部 -->
 		<div style="color:black; clear:both; text-align:center;padding:5px; font-size: 20px;">
 			下面什么都没有了:)
 		</div>
+
+		<!-- 置顶按钮 -->
 		<div id="boxup" class="boxup">
 			<div class="boxup-in"></div>
 		</div>    
