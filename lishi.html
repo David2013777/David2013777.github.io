@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div id="lstoday"></div>
+  <div id="quoauthor"></div>
+  <script>
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              myObj = JSON.parse(this.responseText);
+              document.getElementById("lstoday").innerHTML =myObj.data.dst;
+          }
+      };
+      xmlhttp.open("GET", "https://api.ooomn.com/api/fy?q=The health of the eye seems to demand a horizon. We are never tired, so long as we can see far enough.&to=zh", true);
+      xmlhttp.send();
+  </script> -->
+
+<!-- 
+  <div style="max-width:1000px; margin:10px auto;..">
+  <div id="quobody" style="text-align: left;font-size: 20px;font-family: 'Times New Roman', Times, serif;"></div>
+  <div id="quobodyzh" style="text-align: left;font-size: 20px;font-family: 'Times New Roman', Times, serif;"></div>
+  <div id="quoauthor" style="text-align: right;"></div>
+  <script>
+    var xmlhttp1 = new XMLHttpRequest();
+    xmlhttp1.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj1 = JSON.parse(this.responseText);
+        document.getElementById("quobody").innerHTML =myObj1.quote.body;
+        //temp = myObj1.quote.body;
+        temp="hello"
+        document.getElementById("quoauthor").innerHTML ="————"+myObj1.quote.author;
+      }
+    };
+    xmlhttp1.open("GET", "https://favqs.com/api/qotd", true);
+    xmlhttp1.send();
+
+    // var con = document.getElementById("quobody");
+    // var str = con.innerText;
+    var theurl = "https://api.ooomn.com/api/fy?q=" + temp + "&to=zh";
+    var xmlhttp2 = new XMLHttpRequest();
+    xmlhttp2.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj2 = JSON.parse(this.responseText);
+        document.getElementById("quobodyzh").innerHTML =myObj2.data.dst;
+      }
+    };
+    xmlhttp2.open("GET", theurl, true);
+    xmlhttp2.send();
+  </script>
+  <!-- <script>
+    var con = document.getElementById("quobody");
+    var str = con.innerText;
+    var theurl = "https://api.ooomn.com/api/fy?q=" + str + "&to=zh";
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        document.getElementById("quobodyzh").innerHTML =myObj.data.dst;
+      }
+    };
+    xmlhttp.open("GET", theurl, true);
+    xmlhttp.send();
+  </script> 
+</div> 
+-->
+
+
+<div style="max-width:1000px; margin:10px auto;..">
+  <div id="quobody" style="padding:20px;text-align: left;font-size: 20px;font-family: 'Times New Roman', Times, serif;"></div>
+    <div id="quoauthor" style="padding:20px;text-align: right;"></div>
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        document.getElementById("quobody").innerHTML =myObj.result[0].year;
+      }
+    };
+    xmlhttp.open("GET", "https://www.ipip5.com/today/api.php?type=json", true);
+    xmlhttp.send();
+  </script>
+  
+</div>
+
+
+
+</body>
+</html>
