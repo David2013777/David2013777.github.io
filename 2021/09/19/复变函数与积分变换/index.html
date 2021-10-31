@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/myicon.jpg">
+  <link rel="icon" href="/img/myicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="David">
+  <meta name="keywords" content="">
+  
+  <title>复变函数与积分变换 - Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"zhang-lihao-david.gitee.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1STRICM352yWqtYezLQNLfpY-MdYXbMMI","app_key":"3LS27CzslgcFJjbPLAYhlTwE","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>My Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+
+        <div id="he-plugin-simple"></div>
+        <script>
+        WIDGET = {
+          "CONFIG": {
+            "modules": "01234",
+            "background": "5",
+            "tmpColor": "FFFFFF",
+            "tmpSize": "16",
+            "cityColor": "FFFFFF",
+            "citySize": "16",
+            "aqiColor": "FFFFFF",
+            "aqiSize": "16",
+            "weatherIconSize": "24",
+            "alertIconSize": "18",
+            "padding": "10px 10px 10px 10px",
+            "shadow": "0",
+            "language": "auto",
+            "fixed": "false",
+            "vertical": "center",
+            "horizontal": "center",
+            "key": "025bbd6ea348430cbf9b68b3241abb89"
+          }
+        }
+        </script>
+        <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/background.jfif') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="复变函数与积分变换">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-09-19 19:49" pubdate>
+        2021年9月19日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      91
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">复变函数与积分变换</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：1 天前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="复变函数与积分变换"><a href="#复变函数与积分变换" class="headerlink" title="复变函数与积分变换"></a>复变函数与积分变换</h1><h2 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h2><h3 id="复数的定义及其四则运算"><a href="#复数的定义及其四则运算" class="headerlink" title="复数的定义及其四则运算"></a>复数的定义及其四则运算</h3><p>复数：对实数 $x,y$ ，形如 $x+\mathrm{i} y$ 的数称为复数。两个复数 $x_1+\mathrm{i}y_1$ 和 $x_2+\mathrm{i}y_2$ 称为相等的，当且仅当 $x_1=x_2$ 且 $y_1=y_2$ 。由全体复数构成的集合记为 $\mathbb{C}$ 。</p>
+<p>实部与虚部：对于复数 $x+\mathrm{i}y,(x,y\in \mathbb{R})$ ，称 $x$ 为 $z$ 的实部，记作 $\mathrm{Re} {z}$ ，称 $y$ 为 $z$ 的虚部，记作 $\mathrm{Im} {z}$ 。特别的，若 $x=0$ 且 $y\neq 0$ ，则将 $z$ 记为 $\mathrm{i}y$ ，称为纯虚数。</p>
+<p>复数的四则运算：加减乘除</p>
+<p>略</p>
+<h3 id="复数的几何表示"><a href="#复数的几何表示" class="headerlink" title="复数的几何表示"></a>复数的几何表示</h3><p>模与幅角：复数 $z=x+\mathrm{i}y$ 的模规定为复数 $z$ 作为向量的欧氏长度 $|z|=\sqrt{x^2+y^2}$ ，非零复数 $z$ 的幅角规定为 $z$ 作为向量与 $x$ 轴正方向的夹角，记为 $\mathrm{Arg} z$ 。</p>
+<p>若以 $r$ 和 $\theta$ 分别记一个非零复数的模和幅角，则 $(r,\theta)$ 为 $z$ 的极坐标，对一切非零复数 $z$ ，有<br>$$<br>z=r(\cos \theta+\mathrm{i}\sin \theta)<br>$$<br>这一表达式称为复数 $z$ 的三角形式。</p>
+<p>显然幅角不唯一，如果 $\theta$ 是复数 $z$ 的幅角，则 $\theta +2\pi $ 也是 $z$ 的幅角，其中取值在 $(-\pi,\pi ]$ 上的幅角称为复数 $z$ 的幅角主值，记为 $\mathrm{arg}z$ 。</p>
+<p>三角不等式： $|z_1| - |z_2| \leq |z_1+z_2| \leq |z_1|+|z_2|$ 。</p>
+<p>棣莫弗公式：若 $z=r(\cos \theta+\mathrm{i}\sin \theta)$ 为非零复数 $z$ 的三角形式， $n$ 为整数，则 $z^n=r^n((\cos (n\theta)+\mathrm{i}\sin (n\theta))$ 。特别，对非零复数 $z$ 和整数 $n$ ，有<br>$$<br>|z^n|={|z|}^n,\mathrm{Arg}z^n=n \mathrm{arg}z +2k \pi,k\in \mathbb{Z}<br>$$<br>开方：任意一个非零复数 $z$ 恰有 $n$ 个互不相同的复 $n$ 次方根。若 $z=r(\cos \theta+\mathrm{i}\sin \theta)$ 为非零复数 $z$ 的三角形式，则 $z$ 的 $n$ 个互不相同的复 $n$ 次方根为<br>$$<br>\sqrt[n]{r}(\cos \dfrac{\theta+2k\pi }{n}+\mathrm{i}\sin \dfrac{\theta+2k\pi}{n})<br>$$<br>这里 $k=0,1,\cdots,n-1$ 。</p>
+<p>复数的指数形式：欧拉记 $e^{\mathrm{i}\theta}=\cos \theta+\mathrm{\sin\theta}$ 。于是 $z=r(\cos \theta+\mathrm{i}\sin \theta)$ 可简记为 $z=re^{\mathrm{i}\theta}$ ，称为复数的指数形式。</p>
+<p>利用欧拉公式可以得到： $1+e^{\mathrm{i}\pi}=0$ 。</p>
+<p>共轭复数：对于复数 $z=x+\mathrm{i}y$ ，称 $\overline{z}=x-\mathrm{i}y$ 为 $z$ 的共轭复数。</p>
+<p>球极投影：考虑三维欧式空间 $\mathbb{R}^3$ 以及其上的单位球面<br>$$<br>S^2=\{ (x_1,x_2,x_3)|x_1^2+x_2^2+x_3^2=1 \}<br>$$<br>并将赤道平面与复平面等同，其中 $x_1$ 轴取为实轴， $x_2$ 轴取为虚轴，记北极点 $(0,0,1)$ 为 $N$ ，任取复平面上一点 $A$ ，连接北极点 $N$ 与 $A$ 的直线，易见该直线与除去北极点的单位球面 $S^2-\{ N \}$ 交于唯一一点，记为 $P(A)$ ，于是<br>$$<br>P:C\rightarrow S^2-\{ N \}<br>$$<br>可看作复平面除去北极点的单位球面 $S^2-\{ N \}$ 上的一个映射，该映射就称为球极投影，此时的单位球面称为黎曼球面，显然，该映射是可逆的。</p>
+<p>不难算出映射 $P$ 的表达式为</p>
+<p>于是 $P$ 连续可微，且满足<br>$$<br>\lim_{|z|\to \infty}P(z)=N<br>$$<br>由此规定 $N=P(\infty)$ ， $\infty$ 称为无穷远点。并记 $\overline{C}=C\cup \{ \infty \}$ ，称为扩充复平面，从而 $P$ 是一个从扩充复平面到黎曼球面的双射，而且在无穷远点也是连续的。</p>
+<h3 id="平面点集的复数表示"><a href="#平面点集的复数表示" class="headerlink" title="平面点集的复数表示"></a>平面点集的复数表示</h3><p>平面上的曲线是光滑的，如果该曲线可以写为参数方程<br>$$<br>\begin{cases}x=x\left( t\right) \\ y=y\left( t\right) \end{cases}<br>$$<br>这里 $\alpha \leq t\leq \beta$ ，且 $x^{\prime}(t)$ ， $y^{\prime}(t)$ 在 $[\alpha,\beta]$ 上连续。</p>
+<p>曲线如果由有限段光滑曲线依次首尾连接而成的，这样的曲线称为逐段光滑曲线。</p>
+<p>Jordan曲线定理：平面上的任何一条简单闭曲线 $C$ 必将平面分成两个不相交的区域，其中一个为有界，称为曲线 $C$ 的内部区域，另一个为无界的，称为曲线的外部区域，这两个区域均以 $C$ 为其边界。</p>
+<p>设 $D$ 为一个区域，如果 $D$ 内任一条简单闭曲线的内部区域完全包含于 $D$ 内，则称 $D$ 是单连通的，否则称为多连通的。</p>
+<h3 id="复变函数"><a href="#复变函数" class="headerlink" title="复变函数"></a>复变函数</h3><p>复变函数是定义在复数集的子集上，取值也在复数集上的函数。</p>
+<p>复变函数的分量表示：给定复变函数 $w=f(z)$ ，记 $z=x+\mathrm{i}y$ ，再记 $u=\mathrm{Re}f(z),v=\mathrm{Im}f(z)$ ，显然 $u,v$ 由 $z$ 或者 $(x,y)$ 唯一确定，从而 $u,v$ 可以看做关于 $x,y$ 的二元实函数，于是，一元复变函数作为映射等同于以两个实二元函数为分量的从平面区域到平面的映射，即<br>$$<br>z\rightarrow f(z)\Leftrightarrow \begin{pmatrix}<br>x \\ y<br>\end{pmatrix} \rightarrow \begin{pmatrix}<br>u(x,y) \\ v(x,y)<br>\end{pmatrix}<br>$$</p>
+<h2 id="解析函数的微积分"><a href="#解析函数的微积分" class="headerlink" title="解析函数的微积分"></a>解析函数的微积分</h2><h3 id="复变函数的极限和连续性"><a href="#复变函数的极限和连续性" class="headerlink" title="复变函数的极限和连续性"></a>复变函数的极限和连续性</h3><p>复数列的极限：设复数列 $\{ z_n \}$ ，若存在常数 $z_0$ 对任何 $\epsilon&gt;0$ ，存在 $N&gt;0$ ，使当 $n&gt;N$ 时，有 $|z_n-z_0|&lt;\epsilon$ ，则称该复数列 $\{ z_n \}$ 收敛或存在极限， $z_0$ 称为其极限，记为 $\lim_{n\to \infty}z_n=z_0$ 。</p>
+<p>记 $z_n=x_n+\mathrm{i}y,(n=0,1,2,\cdots)$ ，有<br>$$<br>\max \{ |x_n-x_0|,|y_n-y_0| \} \leq |z_n-z_0| \leq |x_n-x_0|+|y_n-y_0|<br>$$<br>定理：复数列 $\{ z_n \}$ 收敛，当且仅当实数列 $\{ x_n=\mathrm{Re}z_n \}$ 和 $\{ y_n=\mathrm{Im}z_n \}$ 同时收敛，且 $\lim_{n\to \infty}z_n=\lim_{n\to \infty}x_n+\mathrm{i} \lim_{n\to \infty}y_n$ 。</p>
+<p>定理：设 $\{ z_n \}$ 和 $\{ w_n \}$ 为复数列，且极限 $\lim_{n\to \infty}z_n$ 和 $\lim_{n\to \infty}w_n$ 都存在，则</p>
+<ol>
+<li>数列 $\{ z_n \}$ 和 $\{ w_n \}$ 均为有界的。</li>
+<li> $$\lim_{n\to \infty}(z_n+w_n)=\lim_{n\to \infty}z_n \pm \lim_{n\to \infty}w_n$$</li>
+<li>对一切复常数 $c$ ， $\lim_{n\to \infty}cz_n=c\lim_{n\to \infty}z_n$ 。</li>
+<li> $$\lim_{n\to \infty}(z_nw_n)=(\lim_{n\to \infty}z_n)\cdot (\lim_{n\to \infty}w_n)$$</li>
+<li>若 $\lim_{n\to \infty}w_n\neq 0$ ，则存在 $N&gt;0$ ，使得对一切 $n&gt;N$ ，有 $w_n\neq 0$ ，进一步， $\lim_{n\to \infty}w_n^{-1}=(\lim_{n\to \infty}w_n)^{-1}$ 。</li>
+</ol>
+<p>复变函数的极限：设 $f(z)$ 为定义在 $S$ 上的函数， $z_0$ 为 $\overline{S}$ 上的一点，且不是 $S$ 的孤立点。若存在复常数 $A$ ，使对任何 $\epsilon &gt;0$ ，都存在 $\delta &gt;0$ ，使得对 $S$ 上一切满足 $0&lt;|z-z_0|&lt;\delta$ 的点 $z$ ，都有 $|f(z)-A| &lt; \epsilon$ ，则称 $A$ 为 $f(z)$ 当 $z$ 趋向于 $z_0$ 时的极限，记作 $\lim_{z\to z_0}f(z)=A$ 。</p>
+<p>记 $A=a+\mathrm{i}b$ ， $f(z)=u(x,y)+\mathrm{i}v(x,y)$ ，有<br>$$<br>\max \{ |u(x,y)-a|,|v(x,y)-b| \} \leq |f(z)-A| \leq |u(x,y)-a|+|v(x,y)-b|<br>$$<br>定理：函数 $f(z)$ 在点 $z_0$ 的极限 $\lim_{z\to z_0}f(z)$ 存在，当且仅当实部 $u(x,y)$ 和虚部 $v(x,y)$ 作为二元实函数，极限 $\lim_{x\to x_0 \\ y\to y_0}u(x,y)$ 与 $\lim_{x\to x_0 \ y\to y_0}v(x,y)$ 同时存在，且<br>$$<br>\lim_{z\to z_0}f(z)=\lim_{x\to x_0 \\ y\to y_0}u(x,y)+\mathrm{i}\lim_{x\to x_0 \ y\to y_0}v(x,y)<br>$$<br>定义：设 $f(z)$ 为定义在 $\{ |z| &gt; R \}$ 内的函数， $R$ 为给定的非负数。若存在复常数 $A$ ，使对任何 $\epsilon &gt;0$ 都存在 $G&gt;R$ ，使得对一切满足 $|z| &gt; G$ 的点 $z$ ，都有 $|f(z)-A| &lt; \epsilon$ ，则称 $z$ 为 $f(z)$ 当 $z$ 趋向于无穷远点时的极限，记作 $\lim_{z\to \infty}f(z)=A$ 。</p>
+<p>定义：设 $f(z)$ 为定义在 $S$ 上的函数， $z_0$ 为 $\overline{S}$ 上的一点，若对任何 $M&gt;0$ ，都存在 $\delta&gt;0$ ，使得对 $S$ 内一切满足 $0&lt;|z-z_0|$ 的点 $z$ ，都有 $|f(z)|&gt;M$ ，则称当 $z$ 趋向于 $z_0$ 时 $f(z)$ 趋于无穷远点，记作 $\lim_{z\to z_0}f(z)=\infty$ 。</p>
+<p>定义：设 $f(z)$ 为定义在 $\{ |z|&gt;R \}$ 上的函数， $R$ 为给定的非负数，若对任何 $M&gt;0$ ，都存在 $G&gt;R$ ，使得对一切满足 $|z|&gt;G$ 的点 $z$ ，都有 $|f(z)&gt;M|$ ，则称当 $z$ 趋向于 $\infty$ 时 $f(z)$ 趋于无穷远点，记作 $\lim_{z\to \infty}f(z)=\infty$ 。</p>
+<p>定理：设 $f$ 和 $g$ 都是定义在 $S$ 上的函数，且极限 $\lim_{z\to z_0}f(z)$ 和 $\lim_{z\to z_0}g(z)$ 都存在有限，则以下结论成立：</p>
+<ol>
+<li>存在 $\delta&gt;0$ ，使得 $f(z)$ 和 $g(z)$ 在 \{ 0&lt;|z-z_0|&lt; \delta \} 内均为有界的。</li>
+<li> $$\lim_{z\to z_0}(f(z)\pm g(z))=\lim_{z\to z_0}f(z)\pm \lim_{z\to z_0}g(z)$$ 。</li>
+<li>对一切复常数 $c$ ， $\lim_{z\to z_0}cf(z)=c\lim_{z\to z_0}f(z)$ 。</li>
+<li> $$\lim_{z\to z_0}(f(z) g(z))=\lim_{z\to z_0}f(z)\cdot \lim_{z\to z_0}g(z)$$ 。</li>
+<li>若 $\lim_{z\to z_0}g(z)\neq 0$ ，则存在 $\delta &gt;0$ ，使对 $S$ 上一切满足 $0&lt;|z-z_0|&lt;\delta$ 的 $z$ ，有 $g(z)\neq 0$ ，进一步， $\lim_{z\to z_0}[g(z)]^{-1}=(\lim_{z\to z_0}g(z))^{-1}$ 。</li>
+</ol>
+<p>连续函数：设 $f(z)$ 为定义在 $S$ 上的函数， $z_0$ 为 $S$ 上的一点，若 $\lim_{z\to z_0}f(z)=f(z_0)$ ，则称 $f(z)$ 在点 $z_0$ 连续。若 $f(z)$ 在 $S$ 上的每一点都连续，则称 $f(z)$ 为 $S$ 上的连续函数。</p>
+<p>定理：函数 $f(z)$ 在点 $z_0$ 连续的充分必要条件是 $f(z)$ 的实部 $u(x,y)$ 和虚部 $v(x,y)$ 作为二元实函数在点 $(x_0,y_0)$ 都连续。</p>
+<p>定理：设函数 $f$ 和 $g$ 都在 $S$ 上连续， $c$ 为复常数，则</p>
+<ol>
+<li>函数 $f(z)+g(z)$ ， $cf(z)$ 以及 $f(z)g(z)$ 都在 $S$ 上连续。</li>
+<li>若 $g(z)\neq 0$ ，则函数 $\dfrac{f(z)}{g(z)}$ 在 $S$ 上连续。</li>
+</ol>
+<p>定理：设 $f$ 和 $g$ 分别为定义在 $S$ 与 $S^{\prime}$ 上的连续函数，且 $f$ 的值域包含于 $S^{\prime}$ ，则 $g(f(z))$ 为 $S$ 上的连续函数。</p>
+<p>定理：定义在有界闭区域 $\overline{D}$ 上的连续函数 $f(z)$ ，其模 $|f(z)|$ 必在 $\overline{D}$ 上达到最大值与最小值。</p>
+<h3 id="复变函数的导数和解析函数"><a href="#复变函数的导数和解析函数" class="headerlink" title="复变函数的导数和解析函数"></a>复变函数的导数和解析函数</h3><p>复变函数的导数：设 $f(z)$ 为定义在区域 $D$ 内的函数， $z_0$ 为 $D$ 内一点，如果极限</p>
+<p>$$<br>\lim_{\Delta z\to 0}\dfrac{f(z_0+\Delta z)-f(z_0)}{\Delta z}<br>$$</p>
+<p>存在有限，则称 $f(z)$ 在 $z_0$ 点可导。该极限称为 $f(z)$ 在 $z_0$ 点的导数，记作 $f^{\prime}(z_0)$ 或 $\frac{\mathrm{d}f}{\mathrm{d}z}(z_0)$ ，即</p>
+<p>$$<br>\dfrac{\mathrm{d}f}{\mathrm{d}z}(z_0)=f^{\prime}(z_0)=\lim_{\Delta z\to 0}\dfrac{f(z_0+\Delta z)-f(z_0)}{\Delta z}<br>$$</p>
+<p>如果 $f(z)$ 在区域 $D$ 内每点都可导，就称 $f(z)$ 在区域 $D$ 内可导。此时， $f^{\prime}(z)$ 可看作定义在 $D$ 内的函数，称为 $f(z)$ 的导函数，简称导数。</p>
+<p>复变函数的导数与实函数有许多类似的性质：</p>
+<ul>
+<li>线性性</li>
+<li>积的求导法则</li>
+<li>商的求导法则</li>
+<li>复合函数求导链式法则</li>
+<li>可导必然连续</li>
+</ul>
+<p>反函数求导法则：设 $w=f(z)$ 与 $z=\varphi(w)$ 是两个互为反函数的单值可导函数，则 $f^{\prime}(z)\neq 0$ ， $\varphi^{\prime}(w)\neq 0$ ，且 $f^{\prime}(z)=\frac{1}{\varphi^{\prime}(f(z))}$ 。</p>
+<p>在一元实函数的反函数求导法则中，导数不为0是定理的条件，而在复变函数中，导数不为0是结论。这一点的证明需要用到 Rouche 定理。</p>
+<p>柯西-黎曼方程：设 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 为定义在区域 $D$ 的函数，且在 $z=x+\mathrm{i}y\in D$ 处处可导，则<br>$$<br>f^{\prime}(z)=\lim_{\Delta z\to 0}\dfrac{f(z+\Delta z)-f(z)}{\Delta z}<br>$$<br>记 $\Delta z = \Delta x+\mathrm{i}\Delta y$ ，则<br>$$<br>f(z+\Delta z)-f(z)=[u(x+\Delta x,y+\Delta y)-u(x,y)]+\mathrm{i}[v(x+\Delta x,y+\Delta y)-v(x,y)]=\Delta u+\mathrm{i}\Delta v<br>$$<br>分别沿平行于实轴和虚轴的方向取极限，可得<br>$$<br>f^{\prime}(z)=\lim_{\Delta x\to 0}\dfrac{\Delta u+\mathrm{i}\Delta v}{\Delta x}=u_x+\mathrm{i}v_x \\ f^{\prime}(z)=\lim_{\Delta y\to 0}\dfrac{\Delta u+\mathrm{i}\Delta v}{\Delta y}=u_y+\mathrm{i}v_y<br>$$<br>比较实部与虚部有<br>$$<br>\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}<br>$$<br>这就是著名的柯西-黎曼方程。</p>
+<p>定理：设函数 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 定义在区域 $D$ 内， $f(z)$ 在 $z=x+\mathrm{i}y\in D$ 处可导的必要条件是其实部函数 $u(x,y)$ 和虚部函数 $v(x,y)$ 在点 $(x,y)$ 偏导数存在，并且在该点满足柯西-黎曼方程。进一步，当 $f(z)$ 在 $z=z+\mathrm{i}y$ 处可导时，其导数可表达为 $f^{\prime}(z)=u_x+\mathrm{i}v_x=v_y-\mathrm{i}u_y$ 。</p>
+<p>定理：设函数 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 定义在区域 $D$ 内， $f(z)$ 在 $z=x+\mathrm{i}y\in D$ 处可导的充分必要条件是 $u(x,y)$ 和 $v(x,y)$ 在点 $(x,y)$ 可微，并且在该点满足柯西-黎曼方程。</p>
+<p>解析函数：如果 $f(z)$ 在点 $z_0$ 的某个邻域处处可导，则称 $f(z)$ 在点 $z_0$ 解析。若 $f(z)$ 在复平面的子集 $S$ 上的每一点都解析，则称 $f(z)$ 在 $S$ 上解析，或称 $f(z)$ 为 $S$ 上的解析函数。</p>
+<p>定理：设函数 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 在区域 $D$ 内有定义， $f(z)$ 在 $z_0\in D$ 处解析的充分必要条件是存在点 $z_0$ 的一个邻域，使得 $u(x,y)$ 和 $v(x,y)$ 在该邻域内处处可微并且满足柯西-黎曼方程。</p>
+<p>定理：设函数 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ ，则 $f(z)$ 在区域 $D$ 内解析的充分必要条件是 $u(x,y)$ 和 $v(x,y)$ 在区域 $D$ 内处处可微，并且柯西-黎曼方程在区域 $D$ 内处处成立。</p>
+<p>定理：设 $f(z)$ 在区域 $D$ 内解析且 $f^{\prime}(z)\equiv 0$ ，则 $f(z)$ 为常值函数。</p>
+<p>推论：设 $f(z)$ 在区域 $D$ 内解析且 $|f(z)|$ 为常数，则 $f(z)$ 是区域 $D$ 内的常值函数。</p>
+<h3 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h3><p>指数函数：对复数 $z=x+\mathrm{i}y$ ，规定指数函数为<br>$$<br>\mathrm{e}^z=\mathrm{e}^{x+\mathrm{i}y}=\mathrm{e}^x \mathrm{e}^{\mathrm{i}y}=\mathrm{e}^x(\cos y+ \mathrm{i} \sin y)<br>$$</p>
+<!-- 
+根据该定义，有
+
+1.   ；  。
+2.   ，特别  。
+3.   （  为整数）
+4.   在复平面解析。
+5. 当  为实数时，  。
+6. 当  为纯虚数时，  。
+7.   。特别的，对正整数  ，有  。
+8.   （  为整数），即  是周期函数，周期为  。 
+
+-->
+
+<p>单叶性区域：设 $f(z)$ 为定义在区域 $D$ 内的函数，如果对于任何 $z_1,z_2 \in D$ ，只要 $z_1 \neq z_2$ ，就有 $f(z_1)\neq f(z_2)$ ，则称 $f(z)$ 在 $D$ 内是单叶的，区域 $D$ 称为 $f(z)$ 的单叶性区域。</p>
+<p>对数函数：对一切非零复数 $z$ ，定义对数函数为<br>$$<br>\mathrm{Ln}z=\ln{|z|}+\mathrm{i}\mathrm{Arg}z<br>$$<br>对于一个给定的整数 $k$ ，记<br>$$<br>\mathrm{Ln}_k z=\ln{|z|}+\mathrm{i}(\mathrm{arg}z+2k\pi)<br>$$<br>称为对数函数 $\mathrm{Ln}z$ 的一个单值分支函数。</p>
+<p>定义：称 $\mathrm{Ln}_0 z$ 为对数函数的主值，记为 $\ln{z}$ ，即<br>$$<br>\ln{z}=\ln{|z|}+\mathrm{i} \mathrm{arg}z<br>$$<br>定理：对数函数的每个单值分支函数在复平面去掉原点和负实轴的区域内解析。</p>
+<p>三角函数：记<br>$$<br>\sin z = \dfrac{\mathrm{e}^{\mathrm{i}z}-\mathrm{e}^{-\mathrm{i}z}}{2},\cos z = \dfrac{\mathrm{e}^{\mathrm{i}z}+\mathrm{e}^{-\mathrm{i}z}}{2}<br>$$<br>分别称为复变量 $z$ 的正弦函数和余弦函数。</p>
+<p>注意：在复平面上，正弦函数和余弦函数无界，正弦函数和余弦函数解析，零点个数没有增加。</p>
+<p>双曲函数：对一切的复数 $z$ ，规定<br>$$<br>\sin z = \dfrac{\mathrm{e}^{z}-\mathrm{e}^{-z}}{2},\cos z = \dfrac{\mathrm{e}^{z}+\mathrm{e}^{-z}}{2}<br>$$<br>分别称为 $z$ 的双曲正弦和双曲余弦。</p>
+<p>幂函数：设 $a$ 为复常数，定义 $w=z^a=\mathrm{e}^{a\mathrm{Ln}z},z\neq 0$ ，称为 $z$ 的幂函数，当对数 $\mathrm{Ln} z$ 取主值 $\ln{z}$ 时，函数 $\mathrm{e}^{a\mathrm{Ln}z}$ 称为幂函数的主值。</p>
+<p>反三角函数</p>
+<h3 id="复变函数的积分"><a href="#复变函数的积分" class="headerlink" title="复变函数的积分"></a>复变函数的积分</h3><p>复积分：设 $C$ 是区域 $D$ 内一条有向的简单曲线，起点为 $A$ ，终点为 $B$ ， $f(z)$ 为定义在 $D$ 内的函数。在 $C$ 上从 $A$ 向 $B$ 依次插入分点<br>$$<br>A=z_0,z_1,\cdots,z_n=B<br>$$<br>将该曲线 $C$ 分割成 $n$ 个小弧段。在每一个从 $z_{k-1}$ 到 $z_k$ 的小弧段上任取一点 $\zeta_k$ ，记 $\Delta z_k=z_k-z_{k-1}$ ，以及 $\lambda=\max \{ |\Delta z_k| : k=1,2,\cdots,n\}$ 为所有小线段的最大长度，如果极限<br>$$<br>\lim_{\lambda\to 0}\sum_{k=1}^{n}f(\zeta_k)\Delta z_k<br>$$<br>不依赖与曲线 $C$ 的分割方法和点 $\zeta_k$ 的取法而存在，则该极限为 $f(z)$ 沿曲线 $C$ 的复积分。</p>
+<p>复积分的运算性质：</p>
+<ol>
+<li>线性性</li>
+<li>逐段积分</li>
+<li>记 $C^{-}$ 为 $C$ 的反向曲线，则 $\int_{C^{-}}f(z)\mathrm{d}z=\int_{C}f(z)\mathrm{d}z$ 。</li>
+</ol>
+<p>定理：对任意 $z_0 \in C$ ，以及正数 $\rho$ 和整数 $n$ ，有<br>$$<br>\int_{|z-z_0|=\rho}\dfrac{\mathrm{d}z}{(z-z_0)^n}=\begin{cases} 2\pi \mathrm{i} ,n=1 \\ 0,n\neq 1\end{cases}<br>$$<br>这里积分曲线 $|z-z_0|=\rho$ 取逆时针方向。</p>
+<p>复变函数关于弧长的积分：设 $C$ 是一段光滑曲线，函数 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 在 $C$ 上连续，定义函数 $f(z)$ 关于弧长的积分为<br>$$<br>\int_{C}f(z)\mathrm{d}s=\int_{C}u(x,y)\mathrm{d}x+\mathrm{i}\int_{C}v(x,y)\mathrm{d}s<br>$$<br>若曲线 $C$ 的参数方程为 $z(t)=x(t)+\mathrm{i}y(t),(\alpha\leq t \leq \beta)$ ，由于 $\mathrm{d}z=\mathrm{d}x+\mathrm{i}\mathrm{d}y$ ，所以弧长微分<br>$$<br>\mathrm{d}s=\sqrt{(\mathrm{d}x)^2+(\mathrm{d}y)^2}=|\mathrm{d}z|=|z^{\prime}(t)|\mathrm{d}t<br>$$<br>则有<br>$$<br>\int_{C}f(z)\mathrm{d}s=\int_{\alpha}^{\beta}f(z(t))|z^{\prime}(t)|\mathrm{d}t<br>$$</p>
+<p>定理：设 $C$ 为简单有向曲线， $f(z)$ 在包含 $C$ 的一个区域内连续，则<br>$$<br>|\int_C f(z)\mathrm{d}z|\leq \int_C|f(z)|\mathrm{d}s<br>$$<br>特别的，记 $C$ 的长度为 $\mathrm{Length}(C)$ ，且在 $C$ 上有 $|f(z)|\leq M$ ，则<br>$$<br>|\int_C f(z)\mathrm{d}z|\leq M\cdot \mathrm{Length}(C)<br>$$<br>复积分与路径无关：设 $f(z)$ 为定义在区域 $D$ 内的函数，所谓积分 $f(z)$ 在 $D$ 内与路径无关是指对 $D$ 内任意给定的两点 $z_1,z_2$ ，以及 $D$ 内任意两条连接起点为 $z_1$ 终点为 $z_2$ 的简单曲线 $C$ ，都有 $\int_C f(z)\mathrm{d}z=0$ 。</p>
+<p>定理：设 $f(z)$ 为定义在区域 $D$ 内的连续函数，则以下事实等价：</p>
+<ol>
+<li> $f(z)$ 在 $D$ 内与路径无关。</li>
+<li>对 $D$ 内任一简单闭曲线 $C$ ，都有 $\int_C f(z)\mathrm{d}z=0$ 。</li>
+<li>在 $D$ 内存在函数 $F(z)$ ，使得 $f(z)=F^{\prime}(z)$ （此时称 $F(z)$ 为 $f(z)$ 在区域 $D$ 内的一个函数）。</li>
+</ol>
+<p>复积分的牛顿莱布尼兹公式：设 $f(z)$ 为定义在区域 $D$ 内连续函数，且在 $D$ 内存在原函数 $F(z)$ ，则对任何 $z_1,z_2\in D$ 以及连接 $z_1,z_2$ 的曲线 $C$ ，有<br>$$<br>\int_C f(z)\mathrm{d}z=F(z_2)-F(z_1)<br>$$</p>
+<h3 id="柯西积分公式"><a href="#柯西积分公式" class="headerlink" title="柯西积分公式"></a>柯西积分公式</h3><p>格林公式：设 $D$ 为有界区域， $P(x,y),Q(x,y)$ 在 $D$ 上有一阶连续偏导数，则<br>$$<br>\int_{\partial D} P\mathrm{d}x+Q\mathrm{d}y=\iint_{D}(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\mathrm{d}x\mathrm{d}y)<br>$$<br>这里 $\partial D$ 为区域 $D$ 的正向边界。</p>
+<p>柯西积分定理：设 $D$ 为有界区域， $f(z)$ 在 $D$ 内解析，在 $\overline{D}$ 上连续，则有 $\int_{\partial D}f(z)\mathrm{d}z=0$ ，这里 $\partial D$ 为区域 $D$ 的正向边界。</p>
+<p>定理：设 $D$ 为单连通区域， $f(z)$ 在 $D$ 内解析， $C$ 为 $D$ 内任一条简单闭曲线，则有 $\int_{C}f(z)\mathrm{d}z=0$ ，从而 $f(z)$ 在 $D$ 内积分与路径无关。</p>
+<p>解析函数的平均值性质：设 $f(z)$ 在区域 $D$ 内解析，则对一切 $z_0\in D$ ，以及满足 $\{ |z-z_0|\leq R \}\subset D$ 的正数 $R$ ，有<br>$$<br>f(z_0)=\dfrac{1}{2\pi}\int_{0}^{2\pi} f(z_0+R\mathrm{e}^{\mathrm{i}\theta})\mathrm{d}\theta<br>$$<br>柯西积分公式：设 $D$ 为有界区域，若 $f(z)$ 在 $D$ 内解析，在 $\overline{D}$ 上连续，则对一切 $z_0\in D$ ，<br>$$<br>f(z_0)=\dfrac{1}{2\pi \mathrm{i}}\int_{\partial D}\dfrac{f(z)}{z-z_0}\mathrm{d}z<br>$$<br>这里 $\partial D$ 为区域 $D$ 的正向边界。</p>
+<p>定理：设函数 $f(z),g(z)$ 都在有界区域 $D$ 内解析，在 $\overline{D}$ 上连续，且当 $z\in \partial D$ 时有 $f(z)=g(z)$ 则当 $z\in \overline{D}$ 时， $f(z)=g(z)$ 。</p>
+<p>柯西高阶导数公式：设 $D$ 为有界区域，且 $f(z)$ 在 $D$ 内解析，在 $\overline{D}$ 上连续，则对一切 $z_0\in D$ 和正整数 $n$ ，有<br>$$<br>f^{(n)}(z_0)=\dfrac{n!}{2\pi \mathrm{i}}\int_{\partial D}\dfrac{f(z)}{(z-z_0)^{n+1}}\mathrm{d}z<br>$$<br>这里 $\partial D$ 为区域 $D$ 的正向边界。</p>
+<p>定理：设 $f(z)$ 为定义在区域 $D$ 内的连续函数，且 $f(z)$ 在 $D$ 内积分与路径无关，则 $f(z)$ 在 $D$ 内解析。</p>
+<p>定理：有界整函数必定是常值函数。</p>
+<p>皮卡小定理：非常值函数，其值域只有两种类型，全体复数或全体复数除去一个值。</p>
+<p>代数学基本定理：任何复系数多项式方程在复平面上至少有一个根。</p>
+<h3 id="调和函数"><a href="#调和函数" class="headerlink" title="调和函数"></a>调和函数</h3><p>调和函数：设二元实函数 $H(x,y)$ 在平面区域 $D$ 内有二阶连续的偏导数，且满足拉普拉斯方程<br>$$<br>\frac{\partial^2 H}{\partial x^2}+\frac{\partial^2 H}{\partial y^2}=\Delta H=0<br>$$<br>则称其为 $D$ 内的调和函数。</p>
+<p>共轭调和函数：若二元实函数 $u(x,y),v(x,y)$ 都是区域 $D$ 内的调和函数，且满足柯西黎曼方程，则称 $v(x,y)$ 为 $u(x,y)$ 的共轭调和函数。</p>
+<p>注意：共轭调和函数不具有自反性。</p>
+<p>定理：复变函数 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 在区域 $D$ 内解析的充分必要条件是 $u(x,y)$ 与 $v(x,y)$ 都在区域 $D$ 内调和，且 $v(x,y)$ 为 $u(x,y)$ 的共轭调和函数。</p>
+<p>定理：对一切定义在单连通区域 $D$ 的调和函数 $u(x,y)$ ，由下式定义的函数<br>$$<br>v(x,y)=\int_{(x_0,y_0)}^{(x,y)}-u_y\mathrm{d}x+u_x\mathrm{d}y+c<br>$$<br>恰为 $u$ 在 $D$ 内的共轭调和函数，这里 $c$ 为任意实数。</p>
+<p>定理：设 $f(z)=u(x,y)+\mathrm{i}v(x,y)$ 在区域 $D$ 内解析，取值在区域 $D_1$ 中， $h(x,y)$ 在区域 $D_1$ 内调和，则 $h(u(x,y),v(x,y))$ 在区域 $D$ 内调和。</p>
+<p>调和函数的平均值性质：设 $u(x,y)$ 在区域 $D$ 内调和，则对一切 $z_0=x_0+\mathrm{i}y_0\in D$ ，以及满足 ${\overline{B_r}} {(z_0)}\subset D$ 的正数 $r$ ，有</p>
+<p>$$<br>u( x_0 , y_0 )=\dfrac{1}{2\pi}\int_{0}^{2\pi}u( x_0+r\cos \theta, y_0+r\sin \theta)\mathrm{d}\theta<br>$$</p>
+<p>极值原理：设 $u(x,y)$ 在有界区域 $D$ 内调和，在 $\overline{D}$ 上连续，若 $u$ 在 $\overline{D}$ 上的最大值或最小值在 $\overline{D}$ 的内部取到，则 $u$ 必定为 $\overline{D}$ 上的常数函数。</p>
+<p>引理：若非负函数 $f(x)$ 在 $[a,b]$ 上连续，且 $\int_{a}^{b}f(x)\mathrm{d}x=0$ ，则 $f(x)$ 在 $[a,b]$ 上恒为零。</p>
+<p>最大模原理：设 $f(z)$ 在有界区域 $D$ 内解析，在 $\overline{D}$ 上连续，若 $|f(z)|$ 在 $\overline{D}$ 上的最大值在 $D$ 的内部取到，则 $|f(z)|$ 必定为常数函数。</p>
+<p>定理：在平面上调和并且有上界（或下界）的调和函数，必定是常值函数。</p>
+<h2 id="解析函数的级数理论与留数定理"><a href="#解析函数的级数理论与留数定理" class="headerlink" title="解析函数的级数理论与留数定理"></a>解析函数的级数理论与留数定理</h2><h3 id="复数列的级数与幂级数"><a href="#复数列的级数与幂级数" class="headerlink" title="复数列的级数与幂级数"></a>复数列的级数与幂级数</h3><p>级数：给定复数列 $\{ z_k \}$ ，其前 $k$ 项之和记为<br>$$<br>S_k=z_1+z_2+\cdots+z_k<br>$$<br>数列 $\{ S_k \}$ 的极限记为 $\sum_{k=1}^{\infty}z_k$ ，称为级数， $S_k$ 称为级数 $\sum_{k=1}^{\infty}z_k$ 的部分和。若部分和数列 $\{ S_k \}$ 收敛，则称级数 $\sum_{k=1}^{\infty}z_k$ 收敛，否则称级数 $\sum_{k=1}^{\infty}z_k$ 发散。</p>
+<p>定理：复数项级数 $\sum_{k=1}^{\infty}z_k$ 收敛的充分必要条件是实数项级数 $\sum_{k=1}^{\infty}x_k$ 和 $\sum_{k=1}^{\infty}y_k$ 同时收敛。</p>
+<p>定理：若 $\sum_{k=1}^{\infty}z_k$ 收敛，则 $\lim_{k\to \infty}z_k=0$ ，即 $\lim_{k\to \infty}|z_k|=0$ 。</p>
+<p>绝对收敛：对复数项级数 $\sum_{k=1}^{\infty}z_k$ ，若正项级数 $\sum_{k=1}^{\infty}|z_k|$ 收敛，则称 $\sum_{k=1}^{\infty}z_k$ 绝对收敛。</p>
+<p>定理：若 $\sum_{k=1}^{\infty}z_k$ 绝对收敛，则 $\sum_{k=1}^{\infty}z_k$ 收敛。</p>
+<p>和函数：设 $\{ f_k(z) \}$ 为定义在区域 $D$ 内的函数序列，则对每个固定的 $z$ ，当 $\sum_{k=0}^{\infty}f_k(z)$ 作为数项级数收敛时，记其和为 $S(z)$ ，于是 $S(z)$ 为定义在使得级数 $\sum_{k=0}^{\infty}f_k(z)$ 收敛的点集上的函数，称为函数项级数 $\sum_{k=0}^{\infty}f_k(z)$ 的和函数。</p>
+<p>幂级数：函数项级数 $\sum_{k=0}^{\infty}c_k(z-z_0)^k$ 称为以 $z_0$ 为中心的幂级数，这里 $c_k$ 为复常数，并约定 $(z-z_0)^0=1$ 。</p>
+<p>定理：如果 $\sum_{k=0}^{\infty}c_kz^k$ 在非零点 $z_0$ 收敛，则在区域 $\{ |z| &lt; |z_0| \}$ 内，幂级数 $\sum_{k=0}^{\infty}c_kz^k$ 绝对收敛，如果 $\sum_{k=0}^{\infty}c_kz^k$ 在 $z_0$ 点发散，则在区域 $\{ |z| &gt; |z_0| \}$ 内，幂级数 $\sum_{k=0}^{\infty}c_kz^k$ 发散。</p>
+<p>考虑实数集合<br>$$<br>S=\{ r|\text{当}|z-z_0|&lt;r\text{时，级数} \sum_{k=0}^{\infty}c_k(z-z_0)^k \}<br>$$<br>可以证明 $S$ 只可能是三种情形：空集，有界半闭区间 $(0,b]$ 和 $(0,+\infty)$ 。</p>
+<p>记 $R$ 为 $S$ 的最小上界，称为幂级数 $\sum_{k=0}^{\infty}c_k(z-z_0)^k$ 的收敛半径，约定 $S$ 为空集时，$R=0$ ,$S$ 为 $(0,+\infty)$ 时， $R=+\infty$ 。此时 $\{ |z-z_0|&lt;R \}$ 称为幂级数 $\sum_{k=0}^{\infty}c_k(z-z_0)^k$ 的收敛圆盘。</p>
+<p>定理：幂级数 $\sum_{k=0}^{\infty}c_k(z-z_0)^k$ 在收敛圆盘的内部处处绝对收敛，在收敛圆盘的外部处处发散。</p>
+<p>定理：对幂级数 $\sum_{k=0}^{\infty}c_kz^k$ ，若极限 $\lambda =\lim_{k\to \infty}|c_k|^{\frac{1}{k}}$ 存在，则该幂级数的收敛半径 $$R\frac{1}{\lambda} 。</p>
+<p>定理：对幂级数 $\sum_{k=0}^{\infty}c_kz^k$ ，若极限 $\lambda =\lim_{k\to \infty}|\frac{c_{k+1}}{c_k}|$ 存在，则该幂级数的收敛半径 $R=\frac{1}{\lambda}$ 。</p>
+<p>定理：设幂级数 $\sum_{k=0}^{\infty}c_k(z-z_0)^k$ 的收敛半径为 $R$ ，则其和函数 $S(z)$ 满足：</p>
+<ol>
+<li>在收敛圆盘内科逐项求极限，即 $\lim_{z\to z_1}S(z)=\sum_{k=0}^{\infty}c_k(z-z_0)^k$ ，其中 $|z_1-z_0|&lt;R$ 。</li>
+<li>在手链圆盘镊科逐项求导，且逐项求导不改变收敛半径，特别， $S(z)$ 在收敛圆盘内部解析， $S^{\prime}(z)=\sum_{k=1}^{\infty}\dfrac{c_k}{k+1}(z-z_0)^{k+1}$ 。</li>
+<li>在收敛圆盘内可逐项积分，且逐项积分不改变收敛半径，即<br>$$<br>\int_{z_0}^{z}S(\zeta)\mathrm{d}\zeta = \sum_{k=0}^{\infty}\dfrac{c_k}{k+1}(z-z_0)^{k+1}<br>$$<br>其中 $|z-z_0|&lt;R$ 。</li>
+</ol>
+<h3 id="泰勒级数"><a href="#泰勒级数" class="headerlink" title="泰勒级数"></a>泰勒级数</h3><h2 id="积分变换"><a href="#积分变换" class="headerlink" title="积分变换"></a>积分变换</h2><h2 id="共形映照"><a href="#共形映照" class="headerlink" title="共形映照"></a>共形映照</h2>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90/">分析</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%8D%E5%88%86%E6%9E%90/">复分析</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/10/22/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">高等代数</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/09/19/%E5%AE%9E%E5%8F%98%E5%87%BD%E6%95%B0/">
+                        <span class="hidden-mobile">实变函数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "identicon",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://myblog-lti2c7o13-david2013777.vercel.app/",
+          avatarCDN: "",
+          avatarForce: true,
+          requiredFields: [],
+          emojiCDN: "",
+          emojiMaps: null,
+          anonymous: null,
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5l1tkimsu8t&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

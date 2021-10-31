@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/myicon.jpg">
+  <link rel="icon" href="/img/myicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="David">
+  <meta name="keywords" content="">
+  
+  <title>高等代数 - Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"zhang-lihao-david.gitee.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"1STRICM352yWqtYezLQNLfpY-MdYXbMMI","app_key":"3LS27CzslgcFJjbPLAYhlTwE","server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>My Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+
+        <div id="he-plugin-simple"></div>
+        <script>
+        WIDGET = {
+          "CONFIG": {
+            "modules": "01234",
+            "background": "5",
+            "tmpColor": "FFFFFF",
+            "tmpSize": "16",
+            "cityColor": "FFFFFF",
+            "citySize": "16",
+            "aqiColor": "FFFFFF",
+            "aqiSize": "16",
+            "weatherIconSize": "24",
+            "alertIconSize": "18",
+            "padding": "10px 10px 10px 10px",
+            "shadow": "0",
+            "language": "auto",
+            "fixed": "false",
+            "vertical": "center",
+            "horizontal": "center",
+            "key": "025bbd6ea348430cbf9b68b3241abb89"
+          }
+        }
+        </script>
+        <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/background.jfif') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="高等代数">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-22 22:23" pubdate>
+        2021年10月22日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      127
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">高等代数</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：32 分钟前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="高等代数"><a href="#高等代数" class="headerlink" title="高等代数"></a>高等代数</h1><h2 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h2><h3 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h3><p>数域：设 $P$ 是由一些复数组成的集合，其中包括 0 与 1 。如果 $P$ 中任意两个数的和，差，积，商（除数不为0）仍然是 $P$ 中的数（封闭），那么 $P$ 就称为一个数域。</p>
+<p>性质：所有的数域都包含有理数域作为它的一部分。</p>
+<h3 id="一元多项式"><a href="#一元多项式" class="headerlink" title="一元多项式"></a>一元多项式</h3><p>一元多项式：设 $n$ 是一个非负整数，形式表达式<br>$$<br>a_nx^n+a_{n-1}x^{n-1}+\cdots +a_0<br>$$<br>其中 $a_0,\cdots,a_n$ 全属于数域 $P$ ，称为系数在数域 $P$ 中的一个一元多项式，或者简称为数域 $P$ 上的一元多项式。</p>
+<p>相等：如果在多项式 $f(x)$ 与 $g(x)$ 中，除去系数为零的项外，同次项的系数全相等，那么 $f(x)$ 与 $g(x)$ 就称为相等，记为 $f(x)=g(x)$ 。<br>零多项式：系数全为零的多项式称为零多项式，记为0。</p>
+<p>在多项式 $a_nx^n+a_{n-1}x^{n-1}+\cdots +a_0$ 中，如果 $a_n\neq 0$ ，那么 $a_nx^n$ 称为多项式的首项， $a_n$ 称为首项系数， $n$ 称为多项式的次数。零多项式是唯一不定义次数的多项式。多项式 $f(x)$ 的次数记为 $\partial(f(x))$ 。</p>
+<p>设<br>$$<br>f(x)=\sum_{i=0}^na_ix^i \\ g(x)=\sum_{j=0}^mb_jx^j<br>$$</p>
+<p>为数域 $P$ 上的两个多项式 $(n\geq m)$，则<br>$$<br>f(x)+g(x)=\sum_{i=0}^{n}(a_i+b_i)x^i \\ f(x)g(x)=\sum_{s=0}^{m+n}(\sum_{i+j=s}a_ib_j)x^s<br>$$<br>显然，数域 $P$ 上的两个多项式经过加，减，乘等运算后，所得结果仍然是数域 $P$ 上的多项式。</p>
+<p>对于多项式的加法，有<br>$$<br>\partial(f(x)+g(x))\leq \max\{ \partial(f(x)),\partial(g(x)) \}<br>$$<br>对于多项式的乘法，如果 $f(x)\neq ,g(x)\neq 00$ ，那么 $f(x)g(x)\neq 0$ ，并且<br>$$<br>\partial(f(x)g(x))=\partial(f(x))+\partial(g(x))<br>$$<br>多项式乘积的首项系数就等于因子首项系数的乘积。</p>
+<p>和代数运算一样，多项式的运算也满足加法交换律，加法结合律，乘法交换律，乘法结合律，乘法对加法的分配律，乘法消去律。</p>
+<p>一元多项式环：所有系数在数域 $P$ 中的一元多项式的全体，称为数域 $P$ 上的一元多项式环，记为 $P[x]$ ， $P$ 称为 $P[x]$ 的系数域。</p>
+<h3 id="整除的概念"><a href="#整除的概念" class="headerlink" title="整除的概念"></a>整除的概念</h3><p>带余除法：对于 $P[x]$ 中任意两个多项式 $f(x)$ 与 $g(x)$ ，其中 $g(x)\neq 0$ ，一定有 $P[x]$ 中的多项式 $q(x),r(x)$ 存在，使<br>$$<br>f(x)=q(x)g(x)+r(x)<br>$$<br>成立，其中 $\partial(r(x))&lt;\partial(g(x))$ 或者 $r(x)=0$ ，并且这样的 $q(x),r(x)$ 是唯一决定的。</p>
+<p>带余除法中所得的 $q(x)$ 通常称为 $g(x)$ 除 $f(x)$ 的商式。 $r(x)$ 称为 $g(x)$ 除 $f(x)$ 的余式，简称商及余。</p>
+<p>整除：数域 $P$ 上的多项式 $g(x)$ 称为整除 $f(x)$ ，如果有数域 $P$ 上的多项式 $h(x)$ 使等式<br>$$<br>f(x)=g(x)h(x)<br>$$<br>成立。我们用 $g(x)|f(x)$ 表示 $g(x)$ 整除 $f(x)$ ，用 $g(x)\not | f(x)$ 表示 $g(x)$ 不能整除 $f(x)$ 。<br>当 $g(x)|f(x)$ 时， $g(x)$ 就称为 $f(x)$ 的因式， $f(x)$ 称为 $g(x)$ 的倍式。</p>
+<p>当 $g(x)\neq 0$ 时，带余除法给出了整除性的一个判别法。</p>
+<p>定理：对于数域 $P$ 上的任意两个多项式 $f(x),g(x),g(x)\neq 0$ ， $g(x)|f(x)$ 的充分必要条件是 $g(x)$ 除 $f(x)$ 的余式为零。</p>
+<p>整除的几个性质：</p>
+<ol>
+<li>如果 $f(x)|g(x),g(x)|f(x)$ ，那么 $f(x)=cg(x)$ ，其中 $c$ 为非零常数。</li>
+<li>如果 $f(x)|g(x),g(x)|h(x)$ ，那么 $f(x)|h(x)$ 。</li>
+<li>如果 $f(x)|g_i(x),i=1,2,\cdots,r$ ，那么 $f(x)|u_1(x)g_1(x)+\cdots+u_r(x)g_r(x)$ ，其中 $u_i(x)$ 是数域 $P$ 上的任意多项式。</li>
+</ol>
+<p>通常称 $u_1(x)g_1(x)+\cdots+u_r(x)g_r(x)$ 为多项式 $g_1(x)+\cdots+g_r(x)$ 的一个组合。</p>
+<h3 id="最大公因式"><a href="#最大公因式" class="headerlink" title="最大公因式"></a>最大公因式</h3><p>最大公因式：设 $f(x),g(x)$ 是 $P[x]$ 中两个多项式。 $P[x]$ 中多项式 $d(x)$ 称为 $f(x),g(x)$ 的一个最大公因式，如果它满足下面两个条件：</p>
+<ol>
+<li> $d(x)$ 是 $f(x)$ 的公因式。</li>
+<li> $f(x),g(x)$ 的公因式全是 $d(x)$ 的因式</li>
+</ol>
+<p>引理：如果有等式<br>$$<br>f(x)=q(x)g(x)+r(x)<br>$$<br>成立，那么 $f(x),g(x)$ 和 $g(x),r(x)$ 有相同的公因式。</p>
+<p>定理：对于 $P[x]$ 中任意两个多项式 $f(x),g(x)$ ，在 $P[x]$ 中存在一个最大公因式 $d(x)$ ，且 $d(x)$ 可以表成 $f(x),g(x)$ 的一个组合，即有 $P[x]$ 中多项式 $u(x),v(x)$ 使<br>$$<br>d(x)=u(x)f(x)+v(x)g(x)<br>$$<br>互素： $P[x]$ 中两个多项式 $f(x),g(x)$  称为互素的，如果 $(f(x),g(x))=1$ 。</p>
+<p>定理： $P[x]$ 中两个多项式 $f(x),g(x)$ 互素的充分必要条件是有 $P[x]$ 中的多项式 $u(x),v(x)$ 使<br>$$<br>u(x)f(x)+v(x)g(x)=1<br>$$<br>定理：如果 $(f(x),g(x))=1$ ，且 $f(x)|g(x)h(x)$ ，那么 $f(x)|h(x)$ 。</p>
+<p>推论：如果 $f_1(x)|g(x),f_2(x)|g(x)$ ，且 $(f_1(x),f_2(x))=1$ ，那么 $f_1(x)f_2(x)|g(x)$ 。</p>
+<h3 id="因式分解定理"><a href="#因式分解定理" class="headerlink" title="因式分解定理"></a>因式分解定理</h3><p>不可约多项式：数域 $P$ 上次数 $\geq 1$ 的多项式 $p(x)$ 称为域 $P$ 上的不可约多项式，如果它不能表成数域 $P$ 上的两个次数比 $p(x)$ 的次数低的多项式的乘积。</p>
+<p>定理：如果 $p(x)$ 是一个不可约多项式，那么对于任意的两个多项式 $f(x),g(x)$ ，由 $p(x)|f(x)g(x)$ 一定推出 $p(x)|f(x)$ 或者 $p(x)|g(x)$ 。</p>
+<p>因式分解及唯一性定理：数域 $P$ 上每一个次数 $\geq 1$ 的多项式 $f(x)$ 都可以唯一的分解成数域 $P$ 上一些不可约多项式的乘积，所谓唯一性是说，如果有两个分解式<br>$$<br>f(x)=p_1(x)p_2(x)\cdots p_s(x)=q_1(x)q_2(x)\cdots q_t(x)<br>$$<br>那么必有 $s=t$ ，并且适当排列后次序有<br>$$<br>p_i(x)=c_iq_i(x),i=1,2,\cdots,s<br>$$<br>其中 $c_i(i=1,2,\cdots,s)$ 是一些非零常数。</p>
+<p>在多项式 $f(x)$ 的分解式中，可以把每一个不可约因式的首项系数提出来，使他们成为首项系数为1的多项式，再把相同的不可约因式合并，于是 $f(x)$ 的分解式成为<br>$$<br>f(x)=cp_1^{r_1}(x)p_2^{r_2}(x)\cdots p_s^{r_s}(x)<br>$$<br>其中 $c$ 是 $f(x)$ 的首项系数， $p_1(x),p_2(x),\cdots, p_s(x)$ 是不同的首项系数为1的不可约多项式，而 $r_1,r_2,\cdots,r_s$ 是正整数，这种分解式称为标准分解式。</p>
+<h3 id="重因式"><a href="#重因式" class="headerlink" title="重因式"></a>重因式</h3><p>重因式：不可约多项式 $p(x)$ 称为多项式 $f(x)$ 的 $k$ 重因式，如果 $p^k(x)|f(x)$ ，而 $p^{k+1}(x)\not |f(x)$ 。</p>
+<p>如果 $k=0$ ，那么 $p(x)$ 根本不是 $f(x)$ 的因式，如果 $k=1$ ，那么 $p(x)$ 称为 $f(x)$ 的单因式，如果 $k&gt;1$ ，那么 $p(x)$ 称为 $f(x)$ 的重因式。</p>
+<p>定理：如果不可约多项式 $p(x)$ 是 $f(x)$ 的 $k$ 重因式 $k\geq 1$ ，那么它是微商 $f^{\prime}(x)$ 的 $k-1$ 重因式。</p>
+<p>推论：如果不可约多项式 $p(x)$ 是 $f(x)$ 的 $k$ 重因式 $k\geq 1$ ，那么 $p(x)$ 是 $f(x),f^{\prime}(x),\cdots,f^{(k-1)}(x)$ 的因式，但不是 $f^{(k)}(x)$ 的因式。</p>
+<p>推论：不可约多项式 $p(x)$ 是 $f(x)$ 的重因式的充分必要条件为 $p(x)$ 是 $f(x)$ 与 $f^{\prime}(x)$ 的公因式。</p>
+<p>推论：多项式 $f(x)$ 没有重因式的充分必要条件是 $f(x)$ 与 $f^{\prime}(x)$ 互素。</p>
+<h3 id="多项式函数"><a href="#多项式函数" class="headerlink" title="多项式函数"></a>多项式函数</h3><p>设<br>$$<br>f(x)=a_nx^n+\cdots+a_1x+a_0<br>$$<br>是 $P[x]$ 中的多项式， $\alpha$ 是 $P$ 中的数，代入有<br>$$<br>a_n\alpha^n+\cdots+a_1\alpha+a_0<br>$$<br>称为 $f(x)$ 当 $x=\alpha$ 时的值，记为 $f(\alpha)$ 。称这个函数为数域 $P$ 上的多项式函数。</p>
+<p>余数定理：用一次多项式 $x-\alpha$ 去除多项式 $f(x)$ ，所得的余式是一个常数，这个常数等于函数值 $f(\alpha)$ 。</p>
+<p>如果 $f(x)$ 在 $x=\alpha$ 时函数值 $f(\alpha)=0$ ，那么 $\alpha$ 就称为 $f(x)$ 的一个根或零点。</p>
+<p>推论： $\alpha$ 是 $f(x)$ 的根的充分必要条件是 $(x-\alpha)|f(x)$ 。<br>由这个关系，我们可以定义重根的概念， $\alpha$ 称为 $f(x)$ 的 $k$ 重根，如果 $x-\alpha$ 是 $f(x)$ 的 $k$ 重因式。当 $k=1$ 时， $\alpha$ 称为单根，当 $k&gt;1$ 时， $\alpha$ 称为重根。</p>
+<p>定理： $P[x]$ 中 $n$ 次多项式 $n\geq 0$ 在数域 $P$ 中的根不可能多于 $n$ 个，重根按重数计算。</p>
+<p>定理：如果多项式 $f(x),g(x)$ 的次数都不超过 $n$ ，而它们对 $n+1$ 个不同的数 $\alpha_1,\cdots ,\alpha_{n+1}$ 有相同的值，即<br>$$<br>f(\alpha_i)=g(\alpha_i),i=1,1,\cdots,n+1,<br>$$<br>那么 $f(x)=g(x)$ 。</p>
+<h3 id="复系数与实系数多项式的因式分解"><a href="#复系数与实系数多项式的因式分解" class="headerlink" title="复系数与实系数多项式的因式分解"></a>复系数与实系数多项式的因式分解</h3><p>代数基本定理：每个次数 $\geq 1$ 的复系数多项式在复数域中有一根。</p>
+<p>复系数多项式因式分解定理：每个次数 $\geq 1$ 的复系数多项式在复数域上都可以唯一地分解成一次因式的乘积。<br>因此，复系数多项式具有标准分解式<br>$$<br>f(x)=a_n(x-\alpha_1)^{l_1}\cdots (x-\alpha_s)^{l_s}<br>$$<br>其中 $\alpha_1,\cdots,\alpha_s$ 是不同的复数， $l_1,\cdots l_s$ 是正整数。这说明每个 $n$ 次复系数多项式恰有 $n$ 个复根（重根按重数计算）。</p>
+<p>对于实系数多项式，以下的事实是基本的，即，如果 $\alpha$ 是实系数多项式 $f(x)$ 的复根，那么 $\alpha$ 的共轭数 $\overline{\alpha}$ 也是 $f(x)$ 的根。因为设<br>$$<br>f(x)=a_nx^n+\cdots+a_0<br>$$<br>其中 $a_0,\cdots,a_n$ 是实数。由假设<br>$$<br>f(\alpha)=a_n\alpha^n+\cdots+a_0=0<br>$$<br>两边取共轭数，有<br>$$<br>0=\overline{f(\alpha)}=a_n\overline{\alpha}^n+\cdots +a_0=f(\overline{\alpha})<br>$$<br>这就是说 $f(\overline{\alpha})=0$ ， $\overline{\alpha}$ 也是 $f(x)$ 的根。</p>
+<p>实系数多项式因式分解定理：每个次数 $\geq 1$ 的实系数多项式在实数域上都可以唯一地分解成一次因式与二次不可约因式的乘积。</p>
+<h3 id="有理系数多项式"><a href="#有理系数多项式" class="headerlink" title="有理系数多项式"></a>有理系数多项式</h3><p>本原多项式：如果一个非零的整系数多项式 $g(x)=b_nx^n+\cdots+b_0$ 的系数 $b_n,\cdots,b_0$ 没有异于 $\pm 1$ 的公因子，也就是说，它们是互素的，它就称为一个本原多项式。</p>
+<p>高斯引理：两个本原多项式的乘积还是本原多项式。</p>
+<p>定理：如果一非零的整系数多项式能够分解成两个次数较低的有理系数多项式的乘积，那么它一定能分解成两个次数较低的整系数多项式的乘积。</p>
+<p>推论：设 $f(x),g(x)$ 是整系数多项式，且 $g(x)$ 是本原的，如果 $f(x)=g(x)h(x)$ ，其中 $h(x)$ 是有理系数多项式，那么 $h(x)$ 一定是整系数的。</p>
+<p>定理：设 $f(x)=a_nx^n+\cdots +a_0$ 是一个整系数多项式，而 $\frac{r}{s}$ 是它的一个有理根，其中 $r,s$ 互素，那么必有 $s|a_n,r|a_0$ 。特别的，如果 $f(x)$ 的首项系数 $a_n=1$ ，那么 $f(x)$ 的有理根都是整根，而且是 $a_0$ 的因子。</p>
+<p>艾森斯坦判别法：设 $f(x)=a_nx^n+\cdots +a_0$ 是一个整系数多项式。如果有一个素数 $p$ ，使得</p>
+<p>$$<br>\begin{equation*}<br>p\not |a_n;\quad<br>p|a_{n-1},a_{n-2},\cdots ,a_0; \quad<br>p^2\not |a_0<br>\end{equation*}<br>$$</p>
+<p>那么 $f(x)$ 在有理数域上是不可约的。</p>
+<h3 id="多元多项式"><a href="#多元多项式" class="headerlink" title="多元多项式"></a>多元多项式</h3><h3 id="对称多项式"><a href="#对称多项式" class="headerlink" title="对称多项式"></a>对称多项式</h3><h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>求解线性方程组：<br>对于二元线性方程组<br>$$<br>\begin{cases} a_{11}x_1+a_{12}x_2=b_1 \\ a_{21}x_1+a_{22}x_2=b_2\end{cases}<br>$$</p>
+<p>当 $a_{11}a_{22}-a_{12}a_{21}\neq 0$ 时，此方程有唯一解，即<br>$$<br>x_1=\dfrac{b_1a_{22}-a_{12}b_2}{a_{11}a_{22}-a_{12}a_{21}} ,<br>x_2=\dfrac{a_{11}b_2-a_{21}b_1}{a_{11}a_{22}-a_{12}a_{21}}<br>$$<br>我们称 $a_{11}a_{22}-a_{12}a_{21}$ 为二阶行列式，用符号表示为<br>$$<br>a_{11}a_{22}-a_{12}a_{21}=\begin{vmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{vmatrix}<br>$$<br>于是，当 $\begin{vmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{vmatrix}\neq 0$ 时，该方程有唯一解，解为<br>$$<br>x_1=\dfrac{\begin{vmatrix}b_1&amp;a_{12}\\b_2&amp;a_{22}\end{vmatrix}}{\begin{vmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{vmatrix}} ,<br>x_2=\dfrac{\begin{vmatrix}a_{11}&amp;b_1\\a_{21}&amp;b_2\end{vmatrix}}{\begin{vmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{vmatrix}}<br>$$<br>同理，可以定义三阶行列式。</p>
+<h3 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h3><p>排列：由 $1,2,3,\cdots,n$ 组成的一个有序数组称为一个 $n$ 级排列。</p>
+<p>逆序数：在一个排列中，如果一对数的前后位置与大小顺序相反，即前面的数大于后面的数，那么他们就称为一个逆序，一个排列中逆序的总数就称为这个排列的逆序数。排列 $j_1j_1\cdots j_n$ 的逆序数记为 $\tau(j_1j_1\cdots j_n)$ 。</p>
+<p>偶排列与奇排列：逆序数为偶数的排列称为偶排列，逆序数为奇数的排列称为奇排列。</p>
+<p>对换：把一个排列中某两个数的位置互换，其余数不动，这样一个变换称为对换。</p>
+<p>定理：对换改变排列的奇偶性。</p>
+<p>推论：在全部的 $n$ 级排列中，奇偶排列的个数相等，各有 $\frac{n!}{2}$ 个。</p>
+<p>定理：任意一个 $n$ 级排列与排列 $12\cdots n$ 都可以经过一系列对换互变，并且所做对换的个数与这个排列有相同的奇偶性。</p>
+<h3 id="n-阶行列式的定义"><a href="#n-阶行列式的定义" class="headerlink" title="$n$ 阶行列式的定义"></a>$n$ 阶行列式的定义</h3><p> $n$ 阶行列式：由 $n^2$ 个数 $a_{ij}$ （称为行列式的元）排成一个 $n$ 行 $n$ 列的表，并在两边各画一条竖线的记号<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots&amp;\vdots&amp;\ddots&amp;\vdots \\ a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>称为 $n$ 阶行列式。</p>
+<p> $n$ 阶行列式表示的代数和的所有项，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13} \\ a_{21}&amp;a_{22}&amp;a_{23} \\ a_{31}&amp;a_{32}&amp;a_{33}\end{vmatrix}<br>$$</p>
+<!-- 其中 $\sum\_{j\_1,j\_2}$ 表示对 $$ 的一切排列取和。用符号 $$ 或 $$ 表示以 $$ 为元的 $$ 阶行列式。 -->
+
+<p>上三角行列式：当 $i&gt;j$ 时， $a_{ij}=0$ 。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ 0&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  0&amp;0&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>上三角行列式的值等于其主对角线上各元之积。</p>
+<h3 id="n-阶行列式的性质"><a href="#n-阶行列式的性质" class="headerlink" title="$n$ 阶行列式的性质"></a>$n$ 阶行列式的性质</h3><p>性质1：行列式的行和列顺次互换，其值不变，即</p>
+<p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{21}&amp;\cdots &amp;a_{n1} \\ a_{12}&amp;a_{22}&amp;\cdots &amp;a_{n2} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  a_{1n}&amp;a_{2n}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
+<p>上述两个行列式互称转置行列式。</p>
+<p>说明行列式中行与列的地位是对称的，平等的，因此行列式对行成立的性质，对列也同样成立。</p>
+<p>性质2：互换行列式的两行（或两列），行列式变号。</p>
+<p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{s1}&amp;a_{s2}&amp;\cdots &amp;a_{sn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=-\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{s1}&amp;a_{s2}&amp;\cdots &amp;a_{sn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>推论：行列式中两行（列）完全相同，则行列式为0。</p>
+<p>性质3：行列式中某行（列）的元有因子 $K$ ，则 $K$ 可提到行列式符号外边。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ Ka_{t1}&amp;Ka_{t2}&amp;\cdots &amp;Ka_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=K\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>若用 $K$ 乘某行列式的某行（列），则等于用 $K$ 乘该行列式。</p>
+<p>性质4：若行列式中某行（列）的元均可表示为两项之和，例如第 $i$ 行<br>$$<br>a_{ij}=b_{ij}+c_{ij},(j=1,2,\cdots ,n)<br>$$<br>则此行列式等于两个行列式之和，这两个行列式除第 $i$ 行的元分别为 $b_{ij}$ 与 $c_{ij}$ 外，其余各行都与原行列式一样，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ b_{i1}+c_{i1}&amp;b_{i2}+c_{i2}&amp;\cdots &amp;b_{in}+c_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ b_{i1}&amp;b_{i2}&amp;\cdots &amp;b_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}+\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ c_{i1}&amp;c_{i2}&amp;\cdots &amp;c_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>性质5：</p>
+<ol>
+<li>行列式某行（列）的元全为零。</li>
+<li>行列式的两行（列）完全相同。</li>
+<li>行列式的两行（列）的元成比例。<br>若上述条件之一成立，该行列式的值为零。</li>
+</ol>
+<p>性质6：若把行列式的某行（列） $\lambda$ 倍后加到另一行（列）上，则行列式的值不变。</p>
+<p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{i1}+\lambda a_{j1}&amp;a_{i2}+\lambda a_{j2}&amp;\cdots &amp;a_{in}+\lambda a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{j1}&amp;a_{j2}&amp;\cdots &amp;a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{i1}&amp;a_{i2}&amp;\cdots &amp;a_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{j1}&amp;a_{j2}&amp;\cdots &amp;a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
+<h3 id="行列式按行（列）展开"><a href="#行列式按行（列）展开" class="headerlink" title="行列式按行（列）展开"></a>行列式按行（列）展开</h3><!-- 余子式： $$ 恰好是行列式 $$ 中元 $$ 所在的第一行与第一列划去之后所得的 $$ 阶行列式， $$ 称为元 $$ 在 $$ 中的余子式。 -->
+
+<p>代数余子式： $M_{ij}$ 是把行列式 $|A|$ 中元 $a_{ij}$ 所在的第 $i$ 行，第 $j$ 列划掉后所得到的 $n-1$ 阶行列式， $M_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的余子式，记 $A_{ij}=(-1)^{i+j}M_{ij}$ ， $A_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的代数余子式。</p>
+<!-- $$
+\begin{vmatrix}a\_{11}&a\_{12}&\cdots &a\_{1n} \\\\ a\_{21}&a\_{22}&\cdots &a\_{2n} \\\\ \vdots &\vdots &\ddots&\vdots \\\\  a\_{n1}&a\_{n2}&\cdots &a\_{nn}\end{vmatrix}
+$$ -->
+<p>定理： $n$ 阶 $n\geq 2$ 行列式等于它的任一行的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{ik}A_{ik}(i=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式等于它的任何一列的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{kj}A_{kj}(j=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式的任一行的各元与另一行对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{jk}A_{ik}=0(i\neq j)<br>$$<br>定理： $n$ 阶行列式的任一列的各元与另一列对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{kj}A_{ki}=0(i\neq j)<br>$$<br>于是有</p>
+<p>$$<br>\sum_{k=1}^na_{jk}A_{ik}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
+<p>$$<br>\sum_{k=1}^na_{kj}A_{ki}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
+<p>范德蒙德行列式：<br>$$<br>V(x_1,x_2,\cdots,x_n)=\begin{vmatrix}1&amp;1&amp;1&amp;1 \\ x_{1}&amp;x_{2}&amp;\cdots &amp;x_{n}\\x_{1}^{2}&amp;x_{2}^{2}&amp;\cdots &amp;x_{n}^{2}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\x_{1}^{n-1}&amp;x_{2}^{n-1}&amp;\cdots &amp;x_{n}^{n-1}\end{vmatrix}=\prod_{1\leq j\leq i\leq n}(x_i-x_j)<br>$$<br>互为余子式：在 $n$ 阶行列式在，任意指定 $r$ 个行与 $r$ 个列 $(1\leq r&lt;n)$ ，位于这些行列交点处的 $r^2$ 个元构成的 $r$ 阶行列式 $M$ 称为原行列式的一个 $r$ 阶子式。在 $n$ 阶行列式中，划去某个 $r$ 阶子式 $M$ 所在的行和列后，剩下的 $n-r$ 个行和 $n-r$ 个列上的元也构成一个 $n-r$ 阶子式 $N$ ，我们称这一对子式 $M$ 与 $N$ 互为余子式。</p>
+<p>拉普拉斯定理：在 $n$ 阶行列式中任意选定 $k$ 个行（列） $1\leq k&lt;n$ ，则 $n$ 阶行列式等于位于这 $k$ 个行（列）中的一切 $k$ 阶子式 $M_i(i=1,2,\cdots,C_{n}^{k})$ 与其对应的代数余子式 $A_i$ 乘积之和，即<br>$$<br>|A|=\sum_{i=1}^{C_n^k}M_iA_i<br>$$</p>
+<h2 id="矩阵代数"><a href="#矩阵代数" class="headerlink" title="矩阵代数"></a>矩阵代数</h2><h3 id="矩阵的概念"><a href="#矩阵的概念" class="headerlink" title="矩阵的概念"></a>矩阵的概念</h3><p>矩阵：由 $m\times n$ 个数 $$a_{ij}(i=1,\cdots,m;j=1,\cdots,n)$$ 排成的 $m$ 行 $n$ 列的数表<br>$$<br>\begin{pmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{m1}&amp;a_{m2}&amp;\cdots &amp;a_{mn}\end{pmatrix}<br>$$<br>称为 $m$ 行 $n$ 列矩阵（或 $m\times n$ 矩阵）。数 $a_{ij}$ 称为矩阵的元。</p>
+<p>常用大写字母 $A,B,\cdots$ 表示矩阵，矩阵也可以表示为 $A=(a_{ij})$ ， $A_{m\times n}$ ， $(a_{ij})_{m\times n}$ 等。</p>
+<p>特别的，当矩阵的行数和列数相等的时候称为方阵。 $n$ 行 $n$ 列的矩阵也被称为 $n$ 阶方阵。</p>
+<p>实矩阵与复矩阵：如果矩阵 $A$ 的每个元 $a_{ij}$ 都是实数，矩阵 $A$ 称为实矩阵；如果 $A$ 的元是复数， $A$ 称为复矩阵。</p>
+<p>同型矩阵：如果矩阵 $A$ 和 $B$ 有相同的行数与相同的列数，则 $A$ 与 $B$ 称为同型矩阵。</p>
+<p>系数矩阵：考虑线性方程组<br>$$<br>\begin{cases} a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1, \\ a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2,\\ \cdots \\ a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n=b_m \end{cases}<br>$$<br>由未知量的系数 $a_{ij}$ 所构成的 $m\times n$ 矩阵<br>$$<br>A=\begin{pmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{m1}&amp;a_{m2}&amp;\cdots &amp;a_{mn}\end{pmatrix}<br>$$<br>称为方程组的系数矩阵。</p>
+<p>常数列矩阵：由方程组右端常数项 $b_i$ 构成的 $m\times 1$ 矩阵<br>$$<br>b=\begin{pmatrix}b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}<br>$$<br>称为方程组的常数列矩阵。</p>
+<p>增广矩阵：由系数 $a_{ij}$ 和常数项 $b_i$ 组成的矩阵<br>$$<br>B=\begin{pmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n}&amp;b_1 \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n}&amp;b_2 \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots &amp;\vdots  \\ a_{m1}&amp;a_{m2}&amp;\cdots &amp;a_{mn}&amp;b_m\end{pmatrix}=(A,b)<br>$$<br>称为方程组的增广矩阵。</p>
+<p>行向量与列向量：常把 $1\times n$ 矩阵称为 $n$ 维行向量， $n\times 1$ 矩阵称为 $n$ 维列向量。矩阵也可以写成行向量按列排列和列向量按行排列的形式。</p>
+<h3 id="矩阵的代数运算"><a href="#矩阵的代数运算" class="headerlink" title="矩阵的代数运算"></a>矩阵的代数运算</h3><h4 id="矩阵的加法和数乘"><a href="#矩阵的加法和数乘" class="headerlink" title="矩阵的加法和数乘"></a>矩阵的加法和数乘</h4><p>相等：如果同型矩阵 $A=(a_{ij}),B=(b_{ij})$ 的对应元都相等，即 $a_{ij}=b_{ij}$ ，则称 $A$ 与 $B$ 相等，记为 $A=B$ 。</p>
+<p>和：两个同型矩阵 $A={(a_{ij})}_{m\times n}$ 和 $B=(b_{ij})_{m\times n}$ 的对应元相加所得的同型矩阵 $C=(a_{ij}+b_{ij})_{m\times n}$ 称为矩阵 $A$ 与 $B$ 之和，记为 $C=A+B$ 。</p>
+<!-- 和：两个同型矩阵 $A={(a\_{ij})}$ 和 $B=(b\_{ij})$ 的对应元相加所得的同型矩阵 $C=(a\_{ij}+b\_{ij})$ 称为矩阵 $A$ 与 $B$ 之和，记为 $C=A+B$ 。 -->
+
+<p>零矩阵：每个元都等于零的 $m\times n$ 矩阵称为零矩阵，记为 $0_{m\times n}$ 或者 $0$ 。显然对一切 $A=A_{m\times n}$ 恒有 $0_{m\times n}+A_{m\times n}=A_{m\times n}$ 或 $0+A=A$ 。</p>
+<p>负矩阵：若与 $A$ 同型的矩阵 $B$ 的每个元是矩阵 $A$ 的对应元的相反数，则称矩阵 $B$ 为 $A$ 的负矩阵。 $A$ 的负矩阵记为 $-A$ ，显然 $A+(-A)=0$ 。</p>
+<p>差：若矩阵 $A,B$ 是同型矩阵，则称矩阵 $A+(-B)$ 为 $A$ 与 $B$ 的差，并记为 $A-B$ ，即 $A-B=A+(-B)$ 。</p>
+<p>显然， $A=B$ 的充要条件是 $A-B=0$ 。</p>
+<p>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p>
+<!-- 数乘：若 $\lambda$ 是一个数， $A=(a\_{ij})$ 是矩阵，则同型矩阵 $(\lambda a\_{ij})$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a\_{ij})$ 。 -->
+
+<p>矩阵的加（减）法和数与矩阵的数乘统称为矩阵的线性运算。</p>
+<p>性质：</p>
+<ol>
+<li>加法交换律 $A+B=B+A$ </li>
+<li>加法结合律 $(A+B)+C=A+(B+C)$ </li>
+<li>数乘的分配律 $$\lambda (A+B)=\lambda A+\lambda B$$ $$(\lambda+\mu)A=\lambda A+\mu A$$</li>
+<li>数乘的结合律 $\lambda(\mu A)=(\lambda \mu)A$ </li>
+<li>$1A=A$<br>其中 $A,B,C$ 是使上述矩阵线性运算有意义的矩阵， $\lambda,\mu $ 为数。</li>
+</ol>
+<p>线性组合：设给定了若干个同型矩阵 $A_1,\cdots,A_m$ ，经过线性运算<br>$$<br>\lambda_1A_1+\lambda_2A_2+\cdots+\lambda_mA_m=\sum_{j=1}^{m}\lambda_jA_j=B<br>$$<br>（其中 $\lambda_j$ 是常数， $j=1,2,\cdots,m$ ）得到的矩阵 $B$ 称为矩阵 $A_1,\cdots,A_m$ 的线性组合。或者称 $B$ 可经 $A_1,\cdots,A_m$ 线性表出。</p>
+<h4 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h4><p>矩阵与列向量的乘积：设 $A=(a_{ij})_{m\times n},C=(c_j)_{n\times 1}$ ，则规定 $m\times n$ 矩阵 $A$ 与 $n$ 维列向量 $C$ 相乘的乘积 $AC$ 是以 $d_i=\sum_{j=1}^n{a_{ij}c_j}$ $(i=1,\cdots ,n)$ 为分量的 $m$ 维列向量，即</p>
+<!-- 矩阵与列向量的乘积：设 $A=(a\_{ij}),C=(c\_j)$ ，则规定 $m\times n$ 矩阵 $A$ 与 $n$ 维列向量 $C$ 相乘的乘积 $AC$ 是以 $$d\_i=\sum\_{j=1}^n{a\_{ij}c\_j} (i=1,\cdots ,n)$$ 为分量的 $m$ 维列向量，即 -->
+
+<p>$$<br>AC=\begin{pmatrix}a_{11}c_1+a_{12}c_2+\cdots +a_{1n}c_n\\a_{21}c_1+a_{22}c_2+\cdots +a_{2n}c_n\\ \vdots\\a_{m1}c_1+a_{m2}c_2+\cdots +a_{mn}c_n\end{pmatrix}<br>$$</p>
+<p>矩阵与矩阵的乘积：设 $A=(a_{ij})_{m\times n}$ ， $B=(b_{ij})_{n\times s}$ ， $A$ 与 $B$ 相乘的乘积 $AB$ 定义如下</p>
+<!-- 矩阵与矩阵的乘积：设 $A=(a\_{ij})$ ， $B=(b\_{ij})$ ， $A$ 与 $B$ 相乘的乘积 $AB$ 定义如下 -->
+
+<p>$$<br>AB=\begin{pmatrix}\sum_{k=1}^na_{1k}b_{k1}&amp;\sum_{k=1}^na_{1k}b_{k2}&amp;\cdots &amp;\sum_{k=1}^na_{1k}b_{ks} \\ \sum_{k=1}^na_{2k}b_{k1}&amp;\sum_{k=1}^na_{2k}b_{k2}&amp;\cdots &amp;\sum_{k=1}^na_{2k}b_{ks} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ \sum_{k=1}^na_{mk}b_{k1}&amp;\sum_{k=1}^na_{mk}b_{k2}&amp;\cdots &amp;\sum_{k=1}^na_{mk}b_{ks}\end{pmatrix}=D<br>$$</p>
+<p>即， $A$ 与 $B$ 相乘所得的矩阵 $D$ 是 $m\times s$ 矩阵。它的元 $d_{ij}=\sum_{k=1}^na_{ik}b_{kj}$ $(i=1,2,\cdots,m)$,$j=1,2,\cdots,s$ 由 $A$ 的第 $i$ 个行向量与 $B$ 的第 $j$ 个列向量的对应分量乘积之和。</p>
+<p>矩阵乘法不符合交换律。</p>
+<p>若 $AB$ 有意义，称 $A$ 右乘 $B$ ，或者 $B$ 左乘 $A$ 。</p>
+<p>矩阵乘法不满足消去律，当 $A$ 和 $B$ 都是非零矩阵时，可能有 $AB=0$ 。</p>
+<p>矩阵乘法的性质：</p>
+<ol>
+<li>结合律 $$(AB)C=A(BC)$$ </li>
+<li>分配律 $$A(B+C)=AB+AC$$ $$(A+B)C=AC+BC$$ </li>
+<li>$\lambda (AB)=(\lambda A)B=A(\lambda B)$<br>其中 $A,B,C$ 是使上述矩阵乘法有意义的矩阵， $\lambda$ 是数。</li>
+</ol>
+<p>单位矩阵： $n$ 阶方阵<br>$$<br>E_n=\begin{pmatrix}1&amp;0&amp;\cdots &amp;0 \\ 0&amp;1&amp;\cdots &amp;0 \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 0&amp;0&amp;\cdots &amp;1\end{pmatrix}=\begin{pmatrix}1&amp;&amp;&amp; \\ &amp;1&amp;&amp; \\  &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;1\end{pmatrix}<br>$$<br>称为 $n$ 阶单位矩阵，也记为 $E$ 。容易验证对任意的 $n$ 阶矩阵 $A$ 有<br>$$AE=EA=A$$<br>设 $A$ 是 $n$ 阶矩阵，则乘积 ${A\cdots A}(\text{有限个})$ 有意义。 $k$ 个 $A$ 相乘称为 $A$ 的 $k$ 次幂，记为</p>
+<!-- $$
+A^{k}=\underbrace{AA\cdots A}\_{k\text{个}}
+$$ -->
+<p>$$<br>A^k=AA\cdots A(k\text{个})<br>$$<br>并约定 $A^0=E$ 。<br>不难验证</p>
+<p>$$<br>A^kA^l=A^{k+l},(A^k)^l=A^{kl},(k,l\in \mathbb{Z^+})<br>$$<br>成立。由于矩阵乘法不满足交换律，一般的 $(AB)^k\neq A^kB^k$ （ $A,B$ 皆为方阵， $k\geq 2$ ）。</p>
+<p>当 $A$ 为方阵时，称矩阵<br>$$<br>f(A)=a_0A^m+a_1A^{m-1}+\cdots+a_{m-1}A+a_mE<br>$$<br>为矩阵 $A$ 的多项式，也称 $f(A)$ 是普通多项式<br>$$<br>f(\lambda)=a_0\lambda^m+a_1\lambda^{m-1}+\cdots+a_{m-1}\lambda+a_m<br>$$<br>当 $\lambda =A$ 的值，设 $\varphi(\lambda),\psi(\lambda)$ 是两个多项式，令<br>$$<br>f(\lambda)=\varphi(\lambda)+\psi(\lambda),g(\lambda)=\varphi(\lambda)\psi(\lambda)<br>$$<br>由矩阵的运算法则有<br>$$<br>f(A)=\varphi(A)+\psi(A),g(A)=\varphi(A)\psi(A)<br>$$<br>特别是由 $\varphi(\lambda)\psi(\lambda)=\psi(\lambda)\varphi(\lambda)$ 推出 $\varphi(A)\psi(A)=\psi(A)\varphi(A)$ 。</p>
+<p>定理：若 $A$ 与 $B$ 为 $n$ 阶矩阵，则 $|AB|=|A||B|$ 。</p>
+<p>由该定理可知 $|AB|=|BA|$ 。</p>
+<h3 id="逆矩阵与矩阵的初等变换"><a href="#逆矩阵与矩阵的初等变换" class="headerlink" title="逆矩阵与矩阵的初等变换"></a>逆矩阵与矩阵的初等变换</h3><h4 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h4><p>逆矩阵：设 $A$ 是一个 $n$ 阶矩阵。若存在 $n$ 阶矩阵 $B$ 使得<br>$$<br>AB=BA=E<br>$$<br>成立，则称 $A$ 是可逆矩阵， $B$ 是 $A$ 的逆矩阵。</p>
+<p>定理：若 $A$ 是可逆矩阵，则它的逆矩阵是唯一的。</p>
+<p>定理：矩阵 $A=(a_{ij})_{n\times n}$ 可逆的充分必要条件是 $|A|\neq 0$ 。</p>
+<p>伴随矩阵：用 $A$ 中各元 $a_{ij}$ 的代数余子式为元构成矩阵<br>$$<br>A^{\star}=\begin{pmatrix}A_{11}&amp;A_{21}&amp;\cdots &amp;A_{n1} \\ A_{12}&amp;A_{22}&amp;\cdots &amp;A_{n2} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ A_{1n}&amp;A_{2n}&amp;\cdots &amp;A_{nn} \end{pmatrix}<br>$$</p>
+<p>$A^{\star}$ 称为 $n$ 阶矩阵 $A$ 的伴随矩阵。</p>
+<p>有 $A^{-1}=\frac{1}{|A|}A^{\star}$ 。<br> $n$ 阶矩阵 $A$ 可逆的充要条件是 $|A|\neq 0$ ，且当 $A$ 可逆时 $A$ 的逆矩阵<br>$$<br>A^{-1}=\frac{1}{|A|}A^{\star}=|A|^{-1}A^{\star}<br>$$<br>可逆矩阵又称非奇异矩阵，非退化矩阵或满秩矩阵。</p>
+<p>推论：设 $A,B$ 为 $n$ 阶矩阵，若 $AB=E$ （或 $BA=E$ ）成立，则 $B=A^{-1}$ 。</p>
+<p>定理：若 $A$ 与 $B$ 为 $n$ 阶可逆矩阵在，则 $AB$ 也为 $n$ 阶可逆矩阵，而且 $(AB)^{-1}=B^{-1}A^{-1}$ 。</p>
+<p>推论：若 $A_1,A_2,\cdots ,A_m$ 皆为 $n$ 阶可逆矩阵，则乘积 $A_1A_2\cdots A_m$ 也是一个 $n$ 阶可逆矩阵且</p>
+<p>定理：设 $A$ 是 $n$ 阶可逆矩阵，那么对任意的 $B=B_{n\times m}$ （或 $B=B_{m\times n}$ ），矩阵方程<br>$$<br>AX=B(\text{或}XA=B)<br>$$<br>有唯一解 $X$ 。</p>
+<p>克拉默法则： $n$ 元线性方程组<br>$$<br>\begin{cases} a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1, \\ a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2,\\ \cdots \\ a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=b_n \end{cases}<br>$$<br>当其系数矩阵 $A$ 的行列式 $D=|A|=\mathrm{det}(a_{ij})\neq 0$ 时，存在唯一解<br>$$<br>x_j=\dfrac{D_j}{D}(j=1,2,\cdots,n)<br>$$<br>其中 $D_j$ 表示把系数矩阵 $A$ 的第 $j$ 列换成常数项列后的矩阵的行列式。</p>
+<h4 id="矩阵的初等变换"><a href="#矩阵的初等变换" class="headerlink" title="矩阵的初等变换"></a>矩阵的初等变换</h4><p>初等变换：对矩阵的行（列）施行下列三种变换都称为矩阵的初等行（列）变换，这三种变换是</p>
+<ol>
+<li>互换矩阵两行（列）的位置</li>
+<li>用非零常数 $\lambda $ 乘矩阵的某行（列）</li>
+<li>将矩阵某行（列）的 $\gamma$ 倍加到矩阵的另一行（列）上。</li>
+</ol>
+<p>矩阵的初等行变换和初等列变换统称为矩阵的初等变换。</p>
+<p>初等矩阵：对 $n$ 阶单位矩阵 $E$ 分别施行一次上述三种初等变换之一后所得的矩阵称为初等矩阵。</p>
+<ol>
+<li>互换 $E$ 的 $i,j$ 两行（两列）所得的初等矩阵 $E_{ij}$</li>
+<li>用 $\lambda(\lambda\neq 0)$ 乘 $E$ 的第 $i$ 行（列）所得的初等矩阵 $E_{ii}(\lambda)$</li>
+<li>将 $E$ 的 $j$ 行（ $i$ 列）的 $\gamma$ 倍加到 $i$ 行（ $j$ 列）上去 $(i\neq j)$ 所得的初等矩阵 $E_{ij}(\gamma)$</li>
+</ol>
+<p>显然，三种初等矩阵都是可逆矩阵。</p>
+<p>引理：对矩阵 $A=(a_{ij})_{m\times n}$ 施行某一初等行（列）变换，其结果等于对 $A$ 左（右）乘一个相应的 $n$ 阶（ $m$ 阶）初等矩阵。</p>
+<p>初等矩阵的逆矩阵分别为<br>$$<br>(E_{ij})^{-1}=E_{ij}<br>$$<br>$$<br>(E_{ii}(\lambda))^{-1}=E_{ii}(\dfrac{1}{\lambda})(\lambda\neq 0)<br>$$<br>$$<br>(E_{ij}(\gamma))^{-1}=E_{ij}(-\gamma)<br>$$</p>
+<p>定理：可逆矩阵必可表示为若干个初等矩阵的乘积。</p>
+<p>初等行变换求矩阵的逆：<br>$$<br>(A,E)\rightarrow (E,A^{-1})<br>$$</p>
+<p>初等列变换求矩阵的逆：<br>$$<br>\begin{pmatrix}A \\ E\end{pmatrix}\rightarrow \begin{pmatrix}E \\ A^{-1} \end{pmatrix}<br>$$</p>
+<h3 id="转置矩阵与一些重要的方阵"><a href="#转置矩阵与一些重要的方阵" class="headerlink" title="转置矩阵与一些重要的方阵"></a>转置矩阵与一些重要的方阵</h3><h4 id="转置矩阵"><a href="#转置矩阵" class="headerlink" title="转置矩阵"></a>转置矩阵</h4><p>转置矩阵：设 $A$ 是一个 $m\times n$ 矩阵，若将 $A$ 的行顺次改成列，所得到的 $n\times m$ 矩阵称为 $A$ 的转置矩阵，记作 $A^T$ 。</p>
+<p>转置矩阵满足下面的运算规律：</p>
+<ol>
+<li>$(A^T)^T=A$ 。</li>
+<li>$(A\pm B)^T=A^T\pm B^T$ 。</li>
+<li>$(\lambda A)^T=\lambda A^T(\lambda \text{为数})$ 。</li>
+<li>$(AB)^T=B^TA^T$ 。</li>
+<li>若 $A$ 是可逆矩阵，则 $(A^T)^{-1}=(A^{-1})^T$ 。</li>
+</ol>
+<h4 id="几个重要方阵"><a href="#几个重要方阵" class="headerlink" title="几个重要方阵"></a>几个重要方阵</h4><p>对称矩阵：若实矩阵 $A$ 满足条件 $A^T=A$ ，则 $A$ 称为对称矩阵。<br>一个 $n$ 阶矩阵 $A=(a_{ij})$ 是对称矩阵的充要条件是<br>$$<br>(a_{ij})=(a_{ji})(i,j=1,2,\cdots ,n)<br>$$<br>反称矩阵：若矩阵 $A$ 满足条件 $A^T=-A$ ，则 $A$ 称为反称矩阵。</p>
+<p>一个 $n$ 阶矩阵是反称矩阵的充要条件是它的元满足条件<br>$$<br>a_{ij}=\begin{cases} -a_{ji},i\neq j \\ 0,i=j \end{cases}<br>$$<br>即主对角线上的元全为零，主对角线两侧对称的元反号。</p>
+<p>奇数阶反称矩阵的行列式必为零。</p>
+<p>对角矩阵：形为<br>$$<br>A=\begin{pmatrix}d_1&amp;&amp;&amp; \\ &amp;d_2&amp;&amp; \\ &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;d_{n}\end{pmatrix}<br>$$<br>的 $n$ 阶矩阵（主对角线以外的元全为零）称为对角矩阵。</p>
+<p>对角矩阵有以下性质：</p>
+<ol>
+<li><p>若 $A$ 与 $B$ 均为 $n$ 阶对角矩阵，则 $A+B$ ， $\lambda A$ （ $\lambda$ 为实数）， $AB$ 皆为对角矩阵，且<br>$$<br>AB=\begin{pmatrix}a_1&amp;&amp;&amp; \\ &amp;a_2&amp;&amp; \\ &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;a_{n}\end{pmatrix}\begin{pmatrix}b_1&amp;&amp;&amp; \\ &amp;b_2&amp;&amp; \\ &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;b_{n}\end{pmatrix}=BA<br>$$<br>即两个对角矩阵相乘是可交换的。</p>
+</li>
+<li><p>对角矩阵可逆的充要条件是它的主对角线上的元全不为零，且逆矩阵 $A^{-1}$ 也是对角矩阵。 $A^{-1}$ 的主对角线的元恰为 $A$ 中对应元的倒数，即<br>$$<br>A^{-1}=\begin{pmatrix}a_1&amp;&amp;&amp; \\ &amp;a_2&amp;&amp; \\ &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;a_{n}\end{pmatrix}^{-1}=\begin{pmatrix}a_1^{-1}&amp;&amp;&amp; \\ &amp;a_2^{-1}&amp;&amp; \\ &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;a_{n}^{-1}\end{pmatrix}<br>$$<br>正交矩阵：若 $n$ 阶实矩阵 $A$ 满足 $A^TA=E$ ，则 $A$ 称为正交矩阵。</p>
+</li>
+<li><p> $n$ 阶矩阵 $A$ 为正交矩阵的充分必要条件为 $A^T=A^{-1}$ 。</p>
+</li>
+<li><p> $n$ 阶矩阵 $A$ 是正交矩阵的充分必要条件是下列两组等式</p>
+</li>
+</ol>
+<p>$$<br>\sum_{k=1}^n{a_{ik}a_{jk}}=\begin{cases} 1,i=j \\ 0,i\neq j \end{cases},(i,j=1,2,\cdots,n)<br>$$</p>
+<p>$$<br>\sum_{k=1}^n{a_{ki}a_{kj}}=\begin{cases} 1,i=j \\ 0,i\neq j \end{cases},(i,j=1,2,\cdots,n)<br>$$<br>中至少有一组成立。也就是说，正交矩阵每一行（列）  个元的平方和为1，两个不同行（列）对应元乘积之和等于零。</p>
+<ol>
+<li> $A$ 为正交矩阵，则 $A^T=A^{-1}$ 也是正交矩阵。</li>
+<li> $A$ 为正交矩阵，则 $A$ 的行列式必为+1或-1，即 $|A|=\pm 1$ 。</li>
+<li>若 $A$ 与 $B$ 均为 $n$ 阶正交矩阵，则乘积 $AB(BA)$ 也是正交矩阵。</li>
+</ol>
+<p>共轭矩阵：设 $n$ 阶矩阵 $A=(a_{ij})$ 的元 $a_{ij}$ 都是复数，则矩阵 $\overline{A}=(\overline{a}_{ij})$ 称为 $A$ 的共轭矩阵。</p>
+<p>埃尔米特矩阵：若矩阵 $A$ 满足 $A^T=\overline{A}$ ，则 $A$ 称为埃尔米特矩阵。</p>
+<p>酉矩阵：若 $n$ 阶矩阵 $A$ 满足条件 $A=\overline{A^{-1}}$ ，则 $A$ 称为酉矩阵。</p>
+<h3 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h3><h4 id="分块矩阵-1"><a href="#分块矩阵-1" class="headerlink" title="分块矩阵"></a>分块矩阵</h4><p>分块矩阵：一般的，对于任意一个 $m\times n$ 矩阵 $A$ ，可以用若干条水平直线和竖直线按某种需要把 $A$ 划分成若干个行数与列数较少的矩阵，这种矩阵称为 $A$ 的子阵或子块，被划分了的矩阵 $A$ 称为分块矩阵。</p>
+<h4 id="分块矩阵的运算"><a href="#分块矩阵的运算" class="headerlink" title="分块矩阵的运算"></a>分块矩阵的运算</h4><p>分块矩阵的加法：设 $A$ 与 $B$ 是两个同型矩阵，按照相同方式分块后相加，得到和矩阵。</p>
+<p>分块矩阵的数乘：数乘分块矩阵等于数乘分块矩阵的每个子块所得矩阵。</p>
+<p>分块矩阵的转置：每个子块行列交换后再将每个子块转置。</p>
+<p>分块矩阵的乘法</p>
+<p>准对角矩阵：形为<br>$$<br>\begin{pmatrix}A_1&amp;&amp;&amp; \\ &amp;A_2&amp;&amp; \\ &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;A_s\end{pmatrix}<br>$$<br>的 $n$ 阶矩阵 $A$ 称为准对角矩阵。</p>
+<p>性质：</p>
+<ol>
+<li>两个同型的准对角矩阵的乘积还是准对角矩阵。</li>
+<li>准对角矩阵 $A$ 可逆的充分必要条件是 $A_1,\cdots,A_s$ 均可逆矩阵，且为同一型的准对角矩阵。</li>
+</ol>
+<h2 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h2><h3 id="向量组和矩阵的秩"><a href="#向量组和矩阵的秩" class="headerlink" title="向量组和矩阵的秩"></a>向量组和矩阵的秩</h3><h4 id="向量组的秩"><a href="#向量组的秩" class="headerlink" title="向量组的秩"></a>向量组的秩</h4><h4 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h4><h3 id="线性方程组的解法"><a href="#线性方程组的解法" class="headerlink" title="线性方程组的解法"></a>线性方程组的解法</h3><h4 id="非齐次线性方程组的解法"><a href="#非齐次线性方程组的解法" class="headerlink" title="非齐次线性方程组的解法"></a>非齐次线性方程组的解法</h4><h4 id="齐次线性方程组的解法"><a href="#齐次线性方程组的解法" class="headerlink" title="齐次线性方程组的解法"></a>齐次线性方程组的解法</h4><h3 id="线性方程组的解的结构"><a href="#线性方程组的解的结构" class="headerlink" title="线性方程组的解的结构"></a>线性方程组的解的结构</h3><h4 id="齐次线性方程组的基础解系"><a href="#齐次线性方程组的基础解系" class="headerlink" title="齐次线性方程组的基础解系"></a>齐次线性方程组的基础解系</h4><h4 id="非齐次线性方程组解的结构"><a href="#非齐次线性方程组解的结构" class="headerlink" title="非齐次线性方程组解的结构"></a>非齐次线性方程组解的结构</h4><h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><h3 id="线性空间的概念"><a href="#线性空间的概念" class="headerlink" title="线性空间的概念"></a>线性空间的概念</h3><h4 id="线性空间的定义与例子"><a href="#线性空间的定义与例子" class="headerlink" title="线性空间的定义与例子"></a>线性空间的定义与例子</h4><h4 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h4><h3 id="n-维线性空间"><a href="#n-维线性空间" class="headerlink" title="$n$ 维线性空间"></a>$n$ 维线性空间</h3><h4 id="n-维线性空间的定义"><a href="#n-维线性空间的定义" class="headerlink" title="$n$ 维线性空间的定义"></a>$n$ 维线性空间的定义</h4><h4 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h4><h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性变换的定义"><a href="#线性变换的定义" class="headerlink" title="线性变换的定义"></a>线性变换的定义</h3><h3 id="维线性空间-中线性变换的矩阵"><a href="#维线性空间-中线性变换的矩阵" class="headerlink" title="$$ 维线性空间  中线性变换的矩阵"></a>$$ 维线性空间  中线性变换的矩阵</h3><h3 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h3><h2 id="欧几里得空间"><a href="#欧几里得空间" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h2><h2 id="n-元实二次型"><a href="#n-元实二次型" class="headerlink" title="$n$ 元实二次型"></a>$n$ 元实二次型</h2>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/">代数</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">高等代数</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/10/30/%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">格式问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/09/19/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/">
+                        <span class="hidden-mobile">复变函数与积分变换</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "identicon",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://myblog-lti2c7o13-david2013777.vercel.app/",
+          avatarCDN: "",
+          avatarForce: true,
+          requiredFields: [],
+          emojiCDN: "",
+          emojiMaps: null,
+          anonymous: null,
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5l1tkimsu8t&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
