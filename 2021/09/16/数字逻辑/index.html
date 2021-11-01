@@ -224,7 +224,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      9.3k 字
+      10k 字
     </span>
   
 
@@ -234,7 +234,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      102
+      110
        分钟
     </span>
   
@@ -276,7 +276,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -579,7 +579,50 @@
 <p>二、动态特性</p>
 <p>MOS管本身导通和截止时电荷积累和消散的时间很小。<br>动态特性主要取决于电路中杂散电容充、放电所需的时间。</p>
 <p>为了提高MOS器件的工作速度，引入了CMOS电路。<br>在CMOS电路中，由于充电电路和放电电路都是低阻电路，因此，其充、放电过程都比较快，从而使CMOS电路有较高的开关速度</p>
-<h3 id="逻辑门电路"><a href="#逻辑门电路" class="headerlink" title="逻辑门电路"></a>逻辑门电路</h3>
+<h3 id="逻辑门电路"><a href="#逻辑门电路" class="headerlink" title="逻辑门电路"></a>逻辑门电路</h3><h4 id="简单的逻辑门电路"><a href="#简单的逻辑门电路" class="headerlink" title="简单的逻辑门电路"></a>简单的逻辑门电路</h4><ol>
+<li><p>与门<br><img src="%E4%B8%8E%E9%97%A8.jpg" srcset="/img/loading.gif" lazyload alt="与门"></p>
+</li>
+<li><p>或门<br><img src="%E6%88%96%E9%97%A8.jpg" srcset="/img/loading.gif" lazyload alt="或门"></p>
+</li>
+<li><p>非门<br><img src="%E9%9D%9E%E9%97%A8.jpg" srcset="/img/loading.gif" lazyload alt="非门"></p>
+</li>
+</ol>
+<h4 id="TTL-集成逻辑门电路"><a href="#TTL-集成逻辑门电路" class="headerlink" title="TTL 集成逻辑门电路"></a>TTL 集成逻辑门电路</h4><p>TTL(Transistor Transistor Logic)电路是晶体管-晶体管逻辑电路的简称。<br>TTL电路的功耗大、线路较复杂，使其集成度受到一定的限制，故广泛应用于中小规模逻辑电路中。</p>
+<h3 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h3><p>触发器是一种具有记忆功能的电子器件。</p>
+<p>触发器的特点：</p>
+<ul>
+<li>有两个互补的输出端 $Q$ 和 $\overline{Q}$</li>
+<li>有两个稳定状态。通常将 $Q=1$ 和 $\overline{Q}=0$ 称为“1”状态，而把 $Q=0$ 和 $\overline{Q}=1$ 称为“0” 状态。当输入信号不发生变化时，触发器状态稳定不变。</li>
+<li>在一定输入信号作用下（触发），触发器可以从一个稳定状态转移到另一个稳定状态。</li>
+</ul>
+<p>现态与次态的概念：</p>
+<p>现态:输入信号作用前的状态，记作 $Q^n$ 和 $\overline{Q^n}$ , 一般简记为 $Q$ 和 $\overline{Q}$ ；<br>次态:输入信号作用后的状态，记作 $Q^{n+1}$ 和 $\overline{Q^{n+1}}$ 。<br>显然，次态是现态和输入的函数。</p>
+<h4 id="基本的R-S触发器"><a href="#基本的R-S触发器" class="headerlink" title="基本的R-S触发器"></a>基本的R-S触发器</h4><p>基本R-S触发器是直接复位、置位触发器的简称，由于它是构成各种功能触发器的基本部件，故称为基本R-S触发器。</p>
+<p>一、 用与非门构成的基本R-S触发器</p>
+<p>1.组成：由两个与非门交叉耦合构成，其逻辑图和逻辑符号分别如下图 (a)和(b)所示。</p>
+<p><img src="%E4%B8%8E%E9%9D%9E%E9%97%A8%E6%9E%84%E6%88%90%E7%9A%84R-S%E8%A7%A6%E5%8F%91%E5%99%A8.png" srcset="/img/loading.gif" lazyload></p>
+<p>R(Reset)称为置0端或者复位端;<br>S(Set)称为置1端或置位端；<br>逻辑符号输入端加的小圆圈表示低电平或负脉冲有效。</p>
+<ol start="2">
+<li>工作原理</li>
+</ol>
+<p>(1)若R=1,S=1，则触发器保持原来状态不变；<br>(2)若R=1,S=0,则触发器置为1状态；（S置1端）<br>(3)若R=0,S=1,则触发器置为0状态；（R置0端）<br>(4)不允许出现R=0,S=0。（约束条件！）</p>
+<ol start="3">
+<li>逻辑功能及其描述</li>
+</ol>
+<p>由与非门构成的R-S触发器的逻辑功能如下表所示。</p>
+<p><img src="%E5%9F%BA%E6%9C%ACR-S%E8%A7%A6%E5%8F%91%E5%99%A8%E5%8A%9F%E8%83%BD%E8%A1%A8.png" srcset="/img/loading.gif" lazyload></p>
+<p>表中”d”表示触发器次态不确定。该表又称为次态真值表。</p>
+<p>状态表、状态转移图、激励表:</p>
+<p><img src="%E7%8A%B6%E6%80%81%E8%A1%A8%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E5%9B%BE%E6%BF%80%E5%8A%B1%E8%A1%A8.jpg.png" srcset="/img/loading.gif" lazyload></p>
+<p>用卡诺图化简后，可得到该触发器的次态方程</p>
+<p>$$<br>Q^{n+1}=\overline{S}+RQ<br>$$</p>
+<p>用卡诺图化简后，可得到该触发器的次态方程： $Q^{n+1}$ 。</p>
+<p>因为R、S不允许同时为0，所以输入必须满足约束条件：$R+S=1$</p>
+<p>二、用或非门构成的基本R-S触发器</p>
+<p>1.组成：由两个或非门交叉耦合组成，其逻辑图和逻辑符号分别如图(a)和图(b)所示。</p>
+<p><img src="%E6%88%96%E9%9D%9E%E9%97%A8%E6%9E%84%E6%88%90%E7%9A%84R-S%E8%A7%A6%E5%8F%91%E5%99%A8.png" srcset="/img/loading.gif" lazyload alt="或非门构成的R-S触发器"></p>
+<p>该电路的输入是正脉冲或高电平有效，故逻辑符号的输入端未加小圆圈。</p>
+
             </div>
             <hr>
             <div>
