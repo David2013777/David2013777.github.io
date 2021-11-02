@@ -226,7 +226,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.7k 字
+      4.7k 字
     </span>
   
 
@@ -236,7 +236,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      53
+      66
        分钟
     </span>
   
@@ -278,7 +278,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -619,6 +619,22 @@
 <p>设关系$R, r(R), s(R), t(R)$的关系图分别记为$G, G_r, G_s, G_t$ , 则$G_r, G_s, G_t$ 的顶点集与 $G$ 的顶点集相等. 除了 $G$ 的边以外, 以下述方法添加新边：<br>考察$G$的每个顶点, 如果没有环就加上一个环，最终得到$G_r$ 。考察$G$的每条边, 如果有一条 $x_i$ 到 $x_j$ 的单向边, $i\neq j$, 则在$G$中加一条 $x_j$ 到 $x_i$ 的反方向边，最终得到$G_s$。考察$G$的每个顶点 $x_i$, 找从 $x_i$ 出发的每一条路径，如果从 $x_i$ 到路径中任何结点 $x_j$ 没有边，就加上这条边。当检查完所有的顶点后就得到图$G_t$。</p>
 <h4 id="传递闭包的计算——Warshall算法"><a href="#传递闭包的计算——Warshall算法" class="headerlink" title="传递闭包的计算——Warshall算法"></a>传递闭包的计算——Warshall算法</h4><p>算法思路：<br>考虑 $n+1$个矩阵的序列$M_0, M_1,\cdots , M_n$, 将矩阵 $M_k$ 的 $i$ 行$ j$<br>列的元素记作$M_k[i,j]$. 对于$k=0,1\cdots,n, M_k[i,j]=1$当且仅当在$R$ 的关系图中存在一条从 $x_i$ 到 $x_j$ 的路径，并且这条路径除端点外中间只经过 $\{x_1, x_2,\cdots, x_k\}$ 中的顶点。不难证明 $M_0$ 就是 $R$ 的关系矩阵，而 $M_n$ 就对应了 $R$ 的传递闭包。</p>
 <p>Warshall算法：<br>从$M_0$开始，顺序计算 $M_1, M_2,\cdots,$ 直到 $M_n$ 为止。</p>
+<h3 id="等价关系与偏序关系"><a href="#等价关系与偏序关系" class="headerlink" title="等价关系与偏序关系"></a>等价关系与偏序关系</h3><h4 id="等价关系的定义"><a href="#等价关系的定义" class="headerlink" title="等价关系的定义"></a>等价关系的定义</h4><p>等价关系：设 $R$ 为非空集合上的关系. 如果 $R$ 是自反的、<br>对称的和传递的, 则称 $R$ 为 $A$ 上的等价关系. 设 $R$<br>是一个等价关系, 若 $&lt;x,y&gt;\in R$, 称 $x$ 等价于$y$, 记做<br>$x\sim y$</p>
+<h4 id="等价类"><a href="#等价类" class="headerlink" title="等价类"></a>等价类</h4><p>等价类：设$R$为非空集合A上的等价关系, $\forall x\in A$，令<br>$[x]_R = \{ y | y\in A\wedge xRy \}$<br>称 $[x]_R$ 为 $x$ 关于 $R$ 的等价类, 简称为 $x$ 的等价类, 简记为 $[x]$ 。</p>
+<h4 id="等价类的性质"><a href="#等价类的性质" class="headerlink" title="等价类的性质"></a>等价类的性质</h4><p>定理：设$R$是非空集合$A$上的等价关系, 则<br>(1) $\forall x\in A, [x]$ 是A的非空子集.<br>(2) $\forall x, y\in A,$ 如果 $x R y$, 则 $[x]=[y]$。<br>(3) $∀x, y\in A$, 如果 $x \not Ry$, 则 $[x]$与$[y]$不交.<br>(4) $\cup \{ [x] | x\in A\}=A$，即所有等价类的并集就<br>是 $A$。</p>
+<h4 id="商集"><a href="#商集" class="headerlink" title="商集"></a>商集</h4><p>商集：设$R$为非空集合$A$上的等价关系, 以$R$的所有等价类作为元素的集合称为$A$关于$R$的商集, 记做$A/R$, $A/R = \{ [x]R | x∈A \}$</p>
+<h4 id="集合的划分"><a href="#集合的划分" class="headerlink" title="集合的划分"></a>集合的划分</h4><p>集合的划分：设$A$为非空集合, 若$A$的子集族$\pi (\pi \subseteq P(A))$<br>满足下面条件：<br>(1) $$\varnothing \notin \pi$$<br>(2) $$\forall x\forall y(x,y\in \pi \wedge x\neq y\rightarrow x\cap y=\varnothing)$$<br>(3) $$\cup \pi =A$$<br>则称$\pi $是$A$的一个划分, 称$\pi $中的元素为$A$的划分<br>块。</p>
+<h4 id="等价关系与划分的一一对应"><a href="#等价关系与划分的一一对应" class="headerlink" title="等价关系与划分的一一对应"></a>等价关系与划分的一一对应</h4><p>商集 $A/R$ 就是 $A$ 的一个划分<br>不同的商集对应于不同的划分<br>任给 $A$ 的一个划分$\pi $, 如下定义 $A$ 上的关系 $R:R = {&lt;x,y&gt; | x,y\in A\wedge x 与 y \text{在}\pi \text{的同一划分块中}}$ 则 $R$ 为 $A$ 上的等价关系, 且该等价关系确定的商集就是 $\pi $。</p>
+<h4 id="等价关系的计数"><a href="#等价关系的计数" class="headerlink" title="等价关系的计数"></a>等价关系的计数</h4><p>$A$ 上的等价关系计数<br>$$<br>\sum_{m=1}^n\begin{Bmatrix} n \\ m \end{Bmatrix}<br>$$<br>这里$m$表示分成$m$个等价类。 $|A|=n$。</p>
+<p>第二类Stirling数的定义：$n$ 个不同的球恰好放到 $r$ 个相同的盒子里的方法数称为第二类 Stirling 数，记作<br>$$<br>\begin{Bmatrix} n \\ m \end{Bmatrix}<br>$$<br>递推方程：<br>$$<br>\begin{Bmatrix} n \\ r \end{Bmatrix}=r \begin{Bmatrix} n-1 \\ r \end{Bmatrix}+\begin{Bmatrix} n-1 \\ r-1 \end{Bmatrix},\begin{Bmatrix} n \\ 0 \end{Bmatrix}=0,\begin{Bmatrix} n \\ 1 \end{Bmatrix}=1<br>$$</p>
+<p>$$<br>\begin{Bmatrix} n \\ 2 \end{Bmatrix}=2^{n-1}-1,\begin{Bmatrix} n \\ n-1 \end{Bmatrix}=\begin{Bmatrix} n \\ 2 \end{Bmatrix}<br>$$</p>
+<h4 id="偏序关系"><a href="#偏序关系" class="headerlink" title="偏序关系"></a>偏序关系</h4><p>偏序关系：非空集合$A$上的自反、反对称和传递的关系，称为$A$上的偏序关系，记作$\leq $。 设$\leq $为偏序关系, 如<br>果$&lt;x, y&gt;\in \leq $, 则记作 $x\leq y$, 读作 $x$“小于或等于”$y$。</p>
+<p>$x$与 $y$ 可比：设$R$为非空集合$A$上的偏序关系,<br>$x,y\in A,$ $x$与$y$可比 $\Leftrightarrow  x\leq y \vee y\leq x$。</p>
+<p>全序关系：$R$为非空集合$A$上的偏序, $\forall x,y\in A$, $x$与 $y$ 都是可比的，则称 $R$ 为全序（或 线序）。</p>
+<p>覆盖：设$R$为非空集合A上的偏序关系, $x, y\in A$, 如<br>果 $x \leq y$且不存在 $z\in A$ 使得 $x \leq  z \leq  y$, 则称 $y$ 覆盖 $x$ 。</p>
+<h4 id="偏序集与哈斯图"><a href="#偏序集与哈斯图" class="headerlink" title="偏序集与哈斯图"></a>偏序集与哈斯图</h4><p>偏序集：集合$A$和$A$上的偏序关系$\leq $一起叫做偏序集, 记作 $&lt;A,\leq &gt;$。</p>
+<p>哈斯图：利用偏序自反、反对称、传递性简化的关系图。</p>
+<h4 id="偏序集的特定元素"><a href="#偏序集的特定元素" class="headerlink" title="偏序集的特定元素"></a>偏序集的特定元素</h4><p>定义 设$&lt;A,\leq &gt;$为偏序集, $B\subseteq A, y\in B$。<br>(1) 若$\forall x(x\in B\rightarrow y\leq x)$ 成立, 则称 $y$ 为 $B$ 的最小元。<br>(2) 若$\forall x(x\in B→x\leq y)$ 成立, 则称 $y$ 为 $B$ 的最大元。<br>(3) 若$\neg \exists x (x\in B\wedge x&lt; y) $成立, 则称 $y$ 为$B$的极小元。<br>(4) 若$\neg \exists x (x\in B\wedge y&lt;x)$ 成立, 则称 $y$ 为$B$的极大元。</p>
 
             </div>
             <hr>
