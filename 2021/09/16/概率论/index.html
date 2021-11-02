@@ -278,7 +278,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：几秒前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -566,7 +566,7 @@
 <p>协方差的性质：</p>
 <ol>
 <li> $\mathrm{Cov}(aX,bY)=ab\mathrm{Cov}(X,Y)$ ， $a,b$ 是常数。</li>
-<li> $\mathrm{Cov}(X_1+X_2,Y)=\mathrm{Cov}(X_1,Y)+\mathrm{Cov}(X_2,Y)$ 。</li>
+<li>$$\mathrm{Cov}(X_1+X_2,Y)=\mathrm{Cov}(X_1,Y)+\mathrm{Cov}(X_2,Y)$$</li>
 </ol>
 <p>考虑以 $X$ 的线性函数 $a+bX$ 来近似表示 $Y$ ，我们以均方误差<br>$$<br>e=E[(Y-(a+bX))^2]=E(Y^2)+b^2E(X^2)+a^2-2bE(XY)+2abE(X)-2aE(Y)<br>$$<br>来衡量以 $a+bX$ 近似表达 $Y$ 的好坏程度。 $e$ 的值越小表示 $a+bX$ 与 $Y$ 的近似程度越好。这样，我们就取 $a,b$ 使 $e$ 取到最小，将 $e$ 分别关于 $a,b$ 求偏导数，并令它们等于零，得<br>$$<br>\begin{cases} \dfrac{\partial e}{\partial a}=2a+2bE(X)-2E(Y)=0 \\  \dfrac{\partial e}{\partial b}=2bE(X^2)-2E(XY)+2aE(X)=0  \end{cases}<br>$$<br>解得<br>$$<br>b_0=\dfrac{\mathrm{Cov}(X,Y)}{D(X)},a_0=E(Y)-b_0E(X)=E(Y)-E(X)\dfrac{\mathrm{Cov}(X,Y)}{D(X)}<br>$$<br>将 $A_0,b_0$ 代入 $e$ 的定义式中，有<br>$$<br>\min E\{ [Y-(a+bX)]^2 \}=(1-\rho_{XY}^2)D(Y)<br>$$</p>
 <p>定理： $|\rho_{XY}|\leq 1$ 。</p>
