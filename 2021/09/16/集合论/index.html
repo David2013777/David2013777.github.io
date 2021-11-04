@@ -229,7 +229,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.7k 字
+      5.4k 字
     </span>
   
 
@@ -239,7 +239,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      66
+      75
        分钟
     </span>
   
@@ -281,7 +281,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：5 小时前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -631,13 +631,36 @@
 <h4 id="等价关系的计数"><a href="#等价关系的计数" class="headerlink" title="等价关系的计数"></a>等价关系的计数</h4><p>$A$ 上的等价关系计数<br>$$<br>\sum_{m=1}^n\begin{Bmatrix} n \\ m \end{Bmatrix}<br>$$<br>这里$m$表示分成$m$个等价类。 $|A|=n$。</p>
 <p>第二类Stirling数的定义：$n$ 个不同的球恰好放到 $r$ 个相同的盒子里的方法数称为第二类 Stirling 数，记作<br>$$<br>\begin{Bmatrix} n \\ m \end{Bmatrix}<br>$$<br>递推方程：<br>$$<br>\begin{Bmatrix} n \\ r \end{Bmatrix}=r \begin{Bmatrix} n-1 \\ r \end{Bmatrix}+\begin{Bmatrix} n-1 \\ r-1 \end{Bmatrix},\begin{Bmatrix} n \\ 0 \end{Bmatrix}=0,\begin{Bmatrix} n \\ 1 \end{Bmatrix}=1<br>$$</p>
 <p>$$<br>\begin{Bmatrix} n \\ 2 \end{Bmatrix}=2^{n-1}-1,\begin{Bmatrix} n \\ n-1 \end{Bmatrix}=\begin{Bmatrix} n \\ 2 \end{Bmatrix}<br>$$</p>
-<h4 id="偏序关系"><a href="#偏序关系" class="headerlink" title="偏序关系"></a>偏序关系</h4><p>偏序关系：非空集合$A$上的自反、反对称和传递的关系，称为$A$上的偏序关系，记作$\leq $。 设$\leq $为偏序关系, 如<br>果$&lt;x, y&gt;\in \leq $, 则记作 $x\leq y$, 读作 $x$“小于或等于”$y$。</p>
-<p>$x$与 $y$ 可比：设$R$为非空集合$A$上的偏序关系,<br>$x,y\in A,$ $x$与$y$可比 $\Leftrightarrow  x\leq y \vee y\leq x$。</p>
+<h4 id="偏序关系"><a href="#偏序关系" class="headerlink" title="偏序关系"></a>偏序关系</h4><p>偏序关系：非空集合$A$上的自反、反对称和传递的关系，称为$A$上的偏序关系，记作$\preccurlyeq $。 设$\preccurlyeq $为偏序关系, 如<br>果$&lt;x, y&gt;\in \preccurlyeq $, 则记作 $x\preccurlyeq y$, 读作 $x$“小于或等于”$y$。</p>
+<p>$x$与 $y$ 可比：设$R$为非空集合$A$上的偏序关系,<br>$x,y\in A,$ $x$与$y$可比 $\Leftrightarrow  x\preccurlyeq y \vee y\preccurlyeq x$。</p>
 <p>全序关系：$R$为非空集合$A$上的偏序, $\forall x,y\in A$, $x$与 $y$ 都是可比的，则称 $R$ 为全序（或 线序）。</p>
-<p>覆盖：设$R$为非空集合A上的偏序关系, $x, y\in A$, 如<br>果 $x \leq y$且不存在 $z\in A$ 使得 $x \leq  z \leq  y$, 则称 $y$ 覆盖 $x$ 。</p>
-<h4 id="偏序集与哈斯图"><a href="#偏序集与哈斯图" class="headerlink" title="偏序集与哈斯图"></a>偏序集与哈斯图</h4><p>偏序集：集合$A$和$A$上的偏序关系$\leq $一起叫做偏序集, 记作 $&lt;A,\leq &gt;$。</p>
+<p>覆盖：设$R$为非空集合A上的偏序关系, $x, y\in A$, 如<br>果 $x \preccurlyeq y$且不存在 $z\in A$ 使得 $x \preccurlyeq  z \preccurlyeq  y$, 则称 $y$ 覆盖 $x$ 。</p>
+<h4 id="偏序集与哈斯图"><a href="#偏序集与哈斯图" class="headerlink" title="偏序集与哈斯图"></a>偏序集与哈斯图</h4><p>偏序集：集合$A$和$A$上的偏序关系$\preccurlyeq $一起叫做偏序集, 记作 $&lt;A,\preccurlyeq &gt;$。</p>
 <p>哈斯图：利用偏序自反、反对称、传递性简化的关系图。</p>
-<h4 id="偏序集的特定元素"><a href="#偏序集的特定元素" class="headerlink" title="偏序集的特定元素"></a>偏序集的特定元素</h4><p>定义 设$&lt;A,\leq &gt;$为偏序集, $B\subseteq A, y\in B$。<br>(1) 若$\forall x(x\in B\rightarrow y\leq x)$ 成立, 则称 $y$ 为 $B$ 的最小元。<br>(2) 若$\forall x(x\in B→x\leq y)$ 成立, 则称 $y$ 为 $B$ 的最大元。<br>(3) 若$\neg \exists x (x\in B\wedge x&lt; y) $成立, 则称 $y$ 为$B$的极小元。<br>(4) 若$\neg \exists x (x\in B\wedge y&lt;x)$ 成立, 则称 $y$ 为$B$的极大元。</p>
+<h4 id="偏序集的特定元素"><a href="#偏序集的特定元素" class="headerlink" title="偏序集的特定元素"></a>偏序集的特定元素</h4><p>定义 设$&lt;A,\preccurlyeq &gt;$为偏序集, $B\subseteq A, y\in B$。<br>(1) 若$\forall x(x\in B\rightarrow y\preccurlyeq x)$ 成立, 则称 $y$ 为 $B$ 的最小元。<br>(2) 若$\forall x(x\in B→x\preccurlyeq y)$ 成立, 则称 $y$ 为 $B$ 的最大元。<br>(3) 若$\neg \exists x (x\in B\wedge x&lt; y) $成立, 则称 $y$ 为$B$的极小元。<br>(4) 若$\neg \exists x (x\in B\wedge y&lt;x)$ 成立, 则称 $y$ 为$B$的极大元。</p>
+<p>定义 设$&lt;A, \leq&gt;$为偏序集, $B\subseteq A$, $y\in A$。<br>(1) 若$\forall x(x\in B\rightarrow x\preccurlyeq y)$ 成立, 则称 $y$ 为 $B$ 的上界。<br>(2) 若$\forall x(x\in B\rightarrow y\preccurlyeq x)$ 成立, 则称 $y$ 为 $B$ 的下界.<br>(3) 令 $C＝\{y | y\text{为}B\text{的上界}\}$ , 则称$C$的最小元为$B$的最小上界或上确界。<br>(4) 令 $D＝\{y | y\text{为}B\text{的下界}\}$, 则称$D$的最大元为$B$的最大下界或下确界。</p>
+<h4 id="特殊元素的性质"><a href="#特殊元素的性质" class="headerlink" title="特殊元素的性质"></a>特殊元素的性质</h4><ul>
+<li>对于有穷集，极小元和极大元必存在，可能存在多个。</li>
+<li>最小元和最大元不一定存在，如果存在一定惟一。</li>
+<li>最小元一定是极小元；最大元一定是极大元。</li>
+<li>孤立结点既是极小元，也是极大元。</li>
+<li>下界、上界、下确界、上确界不一定存在。</li>
+<li>下界、上界存在不一定惟一。</li>
+<li>下确界、上确界如果存在，则惟一。</li>
+<li>集合的最小元就是它的下确界，最大元就是它的上确界；反之不对。</li>
+</ul>
+<h4 id="偏序集的特殊子集"><a href="#偏序集的特殊子集" class="headerlink" title="偏序集的特殊子集"></a>偏序集的特殊子集</h4><p>定义：设$&lt;A,\preccurlyeq &gt;$为偏序集, $B\subseteq A$。<br>(1) 如果$\forall x,y\in B$，$x$与$y$都是可比的，则称$B$是$A$中的一条链，$B$中的元素个数称为链的长度；<br>(2) 如果$\forall x,y\in B$，$x\neq y$，$x$与$y$都是不可比的，则称$B$是$A$中的一条反链，$B$中的元素个数称为反链的长度。</p>
+<h4 id="分解为反链"><a href="#分解为反链" class="headerlink" title="分解为反链"></a>分解为反链</h4><p>定理：设$&lt;A,\preccurlyeq &gt;$为偏序集，如果$A$中最长的链长度为$n$, 则<br>$A$中存在极大元，且该偏序集可以分解为 $n$ 条不相交的反链。</p>
+<p>定理：设$&lt;A,\preccurlyeq &gt;$为含$mn+1$个元素的偏序集，则$A$中存在长<br>度为$m+1$的反链, 或长度为$n+1$的链。</p>
+<h4 id="拟序关系"><a href="#拟序关系" class="headerlink" title="拟序关系"></a>拟序关系</h4><p>拟序关系：设 $A\neq \varnothing$ ， $R\subseteq A\times A$ 。若 $R$ 是反自反，传递的，就称 $R$ 为 $A$ 上的拟序关系，常用 $\prec$ 表示拟序关系，称 $&lt;A,\prec&gt;$ 为拟序集。</p>
+<h4 id="拟序和偏序"><a href="#拟序和偏序" class="headerlink" title="拟序和偏序"></a>拟序和偏序</h4><p>定理：设 $\preccurlyeq$ 是非空集合 $A$ 上的偏序关系， $\prec $ 是 $A$ 上的拟序关系，则</p>
+<ol>
+<li> $\prec $ 是反对称的。</li>
+<li> $\preccurlyeq -I_A$ 是 $A$ 上的拟序关系。</li>
+<li> $\prec \cup I_A$ 是 $$ 上的偏序关系。</li>
+</ol>
+<h4 id="三歧性，拟线序"><a href="#三歧性，拟线序" class="headerlink" title="三歧性，拟线序"></a>三歧性，拟线序</h4><p>三歧性：设 $A\neq \varnothing$ ， $\prec $ 是 $A$ 上拟序关系，若<br>$$<br>x\prec y,x=y,y\prec x<br>$$<br>中有且仅有一式成立，则称 $\prec $ 具有三歧性。同时称 $\prec $ 为 $A$ 上的拟线序关系（拟全序关系），称 $&lt;A,\prec &gt;$ 为拟线序集。</p>
+<h4 id="良序关系"><a href="#良序关系" class="headerlink" title="良序关系"></a>良序关系</h4><p>良序集：设 $&lt;A,\prec &gt;$ 为（拟）全序集，若 $A$ 任何非空子集 $B$ 均有最小元，则称 $\prec $ 为 $A$ 上的良序关系，称 $&lt;A,\prec &gt;$ 为良序集。</p>
 
             </div>
             <hr>
