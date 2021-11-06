@@ -55,7 +55,7 @@
   <meta name="author" content="David">
   <meta name="keywords" content="">
   
-  <title>格式问题 - Blog</title>
+  <title>数字信号处理 - Blog</title>
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -266,7 +266,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="格式问题">
+            <span class="h2" id="subtitle" title="数字信号处理">
               
             </span>
 
@@ -276,8 +276,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-30 22:23" pubdate>
-        2021年10月30日 晚上
+      <time datetime="2021-09-17 15:50" pubdate>
+        2021年9月17日 下午
       </time>
     </span>
   
@@ -288,7 +288,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      714 字
+      3k 字
     </span>
   
 
@@ -298,7 +298,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12
+      34
        分钟
     </span>
   
@@ -336,57 +336,204 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">格式问题</h1>
+            <h1 style="display: none">数字信号处理</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="格式问题"><a href="#格式问题" class="headerlink" title="格式问题"></a>格式问题</h1><h2 id="大括号"><a href="#大括号" class="headerlink" title="大括号"></a>大括号</h2><p>代码；</p>
-<figure class="highlight gams"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gams"><span class="hljs-symbol">$</span>\&#123; hello,world \&#125;<span class="hljs-symbol">$</span><br></code></pre></div></td></tr></table></figure>
-
-<p>显示：${ hello,world }$</p>
-<p>解决方法：</p>
-<p>代码：</p>
-<figure class="highlight gams"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gams"><span class="hljs-symbol">$</span>\\&#123; hello,world \\&#125;<span class="hljs-symbol">$</span><br></code></pre></div></td></tr></table></figure>
-
-<p>显示：$\{ hello,world \}$</p>
-<h2 id="行间公式换行"><a href="#行间公式换行" class="headerlink" title="行间公式换行"></a>行间公式换行</h2><p>代码；</p>
-<figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs elixir"><span class="hljs-variable">$$</span><br>\<span class="hljs-keyword">begin</span>&#123;cases&#125; hello \\ world \<span class="hljs-keyword">end</span>&#123;cases&#125;<br><span class="hljs-variable">$$</span><br></code></pre></div></td></tr></table></figure>
-
-<p>显示：</p>
-<p>$$<br>\begin{cases} hello \ world \end{cases}<br>$$</p>
-<p>解决方法：</p>
-<p>代码：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs elixir"><span class="hljs-variable">$$</span><br>\<span class="hljs-keyword">begin</span>&#123;cases&#125; hello \\\\ world \<span class="hljs-keyword">end</span>&#123;cases&#125;<br><span class="hljs-variable">$$</span><br></code></pre></div></td></tr></table></figure>
-
-<p>显示：</p>
-<p>$$<br>\begin{cases} hello \\ world \end{cases}<br>$$</p>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>代码；</p>
-<figure class="highlight ruby"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ruby">数乘：若 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>是一个数， <span class="hljs-variable">$A</span>=(a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>是矩阵，则同型矩阵 <span class="hljs-variable">$(</span>\<span class="hljs-built_in">lambda</span> a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>称为数 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>与矩阵 $A<span class="hljs-variable">$ </span>的乘积，记为 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A<span class="hljs-variable">$ </span>或 <span class="hljs-variable">$A</span>\<span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>，即 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A=(\<span class="hljs-built_in">lambda</span> a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>。<br></code></pre></div></td></tr></table></figure>
-
-<p>显示：<br>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})<em>{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a</em>{ij})<em>{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a</em>{ij})_{m\times n}$ 。</p>
-<p>解决方法：</p>
-<p>代码：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ruby">数乘：若 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>是一个数， <span class="hljs-variable">$A</span>=(a\_&#123;ij&#125;)\_&#123;m\times n&#125;<span class="hljs-variable">$ </span>是矩阵，则同型矩阵 <span class="hljs-variable">$(</span>\<span class="hljs-built_in">lambda</span> a\_&#123;ij&#125;)\_&#123;m\times n&#125;<span class="hljs-variable">$ </span>称为数 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>与矩阵 $A<span class="hljs-variable">$ </span>的乘积，记为 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A<span class="hljs-variable">$ </span>或 <span class="hljs-variable">$A</span>\<span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>，即 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A=(\<span class="hljs-built_in">lambda</span> a\_&#123;ij&#125;)\_&#123;m\times n&#125;<span class="hljs-variable">$ </span>。<br></code></pre></div></td></tr></table></figure>
-
-<p>显示：</p>
-<p>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p>
-<h2 id="变成链接"><a href="#变成链接" class="headerlink" title="!+[]+()变成链接"></a>!+[]+()变成链接</h2><p>代码；</p>
-<figure class="highlight dust"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dust"><span class="xml">$$</span><br><span class="xml">\begin</span><span class="hljs-template-variable">&#123;aligned&#125;</span><span class="xml"> N_m(x)=&amp;\frac</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">J_m(x)\ln\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;m-1&#125;</span><span class="xml">\frac</span><span class="hljs-template-variable">&#123;(m-k-1)&#125;</span><span class="hljs-template-variable">&#123;k!&#125;</span><span class="xml">(\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k-m&#125;</span><span class="xml"> \\\\ &amp;-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;\infty&#125;</span><span class="xml">(-1)^k\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;k!(m+k)!&#125;</span><span class="xml">[\Phi(m+k+1)+\Phi(k+1)](\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k+m&#125;</span><span class="xml"> \end</span><span class="hljs-template-variable">&#123;aligned&#125;</span><span class="xml"></span><br><span class="xml">$$</span><br></code></pre></div></td></tr></table></figure>
-
-<p>显示：</p>
-<p>$$<br>\begin{aligned} N_m(x)=&amp;\frac{2}{\pi}J_m(x)\ln\frac{x}{2}-\frac{1}{\pi}\sum_{k=0}^{m-1}\frac{(m-k-1)}{k!}(\frac{x}{2})^{2k-m} \\ &amp;-\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!(m+k)!}<a href="%5Cfrac%7Bx%7D%7B2%7D">\Phi(m+k+1)+\Phi(k+1)</a>^{2k+m} \end{aligned}<br>$$</p>
-<p>解决方法：</p>
-<p>代码：</p>
-<figure class="highlight dust"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dust"><span class="xml">\begin</span><span class="hljs-template-variable">&#123;aligned&#125;</span><span class="xml"> N_m(x)=&amp;\frac</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">J_m(x)\ln\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;m-1&#125;</span><span class="xml">\frac</span><span class="hljs-template-variable">&#123;(m-k-1)&#125;</span><span class="hljs-template-variable">&#123;k!&#125;</span><span class="xml">(\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k-m&#125;</span><span class="xml"> \\\\ &amp;-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;\infty&#125;</span><span class="xml">(-1)^k\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;k!(m+k)!&#125;</span><span class="xml">\[\Phi(m+k+1)+\Phi(k+1)\](\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k+m&#125;</span><span class="xml"> \end</span><span class="hljs-template-variable">&#123;aligned&#125;</span><br></code></pre></div></td></tr></table></figure>
-
-<p>显示：</p>
-<p>$$<br>\begin{aligned} N_m(x)=&amp;\frac{2}{\pi}J_m(x)\ln\frac{x}{2}-\frac{1}{\pi}\sum_{k=0}^{m-1}\frac{(m-k-1)}{k!}(\frac{x}{2})^{2k-m} \\ &amp;-\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!(m+k)!}[\Phi(m+k+1)+\Phi(k+1)](\frac{x}{2})^{2k+m} \end{aligned}<br>$$</p>
-
+              <h1 id="数字信号处理"><a href="#数字信号处理" class="headerlink" title="数字信号处理"></a>数字信号处理</h1><h2 id="时域数字信号处理"><a href="#时域数字信号处理" class="headerlink" title="时域数字信号处理"></a>时域数字信号处理</h2><h3 id="信号的基本概念"><a href="#信号的基本概念" class="headerlink" title="信号的基本概念"></a>信号的基本概念</h3><p>信号：一个（一维或多维）的数据量。</p>
+<h3 id="从模拟信号到数字信号"><a href="#从模拟信号到数字信号" class="headerlink" title="从模拟信号到数字信号"></a>从模拟信号到数字信号</h3><p><strong>信号的分类</strong>：</p>
+<ul>
+<li>模拟信号<br>X,Y轴都是连续值的信号，来自外界收集和用于设备交互</li>
+<li>数字信号<br>X,Y轴都是离散值的信号，用于DSP高速，便捷处理</li>
+<li>量化信号<br>Y轴是离散值的信号，进行过Y轴数据编码，提高数据处理能力，抗噪等</li>
+<li>离散信号<br>X轴是离散值的信号，由采样生成，是DSP的核心内容</li>
+</ul>
+<p><strong>数字信号的特点</strong>：</p>
+<ul>
+<li>抗干扰能力强</li>
+<li>功耗低</li>
+<li>电路设计简单，集成度高</li>
+<li>后期处理方便</li>
+</ul>
+<h3 id="DSP的常见应用"><a href="#DSP的常见应用" class="headerlink" title="DSP的常见应用"></a>DSP的常见应用</h3><p><strong>DSP应用范例</strong>：</p>
+<ul>
+<li>离散多音调传输</li>
+<li>行动电话</li>
+<li>数字声音合成</li>
+<li>信号编码和压缩</li>
+<li>信号增强</li>
+</ul>
+<h3 id="基本信号与基本算法"><a href="#基本信号与基本算法" class="headerlink" title="基本信号与基本算法"></a>基本信号与基本算法</h3><p>连续信号的表示 $f(t)$</p>
+<p>离散信号的表示 $x[n]$</p>
+<p>基本处理办法</p>
+<p>多信号处理：加法，数乘<br>单一信号处理：补零，时移，反折，拉伸</p>
+<p>相对复杂处理：微分，积分，卷积，相似计算</p>
+<h4 id="补零"><a href="#补零" class="headerlink" title="补零"></a>补零</h4><p>对于不同长度或不在统一时间范围的序列间的运算，必须先将不一致的部分序列做适当的补零运算，使这些序列拥有相同的时间n范围。</p>
+<ul>
+<li>补零是一个书写简单，但是编程困难的问题</li>
+<li>补零需要改变用于存储序列的数组长度，这在大部分编程中都是较为困难的。</li>
+<li>如何处理序列变化长度需要自行研究<br>别忘了改变序列长度后，序列时间index也要做相应处理</li>
+</ul>
+<h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p>加法运算：<br>$$f(t)=g(t)+k(t)$$<br><img src="Adder.png" srcset="/img/loading.gif" lazyload alt="Adder"></p>
+<p>加法运算的一个简单应用：去噪——总体平均</p>
+<p>假设 $d_i$ 表示干扰原资料向量 $s$ 的第 $i$ 次量测值的噪声序列：<br>$$<br>x_i[n]=s[n]+d_i[n]<br>$$</p>
+<p>在 $K$ 次量测后，计算一个平均数据向量，称为总体平均。</p>
+<p>$$<br>X_{ave}=\frac{1}{K}\sum_{i=1}^{K}X_i=\frac{1}{K}\sum_{i=1}^K(s+d_i)=S+\frac{1}{K}\sum_{i=1}^Kd_i<br>$$</p>
+<p>从噪音定义可以知道， $\sum_{i=1}^Kd_i\approx 0$ 。<br>对于一个非常大的 $K$ 值而言， $X_{ave}$ 通常相当程度近似于原资料向量 $s$ 。</p>
+<h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><ol>
+<li>数乘：<br>$$f(t)=k\cdot g(t)$$</li>
+</ol>
+<p><img src="Multiplier.png" srcset="/img/loading.gif" lazyload alt="Multiplier"></p>
+<p>乘法运算：放大器。</p>
+<ul>
+<li>现实中的放大器往往也会将噪声等干扰一起放大，所以通常和其他处理配套使用。</li>
+<li>放大器需要引入能量，在电路设计中通常代表需要提供新的能量源（功率放大器—功放）</li>
+</ul>
+<ol start="2">
+<li>两个信号相乘</li>
+</ol>
+<p>乘积 (调变，modulation) 运算:</p>
+<p>$$f(t)=k(t)\cdot g(t)$$<br><img src="Modulator.png" srcset="/img/loading.gif" lazyload alt="Modulator"></p>
+<ul>
+<li>乘法在DSP中有着特殊的作用，通常表明的某种操作。</li>
+<li>文字描述操作是无法量化计算的，例如屏蔽某频率的信号；放大某些局部信息；对当前时间点的信号，做延时间轴的弱化扩散处理</li>
+<li>方法：将要实施的处理，转化成一个特定的信号，然后做乘法<ul>
+<li>以及乘法后的加法和滑动窗处理，三个处理组成最核心的卷积运算。</li>
+</ul>
+</li>
+</ul>
+<p>很多情况下，乘法的运算其中一方是特意设计的，表明某个效果的操作</p>
+<p>应用：遮罩。</p>
+<h4 id="时移"><a href="#时移" class="headerlink" title="时移"></a>时移</h4><p>时间位移运算：时移时一个单一信号的处理方法。<br>$$<br>g(t)=f(t-t_0)<br>$$<br>离散格式 $y(n)=x(n-N)$ 其中 $N$ 是一个整数。</p>
+<p>若 $N&gt;0$ ，称之为延迟运算：<br><img src="Unit%20delay.png" srcset="/img/loading.gif" lazyload alt="Unit delay"></p>
+<p>若 $N&lt;0$ ，则称之为超前运算。<br><img src="Unit%20advance.png" srcset="/img/loading.gif" lazyload alt="Unit advance"></p>
+<p>计算方法：</p>
+<ul>
+<li>平移法</li>
+<li>罗列计算法</li>
+</ul>
+<p>应用：</p>
+<ul>
+<li>主动发射信号，并接受： 激光定位，激光扫描距离 = 延迟时间*速度/2</li>
+<li>被动接受信号，并不进行发射:GPS</li>
+</ul>
+<h4 id="反折"><a href="#反折" class="headerlink" title="反折"></a>反折</h4><p>时间反向或是折叠运算<br>$$<br>g(t)=f(-t)<br>$$<br>离散格式 $y[n]=x[-n]$</p>
+<h4 id="时域尺度变换（拉伸）"><a href="#时域尺度变换（拉伸）" class="headerlink" title="时域尺度变换（拉伸）"></a>时域尺度变换（拉伸）</h4><p>拉伸运算：  。<br>离散格式：  。<br>拉伸变化我们称为采样率（上采样和下采样）的变化，其中  通常采取以下定义：</p>
+<ul>
+<li>若  ，则  通常为正数，即  。</li>
+<li>若  ，则通常找到一个正整数  ，使得  。</li>
+<li>若  ，则先处理  ，然后再做反折。</li>
+<li>通常对于复杂的变化，定义二次采样（采样率变化），不在拉伸部分讨论，把它单独作为一个系统。</li>
+</ul>
+<h4 id="时域尺度变换（上采样）"><a href="#时域尺度变换（上采样）" class="headerlink" title="时域尺度变换（上采样）"></a>时域尺度变换（上采样）</h4><p>若以整数因子$L&gt;1$来进行上采样，计算公式见下图。</p>
+<ul>
+<li>除法是上采样，越除得到的数列越长。而“上”采样的上字与长短对应，上采样变长。</li>
+<li>对于$x[0.5]$之类的index不为整数的项，我们直接定义其为0</li>
+<li>为0的部分，通常通过内插算法（interpolation）后续将其补上</li>
+<li>在上述计算中，仍然左右不变的是$n$项，可以使用列举法进行计算。</li>
+</ul>
+<p><img src="%E4%B8%8A%E9%87%87%E6%A0%B7.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="时域尺度变换（下采样）"><a href="#时域尺度变换（下采样）" class="headerlink" title="时域尺度变换（下采样）"></a>时域尺度变换（下采样）</h4><p>若以整数因子M&gt;1来进行下采样，计算公式见下图。</p>
+<ul>
+<li>乘法是下采样，越除得到的数列越短。“下”采样的序列变短。</li>
+<li>下采样不会产生新的项。</li>
+<li>在上述计算中，仍然左右不变的是 $n$ 项，可以使用列举法进行计算</li>
+</ul>
+<p><img src="%E4%B8%8B%E9%87%87%E6%A0%B7.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="时域尺度变换9-双向拉伸"><a href="#时域尺度变换9-双向拉伸" class="headerlink" title="时域尺度变换9 双向拉伸"></a>时域尺度变换9 双向拉伸</h4><h4 id="内插"><a href="#内插" class="headerlink" title="内插"></a>内插</h4><h3 id="相对复杂的基本运算"><a href="#相对复杂的基本运算" class="headerlink" title="相对复杂的基本运算"></a>相对复杂的基本运算</h3><h4 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h4><p>差分： $x^{\prime}[n]=x[n+1]-x[n]$ </p>
+<p>二阶差分： $x^{\prime \prime}[n]=x[n+2]+x[n]-2x[n+1]$ </p>
+<h4 id="累加"><a href="#累加" class="headerlink" title="累加"></a>累加</h4><p>累加： $g(n)=\sum_{a}^{b}x[n]$ </p>
+<h4 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h4><p>卷积是整个数字信号处理中最重要的运算。</p>
+<ul>
+<li>我们所学的基础处理整合起来称为“系统”</li>
+<li>在本课程中我们只学习一种系统“线性时不变系统”</li>
+<li>一个线性时不变系统，不管多么复杂，其都可以变成输出信号=输入信息与特定（且固定）信号的卷积<br>即：本课程的任何系统，都可以用卷积来表示和研究。S</li>
+</ul>
+<p>卷积分为两种：线性卷积和周期（循环）卷积</p>
+<p>线性卷积的连续性表达式为</p>
+<p>$$<br>F(t)=f(t)*g(t)=\int_{a}^{b}f(t-m)g(m)\mathrm{d}m<br>$$</p>
+<p>其离散表示为</p>
+<p>$$<br>y[n]=x[n]*h[n]=\sum_{k=-\infty}^{\infty}x[n-k]h[k]<br>$$<br>运算的基本流程：</p>
+<ul>
+<li>将 $h[n]$ 反转，作为滑动窗</li>
+<li>窗口内处理 $h[n]$ ，并进行对位相乘后求和</li>
+<li>将滑动窗从 $x[n]$ 最左侧一直移动到最右侧</li>
+</ul>
+<p>快速卷积说明</p>
+<ul>
+<li>所谓的快速卷积只是给人类手动算卷积准备的<br>节省的时间是不需要处理边缘效果的那几次滑动</li>
+<li>当窗口很大时，节省的时间微乎其微<br>手动编写感受</li>
+<li>所以计算机并不使用快速卷积<br>计算机使用转频域-&gt; 算乘法-&gt;转回时域的方法</li>
+<li>这个需要循环卷积</li>
+</ul>
+<h4 id="讯号的相关性"><a href="#讯号的相关性" class="headerlink" title="讯号的相关性"></a>讯号的相关性</h4><p>互相关序列：两个能量讯号 $x[n]$ 及 $y[n]$ 彼此间的相似度可利用以下定义的互相关序列来量度。</p>
+<p>相关性计算和卷积相似，但没有反转。</p>
+<p>相关性中平移的意义：</p>
+<ul>
+<li>参数 $l$ 表示的是将序列 $y[n]$ 作相应的延迟后，对位相乘做加法。</li>
+<li>按照滑动窗的解释， $r_{xy}[l]$ 中的 $l$ 表示的是，对于滑动窗每个滑动距离的结果上的记录。</li>
+</ul>
+<p>相关系数：</p>
+<p>正规化：对一个向量 $A=\{ A_i \}$ ，正规化<br>$$<br>K=\sqrt{\sum A_i^2}\cdot A_i^{\prime}=\frac{A_i}{K}<br>$$<br>$$<br>\sum A_i^{\prime 2}=\sum \frac{A_i^2}{K^2}=\frac{\sqrt{\sum A_i^2}}{\sum A_i^2=1}<br>$$<br>平方和为 $1$ ，称 $A_i^{\prime}$ 为 $A$ 的一种正规化结果。</p>
+<ul>
+<li><p>将向量至于一个单位圆内（即一个单位下），以便进行后期的比较等运算</p>
+</li>
+<li><p>例子：当我们观察信号 A={3,4,5,5,5} 与信号B={-5,-8,-10,-9,-10}时，<br>由于放大器(K=-2)和噪声(Noise={1,0,0,1,0})的共同影响，不一定可以准确的观测到其关系，进行正规化以后<br>A’={0.3,    0.4,    0.5,   0.5,    0.5} 与<br>B’={-0.26,-0.42,-0.52,-0.47,-0.52}的相似度就足够高了</p>
+</li>
+</ul>
+<p>零均值：对一个向量 $A$ ，零均值<br>则有<br>$$<br>\overline{A}=\frac{1}{N}\sum A_i,A_i^{\prime}=A-i-\overline{A}<br>$$<br> $A_i^{\prime}$ 满足<br>$$<br>\sum A_i^{\prime}=\sum (A_i-\overline{A})=0<br>$$<br>称 $A_i^{\prime}$ 为 $A$ 的一种零均值。</p>
+<ul>
+<li>例子，当我们观察信号 A={3,-4,2,5,-7} 与信号B={4,-2,5,7,-5}时，<br>由于叠加信号（D={2,2,2,2,2}和叠加噪声(Noise={-1,0,1,0,0})）的共同影响，不一定可以准确的观测到其关系，进行零均值化以后<br>A’={3.2, -3.8,2.2,5.2,6.8} 与 B’={2.2,-3.8,3.2,5.2,-6.8}的相似度就足够高了</li>
+</ul>
+<p>再看相关系数的定义，令 $A_i$ 零均值变化后为 $A_i^{\prime}$<br>$$<br>\mathrm{Corr}=\sum_{i}\frac{(A_i^{\prime}\cdot B_i^{\prime})}{\sqrt{\sum_{i}(A_i^{\prime})^2\sum_{i}(B_i^{\prime})^2}}=\sum_{i}\overline{A_i^{\prime}}\cdot \overline{B_i^{\prime}}<br>$$<br>在令 $\hat{A_i^{\prime}}$ 为正规化的 $A_i^{\prime}$</p>
+<p>$$<br>\mathrm{Corr}=\sum_{i}\hat{A_i^{\prime}}\hat{B_i^{\prime}}<br>$$</p>
+<ul>
+<li>相似度绝对值 $0\leq |\mathrm{Corr}| \leq 1$ 。</li>
+<li>两个向量的相似度与符号无关，有绝对值决定。</li>
+<li>若 $|\mathrm{Corr}|=1$ 则两个向量相同（反向），相似度最高。</li>
+<li>若 $|\mathrm{Corr}|=0$ 则两个信号完全无关（向量正交），相似度最低。</li>
+</ul>
+<p>相关性一般只出现在DSP，相关系数应用广泛。</p>
+<p>不做零均值和正规化的缺点：</p>
+<ul>
+<li>不做正规化，没有基准，两个向量相似度位于  ，对放大不免疫。</li>
+<li>因为没有零均值，对任何叠加都不免疫。</li>
+</ul>
+<p>如果我们希望 $y[n]$ 当做参考信号，将 $x[n]$ 相对于 $y[n]$ 产生位移，则互相关序列可改写为<br>$$<br>r_{yx}[\mathcal{l}]=r_{xy}[\mathcal{-l}]<br>$$<br>因此，将 $r_{xy}[\mathcal{l}]$ 作时间反向可以得到 $r_{yx}[\mathcal{l}]$ 。</p>
+<p>在互相关序列 $r_{xy}[\mathcal{l}]$ 的公式中设定 $y[n]=x[n]$ ，则 $x[n]$ 的自相关序列可得到：<br>$$<br>r_{xx}[\mathcal{l}]=\sum_{n=-\infty}^{\infty}x[n]x[n-\mathcal{l}]<br>$$<br>$$<br>r_{xx}[0]=\sum_{n=-\infty}^{\infty}x^2[n]=\mathcal{E}_x<br>$$</p>
+<h3 id="信号分类"><a href="#信号分类" class="headerlink" title="信号分类"></a>信号分类</h3><ul>
+<li>连续信号与离散信号</li>
+<li>确定信号与随机信号</li>
+<li>周期信号与非周期信号</li>
+<li>功率信号与能量信号</li>
+</ul>
+<p>确定信号与随机信号：</p>
+<ul>
+<li>确定信号多为我们需要研究的对象<br>此处的确定信号实际上有两种，一种是可以使用公式表示的（这是我们后面本节课要学习的）；另一种确实无法公式表示（如某人的语音输入，却是确定的）</li>
+<li>随机信号在我们这节课的研究中，多为干扰噪音</li>
+<li>所以：评估一个信号是确定信号还是随机信号，不是看是否公式表示，而是讨论其是否具有实际意义。</li>
+</ul>
+<p>周期信号与非周期信号：</p>
+<ul>
+<li>周期信号可以用一个周期函数表示。且周期信号是DSP学习中最重要的2-3种信号之一：<ul>
+<li>DSP研究的是时间轴上的信号变化，那么周期函数（信号）是最容易研究的—周期信号是最简单且“优美”的信号。</li>
+<li>当我们把一个函数变成多个函数的表示，那么周期函数就可以被当做工具（分解的概念）</li>
+<li>例：使用周期信号分析任意一个信号：方波信号</li>
+</ul>
+</li>
+</ul>
+<p>定义：</p>
+<ul>
+<li>对于连续函数（信号）的周期，我们有时  ，  为周期，通常  可以为任意值，而  为任意整数。</li>
+<li>离散信号：满足  的序列，被称为具有周期  的周期序列，其中  是一个正整数，而  是任意整数。</li>
+<li>满足  的最小  值称为基本周期。</li>
+</ul>
+<h3 id="基本信号"><a href="#基本信号" class="headerlink" title="基本信号"></a>基本信号</h3>
             </div>
             <hr>
             <div>
@@ -395,7 +542,9 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7/">数字信号</a>
                     
                   </div>
                 
@@ -403,7 +552,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%85%B6%E4%BB%96/">其他</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">数字信号处理</a>
                     
                   </div>
                 
@@ -421,12 +570,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/archives/301227eb.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Verilog</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/10/22/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">
-                        <span class="hidden-mobile">高等代数</span>
+                      <a href="/archives/155618b9.html">
+                        <span class="hidden-mobile">概率论</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
