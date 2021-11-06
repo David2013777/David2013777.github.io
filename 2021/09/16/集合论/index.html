@@ -230,7 +230,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.6k 字
+      6k 字
     </span>
   
 
@@ -240,7 +240,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      78
+      84
        分钟
     </span>
   
@@ -282,7 +282,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：43 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -664,10 +664,22 @@
 <h3 id="良序关系"><a href="#良序关系" class="headerlink" title="良序关系"></a>良序关系</h3><p>良序集：设 $&lt;A,\prec &gt;$ 为（拟）全序集，若 $A$ 任何非空子集 $B$ 均有最小元，则称 $\prec $ 为 $A$ 上的良序关系，称 $&lt;A,\prec &gt;$ 为良序集。</p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>函数：设 $F$ 为二元关系, 若 $x\in \mathrm{dom}F$ 都存在唯一 $y\in \mathrm{ran}F$ 使 $xFy$ 成立, 则称 $F$ 为函数。对于函数 $F$ , 如果有 $xFy$ , 则记作 $y=F(x)$, 并称 $y$ 为 $F$ 在 $x$ 的值. </p>
 <p>函数相等:设$F, G$为函数, 则 $F=G\Leftrightarrow F\subseteq G\vee G\subseteq F$<br>如果两个函数 $F$ 和 $G$ 相等, 一定满足下面两个条件：<br>(1) $\mathrm{dom}F = \mathrm{dom}G$<br>(2) $\forall x\in \mathrm{dom}F=\mathrm{dom}G$ 都有 $F(x) = G(x)$。</p>
-<p>从 $A$ 到 $B$ 的函数：设$A, B$为集合, 如果 $f$ 为函数 $\mathrm{dom}f = A$ ，$\mathrm{ran}f B$, 则称 $f$ 为从$A$到$B$的函数, 记作 $f：A\rightarrow B$</p>
-<p>$B$上$A$：所有从 $A$ 到 $B$ 的函数的集合记作 $B^A$, 读作“$B$上$A$”，符号化表示为$B^A=\{ f|f:A\rightarrow B \}$</p>
+<p>从 $A$ 到 $B$ 的函数：设$A, B$为集合, 如果 $f$ 为函数 $\mathrm{dom}f = A$ ，$\mathrm{ran}f = B$, 则称 $f$ 为从$A$到$B$的函数, 记作 $f：A\rightarrow B$</p>
+<p>$B$上$A$：所有从 $A$ 到 $B$ 的函数的集合记作 $B^A$, 读作“$B$上$A$”，符号化表示为 $B^A=\{ f|f:A\rightarrow B \}$</p>
 <p>函数的像：设函数 $f：A\rightarrow B,A_1\subseteq A$在 $f$ 下的像： $f(A_1) = \{ f(x) | x\in A_1 \}$ 函数的像 $f(A)$。</p>
-<h3 id="函数的性质"><a href="#函数的性质" class="headerlink" title="函数的性质"></a>函数的性质</h3>
+<h3 id="函数的性质"><a href="#函数的性质" class="headerlink" title="函数的性质"></a>函数的性质</h3><p>定义：设 $f:A\rightarrow B$ ，</p>
+<ol>
+<li>若 $\mathrm{ran}f=B$ ，则称 $f:A\rightarrow B$ 是满射。</li>
+<li>若 $\forall y\in \mathrm{ran}f$ 都存在唯一的 $x\in A$ 使得 $f(x)=y$ ，则称 $f:A\rightarrow B$ 是单射的。</li>
+<li>若 $f:A\rightarrow B$ 既是满射又是单射的，则称 $f:A\rightarrow B$ 是双射的。</li>
+</ol>
+<p> $f$ 满射意味着： $\forall y \in B$ ，都存在 $x\in A$ 使得 $f(x)=y$ 。<br> $f$ 单射意味着： $f(x_1)=f(x_2)\Rightarrow x_1=x_2$ 。</p>
+<p>常函数：设 $f:A\rightarrow B$ ，若存在 $c\in B$ 使得 $\forall x\in A$ 都有 $f(x)=c$ ，则称 $f:A\rightarrow B$ 是常函数。</p>
+<p>恒等函数：称 $A$ 上的恒等关系 $I_A$ 为 $A$ 上的恒等函数，对于所有的 $x\in A$ 都有 $I_A(x)=x$ 。</p>
+<p>单调性：设 $f:R\rightarrow$ ，如果对于任意的 $x_1,x_2\in R$ ， $x_1&lt;x_2$ ，就有 $f(x_1)\leq f(x_2)$ ，则称 $f$ 为单调递增的；如果对于任意的 $x_1,x_2\in R$ ， $x_1&lt;x_2$ ，就有 $f(x_1)&lt; f(x_2)$ ，则称 $f$ 为严格单调递增的。类似的可以定义单调递减和严格单调递减的函数。</p>
+<p>集合的特征函数：设 $A$ 为集合， $\forall A^{\prime}\subseteq A$ ， $A^{\prime}$ 的特征函数 $\chi_{A^{\prime}}:A\rightarrow \{ 0,1 \}$ 定义为<br>$$<br>\chi_{A^{\prime}}(a)=\begin{cases} 1,a\in A^{\prime} \\ 0,a\in A-A^{\prime} \end{cases}<br>$$</p>
+<p>自然映射：设 $R$ 是 $A$ 上的等价关系，令<br>$$<br>g:A\rightarrow A/R \quad g(\alpha)=[\alpha],\forall \alpha \in A<br>$$<br>称 $g$ 是从 $A$ 到商集 $A/R$ 的自然映射。</p>
+<h3 id="函数的复合与反函数"><a href="#函数的复合与反函数" class="headerlink" title="函数的复合与反函数"></a>函数的复合与反函数</h3>
             </div>
             <hr>
             <div>
@@ -704,9 +716,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/16/%E6%A6%82%E7%8E%87%E8%AE%BA/">
+                      <a href="/2021/09/17/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">概率论</span>
+                        <span class="hidden-mobile">数字信号处理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -714,8 +726,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/09/16/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/">
-                        <span class="hidden-mobile">数字逻辑</span>
+                      <a href="/2021/09/16/%E6%A6%82%E7%8E%87%E8%AE%BA/">
+                        <span class="hidden-mobile">概率论</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
