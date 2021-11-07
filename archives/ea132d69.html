@@ -288,7 +288,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6k 字
+      6.5k 字
     </span>
   
 
@@ -298,7 +298,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      84
+      90
        分钟
     </span>
   
@@ -340,7 +340,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：9 小时前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -737,7 +737,27 @@
 <p>单调性：设 $f:R\rightarrow$ ，如果对于任意的 $x_1,x_2\in R$ ， $x_1&lt;x_2$ ，就有 $f(x_1)\leq f(x_2)$ ，则称 $f$ 为单调递增的；如果对于任意的 $x_1,x_2\in R$ ， $x_1&lt;x_2$ ，就有 $f(x_1)&lt; f(x_2)$ ，则称 $f$ 为严格单调递增的。类似的可以定义单调递减和严格单调递减的函数。</p>
 <p>集合的特征函数：设 $A$ 为集合， $\forall A^{\prime}\subseteq A$ ， $A^{\prime}$ 的特征函数 $\chi_{A^{\prime}}:A\rightarrow \{ 0,1 \}$ 定义为<br>$$<br>\chi_{A^{\prime}}(a)=\begin{cases} 1,a\in A^{\prime} \\ 0,a\in A-A^{\prime} \end{cases}<br>$$</p>
 <p>自然映射：设 $R$ 是 $A$ 上的等价关系，令<br>$$<br>g:A\rightarrow A/R \quad g(\alpha)=[\alpha],\forall \alpha \in A<br>$$<br>称 $g$ 是从 $A$ 到商集 $A/R$ 的自然映射。</p>
-<h3 id="函数的复合与反函数"><a href="#函数的复合与反函数" class="headerlink" title="函数的复合与反函数"></a>函数的复合与反函数</h3>
+<h3 id="函数的复合与反函数"><a href="#函数的复合与反函数" class="headerlink" title="函数的复合与反函数"></a>函数的复合与反函数</h3><p>定理：设 $F,G$ 是函数，则 $F\circ G$ 也是函数，且满足<br> (1) $$\mathrm{dom}(F\circ G)={ x | x\in \marthm{dom}F \wedge F(x)\in \mathrm{dom} G}$$<br> (2) $\forall x\in \mathrm{dom}(F\circ G)$ 有 $F\circ G(x) = G(F(x))$</p>
+<p>推论：设 $F,G,H$ 为函数，则 $(F\circ G)\circ H$ 和 $F\circ (G\circ H)$ 都是函数，且 $(F\circ G)\circ H=F\circ (G\circ H)$ 。</p>
+<p>推论：设 $f:A\rightarrow B$ ， $g:B\rightarrow C$ ，则 $f\circ g:A\rightarrow C$ ，且 $\forall x\in A$ 都有 $f\circ g(x)=g(f(x))$ 。</p>
+<p>定理：设 $f:A\rightarrow B$ ， $g:B\rightarrow C$ </p>
+<ol>
+<li>如果 $f:A\rightarrow B$ ， $g:B\rightarrow C$ 都是满射的，则 $f\circ g:A\rightarrow C$ 也是满射的。</li>
+<li>如果 $f:A\rightarrow B$ ， $g:B\rightarrow C$ 都是单射的，则 $f\circ g:A\rightarrow C$ 也是单射的。</li>
+<li>如果 $f:A\rightarrow B$ ， $g:B\rightarrow C$ 都是双射的，则 $f\circ g:A\rightarrow C$ 也是双射的。</li>
+</ol>
+<p>定理：设 $f:A\rightarrow B$ 是双射的，则 $f^{-1}:B\rightarrow A$ 也是双射的。</p>
+<p>反函数：对于双射函数 $f:A\rightarrow B$ ，称 $f^{-1}:B\rightarrow A$ 是它的反函数。</p>
+<p>定理：设 $f:A\rightarrow B$ 是双射的，则<br>$$<br>f^{-1}\circ f=I_B,f\circ f^{-1}=I_A<br>$$<br>定理：设 $f:A\rightarrow B$ ， $g:B\rightarrow C$ </p>
+<ol>
+<li>如果 $f\circ g$ 是满射的，则 $g$ 是满射的。</li>
+<li>如果 $f\circ g$ 是单射的，则 $f$ 是单射的。</li>
+<li>如果 $f\circ g$ 是双射的，则 $g$ 是满射的， $f$ 是单射的。</li>
+</ol>
+<p>左逆右逆：设 $f:A\rightarrow B$ ， $g:B\rightarrow A$ ，若 $f\circ g=I_A$ ，则称 $g$ 为 $f$ 的右逆函数， $f$ 为 $g$ 的左逆函数。</p>
+<p>定理：</p>
+<p>设 $f:A\rightarrow B$,<br>(1) $f$有右逆函数，当且仅当$f$是单射的。<br>(2) $f$有左逆函数，当且仅当$f$是满射的。<br>(3) $f$有左逆和右逆函数，当且仅当$f$是双射的。<br>(4) 如果$f$是双射函数，则$f$的左逆和右逆函数相等。</p>
+
             </div>
             <hr>
             <div>
@@ -784,8 +804,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/archives/79666db.html">
-                        <span class="hidden-mobile">数据结构</span>
+                      <a href="/archives/812c5abc.html">
+                        <span class="hidden-mobile">数字逻辑</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
