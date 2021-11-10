@@ -343,7 +343,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：4 天前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
@@ -391,7 +391,7 @@
 <h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><ol>
 <li>数乘：<br>$$f(t)=k\cdot g(t)$$</li>
 </ol>
-<p><img src="Multiplier.png" srcset="/img/loading.gif" lazyload alt="Multiplier"></p>
+<p><img src="ddac2bd0/Multiplier.png" srcset="/img/loading.gif" lazyload alt="Multiplier"></p>
 <p>乘法运算：放大器。</p>
 <ul>
 <li>现实中的放大器往往也会将噪声等干扰一起放大，所以通常和其他处理配套使用。</li>
@@ -401,7 +401,7 @@
 <li>两个信号相乘</li>
 </ol>
 <p>乘积 (调变，modulation) 运算:</p>
-<p>$$f(t)=k(t)\cdot g(t)$$<br><img src="Modulator.png" srcset="/img/loading.gif" lazyload alt="Modulator"></p>
+<p>$$f(t)=k(t)\cdot g(t)$$<br><img src="ddac2bd0/Modulator.png" srcset="/img/loading.gif" lazyload alt="Modulator"></p>
 <ul>
 <li>乘法在DSP中有着特殊的作用，通常表明的某种操作。</li>
 <li>文字描述操作是无法量化计算的，例如屏蔽某频率的信号；放大某些局部信息；对当前时间点的信号，做延时间轴的弱化扩散处理</li>
@@ -413,8 +413,8 @@
 <p>很多情况下，乘法的运算其中一方是特意设计的，表明某个效果的操作</p>
 <p>应用：遮罩。</p>
 <h4 id="时移"><a href="#时移" class="headerlink" title="时移"></a>时移</h4><p>时间位移运算：时移时一个单一信号的处理方法。<br>$$<br>g(t)=f(t-t_0)<br>$$<br>离散格式 $y(n)=x(n-N)$ 其中 $N$ 是一个整数。</p>
-<p>若 $N&gt;0$ ，称之为延迟运算：<br><img src="Unit%20delay.png" srcset="/img/loading.gif" lazyload alt="Unit delay"></p>
-<p>若 $N&lt;0$ ，则称之为超前运算。<br><img src="Unit%20advance.png" srcset="/img/loading.gif" lazyload alt="Unit advance"></p>
+<p>若 $N&gt;0$ ，称之为延迟运算：<br><img src="ddac2bd0/Unit%20delay.png" srcset="/img/loading.gif" lazyload alt="Unit delay"></p>
+<p>若 $N&lt;0$ ，则称之为超前运算。<br><img src="ddac2bd0/Unit%20advance.png" srcset="/img/loading.gif" lazyload alt="Unit advance"></p>
 <p>计算方法：</p>
 <ul>
 <li>平移法</li>
@@ -440,14 +440,14 @@
 <li>为0的部分，通常通过内插算法（interpolation）后续将其补上</li>
 <li>在上述计算中，仍然左右不变的是$n$项，可以使用列举法进行计算。</li>
 </ul>
-<p><img src="%E4%B8%8A%E9%87%87%E6%A0%B7.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="ddac2bd0/%E4%B8%8A%E9%87%87%E6%A0%B7.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="时域尺度变换（下采样）"><a href="#时域尺度变换（下采样）" class="headerlink" title="时域尺度变换（下采样）"></a>时域尺度变换（下采样）</h4><p>若以整数因子M&gt;1来进行下采样，计算公式见下图。</p>
 <ul>
 <li>乘法是下采样，越除得到的数列越短。“下”采样的序列变短。</li>
 <li>下采样不会产生新的项。</li>
 <li>在上述计算中，仍然左右不变的是 $n$ 项，可以使用列举法进行计算</li>
 </ul>
-<p><img src="%E4%B8%8B%E9%87%87%E6%A0%B7.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="ddac2bd0/%E4%B8%8B%E9%87%87%E6%A0%B7.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="时域尺度变换9-双向拉伸"><a href="#时域尺度变换9-双向拉伸" class="headerlink" title="时域尺度变换9 双向拉伸"></a>时域尺度变换9 双向拉伸</h4><h4 id="内插"><a href="#内插" class="headerlink" title="内插"></a>内插</h4><h3 id="相对复杂的基本运算"><a href="#相对复杂的基本运算" class="headerlink" title="相对复杂的基本运算"></a>相对复杂的基本运算</h3><h4 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h4><p>差分： $x^{\prime}[n]=x[n+1]-x[n]$ </p>
 <p>二阶差分： $x^{\prime \prime}[n]=x[n+2]+x[n]-2x[n+1]$ </p>
 <h4 id="累加"><a href="#累加" class="headerlink" title="累加"></a>累加</h4><p>累加： $g(n)=\sum_{a}^{b}x[n]$ </p>
