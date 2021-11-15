@@ -343,7 +343,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：15 小时前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -447,7 +447,7 @@ $$ -->
 <p>定理： $n$ 阶 $n\geq 2$ 行列式等于它的任一行的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{ik}A_{ik}(i=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式等于它的任何一列的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{kj}A_{kj}(j=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式的任一行的各元与另一行对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{jk}A_{ik}=0(i\neq j)<br>$$<br>定理： $n$ 阶行列式的任一列的各元与另一列对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{kj}A_{ki}=0(i\neq j)<br>$$<br>于是有</p>
 <p>$$<br>\sum_{k=1}^na_{jk}A_{ik}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
 <p>$$<br>\sum_{k=1}^na_{kj}A_{ki}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
-<p>范德蒙德行列式：<br>$$<br>V(x_1,x_2,\cdots,x_n)=\begin{vmatrix}1&amp;1&amp;1&amp;1 \\ x_{1}&amp;x_{2}&amp;\cdots &amp;x_{n}\\x_{1}^{2}&amp;x_{2}^{2}&amp;\cdots &amp;x_{n}^{2}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\x_{1}^{n-1}&amp;x_{2}^{n-1}&amp;\cdots &amp;x_{n}^{n-1}\end{vmatrix}=\prod_{1\leq j\leq i\leq n}(x_i-x_j)<br>$$<br>互为余子式：在 $n$ 阶行列式在，任意指定 $r$ 个行与 $r$ 个列 $(1\leq r&lt;n)$ ，位于这些行列交点处的 $r^2$ 个元构成的 $r$ 阶行列式 $M$ 称为原行列式的一个 $r$ 阶子式。在 $n$ 阶行列式中，划去某个 $r$ 阶子式 $M$ 所在的行和列后，剩下的 $n-r$ 个行和 $n-r$ 个列上的元也构成一个 $n-r$ 阶子式 $N$ ，我们称这一对子式 $M$ 与 $N$ 互为余子式。</p>
+<p>范德蒙德行列式：<br>$$<br>V(x_1,x_2,\cdots,x_n)=\begin{vmatrix}1&amp;1&amp;1&amp;1 \\ x_{1}&amp;x_{2}&amp;\cdots &amp;x_{n}\\x_{1}^{2}&amp;x_{2}^{2}&amp;\cdots &amp;x_{n}^{2}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\x_{1}^{n-1}&amp;x_{2}^{n-1}&amp;\cdots &amp;x_{n}^{n-1}\end{vmatrix}=\prod_{1\leq j &lt; i\leq n}(x_i-x_j)<br>$$<br>互为余子式：在 $n$ 阶行列式在，任意指定 $r$ 个行与 $r$ 个列 $(1\leq r&lt;n)$ ，位于这些行列交点处的 $r^2$ 个元构成的 $r$ 阶行列式 $M$ 称为原行列式的一个 $r$ 阶子式。在 $n$ 阶行列式中，划去某个 $r$ 阶子式 $M$ 所在的行和列后，剩下的 $n-r$ 个行和 $n-r$ 个列上的元也构成一个 $n-r$ 阶子式 $N$ ，我们称这一对子式 $M$ 与 $N$ 互为余子式。</p>
 <p>拉普拉斯定理：在 $n$ 阶行列式中任意选定 $k$ 个行（列） $1\leq k&lt;n$ ，则 $n$ 阶行列式等于位于这 $k$ 个行（列）中的一切 $k$ 阶子式 $M_i(i=1,2,\cdots,C_{n}^{k})$ 与其对应的代数余子式 $A_i$ 乘积之和，即<br>$$<br>|A|=\sum_{i=1}^{C_n^k}M_iA_i<br>$$</p>
 <h2 id="矩阵代数"><a href="#矩阵代数" class="headerlink" title="矩阵代数"></a>矩阵代数</h2><h3 id="矩阵的概念"><a href="#矩阵的概念" class="headerlink" title="矩阵的概念"></a>矩阵的概念</h3><p>矩阵：由 $m\times n$ 个数 $$a_{ij}(i=1,\cdots,m;j=1,\cdots,n)$$ 排成的 $m$ 行 $n$ 列的数表<br>$$<br>\begin{pmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{m1}&amp;a_{m2}&amp;\cdots &amp;a_{mn}\end{pmatrix}<br>$$<br>称为 $m$ 行 $n$ 列矩阵（或 $m\times n$ 矩阵）。数 $a_{ij}$ 称为矩阵的元。</p>
 <p>常用大写字母 $A,B,\cdots$ 表示矩阵，矩阵也可以表示为 $A=(a_{ij})$ ， $A_{m\times n}$ ， $(a_{ij})_{m\times n}$ 等。</p>
