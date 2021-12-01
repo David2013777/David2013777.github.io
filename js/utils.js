@@ -196,3 +196,4 @@ Debouncer.prototype = {
     this.requestTick();
   }
 };
+

@@ -30,3 +30,18 @@
     update();
     setInterval(update, 1000);
   })();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('get', 'https://v1.jinrishici.com/all.json');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      var data = JSON.parse(xhr.responseText);
+      var gushici = document.getElementById('poem');
+      gushici.innerText = data.content;
+      var author = document.getElementById('poem-author');
+      author.innerText = data.author;
+      var title = document.getElementById('poem-title');
+      author.innerText = data.origin;
+    }
+  };
+  xhr.send();
