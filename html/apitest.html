@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api测试</title>
+</head>
+<body>
+
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>一些api接口</h1>
+        <p><a href = "https://api.oick.cn/yulu/api.php">语录 https://api.oick.cn/yulu/api.php </a></p>
+        <p><a href = "https://interface.meiriyiwen.com/article/random?dev=1">文章 https://interface.meiriyiwen.com/article/random?dev=1 </a></p>
+        <p><a href = "https://query.asilu.com/today/list">历史上的今天 https://query.asilu.com/today/list </a></p>
+        <p><a href = "https://api.oick.cn/lishi/api.php">历史上的今天2 https://api.oick.cn/lishi/api.php </a></p>
+        <p><a href = "https://favqs.com/api/qotd">英文名言 https://favqs.com/api/qotd </a></p>
+    </div>
+
+    <!-- 毒鸡汤 -->
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>毒鸡汤</h1>
+        <div id="djt" style="font-size: 20px;">已经失效</div>   
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    
+                    document.getElementById("djt").innerHTML = '毒鸡汤：'+this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "https://api.btstu.cn/yan/api.php", true);
+            xmlhttp.send();
+        </script>
+    </div>
+    <!-- 毒鸡汤 -->
+
+    <!-- 诗词 -->
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>诗词</h1>
+        <script>
+        !function(e) {
+            var n, t = {},
+            o = "jinrishici-token";
+            function i() {
+                return document.getElementById("jinrishici-sentence") || 0 != document.getElementsByClassName("jinrishici-sentence").length
+            }
+            function c() {
+                t.load(function(e) {
+                    var n = document.getElementById("jinrishici-sentence"),
+                    t = document.getElementsByClassName("jinrishici-sentence");
+                    if (n && (n.innerText = e.data.content), 0 !== t.length) for (var o = 0; o < t.length; o++) t[o].innerText = e.data.content
+                })
+            }
+            function r(e, n) {
+                var t = new XMLHttpRequest;
+                t.open("get", n),
+                t.withCredentials = !0,
+                t.send(),
+                t.onreadystatechange = function(n) {
+                    if (4 === t.readyState) {
+                        var o = JSON.parse(t.responseText);
+                        "success" === o.status ? e(o) : console.error("今日诗词API加载失败，错误原因：" + o.errMessage)
+                    }
+                }
+            }
+            t.load = function(n) {
+                return e.localStorage && e.localStorage.getItem(o) ?
+                function(e, n) {
+                    return r(e, "https://v2.jinrishici.com/one.json?client=browser-sdk/1.2&X-User-Token=" + encodeURIComponent(n))
+                } (n, e.localStorage.getItem(o)) : function(n) {
+                    return r(function(t) {
+                        e.localStorage.setItem(o, t.token),
+                        n(t)
+                    },
+                    "https://v2.jinrishici.com/one.json?client=browser-sdk/1.2")
+                } (n)
+            },
+            e.jinrishici = t,
+            i() ? c() : (n = function() {
+                i() && c()
+            },
+            "loading" != document.readyState ? n() : document.addEventListener ? document.addEventListener("DOMContentLoaded", n) : document.attachEvent("onreadystatechange",
+            function() {
+                "complete" == document.readyState && n()
+            }))
+        } (window);
+        </script>
+
+        <div id="poem_sentence"></div>
+        <div id="poem_info"></div>
+        <script>
+        jinrishici.load(function(result) {
+            var sentence = document.querySelector("#poem_sentence")
+            var info = document.querySelector("#poem_info")
+            sentence.innerHTML = result.data.content
+            info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+        });
+        </script>
+	</div>
+    <!-- 诗词 -->
+
+    <!-- 文章 -->
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>文章</h1>
+        <div style="text-align: left; font-size: 25px;font-family: '黑体';">每日一文</div>
+        <div id="doctitle" style="text-align: center; font-size: 30px;font-family: '黑体';"></div>
+        <div id="docauthor" style="text-align: center; font-size: 20px;font-family: '宋体';"></div>
+        <div id="docdigest" style="padding:20px;display: block;font-size: 20px;font-family: '楷体';"></div>
+        <div id="seeall"  onclick="onDocClick1()" style="display: block;text-align: center; font-size: 30px;font-family: '黑体';">查看全文</div>
+        <div id="doccontent" style="padding:20px;display: none;font-size: 20px;font-family: '楷体';"></div>
+        <div id="hideall" onclick="onDocClick2()" style="display: none;text-align: center; font-size: 30px;font-family: '黑体';">收起全文</div>
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myObj = JSON.parse(this.responseText);
+                    document.getElementById("doctitle").innerHTML =myObj.data.title;
+                    document.getElementById("docauthor").innerHTML =myObj.data.author;
+                    document.getElementById("docdigest").innerHTML =myObj.data.digest+'······';
+                    document.getElementById("doccontent").innerHTML =myObj.data.content;
+                }
+            };
+            xmlhttp.open("GET", "https://interface.meiriyiwen.com/article/random?dev=1", true);
+            xmlhttp.send();
+        </script>
+        <script>
+            var content1 = document.getElementById("docdigest");
+            var content2 = document.getElementById("doccontent");
+            var see =document.getElementById("seeall");
+            var hide=document.getElementById("hideall");
+            function onDocClick1()
+            {
+                if(content1.style.display=="block")
+                {
+                    content1.style.display="none"
+                    see.style.display="none"
+                    content2.style.display="block"
+                    hide.style.display="block";
+                }
+            }
+            function onDocClick2()
+            {
+                if(content1.style.display=="none")
+                {
+                    content1.style.display="block"
+                    see.style.display="block"
+                    content2.style.display="none"
+                    hide.style.display="none";
+                }
+            }
+        </script>
+    
+    </div>
+    <!-- 文章 -->
+
+    <!-- 历史上的今天 -->
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>历史上的今天</h1>
+        <div style="text-align: left; font-size: 25px;font-family: '黑体';">历史上的今天</div>
+        <div id="lishi" style="padding:20px;text-align: left;font-size: 15px;font-family: '宋体';">
+        </div>
+        <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            for(i=0;i<myObj.data.length;i++){
+                document.getElementById("lishi").innerHTML +='<p><a href="'+myObj.data[i].link+'" target="_blank" style="text-decoration:none">'+myObj.data[i].year+' '+myObj.data[i].title+'</a></p>';
+            }
+            }
+        };
+        xmlhttp.open("GET", "https://query.asilu.com/today/list", true);
+        xmlhttp.send();
+        </script>
+      </div>
+    <!-- 历史上的今天 -->
+
+    <!-- 历史上的今天2 -->
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>历史上的今天2</h1>
+        <div style="text-align: left; font-size: 25px;font-family: '黑体';">历史上的今天</div>
+        <div id="lishi2" style="padding:20px;text-align: left;font-size: 15px;font-family: '宋体';">
+        </div>
+        <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            for(i=0;i<myObj.result.length;i++){
+                document.getElementById("lishi2").innerHTML +='<p>'+myObj.result[i].date+' '+myObj.result[i].title+'</p>';
+            }
+            }
+        };
+        xmlhttp.open("GET", "https://api.oick.cn/lishi/api.php", true);
+        xmlhttp.send();
+        </script>
+      </div>
+    <!-- 历史上的今天2 -->
+
+
+    
+    <!-- 英文名言 -->
+    <div style="max-width:1000px; margin:10px auto;..">
+        <h1>英文名言</h1>
+        <div id="quobody" style="padding:20px;text-align: left;font-size: 20px;font-family: 'Times New Roman', Times, serif;"></div>
+          <div id="quoauthor" style="padding:20px;text-align: right;"></div>
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myObj = JSON.parse(this.responseText);
+                    document.getElementById("quobody").innerHTML =myObj.quote.body;
+                    document.getElementById("quoauthor").innerHTML ="————"+myObj.quote.author;
+                }
+            };
+            xmlhttp.open("GET", "https://favqs.com/api/qotd", true);
+            xmlhttp.send();
+        </script>
+    </div>
+    <!-- 英文名言 -->
+
+
+
+
+</body>
+</html>
