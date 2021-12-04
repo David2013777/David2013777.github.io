@@ -182,7 +182,7 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/news/">
-                <i class="iconfont icon-wechat2-fill"></i>
+                <i class="iconfont icon-comment"></i>
                 新闻
               </a>
             </li>
@@ -217,9 +217,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/messageboard/">
-                <i class="iconfont icon-comment"></i>
-                留言板
+              <a class="nav-link" href="/robot/">
+                <i class="iconfont icon-steam"></i>
+                机器人
               </a>
             </li>
           
@@ -229,9 +229,21 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/robot/">
-                <i class="iconfont icon-comment"></i>
-                机器人
+              <a class="nav-link" href="/essay/">
+                <i class="iconfont icon-note"></i>
+                美文
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/messageboard/">
+                <i class="iconfont icon-kakao-talk-fill"></i>
+                留言板
               </a>
             </li>
           
@@ -315,7 +327,25 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<script src="../source/js/botui.js"></script>
+<link href="https://cdn.bootcss.com/botui/0.3.9/botui-theme-default.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/botui/0.3.9/botui.min.css" rel="stylesheet">
+<!-- 引入VUE -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<!-- 引入样式 -->
+<script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/lib/index.js"></script>
+<!-- 引入组件库 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css">
+
+<div class="entry-content">
+<div id="kelecnbot" class="popcontainer" style="min-height: 0px; padding: 2px 6px 4px; background-color: rgba(255, 255, 255, 0.5); border-radius: 10px;">
+<center>您在与&nbsp;博主的机器人&nbsp;对话中...</center>   
+<bot-ui></botui>
+</div>
+</div>
+<script src="../js/botui.js"></script>
+<script>
+bot_ui_ini()
+</script>
 
 <!-- Comments -->
 <div class="container comments mx-auto" id="comments" lazyload>

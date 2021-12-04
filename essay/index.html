@@ -182,7 +182,7 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/news/">
-                <i class="iconfont icon-wechat2-fill"></i>
+                <i class="iconfont icon-comment"></i>
                 新闻
               </a>
             </li>
@@ -217,9 +217,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/messageboard/">
-                <i class="iconfont icon-comment"></i>
-                留言板
+              <a class="nav-link" href="/robot/">
+                <i class="iconfont icon-steam"></i>
+                机器人
               </a>
             </li>
           
@@ -229,9 +229,21 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/robot/">
-                <i class="iconfont icon-comment"></i>
-                机器人
+              <a class="nav-link" href="/essay/">
+                <i class="iconfont icon-note"></i>
+                美文
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/messageboard/">
+                <i class="iconfont icon-kakao-talk-fill"></i>
+                留言板
               </a>
             </li>
           
@@ -314,28 +326,58 @@
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
-<div id = "myessay">
-test
-</div>
+<div id = "essay-title" style="font-family: 黑体;text-align: center;"></div>
+<div id = "essay-author" style="font-family: 宋体;text-align: right;"></div>
+<div id = "essay-content" style="font-family: 楷体;font-size: 20px;"></div>
 <script>
-var data = "token=1mJe1ziqLUk0UgoZ";
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === 4) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("myessay").innerHTML = myObj.data.content;
-    
-  }
-});
-
-xhr.open("POST", "https://v2.alapi.cn/api/mryw");
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-xhr.send(data);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        document.getElementById("essay-title").innerHTML = '<h1>'+myObj.data.title+'</h1>';
+        document.getElementById("essay-author").innerHTML = myObj.data.author;
+        document.getElementById("essay-content").innerHTML = myObj.data.content;
+        }
+    };
+    xmlhttp.open("GET", "https://v2.alapi.cn/api/mryw/random?token=1mJe1ziqLUk0UgoZ");
+    xmlhttp.send();
 </script>
+
+<!-- Comments -->
+<div class="container comments mx-auto" id="comments" lazyload>
+    
+    <br><br>
+    
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "identicon",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://myblog-lti2c7o13-david2013777.vercel.app/",
+          avatarCDN: "",
+          avatarForce: true,
+          requiredFields: [],
+          emojiCDN: "",
+          emojiMaps: null,
+          anonymous: null,
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    
+</div>
               </div>
             </div>
           </div>
