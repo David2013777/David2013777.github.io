@@ -27,7 +27,7 @@
     }).then(function() {
         return botui.message.bot({
             delay: 1000,
-            content: "这里是 USTC-NKU bot"
+            content: "这里是博主的机器人"
         })
     }).then(function() {
         return botui.message.bot({
@@ -57,86 +57,68 @@
             })
         }
     });
-     
+    var xmlhttp = new XMLHttpRequest();
+    var question = "title";
+    var answer = "answer";
+    var type = "type"
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        question = myObj.data.content;
+        type = myObj.data.type_name.name;
+        answer = myObj.data.answer;
+        }
+    };
+    xmlhttp.open("GET", "https://v2.alapi.cn/api/riddle/random?token=1mJe1ziqLUk0UgoZ");
+    xmlhttp.send();
     var other = function() {
         botui.message.bot({
             delay: 1500,
-            content: "🎉"
+            content: "猜个谜语吧！"
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "耕耘在微电子领域的小萌新"
+                content: type
             })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "心血来潮搭建了本网"
+                content: question
             })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "时不时更新更新文章内容~"
+                content: "有点难度哦"
             })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "喜欢折腾，热爱折腾，啥都会一点但啥也不精😂"
-            })
-        }).then(function() {
-            return botui.action.button({
-                delay: 1500,
-                action: [{
-                    text: "为什么叫 USTC-NKU 呢？ 🤔",
-                    value: "next"
-                }]
-            })
-        }).then(function(res) {
-            return botui.message.bot({
-                delay: 1500,
-                content: "因为去不成妮可，而又忝列八里台文理职业学校....."
+                content: "猜猜是什么"
             })
         }).then(function() {
             return botui.action.button({
                 delay: 1500,
                 action: [{
-                    text: "(ง •_•)ง",
-                    value: "next"
-                }]
-            })
-        }).then(function(res) {
-            return botui.message.bot({
-                delay: 1500,
-                content: "（。＾▽＾）总之遇见你很高兴！"
-            })
-        }).then(function(res) {
-            return botui.message.bot({
-                delay: 1500,
-                content: "那么，仔细看看我的博客吧？ ^_^"
-            })
-        }).then(function() {
-            return botui.action.button({
-               delay: 1500,
-               action: [{
-                 text: "期待你更加智能的一天 😃",
-                 value: "intel"
-              },
-              {
-                text: "那我走啦！(╹ڡ╹ )",
-                value: "bye"
-              }]
-            })
+                  text: "我猜出来了",
+                  value: "canguessit"
+               },
+               {
+                 text: "没猜出来",
+                 value: "cannotguessit"
+               }]
+             })
         }).then(function(res){
-            if(res.value == "bye"){
+            if(res.value == "canguessit"){
                 return botui.message.bot({
                     delay: 1500,
-                    content: "期待与你再次相见！💞"
+                    content: "答案是："+answer
                 })
             }
-            if(res.value == "intel"){
-               return botui.message.bot({
-                   delay: 1500,
-                   content: "那为了早日实现这个目标，我去学习啦！ヾ(￣▽￣)Bye~Bye~"
-               })
+            if(res.value == "cannotguessit"){
+                return botui.message.bot({
+                    delay: 1500,
+                    content: "答案是："+answer
+                })
             }
         })
     };
