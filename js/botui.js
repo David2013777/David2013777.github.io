@@ -23,7 +23,7 @@
     var botui = new BotUI("kelecnbot");
     botui.message.bot({
         delay: 200,
-        content: "Hi, there🙂"
+        content: "你好"
     }).then(function() {
         return botui.message.bot({
             delay: 1000,
@@ -32,17 +32,17 @@
     }).then(function() {
         return botui.message.bot({
             delay: 1000,
-            content: "一个没有感情的低配机器人🧐"
+            content: "一个会出谜语的机器人"
         })
     }).then(function() {
         return botui.action.button({
             delay: 1500,
             action: [{
-                text: "还有什么呢？ 😃",
+                text: "是真的吗？",
                 value: "and"
             },
             {
-                text: "爪巴吧你！ 🙄",
+                text: "不感兴趣，再见！",
                 value: "gg"
             }]
         })
@@ -120,5 +120,40 @@
                     content: "答案是："+answer
                 })
             }
+        }).then(function(){
+            return botui.message.bot({
+                delay: 1500,
+                content: "你猜对了吗"
+            })
+        }).then(function() {
+            return botui.action.button({
+                delay: 1500,
+                action: [{
+                  text: "猜对了",
+                  value: "yesguessit"
+               },
+               {
+                 text: "没猜对",
+                 value: "noguessit"
+               }]
+             })
+        }).then(function(res){
+            if(res.value == "yesguessit"){
+                return botui.message.bot({
+                    delay: 1500,
+                    content: "太强了"
+                })
+            }
+            if(res.value == "noguessit"){
+                return botui.message.bot({
+                    delay: 1500,
+                    content: "加油"
+                })
+            }
+        }).then(function(){
+            return botui.message.bot({
+                delay: 1500,
+                content: "再见"
+            })
         })
     };
