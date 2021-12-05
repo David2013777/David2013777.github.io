@@ -180,7 +180,7 @@
             kanalyse = myObj.newslist[0].analyse;
             }
         };
-        xmlhttp.open("GET", "http://api.tianapi.com/decide/index?key=0f6995f03cd32b5cb1ba806ce498da92");
+        xmlhttp.open("GET", "https://api.tianapi.com/decide/index?key=0f6995f03cd32b5cb1ba806ce498da92");
         xmlhttp.send();
     }
 
