@@ -32,9 +32,6 @@
     let answer = "answer";
     let type = "type";
 
-    //history
-    let historydate = {};
-    let historyevent = {};
 
     var botui = new BotUI("kelecnbot");
     botui.message.bot({
@@ -45,12 +42,18 @@
             delay: 1000,
             content: "这里是一个十分普通的机器人"
         })
-    }).then(function() {
-        return botui.message.bot({
-            delay: 1000,
-            content: "你想要我做什么？"
-        })
-    }).then(function() {
+    }).then(function(){
+        work();
+    })
+
+    var work = function(){
+        // getRiddleApi();
+        // getJokeApi();
+
+        botui.message.bot({
+            delay: 1500,
+            content: "你想要做什么？"
+        }).then(function(){
         return botui.action.button({
             delay: 1500,
             action: [{
@@ -61,58 +64,40 @@
                 text: "讲个笑话吧！",
                 value: "joke"
             },
-            // {
-            //     text: "历史上的今天",
-            //     value: "history"
-            // },
             {
                 text: "不感兴趣，再见！",
                 value: "bye"
             }]
         })
-    }).then(function(res) {
-        if (res.value == "riddle") {
-            getRiddleApi();
-            riddle();
-        }
-        if(res.value == "joke"){
-            getJokeApi();
-            joke();
-        }
-        if(res.value == "history"){
-            getHistoryApi();
-            history();
-        }
-        if (res.value == "bye") {
-            return botui.message.bot({
-                delay: 1500,
-                content: "![告辞](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1901389031,3540709863&fm=26&gp=0.jpg)"
-            })
-        }
-    });
-
-    var getHistoryApi = function(){
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            myObj = JSON.parse(this.responseText);
-            historydate[0] = myObj.day;
+        }).then(function(res) {
+            if (res.value == "riddle") {
+                getRiddleApi();
+                riddle();
             }
-        };
-        xmlhttp.open("GET", "https://api.oick.cn/lishi/api.php", true);
-        xmlhttp.send();
+            if(res.value == "joke"){
+                getJokeApi();
+                joke();
+            }
+            if (res.value == "bye") {
+                return botui.message.bot({
+                    delay: 1500,
+                    content: "![告辞](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1901389031,3540709863&fm=26&gp=0.jpg)"
+                })
+            }
+    });
     }
+
+    
     var getRiddleApi = function(){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
-            question = myObj.data.title;
-            type = myObj.data.type_name.name;
-            answer = myObj.data.answer;
+            question = myObj.newslist[0].quest;
+            answer = myObj.newslist[0].answer;
             }
         };
-        xmlhttp.open("GET", "https://v2.alapi.cn/api/riddle/random?token=1mJe1ziqLUk0UgoZ");
+        xmlhttp.open("GET", "https://api.tianapi.com/riddle/index?key=0f6995f03cd32b5cb1ba806ce498da92");
         xmlhttp.send();
     }
 
@@ -121,43 +106,21 @@
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
-            content = myObj.data.content;
-            title = myObj.data.title;
+            title = myObj.newslist[0].title;
+            content = myObj.newslist[0].content;
             }
         };
-        xmlhttp.open("GET", "https://v2.alapi.cn/api/joke/random?token=1mJe1ziqLUk0UgoZ");
+        xmlhttp.open("GET", "https://api.tianapi.com/joke/index?key=0f6995f03cd32b5cb1ba806ce498da92");
         xmlhttp.send();
     }
 
 
-    var history = function(){
-
-        botui.message.bot({
-            delay: 1500,
-            content: "讲一则笑话"
-        }).then(function(){
-            return botui.message.bot({
-                delay: 1500,
-                content: historydate[0]
-            })
-        }).then(function() {
-            return botui.message.bot({
-                delay: 1500,
-                content: "每天都要开开心心的啊！"
-            })
-        }).then(function(){
-            return botui.message.bot({
-                delay: 1500,
-                content: "再见"
-            })
-        })
-    }
 
     var joke = function(){
 
         botui.message.bot({
-            delay: 1500,
-            content: "讲一则笑话"
+            delay: 3000,
+            content: "笑话"
         }).then(function(){
             return botui.message.bot({
                 delay: 1500,
@@ -169,23 +132,15 @@
                 content: "每天都要开开心心的啊！"
             })
         }).then(function(){
-            return botui.message.bot({
-                delay: 1500,
-                content: "再见"
-            })
+            work();
         })
     }
 
 
     var riddle = function() {
         botui.message.bot({
-            delay: 1500,
+            delay: 3000,
             content: "试一下吧！"
-        }).then(function() {
-            return botui.message.bot({
-                delay: 1500,
-                content: type
-            })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
@@ -205,22 +160,12 @@
             return botui.action.button({
                 delay: 1500,
                 action: [{
-                  text: "我猜出来了",
-                  value: "canguessit"
-               },
-               {
-                 text: "没猜出来",
-                 value: "cannotguessit"
+                 text: "答案是什么",
+                 value: "guessanswer"
                }]
              })
         }).then(function(res){
-            if(res.value == "canguessit"){
-                return botui.message.bot({
-                    delay: 1500,
-                    content: "答案是："+answer
-                })
-            }
-            if(res.value == "cannotguessit"){
+            if(res.value == "guessanswer"){
                 return botui.message.bot({
                     delay: 1500,
                     content: "答案是："+answer
@@ -257,9 +202,6 @@
                 })
             }
         }).then(function(){
-            return botui.message.bot({
-                delay: 1500,
-                content: "再见"
-            })
+            work();
         })
     };
