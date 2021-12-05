@@ -23,11 +23,18 @@
      * BotUI回复配置
      */
 
+    //joke
     let content = "content";
     let title = "title";
+
+    //riddle
     let question = "question";
     let answer = "answer";
     let type = "type";
+
+    //history
+    let historydate = {};
+    let historyevent = {};
 
     var botui = new BotUI("kelecnbot");
     botui.message.bot({
@@ -48,27 +55,35 @@
             delay: 1500,
             action: [{
                 text: "猜一猜！",
-                value: "miyu"
+                value: "riddle"
             },
             {
                 text: "讲个笑话吧！",
-                value: "xiaohua"
+                value: "joke"
             },
+            // {
+            //     text: "历史上的今天",
+            //     value: "history"
+            // },
             {
                 text: "不感兴趣，再见！",
-                value: "zaijian"
+                value: "bye"
             }]
         })
     }).then(function(res) {
-        if (res.value == "miyu") {
+        if (res.value == "riddle") {
             getRiddleApi();
             riddle();
         }
-        if(res.value == "xiaohua"){
+        if(res.value == "joke"){
             getJokeApi();
             joke();
         }
-        if (res.value == "zaijian") {
+        if(res.value == "history"){
+            getHistoryApi();
+            history();
+        }
+        if (res.value == "bye") {
             return botui.message.bot({
                 delay: 1500,
                 content: "![告辞](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1901389031,3540709863&fm=26&gp=0.jpg)"
@@ -76,6 +91,17 @@
         }
     });
 
+    var getHistoryApi = function(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            historydate[0] = myObj.day;
+            }
+        };
+        xmlhttp.open("GET", "https://api.oick.cn/lishi/api.php", true);
+        xmlhttp.send();
+    }
     var getRiddleApi = function(){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -101,6 +127,30 @@
         };
         xmlhttp.open("GET", "https://v2.alapi.cn/api/joke/random?token=1mJe1ziqLUk0UgoZ");
         xmlhttp.send();
+    }
+
+
+    var history = function(){
+
+        botui.message.bot({
+            delay: 1500,
+            content: "讲一则笑话"
+        }).then(function(){
+            return botui.message.bot({
+                delay: 1500,
+                content: historydate[0]
+            })
+        }).then(function() {
+            return botui.message.bot({
+                delay: 1500,
+                content: "每天都要开开心心的啊！"
+            })
+        }).then(function(){
+            return botui.message.bot({
+                delay: 1500,
+                content: "再见"
+            })
+        })
     }
 
     var joke = function(){
