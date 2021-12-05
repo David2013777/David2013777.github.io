@@ -57,17 +57,17 @@
         return botui.action.button({
             delay: 1500,
             action: [{
-                text: "猜一猜！",
-                value: "riddle"
-            },
-            {
-                text: "讲个笑话吧！",
-                value: "joke"
-            },
-            {
-                text: "不感兴趣，再见！",
-                value: "bye"
-            }]
+                          text: "猜一猜！",
+                          value: "riddle"
+                    },
+                    {
+                          text: "讲个呗笑话！",
+                          value: "joke"
+                    },
+                    {
+                          text: "先说再见叭！",
+                          value: "bye"
+                    }]
         })
         }).then(function(res) {
             if (res.value == "riddle") {
@@ -79,14 +79,47 @@
                 joke();
             }
             if (res.value == "bye") {
-                return botui.message.bot({
-                    delay: 1500,
-                    content: "![告辞](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1901389031,3540709863&fm=26&gp=0.jpg)"
-                })
+                goodbye();
             }
     });
     }
 
+    var goodbye=function(){
+        return botui.message.bot({
+                delay: 1500,
+                content: "（。＾▽＾）总之遇见你很高兴！"
+        }).then(function(res) {
+            return botui.message.bot({
+                delay: 1500,
+                content: "那么，仔细看看我的博客吧？ ^_^"
+            })
+        }).then(function() {
+            return botui.action.button({
+            delay: 1500,
+            action: [{
+                text: "期待你更加智能的一天 😃",
+                value: "intel"
+            },
+            {
+                text: "那我走啦！(╹ڡ╹ )",
+                value: "bye"
+            }]
+            })
+        }).then(function(res){
+            if(res.value == "bye"){
+                return botui.message.bot({
+                    delay: 1500,
+                    content: "期待与你再次相见！💞"
+                })
+            }
+            if(res.value == "intel"){
+            return botui.message.bot({
+                delay: 1500,
+                content: "那为了早日实现这个目标，我去学习啦！ヾ(￣▽￣)Bye~Bye~"
+            })
+            }
+        })
+    }
     
     var getRiddleApi = function(){
         var xmlhttp = new XMLHttpRequest();
@@ -115,9 +148,7 @@
     }
 
 
-
     var joke = function(){
-
         botui.message.bot({
             delay: 3000,
             content: "笑话"
@@ -136,72 +167,160 @@
         })
     }
 
-
     var riddle = function() {
-        botui.message.bot({
-            delay: 3000,
-            content: "试一下吧！"
-        }).then(function() {
-            return botui.message.bot({
-                delay: 1500,
-                content: question
-            })
-        }).then(function() {
-            return botui.message.bot({
-                delay: 1500,
-                content: "有点难度哦"
-            })
-        }).then(function() {
-            return botui.message.bot({
-                delay: 1500,
-                content: "猜猜是什么"
-            })
-        }).then(function() {
-            return botui.action.button({
-                delay: 1500,
-                action: [{
-                 text: "答案是什么",
-                 value: "guessanswer"
-               }]
-             })
-        }).then(function(res){
-            if(res.value == "guessanswer"){
-                return botui.message.bot({
-                    delay: 1500,
-                    content: "答案是："+answer
-                })
-            }
-        }).then(function(){
-            return botui.message.bot({
-                delay: 1500,
-                content: "你猜对了吗"
-            })
-        }).then(function() {
-            return botui.action.button({
-                delay: 1500,
-                action: [{
-                  text: "猜对了",
-                  value: "yesguessit"
-               },
-               {
-                 text: "没猜对",
-                 value: "noguessit"
-               }]
-             })
-        }).then(function(res){
-            if(res.value == "yesguessit"){
-                return botui.message.bot({
-                    delay: 1500,
-                    content: "太强了"
-                })
-            }
-            if(res.value == "noguessit"){
-                return botui.message.bot({
-                    delay: 1500,
-                    content: "加油"
-                })
-            }
-        }).then(function(){
-            work();
-        })
-    };
+                botui.message.bot({
+                    delay: 3000,
+                    content: "试一下吧！"
+                }).then(function() {
+                    return botui.message.bot({
+                        delay: 1500,
+                        content: question
+                    })
+                }).then(function() {
+                    return botui.message.bot({
+                        delay: 1500,
+                        content: "有点难度哦"
+                    })
+                }).then(function() {
+                    return botui.message.bot({
+                        delay: 1500,
+                        content: "猜出来了嘛🙃"
+                    })
+                }).then(function() {
+                    return botui.action.button({
+                        delay: 1500,
+                        action: [{
+                          text: "我猜出来了😝",
+                          value: "canguessit"
+                       },
+                       {
+                         text: "没猜出来😥",
+                         value: "cannotguessit"
+                       }]
+                     })
+                }).then(function(res){
+                    if(res.value == "canguessit"){
+                        return botui.message.bot({
+                            delay: 1500,
+                            content: "答案是："+answer
+                        }).then(function(){
+                            return botui.message.bot({
+                                delay: 1500,
+                                content: "你猜对了吗"
+                            })
+                        }).then(function() {
+                            return botui.action.button({
+                                delay: 1500,
+                                action: [{
+                                  text: "猜对了",
+                                  value: "yesguessit"
+                               },
+                               {
+                                 text: "没猜对",
+                                 value: "noguessit"
+                               }]
+                             })
+                        }).then(function(res){
+                            if(res.value == "yesguessit"){
+                                return botui.message.bot({
+                                    delay: 1500,
+                                    content: "太强了👍"
+                                }).then(function(){
+                                   return botui.message.bot({
+                                       delay: 1500,
+                                       content: "要乘胜追击吗~😊"
+                                   })
+                                }).then(function(){
+                                    return botui.action.button({
+                                        delay: 1500,
+                                        action: [{
+                                            text: "很满足啦！🙂",
+                                            value: "negative"
+                                        },
+                                        {
+                                            text: "那就再来一次吧！",
+                                            value: "okay"
+                                        }]
+                                    })
+                                }).then(function(res){
+                                    if(res.value=="negative"){
+                                        work()
+                                    }
+                                    if(res.value=="okay"){
+                                        getRiddleApi();
+                                        riddle(); 
+                                    }
+                                })
+                            }
+                            if(res.value == "noguessit"){
+                                return botui.message.bot({
+                                    delay: 1500,
+                                    content: "继续努力呀！😘"
+                                }).then(function(){
+                                    return botui.message.bot({
+                                        delay: 1500,
+                                        content: "要再战一次吗？(´▽`ʃ♡ƪ)"
+                                    })
+                                }).then(function(){
+                                    return botui.action.button({
+                                        delay: 1500,
+                                        action: [{
+                                            text: "还是不要啦(T_T)",
+                                            value: "nomore"
+                                        },
+                                        {
+                                            text: "再战一次🐱‍🚀",
+                                            value: "onemore"
+                                        }]
+                                    })
+                                }).then(function(res){
+                                    if(res.value=="nomore"){
+                                        work();
+                                    } 
+                                    if(res.value=="onemore"){
+                                        getRiddleApi();
+                                        riddle();  
+                                    }
+                                })
+                            }
+                        })
+                    }
+                    if(res.value == "cannotguessit"){
+                        return botui.message.bot({
+                            delay: 1500,
+                            content: "答案是："+answer
+                        }).then(function(){
+                           return botui.message.bot({
+                               delay: 1500,
+                               content: "要再战一次吗？(´▽`ʃ♡ƪ)"
+                           })
+                        }).then(function(){
+                            return botui.action.button({
+                                delay: 1500,
+                                action: [{
+                                    text: "还是不要啦(T_T)",
+                                    value: "nomore"
+                                },
+                                {
+                                    text: "再战一次🐱‍🚀",
+                                    value: "onemore"
+                                }]
+                            })
+                        }).then(function(res){
+                            if(res.value=="nomore"){
+                                work();
+                            } 
+                            if(res.value=="onemore"){
+                                getRiddleApi();
+                                riddle();  
+                            }
+                        })
+                    }
+                })
+            }
+    
+
+
+
+
+
