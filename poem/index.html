@@ -409,7 +409,12 @@
         if (this.readyState == 4 && this.status == 200) {
         myObj = JSON.parse(this.responseText);
         for(i = 0;i<10;i++){
-          document.getElementById("poem-content-"+i).innerHTML = '<p>'+myObj.newslist[i].content+'</p>';
+          var str = myObj.newslist[i].content.split((/[，,。,？,！]/));
+          var poemstr = "";
+          for(j = 0;j<str.length;j++){
+            poemstr+=str[j]+'<br>'
+          }
+          document.getElementById("poem-content-"+i).innerHTML = '<p>'+poemstr+'</p>';
           document.getElementById("poem-author-"+i).innerHTML = myObj.newslist[i].author;
           document.getElementById("poem-title-"+i).innerHTML = myObj.newslist[i].title;
         }
