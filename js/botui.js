@@ -211,7 +211,7 @@
 
         botui.message.bot({
             delay: 3000,
-            content: "试一下吧！"
+            content: "常识判断题！"
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
@@ -236,7 +236,7 @@
                 }).then(function() {
                     return botui.message.bot({
                         delay: 1500,
-                        content: "解释"+kanalyse
+                        content: "解释："+kanalyse
                 })
                 })
             }
