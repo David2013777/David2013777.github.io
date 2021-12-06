@@ -348,7 +348,7 @@
 <div id = "essay-author" style="font-family: 宋体;text-align: right;font-size: 25px"></div>
 <div id = "essay-content" style="font-family: 楷体;font-size: 20px;"></div>
 <script>
-    // let readtext = "";
+    var readtext = "";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -356,22 +356,38 @@
         document.getElementById("essay-title").innerHTML = '<h1>'+myObj.data.title+'</h1>';
         document.getElementById("essay-author").innerHTML = myObj.data.author;
         document.getElementById("essay-content").innerHTML = myObj.data.content;
-        // readtext = myObj.data.title+myObj.data.author+myObj.data.content;
-        // setTimeout("readEssay()","3000");
+        readtext = myObj.data.title+myObj.data.author+myObj.data.content;
+        var str = readtext.split((/['<p>','</p>']/));
+        var nextstr = "";
+        for(i = 0;i<str.length;i++){
+            nextstr+=str[i];
+        }
+        //setTimeout("3000");
+        var myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
+        myUrl = 'https://api.oick.cn/txt/apiz.php?text='+nextstr+'&spd=5'
+        document.getElementById("myreader").innerHTML = '<embed src = "'+myUrl+'">';
+        var element = document.getElementById("myreader");
+        element.style.display = "block";
         }
     };
     xmlhttp.open("GET", "https://interface.meiriyiwen.com/article/random?dev=1");
     xmlhttp.send();
 </script>
-<!-- <div id = "myreader"></div>
-<script>
-    let myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
+
+<div id = "myreader" style="max-width: 100px;display: block;">
+    <embed src = myUrl>
+</div>
+
+<!-- <script>
+    var myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
     myUrl = 'https://api.oick.cn/txt/apiz.php?text='+readtext+'&spd=5'
     var readEssay = function() {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("myreader").innerHTML == '<audio><source src = "'+myUrl+'"type = "audio/mp3"></audio>';
+                document.getElementById("myreader").innerHTML = '<embed src = "'+myUrl+'">';
+                var element = document.getElementById("myreader");
+                element.style.display = "block";
             }
         }
         xmlhttp.open("GET", myUrl);
