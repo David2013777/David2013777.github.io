@@ -37,6 +37,10 @@
     let kanswer = "kanswer";
     let kanalyse = "kanalyse";
 
+    //english
+    let ensentence = "en";
+    let zhsentence = "zh";
+
     //////////////////////////////////////////////
 
     var botui = new BotUI("kelecnbot");
@@ -74,6 +78,10 @@
                           text: "考一考常识！",
                           value: "knowledge"
                     },
+                    {
+                          text: "秀一秀外语！",
+                          value: "english"
+                    },
                     {
                           text: "先说再见叭！",
                           value: "bye"
@@ -91,6 +99,10 @@
             if(res.value == "knowledge"){
                 getKnowledgeApi();
                 knowledge();
+            }
+            if(res.value == "english"){
+                getEnglishApi();
+                english();
             }
             if (res.value == "bye") {
                 goodbye();
@@ -138,6 +150,22 @@
         })
     }
 
+
+
+    /////////////////////////////////////////////
+    var getEnglishApi = function(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            myObj = JSON.parse(this.responseText);
+            ensentence = myObj.newslist[0].en;
+            zhsentence = myObj.newslist[0].zh;
+            }
+        };
+        xmlhttp.open("GET", "https://api.tianapi.com/ensentence/index?key=0f6995f03cd32b5cb1ba806ce498da92");
+        xmlhttp.send();
+    }
+
     /////////////////////////////////////////////
     
     var getRiddleApi = function(){
@@ -182,6 +210,28 @@
         };
         xmlhttp.open("GET", "https://api.tianapi.com/decide/index?key=0f6995f03cd32b5cb1ba806ce498da92");
         xmlhttp.send();
+    }
+
+
+    /////////////////////////////////////////////
+
+    var english = function(){
+        botui.message.bot({
+            delay: 3000,
+            content: "那我就班门弄斧啦"
+        }).then(function(){
+            return botui.message.bot({
+                delay: 1500,
+                content: ensentence
+            })
+        }).then(function() {
+            return botui.message.bot({
+                delay: 1500,
+                content: zhsentence
+            })
+        }).then(function(){
+            work();
+        })
     }
 
     /////////////////////////////////////////////
