@@ -355,7 +355,7 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div id = "mypoem">
+<div id = "mypoem" style="float:right;">
 </div>
 
 <script>
@@ -367,14 +367,14 @@
           var str = myObj.newslist[i].content.split((/[，,。,？,！]/));
           var poemstr = "";
           for(j = 0;j<str.length;j++){
-            if(j%4==3){
-              poemstr+=str[j]+'<br></p></div><div><p>'
+            if(j!=0&&j%16==0){
+              poemstr+='</p></div></div><div class="poem"><div><p>'+str[j]+'<br>'
             }
             else{
               poemstr+=str[j]+'<br>'
             }
           }
-          document.getElementById("mypoem").innerHTML+='<div class="poem"><div class="poem-title">'+myObj.newslist[i].title+'</div><div class="poem-author">'+myObj.newslist[i].author+'</div><div><p>'+poemstr+'</p></div>'
+          document.getElementById("mypoem").innerHTML+='<div class="poem"><div class="poem-title">'+myObj.newslist[i].title+'</div><div class="poem-author">'+myObj.newslist[i].author+'</div><div><p>'+poemstr+'</p></div></div>'
         }
       }
     };
