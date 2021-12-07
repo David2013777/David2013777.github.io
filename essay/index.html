@@ -144,6 +144,18 @@
           
           
           
+            <li class="nav-item">
+              <a class="nav-link" href="/navigation/">
+                <i class="iconfont icon-bookmark-fill"></i>
+                导航
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" target="_self" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -348,9 +360,9 @@
 <div id = "essay-author" style="font-family: 宋体;text-align: right;font-size: 25px"></div>
 <div id = "essay-content" style="font-family: 楷体;font-size: 20px;"></div>
 
-<div id = "myreader" style="max-width: 100px;display: block;">
+<!-- <div id = "myreader" style="max-width: 100px;display: block;">
     <embed src = myUrl>
-</div>
+</div> -->
 
 <script>
     var readtext = "";
@@ -361,18 +373,17 @@
         document.getElementById("essay-title").innerHTML = '<h1>'+myObj.data.title+'</h1>';
         document.getElementById("essay-author").innerHTML = myObj.data.author;
         document.getElementById("essay-content").innerHTML = myObj.data.content;
-        readtext = myObj.data.title+myObj.data.author+myObj.data.content;
-        var str = readtext.split((/['<p>','</p>']/));
-        var nextstr = "";
-        for(i = 0;i<str.length;i++){
-            nextstr+=str[i];
-        }
-        //setTimeout("3000");
-        var myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
-        myUrl = 'https://api.oick.cn/txt/apiz.php?text='+nextstr+'&spd=5'
-        document.getElementById("myreader").innerHTML = '<embed src = "'+myUrl+'">';
-        var element = document.getElementById("myreader");
-        element.style.display = "block";
+        // readtext = myObj.data.title+myObj.data.author+myObj.data.content;
+        // var str = readtext.split((/['<p>','</p>']/));
+        // var nextstr = "";
+        // for(i = 0;i<str.length;i++){
+        //     nextstr+=str[i];
+        // }
+        // var myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
+        // myUrl = 'https://api.oick.cn/txt/apiz.php?text='+nextstr+'&spd=5'
+        // document.getElementById("myreader").innerHTML = '<embed src = "'+myUrl+'">';
+        // var element = document.getElementById("myreader");
+        // element.style.display = "block";
         }
     };
     xmlhttp.open("GET", "https://interface.meiriyiwen.com/article/random?dev=1");
