@@ -368,13 +368,13 @@
           var poemstr = "";
           for(j = 0;j<str.length;j++){
             if(j!=0&&j%16==0){
-              poemstr+='</p></div></div><div class="poem"><div><p>'+str[j]+'<br>'
+              poemstr+='</p></div><div class="poem"><p>'+str[j]+'<br>'
             }
             else{
               poemstr+=str[j]+'<br>'
             }
           }
-          document.getElementById("mypoem").innerHTML+='<div class="poem"><div class="poem-title">'+myObj.newslist[i].title+'</div><div class="poem-author">'+myObj.newslist[i].author+'</div><div><p>'+poemstr+'</p></div></div>'
+          document.getElementById("mypoem").innerHTML+='<div class="poem"><div class="poem-title">'+myObj.newslist[i].title+'</div><div class="poem-author">'+myObj.newslist[i].author+'</div><p>'+poemstr+'</p></div>'
         }
       }
     };
