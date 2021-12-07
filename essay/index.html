@@ -347,6 +347,11 @@
 <div id = "essay-title" style="font-family: 黑体;text-align: center;"></div>
 <div id = "essay-author" style="font-family: 宋体;text-align: right;font-size: 25px"></div>
 <div id = "essay-content" style="font-family: 楷体;font-size: 20px;"></div>
+
+<div id = "myreader" style="max-width: 100px;display: block;">
+    <embed src = myUrl>
+</div>
+
 <script>
     var readtext = "";
     var xmlhttp = new XMLHttpRequest();
@@ -374,26 +379,9 @@
     xmlhttp.send();
 </script>
 
-<div id = "myreader" style="max-width: 100px;display: block;">
-    <embed src = myUrl>
-</div>
 
-<!-- <script>
-    var myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
-    myUrl = 'https://api.oick.cn/txt/apiz.php?text='+readtext+'&spd=5'
-    var readEssay = function() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("myreader").innerHTML = '<embed src = "'+myUrl+'">';
-                var element = document.getElementById("myreader");
-                element.style.display = "block";
-            }
-        }
-        xmlhttp.open("GET", myUrl);
-        xmlhttp.send();
-    }
-</script> -->
+
+
 
 <!-- Comments -->
 <div class="container comments mx-auto" id="comments" lazyload>
