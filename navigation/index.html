@@ -363,8 +363,54 @@
   <input type="button"/>
 </div> -->
 
+<style>
+  .search_form
+{
+	width:600px;
+	height:40px;
+	max-width:device-width;
+	min-width:100px;
+}
+
+.input_text
+{
+	width:600px;
+	height:40px;
+	border:1px solid green;
+	max-width:device-width;
+	min-width:100px;
+	text-indent:10px;
+	outline:none;
+	float:left;
+	padding:0;
+}
+
+.input_sub
+{
+	width:100px;
+	height:45px;
+	background:#4285F4;
+	border:0;
+	color:#000;
+	cursor:pointer;
+}
+</style>
+
+<div style="padding: 20px;">
+  <center>
+    <form action="https://cn.bing.com/search?" method="get">
+        <form class="search_form">
+          <input type="text" name="q" class="search_form" value="" placeholder="Bing搜索">
+          <input type="submit" value="搜索" class="input_sub">
+        </form>
+    </form>
+  </center>
+</div>
+
+
 
 <div class="row links">
+  
   
     
     <div class="card col-lg-4 col-md-6 col-sm-12">
