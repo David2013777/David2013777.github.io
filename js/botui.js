@@ -279,7 +279,7 @@
                    }]
                  })
          }).then(function(res){
-            if((res.value == "true"&&kanswer == "1")||(res.value == "false"&&kanswer == "0")){
+            if((res.value == "true"&&kanswer == "1")||(res.value == "false" &&kanswer == "0")){
                 return botui.message.bot({
                     delay: 1500,
                     content: "恭喜你，回答正确！"
