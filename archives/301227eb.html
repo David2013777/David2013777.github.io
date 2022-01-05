@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 个月前
+                  本文最后更新于：7 分钟前
                 
               </p>
             
@@ -1091,6 +1091,7 @@
 <li>在测试文件中生成激励波形作为电路的仿真信号。</li>
 </ul>
 <h2 id="一些Verilog程序"><a href="#一些Verilog程序" class="headerlink" title="一些Verilog程序"></a>一些Verilog程序</h2><figure class="highlight verilog"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs verilog"><span class="hljs-comment">//计算rega中1的个数</span><br><span class="hljs-keyword">module</span> count1s_for_good(count,rega);<br>    <span class="hljs-keyword">output</span>[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] count;<br>    <span class="hljs-keyword">input</span>[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] rega;<br>    <span class="hljs-keyword">reg</span>[<span class="hljs-number">3</span>:<span class="hljs-number">0</span>] count;<br>    <span class="hljs-keyword">always</span> @ (rega)<br>    <span class="hljs-keyword">begin</span>:<br>        block<br>        <span class="hljs-keyword">integer</span> i;<br>        count = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>;i&lt;=<span class="hljs-number">7</span>;i=i+<span class="hljs-number">1</span>)<br>            <span class="hljs-keyword">if</span>(rega[i] == <span class="hljs-number">1</span>)<br>                count = count +<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">end</span><br><span class="hljs-keyword">endmodule</span><br></code></pre></div></td></tr></table></figure>
+
             </div>
             <hr>
             <div>
