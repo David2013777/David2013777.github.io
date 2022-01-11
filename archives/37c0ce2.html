@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      10k 字
+      10.5k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      138
+      144
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 天前
+                  本文最后更新于：6 分钟前
                 
               </p>
             
@@ -662,8 +662,17 @@ $$ -->
 <p>推论：初等变换不改变矩阵的秩。</p>
 <p>定义：满足下面两个条件的矩阵称为行阶梯形矩阵，简称阶梯形矩阵。</p>
 <p>定理：设 $A=(a_{ij})$ 且 $r_A=r&gt;0$ 的充分必要条件是，存在可逆矩阵 $P=P_{m\times n}$ 和 $Q=Q_{n\times p}$ 使得<br>$$<br>A=P\begin{pmatrix}E_r&amp;0\\0&amp;0\end{pmatrix}Q<br>$$</p>
-<h3 id="线性方程组的解法"><a href="#线性方程组的解法" class="headerlink" title="线性方程组的解法"></a>线性方程组的解法</h3><h4 id="非齐次线性方程组的解"><a href="#非齐次线性方程组的解" class="headerlink" title="非齐次线性方程组的解"></a>非齐次线性方程组的解</h4><p>定理：非齐次线性方程组有解的充要条件是系数矩阵的秩和增广矩阵的秩相等，即 $r_A=r_B$ 。</p>
+<h3 id="线性方程组的解法"><a href="#线性方程组的解法" class="headerlink" title="线性方程组的解法"></a>线性方程组的解法</h3><h4 id="非齐次线性方程组的解"><a href="#非齐次线性方程组的解" class="headerlink" title="非齐次线性方程组的解"></a>非齐次线性方程组的解</h4><p>线性方程组的一般形状是<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_{2}+\cdot+a_{1n}x_n=b_1 \\ a_{21}x_1+a_{22}x_{2}+\cdot+a_{2n}x_n=b_2 \\<br>\cdots \\ a_{m1}x_1+a_{m2}x_{2}+\cdot+a_{mn}x_n=b_m<br>\end{cases}<br>$$</p>
+<p>当等号右端 $m$ 个常数不全为零时它为非齐次线性方程组，当等号右端常数全为零时，称它为齐次次线性方程组。</p>
+<p>定理：非齐次线性方程组有解的充要条件是系数矩阵的秩和增广矩阵的秩相等，即 $r_A=r_B$ 。</p>
 <p>定理：当 $r_A=r_b=n$ 时，非齐次线性方程组只有唯一解，当 $r_A=r_B=r&lt;n$ 时，它有无穷多解。</p>
+<p>矩阵消元法：</p>
+<ol>
+<li>写出方程组的增广矩阵，并用初等行变换把它化为阶梯型矩阵 $B_1$ ，即<br>$$<br>B=(A,b)\rightarrow B_1<br>$$<br>比较 $B_1$ 和 $B_1$ 中前 $n$ 列所成之矩阵的非零行个数立刻可知 $r_A=r_B$ 是否成立。<br>若 $r_A&lt;r_B$ （即 $r_B=r_A+1$ ），方程组无界。</li>
+<li>若 $r_A=r_B=n$ ，则解以 $B_1$ 为增广矩阵的阶梯形方程组。为了便于求解，可以继续用初等行变换把 $B_1$ 化成行最简形；每行非零首元都等于1，而且非零首元所在的列，除非零首元本身外其余元全为零的阶梯型矩阵。<br>$$<br>B_1\rightarrow<br>\begin{pmatrix}<br>1&amp;0&amp;\cdots &amp;0&amp;a_{1,r+1}^{\prime}&amp;\cdots &amp;a_{1,n}^{\prime}&amp;b_1^{\prime}\\<br>0&amp;1&amp;\cdots&amp;0&amp;a_{2,r+1}^{\prime}&amp;\cdots &amp;a_{2,n}^{\prime}&amp;b_2^{\prime}\\<br>\vdots&amp;\vdots &amp;&amp;\vdots&amp;\vdots &amp;&amp;\vdots &amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;1&amp;a_{r,r+1}^{\prime}&amp;\cdots &amp;a_{r,n}^{\prime}&amp;b_r^{\prime}\\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0\\<br>\vdots &amp;\vdots &amp;&amp;\vdots &amp;\vdots &amp;&amp;\vdots&amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0<br>\end{pmatrix}<br>$$<br>于是方程组的通解为<br>$$</li>
+</ol>
+<p> $$<br> 其中 $$ 为任意常数。通解也可以写成向量形式</p>
+<p> 特别当 $$ 时，得到方程组 $$ 的一个特解 $$ 。</p>
 <h4 id="齐次线性方程组的解法"><a href="#齐次线性方程组的解法" class="headerlink" title="齐次线性方程组的解法"></a>齐次线性方程组的解法</h4><h3 id="线性方程组的解的结构"><a href="#线性方程组的解的结构" class="headerlink" title="线性方程组的解的结构"></a>线性方程组的解的结构</h3><h4 id="齐次线性方程组的基础解系"><a href="#齐次线性方程组的基础解系" class="headerlink" title="齐次线性方程组的基础解系"></a>齐次线性方程组的基础解系</h4><h4 id="非齐次线性方程组解的结构"><a href="#非齐次线性方程组解的结构" class="headerlink" title="非齐次线性方程组解的结构"></a>非齐次线性方程组解的结构</h4><h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><h3 id="线性空间的概念"><a href="#线性空间的概念" class="headerlink" title="线性空间的概念"></a>线性空间的概念</h3><h4 id="线性空间的定义与例子"><a href="#线性空间的定义与例子" class="headerlink" title="线性空间的定义与例子"></a>线性空间的定义与例子</h4><h4 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h4><h3 id="n-维线性空间"><a href="#n-维线性空间" class="headerlink" title="$n$ 维线性空间"></a>$n$ 维线性空间</h3><h4 id="n-维线性空间的定义"><a href="#n-维线性空间的定义" class="headerlink" title="$n$ 维线性空间的定义"></a>$n$ 维线性空间的定义</h4><h4 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h4><h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性变换的定义"><a href="#线性变换的定义" class="headerlink" title="线性变换的定义"></a>线性变换的定义</h3><h3 id="维线性空间-中线性变换的矩阵"><a href="#维线性空间-中线性变换的矩阵" class="headerlink" title="$$ 维线性空间  中线性变换的矩阵"></a>$$ 维线性空间  中线性变换的矩阵</h3><h3 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h3><h2 id="欧几里得空间"><a href="#欧几里得空间" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h2><h2 id="n-元实二次型"><a href="#n-元实二次型" class="headerlink" title="$n$ 元实二次型"></a>$n$ 元实二次型</h2>
             </div>
             <hr>
@@ -696,6 +705,29 @@ $$ -->
                   
                 </p>
               
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/archives/d63dd81.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">格式问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/archives/e9faf39c.html">
+                        <span class="hidden-mobile">复变函数与积分变换</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
