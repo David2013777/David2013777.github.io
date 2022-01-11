@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      10.5k 字
+      11.5k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      144
+      159
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：6 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -483,9 +483,7 @@
 <p>推论：在全部的 $n$ 级排列中，奇偶排列的个数相等，各有 $\frac{n!}{2}$ 个。</p>
 <p>定理：任意一个 $n$ 级排列与排列 $12\cdots n$ 都可以经过一系列对换互变，并且所做对换的个数与这个排列有相同的奇偶性。</p>
 <h3 id="n-阶行列式的定义"><a href="#n-阶行列式的定义" class="headerlink" title="$n$ 阶行列式的定义"></a>$n$ 阶行列式的定义</h3><p> $n$ 阶行列式：由 $n^2$ 个数 $a_{ij}$ （称为行列式的元）排成一个 $n$ 行 $n$ 列的表，并在两边各画一条竖线的记号<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots&amp;\vdots&amp;\ddots&amp;\vdots \\ a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>称为 $n$ 阶行列式。</p>
-<p> $n$ 阶行列式表示的代数和的所有项，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13} \\ a_{21}&amp;a_{22}&amp;a_{23} \\ a_{31}&amp;a_{32}&amp;a_{33}\end{vmatrix}<br>$$</p>
-<!-- 其中 $\sum\_{j\_1,j\_2}$ 表示对 $$ 的一切排列取和。用符号 $$ 或 $$ 表示以 $$ 为元的 $$ 阶行列式。 -->
-
+<p> $n$ 阶行列式表示的代数和的所有项，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13} \\ a_{21}&amp;a_{22}&amp;a_{23} \\ a_{31}&amp;a_{32}&amp;a_{33}\end{vmatrix}<br>$$<br>其中 $\sum_{j_1,j_2}$ 表示对 $$ 的一切排列取和。用符号 $$ 或 $$ 表示以 $$ 为元的 $$ 阶行列式。</p>
 <p>上三角行列式：当 $i&gt;j$ 时， $a_{ij}=0$ 。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ 0&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  0&amp;0&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>上三角行列式的值等于其主对角线上各元之积。</p>
 <h3 id="n-阶行列式的性质"><a href="#n-阶行列式的性质" class="headerlink" title="$n$ 阶行列式的性质"></a>$n$ 阶行列式的性质</h3><p>性质1：行列式的行和列顺次互换，其值不变，即</p>
 <p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{21}&amp;\cdots &amp;a_{n1} \\ a_{12}&amp;a_{22}&amp;\cdots &amp;a_{n2} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  a_{1n}&amp;a_{2n}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
@@ -502,15 +500,8 @@
 </ol>
 <p>性质6：若把行列式的某行（列） $\lambda$ 倍后加到另一行（列）上，则行列式的值不变。</p>
 <p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{i1}+\lambda a_{j1}&amp;a_{i2}+\lambda a_{j2}&amp;\cdots &amp;a_{in}+\lambda a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{j1}&amp;a_{j2}&amp;\cdots &amp;a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{i1}&amp;a_{i2}&amp;\cdots &amp;a_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{j1}&amp;a_{j2}&amp;\cdots &amp;a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
-<h3 id="行列式按行（列）展开"><a href="#行列式按行（列）展开" class="headerlink" title="行列式按行（列）展开"></a>行列式按行（列）展开</h3><!-- 余子式： $$ 恰好是行列式 $$ 中元 $$ 所在的第一行与第一列划去之后所得的 $$ 阶行列式， $$ 称为元 $$ 在 $$ 中的余子式。 -->
-
-<p>代数余子式： $M_{ij}$ 是把行列式 $|A|$ 中元 $a_{ij}$ 所在的第 $i$ 行，第 $j$ 列划掉后所得到的 $n-1$ 阶行列式， $M_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的余子式，记 $A_{ij}=(-1)^{i+j}M_{ij}$ ， $A_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的代数余子式。</p>
-<!-- $$
-\begin{vmatrix}a\_{11}&a\_{12}&\cdots &a\_{1n} \\\\ a\_{21}&a\_{22}&\cdots &a\_{2n} \\\\ \vdots &\vdots &\ddots&\vdots \\\\  a\_{n1}&a\_{n2}&\cdots &a\_{nn}\end{vmatrix}
-$$ -->
-<p>定理： $n$ 阶 $n\geq 2$ 行列式等于它的任一行的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{ik}A_{ik}(i=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式等于它的任何一列的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{kj}A_{kj}(j=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式的任一行的各元与另一行对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{jk}A_{ik}=0(i\neq j)<br>$$<br>定理： $n$ 阶行列式的任一列的各元与另一列对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{kj}A_{ki}=0(i\neq j)<br>$$<br>于是有</p>
+<h3 id="行列式按行（列）展开"><a href="#行列式按行（列）展开" class="headerlink" title="行列式按行（列）展开"></a>行列式按行（列）展开</h3><p>代数余子式： $M_{ij}$ 是把行列式 $|A|$ 中元 $a_{ij}$ 所在的第 $i$ 行，第 $j$ 列划掉后所得到的 $n-1$ 阶行列式， $M_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的余子式，记 $A_{ij}=(-1)^{i+j}M_{ij}$ ， $A_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的代数余子式。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>定理： $n$ 阶 $n\geq 2$ 行列式等于它的任一行的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{ik}A_{ik}(i=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式等于它的任何一列的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{kj}A_{kj}(j=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式的任一行的各元与另一行对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{jk}A_{ik}=0(i\neq j)<br>$$<br>定理： $n$ 阶行列式的任一列的各元与另一列对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{kj}A_{ki}=0(i\neq j)<br>$$<br>于是有</p>
 <p>$$<br>\sum_{k=1}^na_{jk}A_{ik}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
-<p>$$<br>\sum_{k=1}^na_{kj}A_{ki}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
 <p>范德蒙德行列式：<br>$$<br>V(x_1,x_2,\cdots,x_n)=\begin{vmatrix}1&amp;1&amp;1&amp;1 \\ x_{1}&amp;x_{2}&amp;\cdots &amp;x_{n}\\x_{1}^{2}&amp;x_{2}^{2}&amp;\cdots &amp;x_{n}^{2}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\x_{1}^{n-1}&amp;x_{2}^{n-1}&amp;\cdots &amp;x_{n}^{n-1}\end{vmatrix}=\prod_{1\leq j &lt; i\leq n}(x_i-x_j)<br>$$<br>互为余子式：在 $n$ 阶行列式在，任意指定 $r$ 个行与 $r$ 个列 $(1\leq r&lt;n)$ ，位于这些行列交点处的 $r^2$ 个元构成的 $r$ 阶行列式 $M$ 称为原行列式的一个 $r$ 阶子式。在 $n$ 阶行列式中，划去某个 $r$ 阶子式 $M$ 所在的行和列后，剩下的 $n-r$ 个行和 $n-r$ 个列上的元也构成一个 $n-r$ 阶子式 $N$ ，我们称这一对子式 $M$ 与 $N$ 互为余子式。</p>
 <p>拉普拉斯定理：在 $n$ 阶行列式中任意选定 $k$ 个行（列） $1\leq k&lt;n$ ，则 $n$ 阶行列式等于位于这 $k$ 个行（列）中的一切 $k$ 阶子式 $M_i(i=1,2,\cdots,C_{n}^{k})$ 与其对应的代数余子式 $A_i$ 乘积之和，即<br>$$<br>|A|=\sum_{i=1}^{C_n^k}M_iA_i<br>$$</p>
 <h2 id="矩阵代数"><a href="#矩阵代数" class="headerlink" title="矩阵代数"></a>矩阵代数</h2><h3 id="矩阵的概念"><a href="#矩阵的概念" class="headerlink" title="矩阵的概念"></a>矩阵的概念</h3><p>矩阵：由 $m\times n$ 个数 $$a_{ij}(i=1,\cdots,m;j=1,\cdots,n)$$ 排成的 $m$ 行 $n$ 列的数表<br>$$<br>\begin{pmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{m1}&amp;a_{m2}&amp;\cdots &amp;a_{mn}\end{pmatrix}<br>$$<br>称为 $m$ 行 $n$ 列矩阵（或 $m\times n$ 矩阵）。数 $a_{ij}$ 称为矩阵的元。</p>
@@ -524,15 +515,11 @@ $$ -->
 <p>行向量与列向量：常把 $1\times n$ 矩阵称为 $n$ 维行向量， $n\times 1$ 矩阵称为 $n$ 维列向量。矩阵也可以写成行向量按列排列和列向量按行排列的形式。</p>
 <h3 id="矩阵的代数运算"><a href="#矩阵的代数运算" class="headerlink" title="矩阵的代数运算"></a>矩阵的代数运算</h3><h4 id="矩阵的加法和数乘"><a href="#矩阵的加法和数乘" class="headerlink" title="矩阵的加法和数乘"></a>矩阵的加法和数乘</h4><p>相等：如果同型矩阵 $A=(a_{ij}),B=(b_{ij})$ 的对应元都相等，即 $a_{ij}=b_{ij}$ ，则称 $A$ 与 $B$ 相等，记为 $A=B$ 。</p>
 <p>和：两个同型矩阵 $A={(a_{ij})}_{m\times n}$ 和 $B=(b_{ij})_{m\times n}$ 的对应元相加所得的同型矩阵 $C=(a_{ij}+b_{ij})_{m\times n}$ 称为矩阵 $A$ 与 $B$ 之和，记为 $C=A+B$ 。</p>
-<!-- 和：两个同型矩阵 $A={(a\_{ij})}$ 和 $B=(b\_{ij})$ 的对应元相加所得的同型矩阵 $C=(a\_{ij}+b\_{ij})$ 称为矩阵 $A$ 与 $B$ 之和，记为 $C=A+B$ 。 -->
-
 <p>零矩阵：每个元都等于零的 $m\times n$ 矩阵称为零矩阵，记为 $0_{m\times n}$ 或者 $0$ 。显然对一切 $A=A_{m\times n}$ 恒有 $0_{m\times n}+A_{m\times n}=A_{m\times n}$ 或 $0+A=A$ 。</p>
 <p>负矩阵：若与 $A$ 同型的矩阵 $B$ 的每个元是矩阵 $A$ 的对应元的相反数，则称矩阵 $B$ 为 $A$ 的负矩阵。 $A$ 的负矩阵记为 $-A$ ，显然 $A+(-A)=0$ 。</p>
 <p>差：若矩阵 $A,B$ 是同型矩阵，则称矩阵 $A+(-B)$ 为 $A$ 与 $B$ 的差，并记为 $A-B$ ，即 $A-B=A+(-B)$ 。</p>
 <p>显然， $A=B$ 的充要条件是 $A-B=0$ 。</p>
 <p>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p>
-<!-- 数乘：若 $\lambda$ 是一个数， $A=(a\_{ij})$ 是矩阵，则同型矩阵 $(\lambda a\_{ij})$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a\_{ij})$ 。 -->
-
 <p>矩阵的加（减）法和数与矩阵的数乘统称为矩阵的线性运算。</p>
 <p>性质：</p>
 <ol>
@@ -544,12 +531,8 @@ $$ -->
 </ol>
 <p>线性组合：设给定了若干个同型矩阵 $A_1,\cdots,A_m$ ，经过线性运算<br>$$<br>\lambda_1A_1+\lambda_2A_2+\cdots+\lambda_mA_m=\sum_{j=1}^{m}\lambda_jA_j=B<br>$$<br>（其中 $\lambda_j$ 是常数， $j=1,2,\cdots,m$ ）得到的矩阵 $B$ 称为矩阵 $A_1,\cdots,A_m$ 的线性组合。或者称 $B$ 可经 $A_1,\cdots,A_m$ 线性表出。</p>
 <h4 id="矩阵的乘法"><a href="#矩阵的乘法" class="headerlink" title="矩阵的乘法"></a>矩阵的乘法</h4><p>矩阵与列向量的乘积：设 $A=(a_{ij})_{m\times n},C=(c_j)_{n\times 1}$ ，则规定 $m\times n$ 矩阵 $A$ 与 $n$ 维列向量 $C$ 相乘的乘积 $AC$ 是以 $d_i=\sum_{j=1}^n{a_{ij}c_j}$ $(i=1,\cdots ,n)$ 为分量的 $m$ 维列向量，即</p>
-<!-- 矩阵与列向量的乘积：设 $A=(a\_{ij}),C=(c\_j)$ ，则规定 $m\times n$ 矩阵 $A$ 与 $n$ 维列向量 $C$ 相乘的乘积 $AC$ 是以 $$d\_i=\sum\_{j=1}^n{a\_{ij}c\_j} (i=1,\cdots ,n)$$ 为分量的 $m$ 维列向量，即 -->
-
 <p>$$<br>AC=\begin{pmatrix}a_{11}c_1+a_{12}c_2+\cdots +a_{1n}c_n\\a_{21}c_1+a_{22}c_2+\cdots +a_{2n}c_n\\ \vdots\\a_{m1}c_1+a_{m2}c_2+\cdots +a_{mn}c_n\end{pmatrix}<br>$$</p>
 <p>矩阵与矩阵的乘积：设 $A=(a_{ij})_{m\times n}$ ， $B=(b_{ij})_{n\times s}$ ， $A$ 与 $B$ 相乘的乘积 $AB$ 定义如下</p>
-<!-- 矩阵与矩阵的乘积：设 $A=(a\_{ij})$ ， $B=(b\_{ij})$ ， $A$ 与 $B$ 相乘的乘积 $AB$ 定义如下 -->
-
 <p>$$<br>AB=\begin{pmatrix}\sum_{k=1}^na_{1k}b_{k1}&amp;\sum_{k=1}^na_{1k}b_{k2}&amp;\cdots &amp;\sum_{k=1}^na_{1k}b_{ks} \\ \sum_{k=1}^na_{2k}b_{k1}&amp;\sum_{k=1}^na_{2k}b_{k2}&amp;\cdots &amp;\sum_{k=1}^na_{2k}b_{ks} \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ \sum_{k=1}^na_{mk}b_{k1}&amp;\sum_{k=1}^na_{mk}b_{k2}&amp;\cdots &amp;\sum_{k=1}^na_{mk}b_{ks}\end{pmatrix}=D<br>$$</p>
 <p>即， $A$ 与 $B$ 相乘所得的矩阵 $D$ 是 $m\times s$ 矩阵。它的元 $d_{ij}=\sum_{k=1}^na_{ik}b_{kj}$ $(i=1,2,\cdots,m)$,$j=1,2,\cdots,s$ 由 $A$ 的第 $i$ 个行向量与 $B$ 的第 $j$ 个列向量的对应分量乘积之和。</p>
 <p>矩阵乘法不符合交换律。</p>
@@ -562,10 +545,8 @@ $$ -->
 <li>$\lambda (AB)=(\lambda A)B=A(\lambda B)$<br>其中 $A,B,C$ 是使上述矩阵乘法有意义的矩阵， $\lambda$ 是数。</li>
 </ol>
 <p>单位矩阵： $n$ 阶方阵<br>$$<br>E_n=\begin{pmatrix}1&amp;0&amp;\cdots &amp;0 \\ 0&amp;1&amp;\cdots &amp;0 \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 0&amp;0&amp;\cdots &amp;1\end{pmatrix}=\begin{pmatrix}1&amp;&amp;&amp; \\ &amp;1&amp;&amp; \\  &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;1\end{pmatrix}<br>$$<br>称为 $n$ 阶单位矩阵，也记为 $E$ 。容易验证对任意的 $n$ 阶矩阵 $A$ 有<br>$$AE=EA=A$$<br>设 $A$ 是 $n$ 阶矩阵，则乘积 ${A\cdots A}(\text{有限个})$ 有意义。 $k$ 个 $A$ 相乘称为 $A$ 的 $k$ 次幂，记为</p>
-<!-- $$
-A^{k}=\underbrace{AA\cdots A}\_{k\text{个}}
-$$ -->
-<p>$$<br>A^k=AA\cdots A(k\text{个})<br>$$<br>并约定 $A^0=E$ 。<br>不难验证</p>
+<p>$$<br>A^k=AA\cdots A(k\text{个})<br>$$</p>
+<p>并约定 $A^0=E$ 。<br>不难验证</p>
 <p>$$<br>A^kA^l=A^{k+l},(A^k)^l=A^{kl},(k,l\in \mathbb{Z^+})<br>$$<br>成立。由于矩阵乘法不满足交换律，一般的 $(AB)^k\neq A^kB^k$ （ $A,B$ 皆为方阵， $k\geq 2$ ）。</p>
 <p>当 $A$ 为方阵时，称矩阵<br>$$<br>f(A)=a_0A^m+a_1A^{m-1}+\cdots+a_{m-1}A+a_mE<br>$$<br>为矩阵 $A$ 的多项式，也称 $f(A)$ 是普通多项式<br>$$<br>f(\lambda)=a_0\lambda^m+a_1\lambda^{m-1}+\cdots+a_{m-1}\lambda+a_m<br>$$<br>当 $\lambda =A$ 的值，设 $\varphi(\lambda),\psi(\lambda)$ 是两个多项式，令<br>$$<br>f(\lambda)=\varphi(\lambda)+\psi(\lambda),g(\lambda)=\varphi(\lambda)\psi(\lambda)<br>$$<br>由矩阵的运算法则有<br>$$<br>f(A)=\varphi(A)+\psi(A),g(A)=\varphi(A)\psi(A)<br>$$<br>特别是由 $\varphi(\lambda)\psi(\lambda)=\psi(\lambda)\varphi(\lambda)$ 推出 $\varphi(A)\psi(A)=\psi(A)\varphi(A)$ 。</p>
 <p>定理：若 $A$ 与 $B$ 为 $n$ 阶矩阵，则 $|AB|=|A||B|$ 。</p>
@@ -669,11 +650,28 @@ $$ -->
 <p>矩阵消元法：</p>
 <ol>
 <li>写出方程组的增广矩阵，并用初等行变换把它化为阶梯型矩阵 $B_1$ ，即<br>$$<br>B=(A,b)\rightarrow B_1<br>$$<br>比较 $B_1$ 和 $B_1$ 中前 $n$ 列所成之矩阵的非零行个数立刻可知 $r_A=r_B$ 是否成立。<br>若 $r_A&lt;r_B$ （即 $r_B=r_A+1$ ），方程组无界。</li>
-<li>若 $r_A=r_B=n$ ，则解以 $B_1$ 为增广矩阵的阶梯形方程组。为了便于求解，可以继续用初等行变换把 $B_1$ 化成行最简形；每行非零首元都等于1，而且非零首元所在的列，除非零首元本身外其余元全为零的阶梯型矩阵。<br>$$<br>B_1\rightarrow<br>\begin{pmatrix}<br>1&amp;0&amp;\cdots &amp;0&amp;a_{1,r+1}^{\prime}&amp;\cdots &amp;a_{1,n}^{\prime}&amp;b_1^{\prime}\\<br>0&amp;1&amp;\cdots&amp;0&amp;a_{2,r+1}^{\prime}&amp;\cdots &amp;a_{2,n}^{\prime}&amp;b_2^{\prime}\\<br>\vdots&amp;\vdots &amp;&amp;\vdots&amp;\vdots &amp;&amp;\vdots &amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;1&amp;a_{r,r+1}^{\prime}&amp;\cdots &amp;a_{r,n}^{\prime}&amp;b_r^{\prime}\\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0\\<br>\vdots &amp;\vdots &amp;&amp;\vdots &amp;\vdots &amp;&amp;\vdots&amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0<br>\end{pmatrix}<br>$$<br>于是方程组的通解为<br>$$</li>
+<li>若 $r_A=r_B=n$ ，则解以 $B_1$ 为增广矩阵的阶梯形方程组。为了便于求解，可以继续用初等行变换把 $B_1$ 化成行最简形；每行非零首元都等于1，而且非零首元所在的列，除非零首元本身外其余元全为零的阶梯型矩阵。<br>$$<br>B_1\rightarrow<br>\begin{pmatrix}<br>1&amp;0&amp;\cdots &amp;0&amp;a_{1,r+1}^{\prime}&amp;\cdots &amp;a_{1,n}^{\prime}&amp;b_1^{\prime}\\<br>0&amp;1&amp;\cdots&amp;0&amp;a_{2,r+1}^{\prime}&amp;\cdots &amp;a_{2,n}^{\prime}&amp;b_2^{\prime}\\<br>\vdots&amp;\vdots &amp;&amp;\vdots&amp;\vdots &amp;&amp;\vdots &amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;1&amp;a_{r,r+1}^{\prime}&amp;\cdots &amp;a_{r,n}^{\prime}&amp;b_r^{\prime}\\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0\\<br>\vdots &amp;\vdots &amp;&amp;\vdots &amp;\vdots &amp;&amp;\vdots&amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0<br>\end{pmatrix}<br>$$<br>于是方程组的通解为<br>$$<br>\begin{cases}<br>x_1 = b_{1}^{\prime}-a_{1,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{1,n}\tilde{x}_n\\<br>x_2 =  b_{2}^{\prime}-a_{2,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{2,n}\tilde{x}_n\\<br>\cdots \\<br>x_r = b_{r}^{\prime}-a_{r,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{r,n}\tilde{x}_n\\<br>x_{r+1} = \tilde{x}_{r+1}\\<br>\cdots \\<br>x_n = \tilde{x}_n<br>\end{cases}<br>$$<br>其中 $\tilde{x}_{r+1},\cdots ,\tilde{x}_{n}$ 为任意常数。通解也可以写成向量形式<br>$$<br>\begin{pmatrix}<br>x_1 \\ x_2 \\ \vdots \\ x_{r} \\ x_{r+1} \\ x_{r+2} \\ \vdots \\ x_{n}<br>\end{pmatrix}<br>=\begin{pmatrix}<br>b_1^{\prime} \\ b_2^{\prime} \\ \vdots \\ b_{r}^{\prime} \\ 0 \\ 0 \\ \vdots \\ 0<br>\end{pmatrix}</li>
 </ol>
-<p> $$<br> 其中 $$ 为任意常数。通解也可以写成向量形式</p>
-<p> 特别当 $$ 时，得到方程组 $$ 的一个特解 $$ 。</p>
-<h4 id="齐次线性方程组的解法"><a href="#齐次线性方程组的解法" class="headerlink" title="齐次线性方程组的解法"></a>齐次线性方程组的解法</h4><h3 id="线性方程组的解的结构"><a href="#线性方程组的解的结构" class="headerlink" title="线性方程组的解的结构"></a>线性方程组的解的结构</h3><h4 id="齐次线性方程组的基础解系"><a href="#齐次线性方程组的基础解系" class="headerlink" title="齐次线性方程组的基础解系"></a>齐次线性方程组的基础解系</h4><h4 id="非齐次线性方程组解的结构"><a href="#非齐次线性方程组解的结构" class="headerlink" title="非齐次线性方程组解的结构"></a>非齐次线性方程组解的结构</h4><h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><h3 id="线性空间的概念"><a href="#线性空间的概念" class="headerlink" title="线性空间的概念"></a>线性空间的概念</h3><h4 id="线性空间的定义与例子"><a href="#线性空间的定义与例子" class="headerlink" title="线性空间的定义与例子"></a>线性空间的定义与例子</h4><h4 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h4><h3 id="n-维线性空间"><a href="#n-维线性空间" class="headerlink" title="$n$ 维线性空间"></a>$n$ 维线性空间</h3><h4 id="n-维线性空间的定义"><a href="#n-维线性空间的定义" class="headerlink" title="$n$ 维线性空间的定义"></a>$n$ 维线性空间的定义</h4><h4 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h4><h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性变换的定义"><a href="#线性变换的定义" class="headerlink" title="线性变换的定义"></a>线性变换的定义</h3><h3 id="维线性空间-中线性变换的矩阵"><a href="#维线性空间-中线性变换的矩阵" class="headerlink" title="$$ 维线性空间  中线性变换的矩阵"></a>$$ 维线性空间  中线性变换的矩阵</h3><h3 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h3><h2 id="欧几里得空间"><a href="#欧几里得空间" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h2><h2 id="n-元实二次型"><a href="#n-元实二次型" class="headerlink" title="$n$ 元实二次型"></a>$n$ 元实二次型</h2>
+<p> +\tilde{x}_{r+1}\begin{pmatrix}<br> -a_{1,r+1}^{\prime} \\ -a_{2,r+1}^{\prime} \\ \vdots \\ -a_{r,r+1}^{\prime} \\ 1 \\ 0 \\ \vdots \\ 0<br> \end{pmatrix}<br> +\tilde{x}_{r+2}\begin{pmatrix}<br> -a_{1,r+2}^{\prime} \\ -a_{2,r+2}^{\prime} \\ \vdots \\ -a_{r,r+2}^{\prime} \\ 0 \\ 1 \\ \vdots \\ 0<br> \end{pmatrix}<br> +\cdots<br> +\tilde{x}_{n}\begin{pmatrix}<br> -a_{1,n}^{\prime} \\ -a_{2,n}^{\prime} \\ \vdots \\ -a_{r,n}^{\prime} \\ 0 \\ 0 \\ \vdots \\ 1<br> \end{pmatrix}<br> $$<br> 特别当 $\tilde{x}_{r+1}=\cdots = \tilde{x}_{n}=0$ 时，得到方程组的一个特解 $(b_1^{\prime},b_2^{\prime},\cdots,b_r^{\prime},0,0,\cdots,0)$ 。</p>
+<h4 id="齐次线性方程组的解法"><a href="#齐次线性方程组的解法" class="headerlink" title="齐次线性方程组的解法"></a>齐次线性方程组的解法</h4><p>齐次线性方程组<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_{2}+\cdot+a_{1n}x_n=0 \\ a_{21}x_1+a_{22}x_{2}+\cdot+a_{2n}x_n=0 \\<br>\cdots \\ a_{m1}x_1+a_{m2}x_{2}+\cdot+a_{mn}x_n=0<br>\end{cases}<br>$$<br>它的矩阵形式是 $AX=0$ 。它的向量形式是 $A_1x_1+\cdots+A_nx_n=0$ 。<br>增广矩阵 $B=(A,0)$ 。由于 $r_B=r_A$ 。故齐次线性方程组必定有解。 $(0,\cdots,0)$ 称为零解（平凡解）。当 $r_A=n$ 时，它只有唯一解，即零解。当 $r_A&lt;n$ 时，还有非零解。特别对 $n$ 个未知量 $n$ 个方程的齐次线性方程组，有非零解的充要条件是，系数行列式 $|A|=0$ 。</p>
+<h3 id="线性方程组的解的结构"><a href="#线性方程组的解的结构" class="headerlink" title="线性方程组的解的结构"></a>线性方程组的解的结构</h3><h4 id="齐次线性方程组的基础解系"><a href="#齐次线性方程组的基础解系" class="headerlink" title="齐次线性方程组的基础解系"></a>齐次线性方程组的基础解系</h4><p>基础解系：齐次线性方程组解集合的一个极大线性无关子组，称为该齐次线性方程组的一个基础解系。</p>
+<p>定理：当 $r_A=r&lt;n$ 时，齐次线性方程组的基础解系有 $n-r$ 个向量。</p>
+<h4 id="非齐次线性方程组解的结构"><a href="#非齐次线性方程组解的结构" class="headerlink" title="非齐次线性方程组解的结构"></a>非齐次线性方程组解的结构</h4><p>定理：把非齐次线性方程组的一个特解  加到它的导出组的每个解向量上，就得到非齐次线性方程组的全部解向量，它的全部解向量可表为<br>$$<br>X=X_0+k_1X_1+\cdots+k_{n-r}X_{n-r}<br>$$<br>其中 $k_1,\cdots,k_{n-r}$ 为任意的常数。</p>
+<h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><h3 id="线性空间的概念"><a href="#线性空间的概念" class="headerlink" title="线性空间的概念"></a>线性空间的概念</h3><h4 id="线性空间的定义与例子"><a href="#线性空间的定义与例子" class="headerlink" title="线性空间的定义与例子"></a>线性空间的定义与例子</h4><p>重述向量集合基本运算规律：</p>
+<ol>
+<li>$\alpha+\beta = \beta + \alpha$</li>
+<li>$(\alpha +\beta)+\gamma = \alpha + (\beta+\gamma)$</li>
+<li>存在零向量 0 ，使 $0+\alpha=\alpha$ 对任意向量 $\alpha$ 成立。</li>
+<li>对于每个向量 $\alpha$ 都有负向量 $(-\alpha)$ 存在，使得 $\alpha+(-\alpha)=0$ 。</li>
+<li>$1\alpha = \alpha$</li>
+<li>$\lambda(\alpha+\beta)=\lambda\alpha+\lambda\beta$</li>
+<li>$(\lambda+\mu)\alpha = \lambda\alpha+\mu\alpha$</li>
+<li>$\lambda(\mu\alpha)=(\lambda\mu)\alpha$</li>
+</ol>
+<p>其中 $\alpha,\beta,\gamma$ 表示向量， $\lambda,\mu$ 是实数。另外 $\lambda,\mu$ 也可能是某个数域中的数。</p>
+<p>线性空间：设 $V$ 是一个非空集合。它的元以字母 $\alpha,\beta,\gamma,\cdots$ 表示。又 $F$ 是一个数域，其中的数用 $\lambda,\mu$ 表示。如果集合 $V$ 具备下列条件：<br>第一，在集合 $V$ 中定义了一个规则（称作加法运算），使得对于 $V$ 中任意二元 $\alpha$ 与 $\beta$ ，由这规则确定了 $V$ 中唯一的一元 $\gamma$ 。这个 $\gamma$ 叫做 $\alpha$ 与 $\beta$ 的和，且记为 $\gamma=\alpha+\beta$ 。这个加法运算满足基本运算规律 1-4 。<br>第二，在数域 $F$ 中的数与 $V$ 中的元之间也定义了一个规则（称为数乘运算），使得对于任意给定的数 $\lambda\in F$ 及元 $\alpha\in V$ ，由这一规则确定了 $V$ 中唯一的一个元；把这个元称为数 $\lambda$ 与元 $\alpha$ 的乘积，记为 $\lambda\alpha$ 。这个数乘运算满足前面的基本运算规律 5-8 。加法运算和数乘运算统称为线性运算。称集合 $V$ 按定义的线性运算构成数域 $F$ 上的线性空间，简称 $V$ 是 $F$ 上的线性空间。 $V$ 的元称为向量。</p>
+<h4 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h4><p>子空间：设 $V$ 是 $F$ 上的线性空间， $L$ 是 $V$ 的一个非空子集，如果 $L$ 关于 $V$ 中的加法及数乘运算也构成 $F$ 上的一个线性空间，则 $L$ 称为 $V$ 的子空间。</p>
+<h3 id="n-维线性空间"><a href="#n-维线性空间" class="headerlink" title="$n$ 维线性空间"></a>$n$ 维线性空间</h3><h4 id="n-维线性空间的定义"><a href="#n-维线性空间的定义" class="headerlink" title="$n$ 维线性空间的定义"></a>$n$ 维线性空间的定义</h4><h4 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h4><h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性变换的定义"><a href="#线性变换的定义" class="headerlink" title="线性变换的定义"></a>线性变换的定义</h3><h3 id="维线性空间-中线性变换的矩阵"><a href="#维线性空间-中线性变换的矩阵" class="headerlink" title="$$ 维线性空间  中线性变换的矩阵"></a>$$ 维线性空间  中线性变换的矩阵</h3><h3 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h3><h2 id="欧几里得空间"><a href="#欧几里得空间" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h2><h2 id="n-元实二次型"><a href="#n-元实二次型" class="headerlink" title="$n$ 元实二次型"></a>$n$ 元实二次型</h2>
             </div>
             <hr>
             <div>
