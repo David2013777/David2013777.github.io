@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      11.5k 字
+      12.6k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      159
+      173
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -670,7 +670,32 @@
 <p>其中 $\alpha,\beta,\gamma$ 表示向量， $\lambda,\mu$ 是实数。另外 $\lambda,\mu$ 也可能是某个数域中的数。</p>
 <p>线性空间：设 $V$ 是一个非空集合。它的元以字母 $\alpha,\beta,\gamma,\cdots$ 表示。又 $F$ 是一个数域，其中的数用 $\lambda,\mu$ 表示。如果集合 $V$ 具备下列条件：<br>第一，在集合 $V$ 中定义了一个规则（称作加法运算），使得对于 $V$ 中任意二元 $\alpha$ 与 $\beta$ ，由这规则确定了 $V$ 中唯一的一元 $\gamma$ 。这个 $\gamma$ 叫做 $\alpha$ 与 $\beta$ 的和，且记为 $\gamma=\alpha+\beta$ 。这个加法运算满足基本运算规律 1-4 。<br>第二，在数域 $F$ 中的数与 $V$ 中的元之间也定义了一个规则（称为数乘运算），使得对于任意给定的数 $\lambda\in F$ 及元 $\alpha\in V$ ，由这一规则确定了 $V$ 中唯一的一个元；把这个元称为数 $\lambda$ 与元 $\alpha$ 的乘积，记为 $\lambda\alpha$ 。这个数乘运算满足前面的基本运算规律 5-8 。加法运算和数乘运算统称为线性运算。称集合 $V$ 按定义的线性运算构成数域 $F$ 上的线性空间，简称 $V$ 是 $F$ 上的线性空间。 $V$ 的元称为向量。</p>
 <h4 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h4><p>子空间：设 $V$ 是 $F$ 上的线性空间， $L$ 是 $V$ 的一个非空子集，如果 $L$ 关于 $V$ 中的加法及数乘运算也构成 $F$ 上的一个线性空间，则 $L$ 称为 $V$ 的子空间。</p>
-<h3 id="n-维线性空间"><a href="#n-维线性空间" class="headerlink" title="$n$ 维线性空间"></a>$n$ 维线性空间</h3><h4 id="n-维线性空间的定义"><a href="#n-维线性空间的定义" class="headerlink" title="$n$ 维线性空间的定义"></a>$n$ 维线性空间的定义</h4><h4 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h4><h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性变换的定义"><a href="#线性变换的定义" class="headerlink" title="线性变换的定义"></a>线性变换的定义</h3><h3 id="维线性空间-中线性变换的矩阵"><a href="#维线性空间-中线性变换的矩阵" class="headerlink" title="$$ 维线性空间  中线性变换的矩阵"></a>$$ 维线性空间  中线性变换的矩阵</h3><h3 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h3><h2 id="欧几里得空间"><a href="#欧几里得空间" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h2><h2 id="n-元实二次型"><a href="#n-元实二次型" class="headerlink" title="$n$ 元实二次型"></a>$n$ 元实二次型</h2>
+<h3 id="n-维线性空间"><a href="#n-维线性空间" class="headerlink" title="$n$ 维线性空间"></a>$n$ 维线性空间</h3><h4 id="n-维线性空间的定义"><a href="#n-维线性空间的定义" class="headerlink" title="$n$ 维线性空间的定义"></a>$n$ 维线性空间的定义</h4><p>$n$ 维线性空间：如果线性空间 $V$ 中存在由 $n$ 个向量构成的极大线性无关子组，则 $V$ 称为 $n$ 维线性空间。 $V$ 的极大线性无关子组称为 $V$ 的基或基底。基所含向量的个数称为空间 $V$ 的维数。</p>
+<p>零空间（它没有基）的维数规定为零。<br>既非零空间又非 $n$ 维空间的线性空间称为无穷维空间。</p>
+<p>定理：设 $[\alpha_1,\alpha_2,\cdots,\alpha_n]$ 是 $n$ 维线性空间 $V$ 的一个基，则 $V$ 中任何向量 $\alpha$ 均可由基的向量线性表出，即<br>$$<br>\alpha = a_1\alpha_1+\cdots +a_n\alpha_n<br>$$<br>且表出的形式是唯一的。</p>
+<p>定理：设在基 $[\alpha_1,\alpha_2,\cdots,\alpha_n]$ 下， $n$ 维线性空间 $V$ 中的向量 $\alpha ,\beta$ 的坐标分别是<br>$$<br>X=(a_1,\cdots,a_n)<br>$$<br>$$<br>Y=(b_1,\cdots,b_n)<br>$$<br>则向量 $\alpha+\beta$ 与 $\lambda\alpha$ （ $\lambda$ 是数）的坐标分别为<br>$$<br>X+Y=(a_1+b_1,\cdots,a_n+b_n)<br>$$<br>$$<br>\lambda X = (\lambda a_1,\cdots,\lambda a_n)<br>$$</p>
+<h4 id="基变换与坐标变换"><a href="#基变换与坐标变换" class="headerlink" title="基变换与坐标变换"></a>基变换与坐标变换</h4><p>定理：设 $[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]$ 和 $[\eta_1,\eta_2,\cdots,\eta_n]$ 是 $n$ 维线性空间 $V$ 的两个基。向量 $\alpha$ 在这两个基下的坐标分别为 $X$ 和 $Y$ ，若基变换为<br>$$<br>[\eta_1,\eta_2,\cdots,\eta_n]=[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]M<br>$$<br>其中 $M$ 为基 $[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]$ 到基 $[\eta_1,\eta_2,\cdots,\eta_n]$ 的过渡矩阵，则坐标变换公式为<br>$$<br>X=MY \text{或} Y=M^{-1}X<br>$$</p>
+<h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><h3 id="线性变换的定义"><a href="#线性变换的定义" class="headerlink" title="线性变换的定义"></a>线性变换的定义</h3><p>映射：设 $X,Y$ 是两个非空集合，如果有一个确定的法则 $f$ ，使得 $X$ 中每个元 $x$ 在 $f$ 之下有集合 $Y$ 中唯一确定的元 $y$ 与之对应，则称此法则 $f$ 是 $X$ 到 $Y$ 的一个映射，记为<br>$$<br>f:X \rightarrow Y<br>$$<br>若 $X$ 中的元 $x$ 通过映射 $f$ 得到 $Y$ 中的对应元 $y$ ，则记为<br>$$<br>f:x \rightarrow y<br>$$<br>称 $y$ 为映射 $f$ 下元 $x$ 的象，并记为 $y=f(x)$ 。而 $x$ 称为 $y$ 在映射 $f$ 下的原象。</p>
+<p>变换：设 $V$ 是线性空间。 $V$ 到自身的映射 $T$ 称为 $V$ 的一个变换，即<br>$$<br>T:V \rightarrow V<br>$$<br>这时向量 $\alpha\in V$ 在变换 $T$ 之下的象 $\beta$ 记为 $\beta = T\alpha$ ，即</p>
+<p>线性变换：设 $F$ 上线性空间 $V$ 有一个变换 $T$ ，它满足下列条件</p>
+<ol>
+<li>对任意 $\alpha,\beta\in V$ ，有 $T(\alpha+\beta)=T\alpha+T\beta$ 。</li>
+<li>对任意 $\alpha\in V$ 和 $a\in F$ 有 $T(a\alpha)=aT\alpha$ 。</li>
+</ol>
+<p>则称 $T$ 是线性空间 $V$ 上的一个线性变换。</p>
+<p>定理：线性空间 $V$ 上的变换 $T$ 是线性变换的充要条件是对任意数 $a,b$ 及 $V$ 中的向量 $\alpha,\beta$ 恒有 $T(a\alpha+b\beta)=aT\alpha+bT\beta$ 成立。</p>
+<p>象子空间：设 $T$ 是线性空间 $V$ 的线性变换。令 $TV$ 是 $V$ 的全体向量的象集合，则 $TV$ 是 $V$ 的子空间。称 $TV$ 为在线性变换 $T$ 下 $V$ 的象子空间。</p>
+<h3 id="n-维线性空间-V-中线性变换的矩阵"><a href="#n-维线性空间-V-中线性变换的矩阵" class="headerlink" title="$n$ 维线性空间 $V$ 中线性变换的矩阵"></a>$n$ 维线性空间 $V$ 中线性变换的矩阵</h3><h4 id="线性变换在一个基下的矩阵"><a href="#线性变换在一个基下的矩阵" class="headerlink" title="线性变换在一个基下的矩阵"></a>线性变换在一个基下的矩阵</h4><p>定理：设 $[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]$ 是线性空间 $V$ 的一个基， $T$ 是 $V$ 上的线性变换，则线性变换 $TV$ 被该基的象 $T\varepsilon_1,T\varepsilon_2,\cdots,T\varepsilon_n$ 所确定。</p>
+<p>定理：对于每个 $n$ 阶矩阵 $A$ 。在 $n$ 维线性空间中必存在唯一的线性变换 $T$ ，使得 $T$ 在 $V$ 中给定的基下的矩阵恰为 $A$ 。</p>
+<h4 id="线性变换在不同基下矩阵的关系"><a href="#线性变换在不同基下矩阵的关系" class="headerlink" title="线性变换在不同基下矩阵的关系"></a>线性变换在不同基下矩阵的关系</h4><p>设 $[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]$ 和 $[\eta_1,\eta_2,\cdots,\eta_n]$ 是线性空间 $V$ 中的两个基，且由基 $[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]$ 到基 $[\eta_1,\eta_2,\cdots,\eta_n]$ 的过渡矩阵为 $M$ ，即<br>$$<br>[\eta_1,\eta_2,\cdots,\eta_n]=[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]M<br>$$<br>又假定线性变换 $T$ 在这两个基下的矩阵分别为 $A$ 和 $B$ ，即<br>$$<br>T[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]=[\varepsilon_1,\varepsilon_2,\cdots,\varepsilon_n]A<br>$$<br>$$<br>T[\eta_1,\eta_2,\cdots,\eta_n]=[\eta_1,\eta_2,\cdots,\eta_n]B<br>$$<br>则有 $B=M^{-1}AM$ 。</p>
+<p>相似：设 $A,B$ 是 $n$ 阶矩阵，若存在满秩矩阵 $M$ ，使 $B=M^{-1}AM$ 成立，则称矩阵 $A$ 与 $B$ 相似，记为 $A\sim B$ 。</p>
+<p>矩阵相似有以下三条性质：</p>
+<ol>
+<li>自反性 $A\sim A$</li>
+<li>对称性 $A\sim B$ ，则 $B\sim A$</li>
+<li>传递性 $A\sim B,B\sim C$ ，则 $A\sim C$</li>
+</ol>
+<h3 id="矩阵的对角化"><a href="#矩阵的对角化" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h3><h4 id="矩阵的特征值与特征向量"><a href="#矩阵的特征值与特征向量" class="headerlink" title="矩阵的特征值与特征向量"></a>矩阵的特征值与特征向量</h4><h4 id="矩阵的对角化-1"><a href="#矩阵的对角化-1" class="headerlink" title="矩阵的对角化"></a>矩阵的对角化</h4><h2 id="欧几里得空间"><a href="#欧几里得空间" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h2><h3 id="欧几里得空间-1"><a href="#欧几里得空间-1" class="headerlink" title="欧几里得空间"></a>欧几里得空间</h3><h4 id="向量的标准内积"><a href="#向量的标准内积" class="headerlink" title="向量的标准内积"></a>向量的标准内积</h4><h4 id="标准正交基"><a href="#标准正交基" class="headerlink" title="标准正交基"></a>标准正交基</h4><h3 id="正交变换"><a href="#正交变换" class="headerlink" title="正交变换"></a>正交变换</h3><h2 id="n-元实二次型"><a href="#n-元实二次型" class="headerlink" title="$n$ 元实二次型"></a>$n$ 元实二次型</h2><h3 id="n-元实二次型及其标准形"><a href="#n-元实二次型及其标准形" class="headerlink" title="$n$ 元实二次型及其标准形"></a>$n$ 元实二次型及其标准形</h3><h4 id="n-元实二次型的定义"><a href="#n-元实二次型的定义" class="headerlink" title="$n$ 元实二次型的定义"></a>$n$ 元实二次型的定义</h4><h4 id="n-元实二次型的标准形"><a href="#n-元实二次型的标准形" class="headerlink" title="$n$ 元实二次型的标准形"></a>$n$ 元实二次型的标准形</h4><h3 id="正定二次型"><a href="#正定二次型" class="headerlink" title="正定二次型"></a>正定二次型</h3><h3 id="用正交变换化二次型为标准形"><a href="#用正交变换化二次型为标准形" class="headerlink" title="用正交变换化二次型为标准形"></a>用正交变换化二次型为标准形</h3>
             </div>
             <hr>
             <div>
