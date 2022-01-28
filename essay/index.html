@@ -356,13 +356,35 @@
                 
 
 
-<div id = "essay-title" style="font-family: 黑体;text-align: center;"></div>
-<div id = "essay-author" style="font-family: 宋体;text-align: right;font-size: 25px"></div>
-<div id = "essay-content" style="font-family: 楷体;font-size: 20px;"></div>
+  <!-- Buttons 库的核心文件 -->
+  <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
 
-<!-- <div id = "myreader" style="max-width: 100px;display: block;">
-    <embed src = myUrl>
-</div> -->
+  <!-- 当需要使用带下拉菜单的按钮时才需要加载下面的 JavaScript 文件 -->
+  <!-- <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script> -->
+
+<div>
+    <div style="float: left;font-size: 25px;font-family: 楷体">
+        语音朗读
+    </div>
+    <p style="display: none;">
+        <label>选择播报语音：</label>
+        <select id="voiceSelect" onchange="play()"></select>
+    </p>
+    <div style="float: right;">
+        <button class="_search button button-3d button-box button-primary" onclick="play()"><i class="fa fa-thumbs-up">开始</i></button>
+        <button class="_search button button-3d button-box  button-caution" onclick="resume()"><i class="fa fa-thumbs-up">继续</i></button>
+        <button class="_search button button-3d button-box button-royal" onclick="pause()"><i class="fa fa-thumbs-up">暂停</i></button>
+    </div>
+    <br style="clear:both"/>
+</div>
+
+
+<hr />
+<div id = "essay-title" class = "_title" style="font-family: 黑体;text-align: center;"></div>
+<div id = "essay-author" class = "_author" style="font-family: 宋体;text-align: right;font-size: 25px"></div>
+<div id = "essay-content" class = "_content" style="font-family: 楷体;font-size: 20px;"></div>
+
+
 
 <script>
     var readtext = "";
@@ -373,24 +395,91 @@
         document.getElementById("essay-title").innerHTML = '<h1>'+myObj.data.title+'</h1>';
         document.getElementById("essay-author").innerHTML = myObj.data.author;
         document.getElementById("essay-content").innerHTML = myObj.data.content;
-        // readtext = myObj.data.title+myObj.data.author+myObj.data.content;
-        // var str = readtext.split((/['<p>','</p>']/));
-        // var nextstr = "";
-        // for(i = 0;i<str.length;i++){
-        //     nextstr+=str[i];
-        // }
-        // var myUrl = "https://api.oick.cn/txt/apiz.php?text=免费api做免费接口的搬运工&spd=5";
-        // myUrl = 'https://api.oick.cn/txt/apiz.php?text='+nextstr+'&spd=5'
-        // document.getElementById("myreader").innerHTML = '<embed src = "'+myUrl+'">';
-        // var element = document.getElementById("myreader");
-        // element.style.display = "block";
         }
     };
     xmlhttp.open("GET", "https://interface.meiriyiwen.com/article/random?dev=1");
     xmlhttp.send();
 </script>
 
+<script>
+    if(!('speechSynthesis' in window)) {
+        throw alert("对不起，您的浏览器不支持")
+    }
 
+    var _content = document.querySelector("._content"),
+        to_speak = window.speechSynthesis,
+        dataName, voiceSelect = document.querySelector("#voiceSelect"),
+        voices = [];
+
+    function play() {
+        myCheckFunc();//检查文本框是否为空
+        cancel(); //
+        to_speak = new SpeechSynthesisUtterance(_content.innerText);
+
+        //to_speak.rate = 1.4;// 设置播放语速，范围：0.1 - 10之间
+
+        var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+        for(i = 0; i < voices.length; i++) {
+            if(voices[i].name === selectedOption) {
+                to_speak.voice = voices[i];
+            }
+        }
+
+        window.speechSynthesis.speak(to_speak);
+
+    }
+
+    //暂停
+    function pause() {
+        myCheckFunc();//检查文本框是否为空
+        window.speechSynthesis.pause();
+    }
+    //继续播放
+    function resume() {
+        myCheckFunc();//检查文本框是否为空
+        window.speechSynthesis.resume(); //继续
+    }
+    //清除所有语音播报创建的队列
+    function cancel() {
+        window.speechSynthesis.cancel();
+    }
+    //清空文本框
+    function cls()  {
+         document.getElementById("essay-content").innerText=""; 清空文本框
+    }
+    //检查文本框是否为空
+    function myCheckFunc() {
+            let x;
+            x = document.getElementById("essay-content").innerText;
+            try {
+                if (x === "")
+                    throw "文本框为空";
+        
+            } catch (error) {
+                alert( "提示" + error);
+            }
+    }
+
+    //创建选择语言的select标签
+    function populateVoiceList() {
+        voices = speechSynthesis.getVoices();
+        for(i = 0; i < voices.length; i++) {
+            var option = document.createElement('option');
+            option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+
+            if(voices[i].default) {
+                option.textContent += ' -- DEFAULT';
+            }
+            option.setAttribute('data-lang', voices[i].lang);
+            option.setAttribute('data-name', voices[i].name);
+            voiceSelect.appendChild(option);
+        }
+    }
+
+    setTimeout(function() {
+        populateVoiceList();
+    }, 500) //
+</script>
 
 
 

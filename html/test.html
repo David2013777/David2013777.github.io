@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      /* 这是轮播图的css */
         * {box-sizing:border-box}
         body {font-family: Verdana,sans-serif;}
         .mySlides {
@@ -113,6 +114,16 @@
         to {opacity: 1}
         }
     </style>
+    <style>
+      .my-element {
+        display: inline-block;
+        margin: 0 0.5rem;
+
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+      }
+    </style>
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -120,9 +131,17 @@
 </head>
 <body>
 
-  <h1 class="animate__animated animate__bounce">An animated element</h1>
-  
-    <div class="slideshow-container">
+  <h1 class="animate__animated animate__bounce">hhhhhhh</h1>
+  <div class="my-element">hello</div>
+  <main class="animate__animated animate__fadeInDown">
+    <!-- Your code -->
+    test the animate
+    hhhhhhh
+  </main>
+
+
+    <div>
+      <div class="slideshow-container">
         <div class="mySlides fade">
           <div class="numbertext">1 / 4</div>
           <div class="zoomImage" style="background-image:url(images/photos/1.jfif)"></div>
@@ -150,6 +169,8 @@
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
       </div>
+
+
       <br>
        
       <div style="text-align:center">
@@ -158,6 +179,8 @@
         <span class="dot" onclick="currentSlide(3)"></span> 
         <span class="dot" onclick="currentSlide(4)"></span> 
       </div>
+    </div>
+
 </body>
 <script>
 var slideIndex = 0;
