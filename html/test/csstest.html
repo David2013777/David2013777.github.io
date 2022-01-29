@@ -55,7 +55,7 @@
   <meta name="author" content="David">
   <meta name="keywords" content="">
   
-  <title>数值分析 - Blog</title>
+  <title>page.title - Blog</title>
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -72,8 +72,6 @@
     
   
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
@@ -114,7 +112,7 @@
     <div class="slideshow-image" style="background-image: url('img/background-sunrise.jpg')"></div>
 </div> -->
 <!-- 图片 -->
-  <header style = "height: 70vh;">
+  <header style = "height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -324,63 +322,18 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-      style="background: url('/img/background2.jfif') no-repeat center center;background-size: cover;">
+      style="background: url('/img/background-sunrise.jpg') no-repeat center center;background-size: cover;">
 
       <!-- div class="banner" id="banner" parallax=true
-      style="background: url('/img/background2.jfif') no-repeat center center;background-size: cover;"> -->
+      style="background: url('/img/background-sunrise.jpg') no-repeat center center;background-size: cover;"> -->
       <!-- <div class="banner" id="banner"> -->
       
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数值分析">
+            <span class="h2" id="subtitle" title="page.title">
               
             </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-09 15:41" pubdate>
-        2022年1月9日 下午
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      0 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      1
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
-</div>
 
             
           </div>
@@ -393,142 +346,676 @@
 
   <main>
     
-      
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">数值分析</h1>
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：17 天前
-                
-              </p>
-            
-            <div class="markdown-body">
-              
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
-                    
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E8%AE%A1%E7%AE%97/">计算</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">计算方法</a>
-                    
-                  </div>
-                
-              </div>
-
-              
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
-              
-            </div>
-
-            
-              <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
-                
-                  
-                
-                
-  <div id="waline"></div>
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function () {
-        new Waline({
-          el: "#waline",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "identicon",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          serverURL: "https://myblog-lti2c7o13-david2013777.vercel.app/",
-          avatarCDN: "",
-          avatarForce: true,
-          requiredFields: [],
-          emojiCDN: "",
-          emojiMaps: null,
-          anonymous: null,
-        });
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
+<article class="page-content">
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css测试</title>
+</head>
+<body>
 
 
-              </article>
-            
-          </article>
-        </div>
-      </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-  <!-- 旋转的小人 -->
-  <div class="twopeople">
-    <div class="container" style="height:200px;">
-        <canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople1.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/zdog.dist.js"></script>
-    <script id="rendered-js" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople.js"></script>
+    <!-- 轮播图 -->
+
     <style>
-        .twopeople{
-            margin: 0;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        /* 这是轮播图的css */
+          * {box-sizing:border-box}
+          body {font-family: Verdana,sans-serif;}
+          .mySlides {
+            display:none
+          }
+          
+          /* 幻灯片容器 */
+          .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+          }
+  
+          .zoomImage{
+          width:100%;
+          height:0;
+          padding-bottom: 50%;
+          overflow:hidden;
+          background-position: center center;
+          background-repeat: no-repeat;
+          -webkit-background-size:cover;
+          -moz-background-size:cover;
+          background-size:cover;
+          }
+  
+          
+          
+          /* 下一张 & 上一张 按钮 */
+          .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          }
+          
+          /* 定位 "下一张" 按钮靠右 */
+          .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+          }
+          
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+          }
+          
+          /* 标题文本 */
+          .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+          }
+          
+          /* 数字文本 (1/3 等) */
+          .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+          }
+          
+          /* 标记符号 */
+          .dot {
+          cursor:pointer;
+          height: 13px;
+          width: 13px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+          }
+          
+          .active, .dot:hover {
+          background-color: #717171;
+          }
+          
+          /* 淡出动画 */
+          .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+          }
+          
+          @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+          }
+          
+          @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+          }
+    </style>
+
+    <div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <div class="zoomImage" style="background-image:url(images/photos/1.jfif)"></div>
+            <div class="text">文本 1</div>
+          </div>
+         
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <div class="zoomImage" style="background-image:url(images/photos/2.jfif)"></div>
+            <div class="text">文本 1</div>
+          </div>
+         
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <div class="zoomImage" style="background-image:url(images/photos/3.jfif)"></div>
+            <div class="text">文本 1</div>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <div class="zoomImage" style="background-image:url(images/photos/4.jfif)"></div>
+            <div class="text">文本 1</div>
+          </div>
+         
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+  
+  
+        <br>
+         
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+         
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // 切换时间为 2 秒
         }
-        canvas {
-            display: block;
-            margin: 0 auto;
-            cursor: move;
+    </script>
+  
+    <!-- 轮播图 -->
+
+    <!-- 翻转卡片 -->
+
+    <style>
+        .re-item {
+            width: 220px;
+            margin: 50px auto;
+            height: 276px;
+            cursor: pointer;
+            position: relative;
+            perspective: 500;
+            -webkit-perspective: 500;
+        }
+
+        .re-item img {
+            max-width: 220px;
+        }
+
+        .re-item-front,
+        .re-item-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            -webkit-perspective: 1000;
+            backface-visibility: hidden;
+            -webkit-transition: all 1.5s;
+            -moz-transition: all 1.5s;
+            -ms-transition: all 1.5s;
+            -o-transition: all 1.5s;
+            box-shadow: rgba(50, 50, 50, 0.2) 0 0 15px;
+            overflow: hidden;
+        }
+
+        .re-item-back {
+            position: relative;
+            transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+        }
+
+        .re-item:hover .re-item-front {
+            transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+        }
+
+        .re-item:hover .re-item-back {
+            transform: rotateY(-360deg);
+            -webkit-transform: rotateY(-360deg);
+        }
+
+        .re-box .re-item dd {
+            text-align: center;
+            font-family: "微软雅黑";
+        }
+
+        .re-item .re-item-job {
+            margin: 2px 0;
+            font-size: 18px;
+            color: #303030;
+            line-height: 40px;
+        }
+
+        .re-item .re-item-des {
+            padding: 0 12px;
+            font-size: 14px;
+            color: #939393;
         }
     </style>
-</div>
-  <!-- 旋转的小人 -->
+
+    <div class="re-box">
+        <div class="re-item">
+            <dl class="re-item-front">
+                <dt><img src="images/background.jfif" srcset="/img/loading.gif" lazyload / alt="coser"></dt>
+                <dd class="re-item-job">coser</dd>
+                <dd class="re-item-des">成为我们的合作coser，漫展返图，自由扩列，以及无偿拍摄&后期服务</dd>
+            </dl>
+
+            <div class="re-item-back">
+                <img src="images/background.jfif" srcset="/img/loading.gif" lazyload alt="苏苏" />
+                <button type="button" class="join_btn open_modal" data-id="2">立即加入</button>
+            </div>
+        </div>
+    </div>
 
 
-</div>
+    <!-- 翻转卡片 -->
 
+
+    <!-- 翻转卡片 -->
+
+    <!-- 
+
+    <style>
+        #my3dspace {
+            -webkit-perspective: 800;
+            -webkit-perspective-origin: 50% 50%;
+ 
+            overflow: hidden;
+        }
+        #pagegroup {
+            width: 400px;
+            height: 400px;
+            margin: 100px auto 0 auto;
+ 
+            -webkit-transform-style: preserve-3d;
+            position: relative;
+        }
+        .page {
+            width: 360px;
+            height: 360px;
+            padding: 20px;
+            background-color: black;
+            color: white;
+ 
+            font-weight: bold;
+            font-size: 360px;
+            line-height: 360px;
+            text-align: center;
+ 
+            position: absolute;
+        }
+ 
+        #page1 {
+            -webkit-transform-origin: bottom; /*设置旋转元素的基点位置（以x轴）*/
+            -webkit-transition: -webkit-transform 1s linear;
+        }
+        #page2,#page3,#page4,#page5,#page6 {
+            -webkit-transform-origin: bottom;
+            -webkit-transition: -webkit-transform 1s linear;
+ 
+            -webkit-transform: rotateX(90deg); //沿着x轴进行90°的翻转（平躺）
+        }
+ 
+        #op {
+            text-align: center;
+        }
+        #op a {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+ 
+            color: #696969;
+            border: 1px solid #CCC;
+            padding: 10px 20px;
+        }
+        #op a:hover {
+            background-color: #ABCDEF;
+            color: #FFF;
+        }
+    </style>
+
+    <div id="my3dspace">
+        <div id="pagegroup">
+            <div class="page" id="page1">1</div>
+            <div class="page" id="page2">2</div>
+            <div class="page" id="page3">3</div>
+            <div class="page" id="page4">4</div>
+            <div class="page" id="page5">5</div>
+            <div class="page" id="page6">6</div>
+        </div>
+    </div>
+    <div id="op">
+        <a href="javascript:next()">next</a> <a href="javascript:previous()">previous</a>
+    </div>
+
+
+    <script>
+        var cur = 1;
+        function next() {
+            if(cur == 6)
+                return;
+ 
+            document.getElementById("page" + cur).style.webkitTransform = "rotateX(-90deg)";
+            cur++;
+            document.getElementById("page" + cur).style.webkitTransform = "rotateX(0)";
+        }
+        function previous() {
+            if(cur == 1)
+                return;
+ 
+            document.getElementById("page" + cur).style.webkitTransform = "rotateX(90deg)";
+            cur--;
+            document.getElementById("page" + cur).style.webkitTransform = "rotateX(0)";
+        }
+    </script>
+
+
+     -->
+
+
+    <!-- 翻转卡片 -->
+
+
+    <!-- 翻转卡片 -->
+
+    <style>
+        #my3dspace {
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: 50% 50%;
+ 
+            overflow: hidden;
+        }
+        #pagegroup {
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+ 
+            -webkit-transform-style: preserve-3d;
+            position: relative;
+        }
+        .page {
+            width: 360px;
+            height: 360px;
+            padding: 20px;
+            font-size: 360px;
+            line-height: 360px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            position: absolute;
+            font-weight: bold;
+        }
+ 
+        #page1 {
+            -webkit-transform-origin: left;
+            -webkit-transition: -webkit-transform 1s ease-in;
+        }
+        #page2, #page3, #page4, #page5, #page6 {
+            -webkit-transform-origin: left;
+            -webkit-transition: -webkit-transform 1s ease-in;
+ 
+            -webkit-transform: rotateY(0);
+        }
+ 
+        #op {
+            text-align: center;
+        }
+        #op a {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+ 
+            color: #696969;
+            border: 1px solid #CCC;
+            padding: 10px 20px;
+        }
+        #op a:hover {
+            background-color: #ABCDEF;
+            color: #FFF;
+        }
+    </style>
+
+
+    <div id="my3dspace">
+        <div id="pagegroup">
+            <div class="page"></div>
+            <div class="page" id="page6">6</div>
+            <div class="page" id="page5">5</div>
+            <div class="page" id="page4">4</div>
+            <div class="page" id="page3">3</div>
+            <div class="page" id="page2">2</div>
+            <div class="page" id="page1">1</div>
+        </div>
+    </div>
+    <div id="op">
+        <a href="javascript:next()">next</a> <a href="javascript:previous()">previous</a>
+    </div>
+
+
+    <script>
+        var cur = 1;
+        function next() {
+            if(cur == 7)
+                return;
+
+            document.getElementById("page" + cur).style.webkitTransform = "rotateY(-160deg)";
+            cur++;
+        }
+
+        function previous() {
+            if(cur == 0)
+                return;
+            cur--;
+            document.getElementById("page" + cur).style.webkitTransform = "rotateY(0)";
+        }
+    </script>
+
+    <!-- 翻转卡片 -->
+
+    <!-- 爱心 -->
+
+    <style>
+        .heart{
+            position:relative;
+            display:flex;
+            list-style-type:none;
+            height: 200px;
+        }
+        .heart::heartafter{
+            content: '爱心怦怦跳';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            color: darkturquoise;
+            font-size: 30px;
+            font-weight: 700;
+            transform: translate(-50%,-700%);
+        }
+
+
+        .liheart{
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+        .liheart:nth-child(1){
+            background-color: red;
+            animation: love1 5s 0s infinite;
+        }
+        .liheart:nth-child(2){
+            background-color: darkturquoise;
+            animation: love2 5s 0.2s infinite;
+        }
+        .liheart:nth-child(3){
+            background-color: darksalmon;
+            animation: love3 5s 0.4s infinite;
+        }
+        .liheart:nth-child(4){
+            background-color: deeppink;
+            animation: love4 5s 0.6s infinite;
+        }
+        .liheart:nth-child(5){
+            background-color: yellow;
+            animation: love5 5s 0.8s infinite;
+        }
+        .liheart:nth-child(6){
+            background-color: deeppink;
+            animation: love4 5s 1s infinite;
+        }
+
+        .liheart:nth-child(7) {
+            background-color: darksalmon;
+            animation: love3 5s 1.2s infinite;
+        }
+
+        .liheart:nth-child(8) {
+            background-color: darkturquoise;
+            animation: love2 5s 1.4s infinite;
+        }
+
+        .liheart:nth-child(9) {
+            background-color: red;
+            animation: love1 5s 1.6s infinite;
+        }
+        /* 下面定义动画 */
+        @keyframes love1{
+            30%,50%{
+                height: 60px;
+                transform: translateY(-30px);
+            }
+            70%,100%{
+                height: 20px;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes love2 {
+
+            30%,
+            50% {
+                height: 125px;
+                transform: translateY(-60px);
+            }
+
+            70%,
+            100% {
+                height: 20px;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes love3 {
+
+            30%,
+            50% {
+                height: 160px;
+                transform: translateY(-75px);
+            }
+
+            70%,
+            100% {
+                height: 20px;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes love4 {
+
+            30%,
+            50% {
+                height: 180px;
+                transform: translateY(-60px);
+            }
+
+            70%,
+            100% {
+                height: 20px;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes love5 {
+
+            30%,
+            50% {
+                height: 200px;
+                transform: translateY(-45px);
+            }
+
+            70%,
+            100% {
+                height: 20px;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <ul class="heart">
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+        <li class="liheart"></li>
+    </ul>
+
+    <!-- 爱心 -->
+
+<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
+</html>
+
+  
+</article>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
-
-
     
 
     
@@ -729,11 +1216,7 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
 
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
 
 
 
@@ -782,45 +1265,6 @@
 
 
 
-  
-
-  
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
-
-  
-
 
 
 
@@ -852,23 +1296,5 @@
 <script  src="/js/boot.js" ></script>
 
 
-<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
-                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
-                console.log('已挂载electric_clock')
-                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
-            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
-
-            electric_clock_injector_config()
-        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
-                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
-                console.log('已挂载history_calendar')
-                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
-            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
-
-            history_calendar_injector_config()
-        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
