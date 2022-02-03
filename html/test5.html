@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>test</title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <meta name="author" content="xuyunfei">
+    <meta name="description" content="">
+    <meta name="keywords" content="test,html">
+    <title>test</title>
+    <style>
+        .container, .container.one, .two{ 
+            width: 100px; 
+            height: 200px; 
+        }
+        .container{ 
+            position: relative; 
+            transition: 1s; 
+            transform-style: preserve-3d; 
+        }
+        .one{ 
+            position: absolute; 
+            top: 0; 
+            background: red; 
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+         }
+        .two{ 
+            position: absolute; 
+            top: 0; 
+            background: yellow;
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one"><img src="images/background.jfif" style="padding: 20px;"/>hhh</div>
+        <div class="two"><img src="images/background.jfif" style="padding: 20px;"/>hhh</div>
+    </div>
+
+    <button id="btn">点击反转</button>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $("#btn").click(() => {
+                if($(".container").attr("style") == undefined){
+                    $(".container").css("transform","rotateY(180deg)");
+                }else{
+                    $(".container").removeAttr("style");
+                }
+                
+            });
+        })
+    </script>
+</body>
+</html>
