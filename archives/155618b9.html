@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：3 分钟前
                 
               </p>
             
@@ -717,6 +717,8 @@
 <p>伯努利大数定理：设 $f_A$ 是 $n$ 次独立重复试验中事件 $A$ 发生的次数， $p$ 是事件 $A$ 在每次试验中发生的概率，则对于任意正数 $\varepsilon &gt;0$ ，有<br>$$<br>\lim_{n\to \infty}P\{ |\frac{f_A}{n}-p|&lt;\varepsilon \}=1<br>$$<br>或<br>$$<br>\lim_{n\to \infty}P\{ |\frac{f_A}{n}-p|\geq \varepsilon \}=0<br>$$</p>
 <h3 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h3><p>独立同分布的中心极限定理：设随机变量 $X_1,X_2,\cdots$ 相互独立，且服从同一分布，且具有数学期望和方差： $E(X_k)=\mu $ ， $D(X_k)=\sigma^2&gt;0$ ， $(k=1,2,\cdots)$ ，则随机变量之和 $\sum_{k=1}^nX_k$ 的标准化变量<br>$$<br>Y_n=\dfrac{\sum_{k=1}^nX_k-E(\sum_{k=1}^nX_k)}{\sqrt{D(\sum_{k=1}^nX_k)}}<br>$$<br>的分布函数 $F_{n}(x)$ 对于任意 $x$ 满足<br>$$<br>\lim_{n\to \infty}F_n(x)=\lim_{n\to \infty}P\{ \frac{\sum_{k=1}X_k-n\mu}{\sqrt{n}\sigma} \}<br>$$<br>李雅普诺夫定理：设随机变量 $X_1,X_2,\cdots$ 相互独立，它们具有数学期望和方差<br>$$<br>E(X_k)=\mu_k,D(X_k)=\sigma_k^2&gt;0,k=1,2,\cdots<br>$$<br>记<br>$$<br>B_n^2=\sum_{k=1}^n\sigma_k^2<br>$$<br>若存在正数 $\delta$ ，使得当 $n\rightarrow \infty$ 时，<br>$$<br>\frac{1}{B_{n}^{2+\delta}}\sum_{k=1}^nE\{ |X_k-\mu_k|^{2+\delta} \}\rightarrow 0<br>$$<br>则随机变量之和 $\sum_{k=1}^nX_k$ 的标准化变量<br>$$<br>Z_n=\dfrac{\sum_{k=1}^nX_k-\sum_{k=1}^n\mu_k}{B_n}<br>$$<br>的分布函数 $F_n(x)$ 对于任意 $x$ ，满足<br>$$<br>\lim_{n\to \infty}F_n{x}=\lim_{n\to \infty}=\lim_{n\to \infty}P\{ \dfrac{\sum_{k=1}^nX_k-\sum_{k=1}^n\mu_k}{B_n}\leq x \}=\int_{-\infty}^{x}\dfrac{1}{\sqrt{2\pi}}\mathrm{e}^{-t^2/2}\mathrm{d}t=\varPhi(x)<br>$$</p>
 <p>棣莫弗——拉普拉斯定理：设随机变量 $\eta$ 服从参数为 $n,p(0&lt;p&lt;1)$ 的二项分布，则对于任意 $x$ ，有<br>$$<br>\lim_{n\to \infty}P\{ \dfrac{\eta_n-np}{\sqrt{np(1-p)}}\leq x \}=\int_{-\infty}^{x}\dfrac{1}{\sqrt{2\pi}}\mathrm{e}^{-t^2/2}\mathrm{d}t=\varPhi(x)<br>$$</p>
+<hr>
+<p>$$<br>\mathscr{THE} \quad \mathscr{END}<br>$$</p>
 
             </div>
             <hr>
