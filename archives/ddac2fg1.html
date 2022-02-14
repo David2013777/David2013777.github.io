@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      1.9k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19
+      24
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 分钟前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
@@ -479,20 +479,20 @@ $$ -->
 <li>设 $A\subset X$ ， $X$ 中一切包含 $A$ 的闭集的交称为 $A$ 的闭包，记作 $\overline{A}$ 或 $\mathrm{Cl}A$ 。</li>
 <li>设 $A\subset X$ ，则含于 $A$ 中一切开集的并称为 $A$ 的内部，记为 $\mathring{A}$ 或 $\mathrm{Int}A$ 。 $\mathring{A}$ 中的点称为 $A$ 的内点。</li>
 <li>设 $A\subset X$ ，则集合 $\overline{A}\cap \overline{X\backslash A}$ 称为 $A$ 的边界，记作 $\operatorname{Bd}A$ ， $\operatorname{Bd}A$ 中的点称作 $A$ 的边界点。</li>
-<li>设 $$ ，若对任意 $$ ，有 $$ ，则称 $$ 为 $$ 的聚点， $$ 的一切<br>聚点的集合称为 $$ 的导集，记作 $$ 。</li>
-<li>设 $$ ，若任一 $$ 均可表为 $$ 中若干成员的并，则称 $$ 为拓扑 $$ 的基。</li>
-<li>设 $$ ，若 $$ 中有限多个成员交的去哪提构成 $$ 的基，则称 $$ 为拓扑 $$ 的亚基，称 $$ 为由 $$ 生成的拓扑。</li>
+<li>设 $A\subset X,x\in X$ ，若对任意 $N\in \mathscr{N}(x)$ ，有 $N\cap (A\backslash |x|)\neq \varnothing$ ，则称 $x$ 为 $A$ 的聚点， $A$ 的一切聚点的集合称为 $A$ 的导集，记作 $A^{\prime}$ 。</li>
+<li>设 $\mathscr{B}\subset \mathscr{T}$ ，若任一 $U\in \mathscr{T}$ 均可表为 $\mathscr{B}$ 中若干成员的并，则称 $\mathscr{B}$ 为拓扑 $\mathscr{T}$ 的基。</li>
+<li>设 $\mathscr{S}\subset \mathscr{T}$ ，若 $\mathscr{S}$ 中有限多个成员交的全体构成 $\mathscr{T}$ 的基，则称 $\mathscr{S}$ 为拓扑 $\mathscr{T}$ 的亚基，称 $\mathscr{T}$ 为由 $\mathscr{S}$ 生成的拓扑。</li>
 </ol>
-<p>拓扑空间的性质：<br>设  为拓扑空间，则有如下性质：</p>
+<p>拓扑空间的性质：<br>设 $(X,\mathscr{T})$ 为拓扑空间，则有如下性质：</p>
 <ol>
 <li>$X$ 的全体闭集 $\mathscr{F}$ 满足：<br>$(\mathrm{C_1})$ $X$ 和 $\varnothing$ 属于 $\mathscr{F}$ ；<br>$(\mathrm{C_2})$ 任意多个闭集的交仍为闭集。<br>$(\mathrm{C_3})$ 有限多个闭集的并仍为闭集。</li>
-<li>任意点  的邻域系  具有性质：<br>$(\mathrm{N_1})$  ，且对任意  ，必有  ；<br>$(\mathrm{N_2})$ 设  ，则  ；<br>$(\mathrm{N_3})$ 设  ，  ，则  ；<br>$(\mathrm{N_4})$ 对任意  ，存在  ，使得  ，且对每一  ，恒有  。</li>
-<li>设  ，则  为含于  的最大开集，  为开集的充要条件为：  。</li>
-<li>设  ，则  为包含  的最小闭集，  为闭集的充要条件为：  。</li>
-<li>  ，则  的充要条件为：对任意  ，有  。</li>
-<li>设  为  的任意子集，则有<br>$(\mathrm{K_1})$<br>$(\mathrm{K_2})$<br>$(\mathrm{K_3})$<br>$(\mathrm{K_4})$<br>上述  称为库拉托夫斯基闭包公理。</li>
-<li>设  ，则  能成为  上某个拓扑的基的充要条件为<br>$(\mathrm{A_1})$<br>$(\mathrm{A_2})$ 对任意  ，交集  能表为  中某些成员的并。</li>
-<li>设  ，若满足  ，则  上存在唯一的拓扑  ，以  为亚基。</li>
+<li>任意点 $x\in X$ 的邻域系 $\mathscr{N}(x)$ 具有性质：<br>$(\mathrm{N_1})$ $\mathscr{N}(x)\neq \varnothing$ ，且对任意 $N\in \mathscr{N}(x)$ ，必有 $x\in N$ ；<br>$(\mathrm{N_2})$ 设 $N_1,N_2\in \mathscr{N}(x)$ ，则 $N_1\cap N_2\in \mathscr{N}(x)$ ；<br>$(\mathrm{N_3})$ 设 $N\in \mathscr{N}(x)$ ， $,N\subset U$ ，则 $U\in \mathscr{N}(x)$ ；<br>$(\mathrm{N_4})$ 对任意 $N\in \mathscr{N}(x)$ ，存在 $U\in \mathscr{N}(x)$ ，使得 $U\subset N$ ，且对每一 $y\in U$ ，恒有 $U\in \mathscr{N}(y)$ 。</li>
+<li>设 $A\subset X$ ，则 $\mathring{A}$ 为含于 $A$ 的最大开集， $A$ 为开集的充要条件为：$A=\mathring{A}$  。</li>
+<li>设 $A\subset X$ ，则 $\overline{A}$ 为包含 $A$ 的最小闭集， $A$ 为闭集的充要条件为：$A=\overline{A}$  。</li>
+<li>$A\subset X,x\in X$ ，则 $x\in \overline{A}$ 的充要条件为：对任意 $N\in \mathscr{N}(x)$ ，有 $N\cup A\neq \varnothing$ 。</li>
+<li>设 $A,B$ 为 $X$ 的任意子集，则有<br>$(\mathrm{K_1})$ $\overline{\varnothing}=\varnothing$<br>$(\mathrm{K_2})$ $A\subset \overline{A}$<br>$(\mathrm{K_3})$ $\overline{\overline{A}}=\overline{A}$<br>$(\mathrm{K_4})$ $\overline{A\cup B}=\overline{A}\cup \overline{B}$<br>上述 $(\mathrm{K_1})-(\mathrm{K_4})$ 称为库拉托夫斯基闭包公理。</li>
+<li>设 $\mathscr{B}\subset \mathscr{P}(X)$ ，则 $\mathscr{B}$ 能成为 $X$ 上某个拓扑的基的充要条件为<br>$(\mathrm{A_1})$ $X=\bigcup _{B\in \mathscr{B}}B$<br>$(\mathrm{A_2})$ 对任意 $B_1,B_2\in \mathscr{B}$ ，交集 $B_1\cap B_2$ 能表为 $\mathscr{B}$ 中某些成员的并。</li>
+<li>设 $\mathscr{S}\subset \mathscr{P}(X)$ ，若满足 $X=\bigcup _{S\in \mathscr{S}}S$ ，则 $X$ 上存在唯一的拓扑 $\mathscr{T}$ ，以 $\mathscr{S}$ 为亚基。</li>
 </ol>
 <p>设  是集合  上的一个关系，满足：</p>
 <ol>
