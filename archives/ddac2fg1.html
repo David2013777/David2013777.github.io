@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.9k 字
+      2k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24
+      26
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -471,7 +471,7 @@ $$ -->
 <p>平凡拓扑：设 $X$ 是任意集合， $\mathscr{T}_T:=\{ X,\varnothing \}$ ，则 $(X,\mathscr{T}_T)$ 是拓扑空间， $\mathscr{T}_T$ 称为平凡拓扑。</p>
 <p>离散拓扑：设 $X$ 是任意集合， $\mathscr{T}_D:=\{ \mathscr{P}(X) \}$ ，则 $(X,\mathscr{T}_D)$ 是拓扑空间， $\mathscr{T}_D$ 称为离散拓扑。</p>
 <p>度量拓扑：设 $(X,d)$ 为度量空间，对任意 $x\in X$ 及正数 $r$ ，称 $B(x,r):=\{ y\in X|d(x,y)&lt;r \}$ 为以 $x$ 为中心、半径为 $r$ 的球形邻域。设 $U\subset X$ ，若对任意 $x\in U$ ，存在 $r&gt;0$ ，使得 $B(x,r)\subset U$ ，则称 $U$ 为开集，所有这样的开集构成 $X$ 的一个拓扑，称为由度量 $d$ 决定的度量拓扑，记为 $\mathscr{T}_d$ 。</p>
-<p>设 $\mathscr{T}_1$ 和 $\mathscr{T}_2$ 为 $X$ 上的两个拓扑，若 $\mathscr{T}_1\subset \mathscr{T}_2$ ，则称拓扑 $\mathscr{T}_1$ 比 $\mathscr{T}_2$ 粗（ $\mathscr{T}_2$ 比 $\mathscr{T}_1$ 细），记为 $\mathscr{T}_1&lt;\mathscr{T}_2(\mathscr{T}_2&gt;\mathscr{T}_1)$ 。显然 $X$ 上的拓扑按关系 $&lt;$ 构成偏序。设 $\mathscr{T}$ 为 $X$ 上任一拓扑，则恒有 $\mathscr{T}_T&lt;\mathscr{T}&lt;\mathscr{T}_D$ 。</p>
+<p>设 $\mathscr{T}_1$ 和 $\mathscr{T}_2$ 为 $X$ 上的两个拓扑，若 $\mathscr{T}_1\subset \mathscr{T}_2$ ，则称拓扑 $\mathscr{T}_1$ 比 $\mathscr{T}_2$ 粗（ $\mathscr{T}_2$ 比 $\mathscr{T}_1$ 细），记为 $\mathscr{T}_1\prec\mathscr{T}_2(\mathscr{T}_2\succ\mathscr{T}_1)$ 。显然 $X$ 上的拓扑按关系 $\prec$ 构成偏序。设 $\mathscr{T}$ 为 $X$ 上任一拓扑，则恒有 $\mathscr{T}_T\prec\mathscr{T}\prec\mathscr{T}_D$ 。</p>
 <p>设 $(X,\mathscr{T})$ 为一拓扑空间，则有</p>
 <ol>
 <li>设 $E\subset X$ ，若 $X-F\in \mathscr{T}$ ，则称 $F$ 为此拓扑空间的闭集。 $(X,\mathscr{T})$ 的一切闭集的全体记作 $\mathscr{F}$ 。</li>
@@ -494,14 +494,14 @@ $$ -->
 <li>设 $\mathscr{B}\subset \mathscr{P}(X)$ ，则 $\mathscr{B}$ 能成为 $X$ 上某个拓扑的基的充要条件为<br>$(\mathrm{A_1})$ $X=\bigcup _{B\in \mathscr{B}}B$<br>$(\mathrm{A_2})$ 对任意 $B_1,B_2\in \mathscr{B}$ ，交集 $B_1\cap B_2$ 能表为 $\mathscr{B}$ 中某些成员的并。</li>
 <li>设 $\mathscr{S}\subset \mathscr{P}(X)$ ，若满足 $X=\bigcup _{S\in \mathscr{S}}S$ ，则 $X$ 上存在唯一的拓扑 $\mathscr{T}$ ，以 $\mathscr{S}$ 为亚基。</li>
 </ol>
-<p>设  是集合  上的一个关系，满足：</p>
+<p>设 $\succcurlyeq$ 是集合 $D$ 上的一个关系，满足：</p>
 <ol>
-<li>对任意  ，有  。</li>
-<li>对任意  ，若  ，则有  ；</li>
-<li>对任意  ，存在  ，使得  ，则称  是一个有向集，  称为  上的一个定向。</li>
+<li>对任意 $\alpha \in D$ ，有 $\alpha\succcurlyeq \alpha$ 。</li>
+<li>对任意 $\alpha,\beta,\gamma \in D$ ，若 $\alpha\succcurlyeq\beta,\beta\succcurlyeq\gamma$ ，则有 $\alpha\succcurlyeq\gamma$ ；</li>
+<li>对任意 $\alpha,\beta\in D$ ，存在 $\gamma\in D$ ，使得 $\gamma\succcurlyeq\alpha,\gamma\succcurlyeq\beta$ ，则称 $(D,\succcurlyeq)$ 是一个有向集， $\succcurlyeq$ 称为 $D$ 上的一个定向。</li>
 </ol>
-<p>设  为一有向集，  为一集合，  ，映射  称为  中的网，对  ，映射  记为  或  。当  ，且  即为自然数的大小关系，则网即为通常的序列  。</p>
-<p>设  为拓扑空间  中的网，  。若对  的任意邻域  ，存在  ，使得当  且  时，有  ，则称网  收敛于  ，记作  或  。</p>
+<p>设 $D$ 为一有向集， $X$ 为一集合， $A\subset X$ ，映射 $N:D\rightarrow A$ 称为 $A$ 中的网，对 $\alpha\in N,x_\alpha:=N(\alpha)$ ，映射 $N$ 记为 $\{ x_{\alpha}|\alpha\in D \}$ 或 $\{ x_\alpha \}$ 。当 $D=Z^{+}$ ，且 $\succcurlyeq$ 即为自然数的大小关系，则网即为通常的序列 $\{ x_n|n\in Z^{+} \}$ 。</p>
+<p>设 $$ 为拓扑空间  中的网，  。若对  的任意邻域  ，存在  ，使得当  且  时，有  ，则称网  收敛于  ，记作  或  。</p>
 <p>设  为拓扑空间，  ，则  的充要条件为：在  中存在收敛于  的网。</p>
 <p>设  为拓扑空间，  为映射。若对任意  ，有  ，则称  为连续。</p>
 <p>设  为拓扑空间，  为从  到  的函数，则下列断言等价：</p>
