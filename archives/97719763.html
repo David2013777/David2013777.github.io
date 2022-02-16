@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      3.2k 字
     </span>
   
 
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -493,12 +493,12 @@
 <p>$$<br>U(x)=1\quad (\forall x\in \mathbb{Z}^+)<br>$$<br>$$<br>I (x)=<br>\begin{cases}<br>  1,x=1 \\<br>  0,x&gt;1<br>\end{cases}\quad (\forall x\in \mathbb{Z}^+)<br>$$<br>$$<br>N(x)=x\quad (\forall x\in \mathbb{Z}^+)<br>$$</p>
 <p>默比乌斯函数：<br>$$<br>\mu (x)=<br>\begin{cases}<br>  1,\text{若}x=1 \\<br>  0,\text{若}x=p_1^{\alpha_1}\cdots p_k^{\alpha_k},p_1,\cdots p_k \text{是不同的素数，存在}\alpha_i\geq 2 \\<br>  (-1)^{k},\text{若}x=p_1\cdots p_k,p_1,\cdots p_k \text{是不同的素数}<br>\end{cases}\quad (\forall x\in \mathbb{Z}^+)<br>$$<br>$\mu$ 是积性函数。</p>
 <p>数论函数是积性函数的充要条件是<br>$$<br>f(1)=1,f(x)=f(p_1^{\alpha_1})f(p_2^{\alpha_2})\cdots f(p_k^{\alpha_k})(x=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k})<br>$$<br>$f$ 是完全积性函数的充要条件是<br>$$<br>f(1)=1,f(x)=f^{\alpha_1}(p_1)f^{\alpha_2}(p_2)\cdots f^{\alpha_k}(p_k)<br>$$</p>
-<h3 id="狄利克雷卷积"><a href="#狄利克雷卷积" class="headerlink" title="狄利克雷卷积"></a>狄利克雷卷积</h3><p>狄利克雷卷积：设 $f,g$ 是数论函数， $f$ 与 $g$ 的狄利克雷卷积 $f<em>g$ 定义如下：<br>$$<br>f</em>g(n)=\sum_{d\mid n}f(d)g(\frac{n}{d})<br>$$</p>
-<p>$$<br>U*\mu = I<br>$$</p>
-<p>$$<br>U*\varphi = N<br>$$</p>
-<p>$$<br>\mu *N=\varphi<br>$$</p>
-<p>定理：若 $f,g$ 都是积性函数，则 $f*g$ 也是积性函数。</p>
-<h3 id="默比乌斯反演公式"><a href="#默比乌斯反演公式" class="headerlink" title="默比乌斯反演公式"></a>默比乌斯反演公式</h3><p>默比乌斯反演公式：设 $f,g$ 是数论函数，则<br>$$<br>f=g<em>U\Leftrightarrow g=f</em>\mu<br>$$<br>，即<br>$$<br>f(n)=\sum_{d\mid n}g(d)\Leftrightarrow g(n)=\sum_{d\mid n}f(d)\mu (\dfrac{n}{d})<br>$$</p>
+<h3 id="狄利克雷卷积"><a href="#狄利克雷卷积" class="headerlink" title="狄利克雷卷积"></a>狄利克雷卷积</h3><p>狄利克雷卷积：设 $f,g$ 是数论函数， $f$ 与 $g$ 的狄利克雷卷积 $f\ast g$ 定义如下：<br>$$<br>f\ast g(n)=\sum_{d\mid n}f(d)g(\frac{n}{d})<br>$$</p>
+<p>$$<br>U\ast \mu = I<br>$$</p>
+<p>$$<br>U\ast \varphi = N<br>$$</p>
+<p>$$<br>\mu \ast N=\varphi<br>$$</p>
+<p>定理：若 $f,g$ 都是积性函数，则 $f\ast g$ 也是积性函数。</p>
+<h3 id="默比乌斯反演公式"><a href="#默比乌斯反演公式" class="headerlink" title="默比乌斯反演公式"></a>默比乌斯反演公式</h3><p>默比乌斯反演公式：设 $f,g$ 是数论函数，则<br>$$<br>f=g\ast U\Leftrightarrow g=f\ast \mu<br>$$<br>，即<br>$$<br>f(n)=\sum_{d\mid n}g(d)\Leftrightarrow g(n)=\sum_{d\mid n}f(d)\mu (\dfrac{n}{d})<br>$$</p>
 <p>曼戈尔特函数：<br>$$<br>\Lambda (n)=<br>\begin{cases}<br>  \ln p,\text{若}n=p^{\alpha},p\text{是素数},\alpha\in \mathbb{Z}^+ \\ 0,\text{其他}<br>\end{cases}<br>$$</p>
 <p>当 $n=p_1^{\alpha_1}\cdots p_k^{\alpha_k}$ 时，</p>
 <p>$$<br>\sum_{d\mid n}\Lambda (d) =\ln n<br>$$</p>
