@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      658 字
+      823 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      10
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -425,6 +425,8 @@
 <h2 id="插值法"><a href="#插值法" class="headerlink" title="插值法"></a>插值法</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>定义：设函数 $y=f(x)$ 在区间 $[a,b]$ 上有定义，且已知在点 $a\leq x_0&lt;x_1&lt;\cdots&lt;x_n\leq b$ 上的值 $y_0,y_1,\cdots,y_n$ ，若存在一个简单函数 $p(x)$ ，使 $p(x_i)=y_i(i=0,\cdots,n)$ 成立，则称 $p(x)$ 为 $f(x)$ 的插值函数，点 $x_0,x_1,\cdots,x_n$ 称为插值节点，区间 $[a,b]$ 称为插值区间，求插值函数 $p(x)$ 的方法称为插值方法。</p>
 <p>若 $p(x)$ 是次数不超过 $n$ 的代数多项式，即<br>$$<br>p(x)=a_0+a_1x+\cdots+a_nx^n<br>$$<br>其中 $a_i$ 为实数，则 $p(x)$ 称为插值多项式，相应的插值法称为多项式插值（代数插值）。<br>若 $p(x)$ 是分段的多项式，则为分段插值。<br>若 $p(x)$ 是三角多项式，则称为三角插值。</p>
 <h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><p>定理：设给定 $n+1$ 个互异的点 $x_{0},x_{1}, \cdots ,x_{n}$ 和 $n+1$ 个函数值 $ y_{0},y_{1}, \cdots ,y_{n} $ ,则在次数不高于 $n$ 的代数多项式集合中，唯一的存在一个多项式 $p(x)=a_0+a_1x+\cdots+a_nx^n$ ,它满足条件 $p(x_i)=y_i(i=0,\cdots,n)$。（可以使用范德蒙德行列式的性质证明）</p>
+<p>当 $n=1$ 时，有 $L_1(x)=y_{k}l_{k}(x)+y_{k+1}l_{k+1}(x)$ ，其中 $l_k(x)=\dfrac{x-x_{k+1}}{x_{k}-x_{k+1}}$ ， $l_{k+1}(x)=\dfrac{x-x_k}{x_{k+1}-x_k}$ ， $l_k(x),l_{k+1}(x)$ 称为线性插值基函数。</p>
+<p>当 $n=2$ 时，三个插值基函数为<br>$$<br>l_{k-1}(x)=\dfrac{(x-x_{k})(x-x_{k+1})}{(x_{k-1}-x_k)(x_{k-1}-x_{k+1})} \\ l_{k}(x)=\dfrac{(x-x_{k-1})(x-x_{k+1})}{(x_{k}-x_k-1)(x_{k}-x_{k+1})} \\ l_{k+1}(x)=\dfrac{(x-x_{k-1})(x-x_{k})}{(x_{k+1}-x_{k-1})(x_{k+1}-x_{k})}<br>$$<br>二次插值函数为：<br>$$<br>L_2(x)=y_{k-1}l_{k-1}(x)+y_{k}l_{k}(x)+y_{k+1}l_{k+1}(x)<br>$$</p>
 <!-- 
 
 ### 均差和牛顿插值公式
@@ -533,6 +535,8 @@
 
 ### 方程组和高阶方程
  -->
+
+
 
 
             </div>
