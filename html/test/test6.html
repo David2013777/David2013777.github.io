@@ -55,7 +55,7 @@
   <meta name="author" content="David">
   <meta name="keywords" content="">
   
-  <title>数值分析 - Blog</title>
+  <title>page.title - Blog</title>
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -72,8 +72,6 @@
     
   
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
@@ -114,7 +112,7 @@
     <div class="slideshow-image" style="background-image: url('img/background-sunrise.jpg')"></div>
 </div> -->
 <!-- 图片 -->
-  <header style = "height: 70vh;">
+  <header style = "height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -324,63 +322,18 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-      style="background: url('/img/background2.jfif') no-repeat center center;background-size: cover;">
+      style="background: url('/img/background-sunrise.jpg') no-repeat center center;background-size: cover;">
 
       <!-- div class="banner" id="banner" parallax=true
-      style="background: url('/img/background2.jfif') no-repeat center center;background-size: cover;"> -->
+      style="background: url('/img/background-sunrise.jpg') no-repeat center center;background-size: cover;"> -->
       <!-- <div class="banner" id="banner"> -->
       
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数值分析">
+            <span class="h2" id="subtitle" title="page.title">
               
             </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-09 15:41" pubdate>
-        2022年1月9日 下午
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      823 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      10
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- 不蒜子统计文章PV -->
-      <span id="busuanzi_container_page_pv" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="busuanzi_value_page_pv"></span> 次
-      </span>
-    
-  
-</div>
 
             
           </div>
@@ -393,294 +346,394 @@
 
   <main>
     
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">数值分析</h1>
-            
-              <p class="note note-info">
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                  本文最后更新于：4 分钟前
-                
-              </p>
-            
-            <div class="markdown-body">
-              <h1 id="数值分析"><a href="#数值分析" class="headerlink" title="数值分析"></a>数值分析</h1><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h3><p>误差分类：模型误差，观测误差，截断误差，舍入误差。</p>
-<ol>
-<li>模型误差：数学模型的解与实际问题的解之间的误差。</li>
-<li>观测误差：数学模型中包含的某些参数（如时间、长度、电压、温度等）往往通过观测而获得，由观测得到的数据与实际的数据之间的误差称为观测误差。</li>
-<li>截断误差：当数学模型不能得到精确解时，通常要用数值方法求它的近似解，近似解与精确解之间的误差称为截断误差，或叫方法误差。</li>
-<li>舍入误差：由于计算机的字长有限，参加运算的数据以及运算结果在计算机中保存时会产生误差，称为舍入误差或计算误差。</li>
-</ol>
-<p>误差：设 $x$ 为准确值， $x^{\ast }$ 为 $x$ 的一个近似值，称 $e^{\ast }=x^{\ast}-x$ 为近似值的绝对误差，简称误差。</p>
-<p>相对误差：我们把近似值的误差 $e^{\ast }$ 与准确值 $x$ 的比值<br>$$<br>\dfrac{e^{\ast}}{x}=\dfrac{x^{\ast}-x}{x}<br>$$<br>称为近似值 $x^{\ast }$ 的相对误差，记作 $e_r^{\ast}$ 。当 $e^{\ast}/x^{\ast}$ 很小时，可以取 $e_r^{\ast }=\dfrac{x^{\ast}-x}{x^{\ast}}$ 。 </p>
-<p>相对误差可正可负，其绝对值上界叫做相对误差限，记作 $\varepsilon_r^{\ast}$ ，即 $\varepsilon_r^{\ast}=\dfrac{\varepsilon^{\ast}}{|x^{\ast}|}$ 。</p>
-<h2 id="插值法"><a href="#插值法" class="headerlink" title="插值法"></a>插值法</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>定义：设函数 $y=f(x)$ 在区间 $[a,b]$ 上有定义，且已知在点 $a\leq x_0&lt;x_1&lt;\cdots&lt;x_n\leq b$ 上的值 $y_0,y_1,\cdots,y_n$ ，若存在一个简单函数 $p(x)$ ，使 $p(x_i)=y_i(i=0,\cdots,n)$ 成立，则称 $p(x)$ 为 $f(x)$ 的插值函数，点 $x_0,x_1,\cdots,x_n$ 称为插值节点，区间 $[a,b]$ 称为插值区间，求插值函数 $p(x)$ 的方法称为插值方法。</p>
-<p>若 $p(x)$ 是次数不超过 $n$ 的代数多项式，即<br>$$<br>p(x)=a_0+a_1x+\cdots+a_nx^n<br>$$<br>其中 $a_i$ 为实数，则 $p(x)$ 称为插值多项式，相应的插值法称为多项式插值（代数插值）。<br>若 $p(x)$ 是分段的多项式，则为分段插值。<br>若 $p(x)$ 是三角多项式，则称为三角插值。</p>
-<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><p>定理：设给定 $n+1$ 个互异的点 $x_{0},x_{1}, \cdots ,x_{n}$ 和 $n+1$ 个函数值 $ y_{0},y_{1}, \cdots ,y_{n} $ ,则在次数不高于 $n$ 的代数多项式集合中，唯一的存在一个多项式 $p(x)=a_0+a_1x+\cdots+a_nx^n$ ,它满足条件 $p(x_i)=y_i(i=0,\cdots,n)$。（可以使用范德蒙德行列式的性质证明）</p>
-<p>当 $n=1$ 时，有 $L_1(x)=y_{k}l_{k}(x)+y_{k+1}l_{k+1}(x)$ ，其中 $l_k(x)=\dfrac{x-x_{k+1}}{x_{k}-x_{k+1}}$ ， $l_{k+1}(x)=\dfrac{x-x_k}{x_{k+1}-x_k}$ ， $l_k(x),l_{k+1}(x)$ 称为线性插值基函数。</p>
-<p>当 $n=2$ 时，三个插值基函数为<br>$$<br>l_{k-1}(x)=\dfrac{(x-x_{k})(x-x_{k+1})}{(x_{k-1}-x_k)(x_{k-1}-x_{k+1})} \\ l_{k}(x)=\dfrac{(x-x_{k-1})(x-x_{k+1})}{(x_{k}-x_k-1)(x_{k}-x_{k+1})} \\ l_{k+1}(x)=\dfrac{(x-x_{k-1})(x-x_{k})}{(x_{k+1}-x_{k-1})(x_{k+1}-x_{k})}<br>$$<br>二次插值函数为：<br>$$<br>L_2(x)=y_{k-1}l_{k-1}(x)+y_{k}l_{k}(x)+y_{k+1}l_{k+1}(x)<br>$$</p>
-<!-- 
 
-### 均差和牛顿插值公式
+<article class="page-content">
+  <!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>冰墩墩</title>
 
-### 差分与等距节点插值
+<body>
+    <!-- 仅供学习交流使用，转载请注明出处@布拉布拉
+        by SDUT Bulbul -->
+    <canvas id="myCanvas" width="2000" height="2000 ">
+        </canvas>
+    <script>
+        var c=document.getElementById("myCanvas");
+        var btt=c.getContext("2d");
+        // 能量外壳
+        btt.beginPath();
+        btt.moveTo(497,462);
+        btt.bezierCurveTo(452,380,497,184,666,297);
+        btt.bezierCurveTo(792,255,921,261,1017,278);
+        btt.bezierCurveTo(1127,155,1227,305,1183,404);
+        btt.bezierCurveTo(1208,443,1238,488,1254,544);
+        btt.bezierCurveTo(1251,421,1503,398,1472,577);
+        btt.bezierCurveTo(1407,758,1336,789,1279,876);
+        btt.bezierCurveTo(1270,924,1255,1044,1147,1222);
+        btt.bezierCurveTo(1098,1372,1211,1454,1031,1457);
+        btt.bezierCurveTo(877,1469,892,1434,901,1376);
+        btt.bezierCurveTo(924,1313,783,1324,802,1378);
+        btt.bezierCurveTo(822,1432,819,1467,691,1469);
+        btt.bezierCurveTo(571,1473,569,1448,571,1332);
+        btt.bezierCurveTo(572,1218,530,1226,464,1038);
+        btt.bezierCurveTo(386,1244,233,1115,272,1017);
+        btt.bezierCurveTo(306,916,365,845,407,777);
+        btt.bezierCurveTo(433,669,449,545,497,462);
+        btt.stroke();
+        // 左耳
+        btt.beginPath();
+        btt.moveTo(526,437);
+        btt.bezierCurveTo(498,263,667,325,641,329);
+        btt.quadraticCurveTo(600,343,526,437);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 右耳
+        btt.beginPath();
+        btt.moveTo(1050,285);
+        btt.bezierCurveTo(1144,232,1167,342,1162,387);
+        btt.quadraticCurveTo(1119,317,1050,285);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 左手
+        btt.beginPath();
+        btt.moveTo(417,804);
+        btt.bezierCurveTo(430,837,435,914,457,968);
+        btt.bezierCurveTo(445,1016,440,1022,428,1053);
+        btt.bezierCurveTo(396,1142,307,1112,304,1048);
+        btt.quadraticCurveTo(300,987,418,803);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 右手
+        btt.beginPath();
+        btt.moveTo(1267,593);
+        btt.bezierCurveTo(1275,584,1279,574,1280,555);
+        btt.bezierCurveTo(1282,448,1480,477,1429,575);
+        btt.bezierCurveTo(1403,621,1374,689,1287,757);
+        btt.quadraticCurveTo(1291,693,1267,594);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 左脚
+        btt.beginPath();
+        btt.moveTo(585,1231);
+        btt.bezierCurveTo(626,1261,776,1297,792,1336);
+        btt.bezierCurveTo(756,1387,838,1427,710,1428);
+        btt.bezierCurveTo(505,1431,644,1381,585,1231);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 右脚
+        btt.beginPath();
+        btt.moveTo(910,1342);
+        btt.bezierCurveTo(981,1318,938,1293,1125,1226);
+        btt.bezierCurveTo(1087,1370,1172,1404,1014,1420);
+        btt.bezierCurveTo(875,1425,959,1403,910,1342);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 仅供学习交流使用
+        // by SDUT Bulbul 
+        // 左黑眼圈
+        btt.beginPath();
+        btt.moveTo(806,552);
+        btt.bezierCurveTo(706,492,512,681,603,777);
+        btt.bezierCurveTo(738,882,896,600,806,552);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 右黑眼圈        
+        btt.beginPath();
+        btt.moveTo(989,541);
+        btt.bezierCurveTo(1080,477,1251,684,1168,768);
+        btt.bezierCurveTo(1077,837,893,607,989,541);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 能量圈
+        btt.beginPath();
+        btt.lineWidth=7;
+        btt.strokeStyle='#73fd94';
+        btt.moveTo(497,772);
+        btt.bezierCurveTo(425,371,1145,80,1262,699);
+        btt.bezierCurveTo(1294,945,1105,1031,907,1040);
+        btt.bezierCurveTo(716,1049,519,962,497,772);
+        btt.stroke();
 
-### 埃尔米特插值
+        btt.beginPath();
+        btt.lineWidth=5;
+        btt.strokeStyle='#f97dfe';
+        btt.moveTo(515,794);
+        btt.bezierCurveTo(405,421,1093,119,1242,646);
+        btt.bezierCurveTo(1316,881,1130,1001,898,1003);
+        btt.bezierCurveTo(732,1005,562,961,515,794);
+        btt.stroke();
 
-### 分段低次插值
+        btt.beginPath();
+        btt.lineWidth=9;
+        btt.strokeStyle='#ecea87';
+        btt.moveTo(611,909);
+        btt.bezierCurveTo(301,602,878,185,1137,487);
+        btt.bezierCurveTo(1495,981,840,1066,611,909);
+        btt.stroke();
 
-### 三次样条插值
+        btt.beginPath();
+        btt.lineWidth=7;
+        btt.strokeStyle='#9ad6ff';
+        btt.moveTo(611,909);
+        btt.bezierCurveTo(281,592,878,200,1137,487);
+        btt.bezierCurveTo(1495,1001,840,1076,611,909);
+        btt.stroke();
 
-## 函数逼近与曲线拟合
+        btt.beginPath();
+        btt.lineWidth=5;
+        btt.strokeStyle='#9ad6ff';
+        btt.moveTo(515,794);
+        btt.bezierCurveTo(405,421,1053,109,1242,646);
+        btt.bezierCurveTo(1316,911,1150,1001,898,1023);
+        btt.bezierCurveTo(732,1025,562,971,515,794);
+        btt.stroke();
 
-### 函数逼近的基本概念
+        btt.beginPath();
+        btt.lineWidth=7;
+        btt.strokeStyle='#d2fbe5';
+        btt.moveTo(545,674);
+        btt.bezierCurveTo(673,289,1265,370,1215,773);
+        btt.bezierCurveTo(1177,1083,453,1010,545,674);
+        btt.stroke();
 
-### 正交多项式
+        btt.beginPath();
+        btt.lineWidth=7;
+        btt.strokeStyle='#4a46be';
+        btt.moveTo(549,752);
+        btt.bezierCurveTo(548,421,1037,320,1191,640);
+        btt.bezierCurveTo(1309,1058,597,1021,549,752);
+        btt.stroke();
 
-### 最佳一致逼近多项式
+        btt.beginPath();
+        btt.lineWidth=5;
+        btt.strokeStyle='#b5e7fe';
+        btt.moveTo(549,752);
+        btt.bezierCurveTo(548,441,1057,300,1191,640);
+        btt.bezierCurveTo(1319,1048,567,1021,549,752);
+        btt.stroke();
+        // 仅供学习交流使用，转载请注明出处@布拉布拉
+        // by SDUT Bulbul
+        // 嘴巴
+        btt.beginPath();
+        btt.lineWidth=1;
+        btt.strokeStyle='#000000';
+        btt.moveTo(824,728);
+        btt.bezierCurveTo(895,754,939,740,982,726);
+        btt.bezierCurveTo(935,782,861,764,824,728);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
 
-### 最佳平方逼近
+        btt.beginPath();
+        btt.moveTo(870,750);
+        btt.bezierCurveTo(876,746,939,745,945,749);
+        btt.bezierCurveTo(910,764,872,755,870,750);
+        btt.fillStyle="#e5482d";
+        btt.fill();
+        btt.stroke();
+        // 小红心
+        btt.beginPath();
+        btt.moveTo(1364,545);
+        btt.bezierCurveTo(1359,525,1300,508,1331,595);
+        btt.bezierCurveTo(1338,615,1349,607,1356,605);
+        btt.bezierCurveTo(1394,587,1420,532,1364,545);
+        btt.fillStyle="red";
+        btt.fill();
+        btt.stroke();
+        // 左眼
+        btt.beginPath();
+        btt.moveTo(749,595);
+        btt.bezierCurveTo(798,592,829,709,743,712);
+        btt.bezierCurveTo(659,707,686,593,749,595);
+        btt.fillStyle="#ffffff";
+        btt.fill();
+        btt.stroke();
 
-### 曲线拟合的最小二乘法
+        btt.beginPath();
+        btt.moveTo(699,655);
+        btt.bezierCurveTo(696,596,782,574,783,653);
+        btt.bezierCurveTo(775,735,694,699,699,655);
+        var l_eye=btt.createRadialGradient(742,652,20,742,652,50);
+        l_eye.addColorStop(0,"#857343");
+        l_eye.addColorStop(1,"black");
+        btt.fillStyle=l_eye;
+        btt.fill();
+        btt.stroke();
 
+        btt.beginPath();
+        btt.moveTo(719,655);
+        btt.bezierCurveTo(716,633,760,609,762,657);
+        btt.bezierCurveTo(755,691,723,676,719,655);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
 
-### 最佳平方三角逼近与快速傅里叶变换
+        // 右眼
+        btt.beginPath();
+        btt.moveTo(988,630);
+        btt.bezierCurveTo(997,569,1091,548,1087,647);
+        btt.bezierCurveTo(1079,719,976,710,988,630);
+        btt.fillStyle="#ffffff";
+        btt.fill();
+        btt.stroke();
 
+        btt.beginPath();
+        btt.moveTo(995,634);
+        btt.bezierCurveTo(993,584,1077,559,1077,641);
+        btt.bezierCurveTo(1068,707,993,689,995,634);
+        var r_eye=btt.createRadialGradient(1040,635,20,1040,635,50);
+        r_eye.addColorStop(0,"#857343");
+        r_eye.addColorStop(1,"black");
+        btt.fillStyle=r_eye;
+        btt.fill();
+        btt.stroke();
 
-### 有理逼近
+        btt.beginPath();
+        btt.moveTo(1022,621);
+        btt.bezierCurveTo(1055,596,1065,650,1042,659);
+        btt.bezierCurveTo(1027,662,1002,646,1022,621);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
+        // 左眼高光
+        btt.strokeStyle='#ffffff';
+        btt.beginPath();
+        btt.arc(743,623,13,0,2*Math.PI);
+        btt.fillStyle="#ffffff";
+        btt.fill();
+        btt.stroke();
+        btt.strokeStyle='#000000';
 
-## 数值积分与数值微分
+        btt.strokeStyle='#5fc2ba';
+        btt.beginPath();
+        btt.arc(732,675,7,0,2*Math.PI);
+        btt.fillStyle="#5fc2ba";
+        btt.fill();
+        btt.stroke();
+        btt.strokeStyle='#000000';
 
-### 引言
+        // 右眼高光
+        btt.strokeStyle='#ffffff';
+        btt.beginPath();
+        btt.arc(1036,606,12,0,2*Math.PI);
+        btt.fillStyle="#ffffff";
+        btt.fill();
+        btt.stroke();
+        btt.strokeStyle='#000000';
+        
+        btt.strokeStyle='#5fc2ba';
+        btt.beginPath();
+        btt.arc(1024,659,7,0,2*Math.PI);
+        btt.fillStyle="#5fc2ba";
+        btt.fill();
+        btt.stroke();
+        btt.strokeStyle='#000000';
+        
 
-### 牛顿·柯特斯公式
+        // 鼻子
+        btt.beginPath();
+        btt.moveTo(914,646);
+        btt.bezierCurveTo(863,646,867,682,901,698);
+        btt.bezierCurveTo(920,706,927,704,941,694);
+        btt.bezierCurveTo(970,668,961,644,914,646);
+        btt.fillStyle="#000000";
+        btt.fill();
+        btt.stroke();
 
-### 复化求积公式
+        btt.beginPath();
+        btt.moveTo(886,666);
+        btt.bezierCurveTo(887,648,945,644,944,666);
+        btt.bezierCurveTo(944,686,886,683,886,666);
+        var nose=btt.createLinearGradient(910,650,910,675);
+        nose.addColorStop(1,"black");
+        nose.addColorStop(0,"white");
+        btt.fillStyle=nose;
+        btt.fill();
+        btt.stroke();
+        // 仅供学习交流使用，转载请注明出处@布拉布拉
+        // by SDUT Bulbul 
+        // // 五环
+        // btt.lineWidth=3;
+        // btt.strokeStyle='#ebcb44';
+        // btt.beginPath();
+        // btt.arc(886,1245,15,0,2*Math.PI);
+        // btt.stroke();
 
-### 龙贝格求积公式
+        // btt.lineWidth=3;
+        // btt.strokeStyle='#2bb459';
+        // btt.beginPath();
+        // btt.arc(921,1245,15,0,2*Math.PI);
+        // btt.stroke();
 
-### 高斯求积公式
+        // btt.lineWidth=3;
+        // btt.strokeStyle='#5398db';
+        // btt.beginPath();
+        // btt.arc(871,1230,15,0,2*Math.PI);
+        // btt.stroke();
 
-### 数值微分
+        // btt.lineWidth=3;
+        // btt.strokeStyle='#2c2e2e';
+        // btt.beginPath();
+        // btt.arc(906,1230,15,0,2*Math.PI);
+        // btt.stroke();
 
-## 解线性方程组的直接方法
+        // btt.lineWidth=3;
+        // btt.strokeStyle='#f53e59';
+        // btt.beginPath();
+        // btt.arc(941,1230,15,0,2*Math.PI);
+        // btt.stroke();
 
-### 引言和预备知识
+    </script>
 
-### 高斯消去法
+    <div></div>
+</head>
+<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
 
-### 高斯主元素消去法
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
 
-### 矩阵三角分解法
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body>
+</html>
 
-### 向量和矩阵的范数
+  
+</article>
 
-### 误差分析
-
-### 矩阵的正交三角化及应用
-
-## 解线性方程组的迭代法
-
-### 引言
-
-### 基本迭代法
-
-### 迭代法的收敛性
-
-### 分块迭代法
-
-## 非线性方程求根
-
-### 方程求根与二分法
-
-### 迭代法及其收敛性
-
-### 迭代收敛的加速方法
-
-### 牛顿法
-
-### 弦截法与抛物线法
-
-### 解非线性方程组的牛顿迭代法
-
-## 矩阵特征值问题计算
-
-### 引言
-
-### 幂法及反幂法
-
-### 豪斯霍尔德方法
-
-### $QR$ 方法
-
-## 常微分方程初值问题数值解法
-
-### 引言
-
-### 简单的数值方法和基本概念
-
-### 龙格·库塔方法
-
-### 单步法的收敛性与稳定性
-
-### 线性多步法
-
-### 方程组和高阶方程
- -->
-
-
-
-
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
-                    
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E8%AE%A1%E7%AE%97/">计算</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">计算方法</a>
-                    
-                  </div>
-                
               </div>
-
-              
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/archives/8a987d25.html">
-                        <span class="hidden-mobile">大学语文</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
-
-            
-              <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
-                
-                  
-                
-                
-
-  <style>
-    .v[data-class=v] .veditor {
-        background-image: url(https://th.bing.com/th/id/R.0ef55b8eb59d725797a28aee2a72ce6a?rik=op23xL3hY4wEOg&riu=http%3a%2f%2fwww.sport.gov.cn%2fn316%2fn343%2fn1194%2fc927555%2fpart%2f573165.jpg&ehk=eY8UMEgeLEcEIv44Dev2PjCvjS%2baygI1n4fN5BX0OLU%3d&risl=&pid=ImgRaw&r=0);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-  </style>
-  <div id="waline"></div>
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function () {
-        new Waline({
-          el: "#waline",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "identicon",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: true,
-          serverURL: "https://myblog-lti2c7o13-david2013777.vercel.app/",
-          avatarCDN: "",
-          avatarForce: true,
-          requiredFields: [],
-          emojiCDN: "",
-          emojiMaps: null,
-          anonymous: null,
-        });
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
-
-
-              </article>
-            
-          </article>
+          </div>
         </div>
       </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-  <!-- 旋转的小人 -->
-  <div class="twopeople">
-    <div class="container" style="height:200px;">
-        <canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople1.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/zdog.dist.js"></script>
-    <script id="rendered-js" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople.js"></script>
-    <style>
-        .twopeople{
-            margin: 0;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        canvas {
-            display: block;
-            margin: 0 auto;
-            cursor: move;
-        }
-    </style>
-</div>
-  <!-- 旋转的小人 -->
-
-
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
-
-
     
 
     
@@ -881,11 +934,7 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
 
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
 
 
 
@@ -934,45 +983,6 @@
 
 
 
-  
-
-  
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
-
-  
-
 
 
 
@@ -1004,23 +1014,5 @@
 <script  src="/js/boot.js" ></script>
 
 
-<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
-                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
-                console.log('已挂载electric_clock')
-                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
-            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
-
-            electric_clock_injector_config()
-        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
-                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
-                console.log('已挂载history_calendar')
-                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
-            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
-
-            history_calendar_injector_config()
-        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

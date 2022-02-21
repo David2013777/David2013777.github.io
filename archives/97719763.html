@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.3k 字
+      4.9k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      46
+      72
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：4 分钟前
                 
               </p>
             
@@ -440,8 +440,8 @@
 <li>若 $b\mid a$ ，则 $|b|&lt;|a|$ 。</li>
 </ol>
 <p>设 $a\in \mathbb{Z},a\neq 0$ ， $\pm 1,\pm b$ 显然是 $b$ 的因数， $b$ 的其他因数称为 $b$ 的真因数。</p>
-<p>素数与合数：设  是大于  的整数，若  没有真因数，则称  为素数（质数）。有真因数的非零整数称为合数。</p>
-<p>定理：大于1的整数可以表示成素数的乘积，或者本身就是素数。</p>
+<p>素数与合数：设 $p$ 是大于 $1$ 的整数，若 $p$ 没有真因数，则称 $p$ 为素数（质数）。有真因数的非零整数称为合数。</p>
+<p>定理：大于 $1$ 的整数可以表示成素数的乘积，或者本身就是素数。</p>
 <p>定理：素数有无穷多个。</p>
 <h3 id="带余除法"><a href="#带余除法" class="headerlink" title="带余除法"></a>带余除法</h3><p>定理：设 $a,b\in \mathbb{Z},b\neq 0$ ，存在唯一的 $q$ 与唯一的 $r$ ，使得 $a=bq+r,0\leq r&lt;|b|$ 。 $a$ 称为被除数， $b$ 称为除数， $q$ 称为不完全商，简称商， $r$ 称为 $b$ 除 $a$ 的非负最小剩余。</p>
 <p>一般的，设 $a,b,c\in\mathbb{Z},b\neq 0$ ，存在唯一的 $q$ 与唯一的 $r$ ，使得<br>$$<br>a=bq+r,c\leq r&lt;|b|+c<br>$$<br>取 $c=-\dfrac{|b|}{2}+1$ ，便有<br>$$<br>a=bq+r,-\dfrac{|b|}{2}&lt;r\leq \dfrac{|b|}{2}<br>$$<br>这样的 $r$ 称为 $b$ 除 $a$ 的绝对最小剩余。取 $c=1$ 所得的 $r$ 称为 $b$ 除 $a$ 的最小正剩余，非负最小剩余与绝对最小剩余是经常用到的。</p>
@@ -519,7 +519,71 @@
 <li>$\left(\dfrac{-1}{p}\right)=&lt; p &gt;_{4}$ ，$&lt; p &gt;_{4}$ 表示 $p$ 模 $4$ 的绝对最小剩余。</li>
 </ol>
 <p>定理：设 $p$ 是奇素数， $p\nmid a$ ， $p_1=(p-1)/2$ ， $&lt; x &gt;_p$ 表示 $x$ 模 $p$ 的绝对最小剩余， $S=\{ &lt; a &gt;_p,\cdots,&lt; pa &gt;_p \}$ ， $S$ 中取负值的元素的个数为 $s$ ，则 $\left(\dfrac{a}{p}\right)=(-1)^{s}$ 。</p>
-<h2 id="指数，原根与指标"><a href="#指数，原根与指标" class="headerlink" title="指数，原根与指标"></a>指数，原根与指标</h2><h2 id="连分数"><a href="#连分数" class="headerlink" title="连分数"></a>连分数</h2><h2 id="数论变换"><a href="#数论变换" class="headerlink" title="数论变换"></a>数论变换</h2><h2 id="素性测试与大数分解"><a href="#素性测试与大数分解" class="headerlink" title="素性测试与大数分解"></a>素性测试与大数分解</h2>
+<p>定理：设 $p\nmid a$ ， $p$ 是奇素数，则</p>
+<ol>
+<li>若 $2\nmid a$ ，则 $\left( \dfrac{a}{p} \right)=(-1)^s$ ， $s=\sum_{k=1}^{p_1}\lfloor{\dfrac{ak}{p}}$ 。</li>
+<li>当 $a=2$ 时， $\left(\dfrac{2}{p}\right)=(-1)^{(p^2-1)/8}$ 。</li>
+</ol>
+<p>二次互反律：设 $p,q$ 是不同的奇素数，则<br>$$<br>\left(\dfrac{q}{p}\right)\left(\dfrac{p}{q}\right)=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}=\begin{cases}<br>-1,\text{当}p\equiv q \equiv -1\mod 4<br> \\<br> 1,\text{其他}<br>\end{cases}<br>$$</p>
+<p>雅可比符号：设 $m=p_{1} \cdot p_{2} \cdots p_{t}$ ， $(i=1,2,\cdots,t)$ 是奇素数，定义 $\left(\dfrac{a}{m}\right)=\left(\dfrac{a}{p_1}\right)\left(\dfrac{a}{p_2}\right)\cdots\left(\dfrac{a}{p_i}\right)$ ，其中 $\left(\dfrac{a}{p_i}\right)$ 是勒让德符号。 $\left(\dfrac{a}{m}\right)$ 称为 $a$ 对 $m$ 的雅可比符号。</p>
+<p>雅可比符号有以下性质：</p>
+<ol>
+<li>$\left(\dfrac{1}{m}\right)=1$ ;</li>
+<li>$\left(\dfrac{a}{m}\right)=0$ ，当 $(a,m)&gt;1$ ;</li>
+<li>$\left(\dfrac{a}{m}\right)=\left(\dfrac{b}{m}\right)$,当 $a\equiv b\mod m$ ;</li>
+<li>$\left(\dfrac{ab}{m}\right)=\left(\dfrac{a}{m}\right)\left(\dfrac{b}{m}\right)$ ;</li>
+<li>$\left(\dfrac{a^2}{m}\right)=1$ ;</li>
+<li>$\left(\dfrac{a}{m_1m_2}\right)=\left(\dfrac{a}{m_1}\right)\left(\dfrac{a}{m_2}\right)$ .</li>
+</ol>
+<p>定理：$\left(\dfrac{-1}{m}\right)=(-1)^{(m-1)/2}=\begin{cases}<br>1,\text{当}m\equiv 1\mod 4<br>  \\<br>-1,\text{当}m\equiv -1\mod 4<br>\end{cases}$</p>
+<p>定理：$\left(\dfrac{2}{m}\right)=(-1)^{(m^2-1)/8}=\begin{cases}<br>1,\text{当}m\equiv \pm 1\mod 8<br>  \\<br>-1,\text{当}m\equiv \pm 3\mod 8<br>\end{cases}$</p>
+<p>定理：设 $m,n$ 是大于 $1$ 的奇数， $(m,n)=1$ 。则<br>$$<br>\left(\dfrac{n}{m}\right)\left(\dfrac{m}{n}\right)=(-1)^{\frac{m-1}{2}\frac{n-1}{2}}<br>$$</p>
+<h3 id="二次同余方程"><a href="#二次同余方程" class="headerlink" title="二次同余方程"></a>二次同余方程</h3><p>定理：设 $\left(\dfrac{a}{p}\right)=1$ ， $x^2\equiv a\mod p$ ，</p>
+<ol>
+<li>若 $p=4k-1$ ，则解为 $x\equiv \pm a^{(p+1)/4}\mod p$ 。</li>
+<li>若 $p=8k-3$ ，则解为<br>$$<br>x\equiv \begin{cases} \pm a^{(p+3/8)}\mod p ,\text{当}a^{(p-1)/4}\equiv 1\mod p \\ \pm 2^{(p-1)/4}a^{(p+3)/8}, \text{当}a^{(p-1)/4}\equiv -1\mod p\end{cases}<br>$$</li>
+</ol>
+<p>模是素数幂的二次同余方程：<br>设<br>$$<br>f(x)=a_{n}x^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0<br>$$<br> $f^{\prime}(x)$ 为 $f(x)$ 的导函数，<br>$$<br>f(x)\equiv o\mod p^{\alpha} \\ f^{\prime}(x)\equiv 0\mod p^{\alpha-1}<br>$$</p>
+<p>其中 $p$ 是素数， $\alpha\geq 2$ 。</p>
+<p>定理：设 $x\equiv x_{\alpha-1}\mod p^{\alpha-1}$ 是 $f^{\prime}(x)\equiv 0\mod p^{\alpha-1}$ 的解， $p\nmid f^{\prime}(x_{\alpha-1})$ ，则 $f(x)\equiv o\mod p^{\alpha}$ 的解是<br>$$<br>x\equiv x_{\alpha-1}+p^{\alpha-1}t_{\alpha-1}\mod p^{\alpha}<br>$$<br>其中 $y\equiv t_{\alpha-1}\mod p$ 是<br>$$<br>f^{\prime}(x_{\alpha-1})y\equiv -\dfrac{f(x_{\alpha-1})}{p^{\alpha-1}}\mod p<br>$$<br>的解。</p>
+<p>定理：设<br>$$<br>x\equiv a\mod 2^{\alpha},\alpha\geq 3<br>$$<br>有解的充要条件是 $\alpha\equiv 1\mod 8$ 。若 $x\equiv x_{\alpha}\mod 2^{\alpha}$ 是该式的一个特解，则其所有的解是 $x=\pm (x_0+2^{\alpha-1}t_{\alpha}),t_{\alpha}\in Z$ ，共有 $4$ 个解。</p>
+<p>定理：设<br>$$<br>x^2\equiv \alpha\mod m \\ m=2^{\alpha}p_1^{\alpha_1}\cdots p_k^{\alpha_k},(a,m)=1<br>$$<br>有解的必要条件是下列条件同时成立。</p>
+<ol>
+<li>当 $\alpha=1$ 时， $a\equiv 1\mod 4$ ；当 $\alpha\geq 3$ 时， $a\equiv 1\mod 8$ 。</li>
+<li> $\left(\dfrac{a}{p_i}\right)=1$ ， $i=1,2,\cdots,k$ 。若上述条件成立。则当 $\alpha =0,1$ 时，解数为 $2^k$ ；当 $\alpha=2$ 时，解数为 $2^{k+1}$ ；当 $\alpha\geq 3$ 时，解数为 $2^{k+2}$ 。</li>
+</ol>
+<p>定理：设 $p$ 为奇素数， $p\mid a$ ， $\left(\dfrac{a}{p}\right)=1$ ， $\alpha\geq 2$ ， $x\equiv x_1\mod p$ 是 $x^2\equiv a\mod p$ 的一个特解，则 $x^2\equiv a\mod p^{\alpha}$ 的所有解是 $x\equiv \pm PQ^{-1}\mod p^{\alpha}$ 。其中<br>$$<br>P=\dfrac{(x_1+\sqrt{a})^{\alpha}+(x_1-\sqrt{a})^{\alpha}}{2} \\ Q=\dfrac{(x_1+\sqrt{a})^{\alpha}-(x_1-\sqrt{a})^{\alpha}}{2\sqrt{a}}<br>$$<br> $Q^{-1}$ 是 $Q$ 模 $p^{\alpha}$ 的逆元。</p>
+<h2 id="指数，原根与指标"><a href="#指数，原根与指标" class="headerlink" title="指数，原根与指标"></a>指数，原根与指标</h2><h3 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h3><p>定义：设 $m\in Z^{+}$ ， $(a,m)=1$ ， $a^t\equiv 1\mod m$ 的最小正整数 $t$ 称为 $a$ 模 $m$ 的指数（阶），记作 $\delta_m(a)$ 。当 $\delta_m(a)=\varphi(m)$ 时，称 $a$ 为模 $m$ 的原根。</p>
+<p>指数的性质：</p>
+<ol>
+<li>若 $a^t\equiv 1\mod m$ ，则 $\delta_m(a)\mid t$ ， $\delta_m(a)\mid \varphi(m)$ 。</li>
+<li>若 $m=2^{\alpha}$ ， $\alpha\geq 3$ ， $(a,m)=1$ ，则 $\delta_m(a)\mid 2^{\alpha-2}$ 。</li>
+<li>若 $\delta_m(a)=\varphi(m)$ ，则 $a^0,a,\cdots ,a^{\varphi(m)-1}$ 构成模 $m$ 的缩系。</li>
+<li>设 $k\in N$ ，则 $\delta_m(a^k)=\frac{\delta_m(a)}{(\delta_m(a),k)}$ 。在模 $m$ 的缩系中至少有 $\varphi(\delta_m(a))$ 个数阶为 $\delta_m(a)$ 。</li>
+<li>$\delta_m(ab)=\delta_m(a)\delta_m(b)\Leftrightarrow (\delta_m(a),\delta_m(b))=1$ 。</li>
+<li>若 $n\mid m$ ，则 $\delta_n(a)\mid \delta_m(a)$ 。</li>
+<li>若 $(n,m)=1$ ，则 $\delta_{mn}(a)=[\delta_m(a),\delta_n(a)]$ 。</li>
+<li>设 $(m,n)=1$ ， $(a,m)=(b,m)=1$ 。则有 $c$ 满足 $\delta_{mn}(a)=[\delta_m(a),\delta_n(b)]$ 。</li>
+<li>设 $(a,m)=(b,m)=1$ 。存在 $c$ ，满足 $\delta_m(c)=[\delta_m(a),\delta_m(b)]$ 。</li>
+</ol>
+<h3 id="原根"><a href="#原根" class="headerlink" title="原根"></a>原根</h3><p>定理：设 $p$ 是素数，则模 $p$ 有原根。</p>
+<p>定理：设 $p$ 是奇素数， $\alpha\geq 1$ 。则模 $p^{\alpha}$ 有原根。存在 $g_1$ 是模 $p^{\alpha}$ 与模 $2p^{\alpha}$ 的公共原根。</p>
+<p>定理：模 $m$ 有原根的充要条件是 $m=1,2,3,p^{\alpha}$ 或 $2p^{\alpha}$ 。 $p$ 是奇素数， $\alpha\in Z^{+}$ 。</p>
+<p>定理：设 $2\nmid a,k\geq 3$ ，则 $a^{2^{k-2}}\equiv 1\mod 2^k$ 。</p>
+<p>定理：设 $k\geq 3$ ， $5$ 模 $2$ 的阶为 $2^{k-2}$ 。</p>
+<h3 id="指标"><a href="#指标" class="headerlink" title="指标"></a>指标</h3><p>指标：设模 $m$ 有原根 $g$ ， $(a,m)=1$ 。若 $a\equiv g^{\gamma}\mod m$ ， $0\leq \gamma\varphi(m)$ ，则称 $a$ 模 $m$ 以 $g$ 为底的指标是 $\gamma$ ，记作 $\gamma_{m,g}(a)=\gamma$ ，简记作 $\gamma_g(a)=\gamma$ ，或 $\gamma(a)=\gamma$ 。</p>
+<p>设 $g$ 是模 $m$ 的原根， $(a,m)=(b,m)=1$ 。则有以下性质：</p>
+<ol>
+<li>$\gamma(ab)\equiv \gamma(a)+\gamma(b)\mod \varphi(m)$ 。</li>
+<li>若 $k\in Z^{+}$ ，则 $\gamma(a^k)\equiv k\gamma(a)\mod \varphi(m)$ 。</li>
+<li>若 $g^{\prime}$ 是模 $m$ 的另一个原根，则 $\gamma_{g^{\prime}}(a)\equiv \gamma_{g^{\prime}}(g)\gamma_{g}(a)\mod \varphi(m)$ 。特别的， $\gamma_{g^{\prime}}(g)\gamma_{g}(g^{\prime})\equiv 1\mod \varphi(m)$ 。</li>
+<li>$\delta(a)=\dfrac{\varphi(m)}{(\gamma(a),\varphi(m))}$ 。</li>
+</ol>
+<h2 id="连分数"><a href="#连分数" class="headerlink" title="连分数"></a>连分数</h2><h3 id="连分数的基本性质"><a href="#连分数的基本性质" class="headerlink" title="连分数的基本性质"></a>连分数的基本性质</h3><p>连分数：设 $a_0,a_1,\cdots $ 是无穷实数序列，当 $i\geq 1$ 时， $a+i\geq 0$ ，称<br>$$<br>{a_{0} +<br>\cfrac{1}{a_{1} +<br>\cfrac{1}{\cdots+a_{n-1} + \frac{1}{a_n}}}}<br>$$<br>为 $n$ 阶有限连分数，当 $a_0,\cdots ,a_n$ 都是整数时称之为有限简单连分数。为了方便，记为 $\langle a_0,a_1,\cdots ,a_n \rangle $ 。设 $0\leq k\leq n$ ，则 $\langle a_0,a_1,\cdots ,a_k \rangle $ 称为该式的第 $k$ 个渐进分数。 $a_i(0\leq i\leq n)$ 称为该式的第 $i$ 个部分商。当 $n\rightarrow \infty$ 时，称为无限连分数，若 $a_i(i\geq 0)$ 都是整数，则称之为无限简单连分数。若有极限<br>$$<br>\lim_{k\to \infty}\langle a_0,a_1,\cdots a_k \rangle = \theta<br>$$<br>则称此无限连分数是收敛的， $\theta$ 称为 $\langle a_0,a_1,\cdots \rangle$ 的值，记作 $\langle a_0,a_1,\cdots \rangle = \theta$ ，若此极限不存在，则称 $\langle a_0,a_1,\cdots \rangle$ 是发散的。</p>
+<blockquote>
+<p>此处以后完善</p>
+</blockquote>
+<h2 id="数论变换"><a href="#数论变换" class="headerlink" title="数论变换"></a>数论变换</h2><h3 id="数论变换的基本性质"><a href="#数论变换的基本性质" class="headerlink" title="数论变换的基本性质"></a>数论变换的基本性质</h3><h2 id="素性测试与大数分解"><a href="#素性测试与大数分解" class="headerlink" title="素性测试与大数分解"></a>素性测试与大数分解</h2>
             </div>
             <hr>
             <div>
