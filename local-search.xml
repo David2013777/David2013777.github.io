@@ -17,6 +17,8 @@
       
       <category>应用数学</category>
       
+      <category>数值分析</category>
+      
     </categories>
     
     
@@ -71,6 +73,8 @@
       
       <category>应用数学</category>
       
+      <category>概率统计</category>
+      
     </categories>
     
     
@@ -123,7 +127,7 @@
       
       <category>纯数学</category>
       
-      <category>结构</category>
+      <category>代数</category>
       
     </categories>
     
@@ -152,7 +156,7 @@
       
       <category>纯数学</category>
       
-      <category>变化</category>
+      <category>分析</category>
       
     </categories>
     
@@ -181,7 +185,7 @@
       
       <category>纯数学</category>
       
-      <category>变化</category>
+      <category>分析</category>
       
     </categories>
     
@@ -264,6 +268,8 @@
       
       <category>应用数学</category>
       
+      <category>概率统计</category>
+      
     </categories>
     
     
@@ -288,6 +294,8 @@
     <categories>
       
       <category>数学</category>
+      
+      <category>纯数学</category>
       
       <category>数学基础</category>
       
@@ -315,6 +323,8 @@
     <categories>
       
       <category>数学</category>
+      
+      <category>纯数学</category>
       
       <category>数学基础</category>
       
