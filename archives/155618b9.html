@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -541,7 +541,7 @@
 <h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><p>方差：设 $X$ 是一个随机变量，若 $E\{ [X-E(X)]^2 \}$ 存在，则称 $E\{ [X-E(X)]^2 \}$ 为 $X$ 的方差，记为 $D(X)$ 或 $\mathrm{Var}(X)$ ，即<br>$$<br>D(X)=\mathrm{Var}(X)=E\{[X-E(X)]^2\}<br>$$<br>在应用上还引入量 $\sqrt{D(X)}$ ，记为 $\sigma(X)$ ，称为标准差或均方差。</p>
 <p>对于离散型随机变量，有<br>$$<br>D(X)=\sum_{k=1}^{\infty}[x_k-E(X)]^2p_k<br>$$<br>其中 $P\{ X=x_k \}=p_k,k=1,2,\cdots $ 是 $X$ 的分布律。</p>
 <p>对于连续型随机变量，有<br>$$<br>D(X)=\int_{-\infty}^{\infty}[x-E(X)]^2f(x)\mathrm{d}x<br>$$<br>其中 $f(x)$ 是 $X$ 的概率密度。</p>
-<p>随机变量的方差可按下列公式计算<br>$$<br>D(X)-E(X^2)-[E(X)]^2<br>$$<br>设随机变量 $X$ 具有数学期望 $E(X)=\mu$ ，方差 $D(X)=\sigma^2\neq 0$ 。记<br>$$<br>X^*=\dfrac{X-\mu}{\sigma}<br>$$<br>则<br>$$<br>E(X^*)=\dfrac{1}{\sigma}E(X-\mu)=\dfrac{1}{\sigma}[E(X)-\mu]=0<br>$$</p>
+<p>随机变量的方差可按下列公式计算<br>$$<br>D(X)=E(X^2)-[E(X)]^2<br>$$<br>设随机变量 $X$ 具有数学期望 $E(X)=\mu$ ，方差 $D(X)=\sigma^2\neq 0$ 。记<br>$$<br>X^*=\dfrac{X-\mu}{\sigma}<br>$$<br>则<br>$$<br>E(X^*)=\dfrac{1}{\sigma}E(X-\mu)=\dfrac{1}{\sigma}[E(X)-\mu]=0<br>$$</p>
 <p>$$<br>D(X^*)=E(X^*)-[E(X^*)]^2=E[(\dfrac{X-\mu}{\sigma})^2]=\dfrac{1}{\sigma^2}E[(X-\mu)^2]=1<br>$$<br>即 $X^*$ 的数学期望为0，方差为1. $X^*$ 称为 $X$ 的标准化变量。</p>
 <p>方差的几个重要性质：</p>
 <ol>
