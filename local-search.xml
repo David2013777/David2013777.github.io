@@ -15,14 +15,14 @@
       
       <category>数学</category>
       
-      <category>计算</category>
+      <category>应用数学</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>计算方法</tag>
+      <tag>数值分析</tag>
       
     </tags>
     
@@ -69,7 +69,7 @@
       
       <category>数学</category>
       
-      <category>概统</category>
+      <category>应用数学</category>
       
     </categories>
     
@@ -89,7 +89,7 @@
     <link href="/archives/d63dd81.html"/>
     <url>/archives/d63dd81.html</url>
     
-    <content type="html"><![CDATA[<p>LaTex与Markdown语法存在不兼容的情况，这里提供了例子与解决办法。</p><span id="more"></span><h1 id="格式问题"><a href="#格式问题" class="headerlink" title="格式问题"></a>格式问题</h1><h2 id="大括号"><a href="#大括号" class="headerlink" title="大括号"></a>大括号</h2><p>代码；</p><figure class="highlight gams"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gams"><span class="hljs-symbol">$</span>\&#123; hello,world \&#125;<span class="hljs-symbol">$</span><br></code></pre></div></td></tr></table></figure><p>显示：$\{ hello,world \}$</p><p>解决方法：</p><p>代码：</p><figure class="highlight gams"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gams"><span class="hljs-symbol">$</span>\&#123; hello,world \&#125;<span class="hljs-symbol">$</span><br></code></pre></div></td></tr></table></figure><p>显示：$\{ hello,world \}$</p><h2 id="行间公式换行"><a href="#行间公式换行" class="headerlink" title="行间公式换行"></a>行间公式换行</h2><p>代码；</p><figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs elixir"><span class="hljs-variable">$$</span><br>\<span class="hljs-keyword">begin</span>&#123;cases&#125; hello \\ world \<span class="hljs-keyword">end</span>&#123;cases&#125;<br><span class="hljs-variable">$$</span><br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{cases} hello \\ world \end{cases}<br>$$</p><p>解决方法：</p><p>代码：</p><figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs elixir"><span class="hljs-variable">$$</span><br>\<span class="hljs-keyword">begin</span>&#123;cases&#125; hello \\ world \<span class="hljs-keyword">end</span>&#123;cases&#125;<br><span class="hljs-variable">$$</span><br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{cases} hello \\ world \end{cases}<br>$$</p><h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>代码；</p><figure class="highlight ruby"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ruby">数乘：若 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>是一个数， <span class="hljs-variable">$A</span>=(a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>是矩阵，则同型矩阵 <span class="hljs-variable">$(</span>\<span class="hljs-built_in">lambda</span> a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>称为数 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>与矩阵 $A<span class="hljs-variable">$ </span>的乘积，记为 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A<span class="hljs-variable">$ </span>或 <span class="hljs-variable">$A</span>\<span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>，即 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A=(\<span class="hljs-built_in">lambda</span> a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>。<br></code></pre></div></td></tr></table></figure><p>显示：<br>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p><p>解决方法：</p><p>代码：</p><figure class="highlight ruby"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ruby">数乘：若 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>是一个数， <span class="hljs-variable">$A</span>=(a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>是矩阵，则同型矩阵 <span class="hljs-variable">$(</span>\<span class="hljs-built_in">lambda</span> a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>称为数 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>与矩阵 $A<span class="hljs-variable">$ </span>的乘积，记为 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A<span class="hljs-variable">$ </span>或 <span class="hljs-variable">$A</span>\<span class="hljs-built_in">lambda</span><span class="hljs-variable">$ </span>，即 <span class="hljs-variable">$\</span><span class="hljs-built_in">lambda</span> A=(\<span class="hljs-built_in">lambda</span> a_&#123;ij&#125;)_&#123;m\times n&#125;<span class="hljs-variable">$ </span>。<br></code></pre></div></td></tr></table></figure><p>显示：</p><p>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p><h2 id="变成链接"><a href="#变成链接" class="headerlink" title="!+[]+()变成链接"></a>!+[]+()变成链接</h2><p>代码；</p><figure class="highlight dust"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dust"><span class="xml">$$</span><br><span class="xml">\begin</span><span class="hljs-template-variable">&#123;aligned&#125;</span><span class="xml"> N_m(x)=&amp;\frac</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">J_m(x)\ln\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;m-1&#125;</span><span class="xml">\frac</span><span class="hljs-template-variable">&#123;(m-k-1)&#125;</span><span class="hljs-template-variable">&#123;k!&#125;</span><span class="xml">(\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k-m&#125;</span><span class="xml"> \\ &amp;-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;\infty&#125;</span><span class="xml">(-1)^k\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;k!(m+k)!&#125;</span><span class="xml">[\Phi(m+k+1)+\Phi(k+1)](\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k+m&#125;</span><span class="xml"> \end</span><span class="hljs-template-variable">&#123;aligned&#125;</span><span class="xml"></span><br><span class="xml">$$</span><br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{aligned}<br>N_m(x)=&amp;\frac{2}{\pi}J_m(x)\ln\frac{x}{2}-\frac{1}{\pi}\sum_{k=0}^{m-1}\frac{(m-k-1)}{k!}(\frac{x}{2})^{2k-m} \\ &amp;-\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!(m+k)!}<a href="%5Cfrac%7Bx%7D%7B2%7D">\Phi(m+k+1)+\Phi(k+1)</a>^{2k+m}<br>\end{aligned}<br>$$</p><p>解决方法：</p><p>代码：</p><figure class="highlight dust"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dust"><span class="xml">\begin</span><span class="hljs-template-variable">&#123;aligned&#125;</span><span class="xml"> N_m(x)=&amp;\frac</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">J_m(x)\ln\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;m-1&#125;</span><span class="xml">\frac</span><span class="hljs-template-variable">&#123;(m-k-1)&#125;</span><span class="hljs-template-variable">&#123;k!&#125;</span><span class="xml">(\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k-m&#125;</span><span class="xml"> \\ &amp;-\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;\pi&#125;</span><span class="xml">\sum_</span><span class="hljs-template-variable">&#123;k=0&#125;</span><span class="xml">^</span><span class="hljs-template-variable">&#123;\infty&#125;</span><span class="xml">(-1)^k\frac</span><span class="hljs-template-variable">&#123;1&#125;</span><span class="hljs-template-variable">&#123;k!(m+k)!&#125;</span><span class="xml">\[\Phi(m+k+1)+\Phi(k+1)\](\frac</span><span class="hljs-template-variable">&#123;x&#125;</span><span class="hljs-template-variable">&#123;2&#125;</span><span class="xml">)^</span><span class="hljs-template-variable">&#123;2k+m&#125;</span><span class="xml"> \end</span><span class="hljs-template-variable">&#123;aligned&#125;</span><br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{aligned} N_m(x)=&amp;\frac{2}{\pi}J_m(x)\ln\frac{x}{2}-\frac{1}{\pi}\sum_{k=0}^{m-1}\frac{(m-k-1)}{k!}(\frac{x}{2})^{2k-m} \\ &amp;-\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!(m+k)!}[\Phi(m+k+1)+\Phi(k+1)](\frac{x}{2})^{2k+m} \end{aligned}<br>$$</p>]]></content>
+    <content type="html"><![CDATA[<p>LaTex与Markdown语法存在不兼容的情况，这里提供了例子与解决办法。</p><span id="more"></span><h1 id="格式问题"><a href="#格式问题" class="headerlink" title="格式问题"></a>格式问题</h1><h2 id="大括号"><a href="#大括号" class="headerlink" title="大括号"></a>大括号</h2><p>代码；</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">$\&#123; hello,world \&#125;$<br></code></pre></div></td></tr></table></figure><p>显示：$\{ hello,world \}$</p><p>解决方法：</p><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">$\&#123; hello,world \&#125;$<br></code></pre></div></td></tr></table></figure><p>显示：$\{ hello,world \}$</p><h2 id="行间公式换行"><a href="#行间公式换行" class="headerlink" title="行间公式换行"></a>行间公式换行</h2><p>代码；</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">$$<br>\begin&#123;cases&#125; hello \\ world \end&#123;cases&#125;<br>$$<br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{cases} hello \\ world \end{cases}<br>$$</p><p>解决方法：</p><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">$$<br>\begin&#123;cases&#125; hello \\ world \end&#123;cases&#125;<br>$$<br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{cases} hello \\ world \end{cases}<br>$$</p><h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>代码；</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">数乘：若 $\lambda$ 是一个数， $A=(a_&#123;ij&#125;)_&#123;m\times n&#125;$ 是矩阵，则同型矩阵 $(\lambda a_&#123;ij&#125;)_&#123;m\times n&#125;$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_&#123;ij&#125;)_&#123;m\times n&#125;$ 。<br></code></pre></div></td></tr></table></figure><p>显示：<br>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p><p>解决方法：</p><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">数乘：若 $\lambda$ 是一个数， $A=(a_&#123;ij&#125;)_&#123;m\times n&#125;$ 是矩阵，则同型矩阵 $(\lambda a_&#123;ij&#125;)_&#123;m\times n&#125;$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_&#123;ij&#125;)_&#123;m\times n&#125;$ 。<br></code></pre></div></td></tr></table></figure><p>显示：</p><p>数乘：若 $\lambda$ 是一个数， $A=(a_{ij})_{m\times n}$ 是矩阵，则同型矩阵 $(\lambda a_{ij})_{m\times n}$ 称为数 $\lambda$ 与矩阵 $A$ 的乘积，记为 $\lambda A$ 或 $A\lambda$ ，即 $\lambda A=(\lambda a_{ij})_{m\times n}$ 。</p><h2 id="变成链接"><a href="#变成链接" class="headerlink" title="!+[]+()变成链接"></a>!+[]+()变成链接</h2><p>代码；</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">$$<br>\begin&#123;aligned&#125; N_m(x)=&amp;\frac&#123;2&#125;&#123;\pi&#125;J_m(x)\ln\frac&#123;x&#125;&#123;2&#125;-\frac&#123;1&#125;&#123;\pi&#125;\sum_&#123;k=0&#125;^&#123;m-1&#125;\frac&#123;(m-k-1)&#125;&#123;k!&#125;(\frac&#123;x&#125;&#123;2&#125;)^&#123;2k-m&#125; \\ &amp;-\frac&#123;1&#125;&#123;\pi&#125;\sum_&#123;k=0&#125;^&#123;\infty&#125;(-1)^k\frac&#123;1&#125;&#123;k!(m+k)!&#125;[\Phi(m+k+1)+\Phi(k+1)](\frac&#123;x&#125;&#123;2&#125;)^&#123;2k+m&#125; \end&#123;aligned&#125;<br>$$<br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{aligned}<br>N_m(x)=&amp;\frac{2}{\pi}J_m(x)\ln\frac{x}{2}-\frac{1}{\pi}\sum_{k=0}^{m-1}\frac{(m-k-1)}{k!}(\frac{x}{2})^{2k-m} \\ &amp;-\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!(m+k)!}<a href="%5Cfrac%7Bx%7D%7B2%7D">\Phi(m+k+1)+\Phi(k+1)</a>^{2k+m}<br>\end{aligned}<br>$$</p><p>解决方法：</p><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs latex">\begin&#123;aligned&#125; N_m(x)=&amp;\frac&#123;2&#125;&#123;\pi&#125;J_m(x)\ln\frac&#123;x&#125;&#123;2&#125;-\frac&#123;1&#125;&#123;\pi&#125;\sum_&#123;k=0&#125;^&#123;m-1&#125;\frac&#123;(m-k-1)&#125;&#123;k!&#125;(\frac&#123;x&#125;&#123;2&#125;)^&#123;2k-m&#125; \\ &amp;-\frac&#123;1&#125;&#123;\pi&#125;\sum_&#123;k=0&#125;^&#123;\infty&#125;(-1)^k\frac&#123;1&#125;&#123;k!(m+k)!&#125;\[\Phi(m+k+1)+\Phi(k+1)\](\frac&#123;x&#125;&#123;2&#125;)^&#123;2k+m&#125; \end&#123;aligned&#125;<br></code></pre></div></td></tr></table></figure><p>显示：</p><p>$$<br>\begin{aligned} N_m(x)=&amp;\frac{2}{\pi}J_m(x)\ln\frac{x}{2}-\frac{1}{\pi}\sum_{k=0}^{m-1}\frac{(m-k-1)}{k!}(\frac{x}{2})^{2k-m} \\ &amp;-\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!(m+k)!}[\Phi(m+k+1)+\Phi(k+1)](\frac{x}{2})^{2k+m} \end{aligned}<br>$$</p>]]></content>
     
     
     <categories>
@@ -121,14 +121,16 @@
       
       <category>数学</category>
       
-      <category>代数</category>
+      <category>纯数学</category>
+      
+      <category>结构</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>高等代数</tag>
+      <tag>线性代数</tag>
       
     </tags>
     
@@ -148,7 +150,9 @@
       
       <category>数学</category>
       
-      <category>分析</category>
+      <category>纯数学</category>
+      
+      <category>变化</category>
       
     </categories>
     
@@ -175,7 +179,9 @@
       
       <category>数学</category>
       
-      <category>分析</category>
+      <category>纯数学</category>
+      
+      <category>变化</category>
       
     </categories>
     
@@ -229,7 +235,7 @@
       
       <category>计算机</category>
       
-      <category>数字信号</category>
+      <category>电路</category>
       
     </categories>
     
@@ -256,14 +262,14 @@
       
       <category>数学</category>
       
-      <category>概统</category>
+      <category>应用数学</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>概率</tag>
+      <tag>概率论</tag>
       
     </tags>
     
@@ -283,14 +289,14 @@
       
       <category>数学</category>
       
-      <category>基础</category>
+      <category>数学基础</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>集合</tag>
+      <tag>集合论</tag>
       
     </tags>
     
@@ -310,7 +316,7 @@
       
       <category>数学</category>
       
-      <category>基础</category>
+      <category>数学基础</category>
       
     </categories>
     
