@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -434,8 +434,10 @@
 <p>为在事件 $A$ 发生的条件下事件 $B$ 发生的条件概率。</p>
 <p>乘法定理：设 $P(A)&gt;0$ ，则有 $P(AB)=P(B|A)P(A)$ 。</p>
 <p>乘法定理可以推广到多个事件的积事件的情况。</p>
-<p>全概率公式：设试验 $E$ 的样本空间为 $S$ ， $A$ 为 $E$ 的事件， $B_1,B_2,\cdots ,B_n$ 为 $S$ 的一个划分，且 $P(B_i)&gt;0\quad (i=1,2,\cdots ,n)$ ，则<br>$$<br>P(A) = P(A|B_1)P(B_1)+P(A|B_2)P(B_2) + \cdots + P(A|B_n)P(B_n)<br>$$</p>
-<p>贝叶斯公式：设试验 $E$ 的样本空间为 $S$ ， $A$ 为 $E$ 的事件， $B_1,B_2,\cdots ,B_n$ 为 $S$ 的一个划分，且 $P(A)&gt;0,P(B_i)&gt;0\quad (i=1,2,\cdots ,n)$ ，则<br>$$<br>P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\displaystyle\sum_{j=1}^{n}{P(A|B_j)P(B_j)}},i=1,2,\cdots,n<br>$$</p>
+<p>全概率公式：设试验 $E$ 的样本空间为 $S$ ， $A$ 为 $E$ 的事件， $B_1,B_2,\cdots ,B_n$ 为 $S$ 的一个划分，且 $P(B_i)&gt;0\quad (i=1,2,\cdots ,n)$ ，则</p>
+<p>$$<br>P(A) = P(A|B_1)P(B_1)+P(A|B_2)P(B_2) + \cdots + P(A|B_n)P(B_n)<br>$$</p>
+<p>贝叶斯公式：设试验 $E$ 的样本空间为 $S$ ， $A$ 为 $E$ 的事件， $B_1,B_2,\cdots ,B_n$ 为 $S$ 的一个划分，且 $P(A)&gt;0,P(B_i)&gt;0\quad (i=1,2,\cdots ,n)$ ，则</p>
+<p>$$<br>P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\displaystyle\sum_{j=1}^{n}{P(A|B_j)P(B_j)}},i=1,2,\cdots,n<br>$$</p>
 <p>其中 $P(B_i)$ 称为先验概率， $P(B_i|A)$ 称为后验概率， $P(A|B_i)$ 称为似然概率。</p>
 <h3 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h3><p>独立：设 $A,B$ 是两事件，如果满足等式 $P(AB)=P(A)P(B)$ ，则称事件 $A,B$ 相互独立。简称 $A,B$ 独立。</p>
 <p>设 $A,B$ 是两事件，且 $P(A)&gt;0$ 。若 $A,B$ 相互独立，则 $P(B|A)=P(B)$ 。反之亦然。</p>
@@ -446,16 +448,23 @@
 <h3 id="离散型随机变量及其分布律"><a href="#离散型随机变量及其分布律" class="headerlink" title="离散型随机变量及其分布律"></a>离散型随机变量及其分布律</h3><p>离散型随机变量：有些随机变量，它全部可能取到的值为有限个或可列的无限多个，这种随机变量称为离散型随机变量。</p>
 <p>离散型随机变量的分布律</p>
 <p>一：两点分布</p>
-<p>设随机变量 $X$ 只可能取0与1两个值，它的分布律是<br>$$P\{X=k\}=p^k(1-p)^{1-k},k=0,1 (0&lt;p&lt;1)$$<br>则称 $X$ 服从以 $p$ 为参数的 $(0-1)$ 分布或两点分布。</p>
+<p>设随机变量 $X$ 只可能取0与1两个值，它的分布律是</p>
+<p>$$<br>P\{X=k\}=p^k(1-p)^{1-k},k=0,1 (0&lt;p&lt;1)<br>$$</p>
+<p>则称 $X$ 服从以 $p$ 为参数的 $(0-1)$ 分布或两点分布。</p>
 <p>二：二项分布</p>
 <p>设试验 $E$ 只有两个可能结果： $A$ 和 $\overline{A}$ ，则称 $E$ 为伯努利试验。设 $P(A)=p(0&lt;p&lt;1)$ ，此时 $P(\overline{A})=1-p$ 。将 $E$ 独立重复地进行 $n$ 次，称这串试验为 $n$ 重伯努利试验。</p>
-<p>以 $X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数， $X$ 是一个随机变量，分布律为<br>$$P\{ X=k \}=\binom{n}{k}p^k(1-p)^{n-k},k=0,1,2,\cdots,n$$<br>称随机变量 $X$ 服从参数为 $n,p$ 的二项分布，记为 $X\sim b(n,p)$ 。</p>
+<p>以 $X$ 表示 $n$ 重伯努利试验中事件 $A$ 发生的次数， $X$ 是一个随机变量，分布律为</p>
+<p>$$<br>P\{ X=k \}=\binom{n}{k}p^k(1-p)^{n-k},k=0,1,2,\cdots,n<br>$$</p>
+<p>称随机变量 $X$ 服从参数为 $n,p$ 的二项分布，记为 $X\sim b(n,p)$ 。</p>
 <p>三：泊松分布</p>
 <p>设随机变量 $X$ 所有可能取的值为 $0,1,2,\cdots$ ，而取各个值的概率为</p>
 <p>其中 $\lambda &gt;0$ 是常数。则称 $X$ 服从参数 $\lambda$ 的泊松分布，记为 $X\sim \pi(\lambda)$ 。</p>
-<p>泊松定理：设 $\lambda &gt;0$ 是一个常数， $n$ 是任意正整数，设 $np_{n}=\lambda$ ，则对于任一固定的非负整数 $k$ ，有<br>$$\lim_{n\to \infty}{\binom {n}{k}p^{k}_{n}(1-p_n)^{n-k}=\dfrac{\lambda^ke^{-\lambda}}{k!}}$$</p>
+<p>泊松定理：设 $\lambda &gt;0$ 是一个常数， $n$ 是任意正整数，设 $np_{n}=\lambda$ ，则对于任一固定的非负整数 $k$ ，有</p>
+<p>$$<br>\lim_{n\to \infty}{\binom {n}{k}p^{k}_{n}(1-p_n)^{n-k}=\dfrac{\lambda^ke^{-\lambda}}{k!}}<br>$$</p>
 <h3 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h3><p>分布函数：设 $X$ 是一个随机变量， $x$ 是任意实数，函数<br>$$F(x)=P\{x\leq x\},-\infty&lt;x&lt;\infty$$<br>称为 $X$ 的分布函数。</p>
-<h3 id="连续型随机变量及其概率密度"><a href="#连续型随机变量及其概率密度" class="headerlink" title="连续型随机变量及其概率密度"></a>连续型随机变量及其概率密度</h3><p>连续型随机变量：如果对于随机变量 $X$ 的分布函数 $F(x)$ ，存在非负可积函数 $f(x)$ ，使对于任意实数 $x$ 有<br>$$F(x)=\int_{-\infty}^{x}f(t)\mathrm{d}t$$<br>则称 $X$ 为连续型随机变量， $f(x)$ 称为 $X$ 的概率密度函数，简称概率密度。</p>
+<h3 id="连续型随机变量及其概率密度"><a href="#连续型随机变量及其概率密度" class="headerlink" title="连续型随机变量及其概率密度"></a>连续型随机变量及其概率密度</h3><p>连续型随机变量：如果对于随机变量 $X$ 的分布函数 $F(x)$ ，存在非负可积函数 $f(x)$ ，使对于任意实数 $x$ 有</p>
+<p>$$<br>F(x)=\int_{-\infty}^{x}f(t)\mathrm{d}t<br>$$</p>
+<p>则称 $X$ 为连续型随机变量， $f(x)$ 称为 $X$ 的概率密度函数，简称概率密度。</p>
 <p>一：均匀分布</p>
 <p>若连续型随机变量 $X$ 具有概率密度<br>$$f(x)=\begin{cases}\dfrac{1}{b-a},a&lt;x&lt;b\\ 0,\text{其他}\end{cases}$$<br>则称 $X$ 在区间 $(a,b)$ 上服从均匀分布，记为 $X\sim U(a,b)$ 。</p>
 <p>二：指数分布</p>
@@ -716,7 +725,8 @@
 <p>设 $X_n\stackrel{P}{\longrightarrow} a$ ， $Y_n\stackrel{P}{\longrightarrow} b$ ，又设函数 $g(x,y)$ 在点 $(a,b)$ 连续，则<br>$$<br>g(X_n,Y_n)\stackrel{P}{\longrightarrow} g(a,b)<br>$$<br>弱大数定理（辛钦大数定理）：设随机变量 $X_1,X_2,\cdots$ ，相互独立，服从同一分布且具有数学期望 $E(X_k)=\mu (k=1,2,\cdots)$ ，则序列 $\overline{X}=\frac{1}{n}\sum_{k=1}^nX_k$ 依概率收敛于 $\mu $ ，即 $\overline{X} \stackrel{P}{\longrightarrow} \mu $ 。</p>
 <p>伯努利大数定理：设 $f_A$ 是 $n$ 次独立重复试验中事件 $A$ 发生的次数， $p$ 是事件 $A$ 在每次试验中发生的概率，则对于任意正数 $\varepsilon &gt;0$ ，有<br>$$<br>\lim_{n\to \infty}P\{ |\frac{f_A}{n}-p|&lt;\varepsilon \}=1<br>$$<br>或<br>$$<br>\lim_{n\to \infty}P\{ |\frac{f_A}{n}-p|\geq \varepsilon \}=0<br>$$</p>
 <h3 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h3><p>独立同分布的中心极限定理：设随机变量 $X_1,X_2,\cdots$ 相互独立，且服从同一分布，且具有数学期望和方差： $E(X_k)=\mu $ ， $D(X_k)=\sigma^2&gt;0$ ， $(k=1,2,\cdots)$ ，则随机变量之和 $\sum_{k=1}^nX_k$ 的标准化变量<br>$$<br>Y_n=\dfrac{\sum_{k=1}^nX_k-E(\sum_{k=1}^nX_k)}{\sqrt{D(\sum_{k=1}^nX_k)}}<br>$$<br>的分布函数 $F_{n}(x)$ 对于任意 $x$ 满足<br>$$<br>\lim_{n\to \infty}F_n(x)=\lim_{n\to \infty}P\{ \frac{\sum_{k=1}X_k-n\mu}{\sqrt{n}\sigma} \}<br>$$<br>李雅普诺夫定理：设随机变量 $X_1,X_2,\cdots$ 相互独立，它们具有数学期望和方差<br>$$<br>E(X_k)=\mu_k,D(X_k)=\sigma_k^2&gt;0,k=1,2,\cdots<br>$$<br>记<br>$$<br>B_n^2=\sum_{k=1}^n\sigma_k^2<br>$$<br>若存在正数 $\delta$ ，使得当 $n\rightarrow \infty$ 时，<br>$$<br>\frac{1}{B_{n}^{2+\delta}}\sum_{k=1}^nE\{ |X_k-\mu_k|^{2+\delta} \}\rightarrow 0<br>$$<br>则随机变量之和 $\sum_{k=1}^nX_k$ 的标准化变量<br>$$<br>Z_n=\dfrac{\sum_{k=1}^nX_k-\sum_{k=1}^n\mu_k}{B_n}<br>$$<br>的分布函数 $F_n(x)$ 对于任意 $x$ ，满足<br>$$<br>\lim_{n\to \infty}F_n{x}=\lim_{n\to \infty}=\lim_{n\to \infty}P\{ \dfrac{\sum_{k=1}^nX_k-\sum_{k=1}^n\mu_k}{B_n}\leq x \}=\int_{-\infty}^{x}\dfrac{1}{\sqrt{2\pi}}\mathrm{e}^{-t^2/2}\mathrm{d}t=\varPhi(x)<br>$$</p>
-<p>棣莫弗——拉普拉斯定理：设随机变量 $\eta$ 服从参数为 $n,p(0&lt;p&lt;1)$ 的二项分布，则对于任意 $x$ ，有<br>$$<br>\lim_{n\to \infty}P\{ \dfrac{\eta_n-np}{\sqrt{np(1-p)}}\leq x \}=\int_{-\infty}^{x}\dfrac{1}{\sqrt{2\pi}}\mathrm{e}^{-t^2/2}\mathrm{d}t=\varPhi(x)<br>$$</p>
+<p>棣莫弗——拉普拉斯定理：设随机变量 $\eta$ 服从参数为 $n,p(0&lt;p&lt;1)$ 的二项分布，则对于任意 $x$ ，有</p>
+<p>$$<br>\lim_{n\to \infty}P\{ \dfrac{\eta_n-np}{\sqrt{np(1-p)}}\leq x \}=\int_{-\infty}^{x}\dfrac{1}{\sqrt{2\pi}}\mathrm{e}^{-t^2/2}\mathrm{d}t=\varPhi(x)<br>$$</p>
 <hr>
 <p>$$<br>\mathscr{THE} \quad \mathscr{END}<br>$$</p>
 
