@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：几秒前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -452,7 +452,7 @@
 <li>交换律<br>$$A\vee B\Leftrightarrow B\vee A,A\wedge B\Leftrightarrow B\wedge A$$</li>
 <li>结合律<br>$$(A\vee B)\vee C\Leftrightarrow A\vee (B\vee C),(A\wedge B)\wedge C\Leftrightarrow A\wedge (B\wedge C)$$</li>
 <li>分配律<br>$$A\vee (B\wedge C)\Leftrightarrow (A\vee B)\wedge (A\vee C),A\wedge (B\vee C)\Leftrightarrow (A\wedge B)\vee (A\wedge C)$$</li>
-<li>德摩根律<br>$$\neg (A\vee B)\Leftrightarrow \neg A\wedge \neg B,\neg (A\wedge B)\Leftrightarrow \neg A\vee \neg B$$ </li>
+<li>德摩根律<br>$$\neg (A\vee B)\Leftrightarrow \neg A\wedge \neg B,\neg (A\wedge B)\Leftrightarrow \neg A\vee \neg B$$</li>
 <li>吸收律<br>$$A\vee (A\wedge B)\Leftrightarrow A,A\wedge (A\vee B)\Leftrightarrow A$$</li>
 <li>零律<br>$$A\vee 1\Leftrightarrow 1,A\wedge 0\Leftrightarrow 0$$</li>
 <li>同一律<br> $$A\vee 0\Leftrightarrow A,A\wedge 1\Leftrightarrow A$$</li>
@@ -551,7 +551,7 @@
 <h3 id="命题函数与量词"><a href="#命题函数与量词" class="headerlink" title="命题函数与量词"></a>命题函数与量词</h3><h4 id="命题函数"><a href="#命题函数" class="headerlink" title="命题函数"></a>命题函数</h4><p>命题函数：由一个谓词和一些客体变元组成的表达式，称为简单命题函数。 $n$ 元谓词，就是有 $n$ 个客体变元的命题函数。由一个或 $n$ 个简单命题函数以及逻辑联结词组成的表达式，称为复合命题函数。</p>
 <p>个体域：在命题函数中，客体变元的取值范围（讨论范围）叫个体域或论述域。</p>
 <p>全总个体域：把各种个体域综合在一起作为论述范围的域。</p>
-<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><p>全称量词： $\forall$<br>存在量词： $\exists$<br>存在唯一量词： $\exists !$ </p>
+<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><p>全称量词： $\forall$<br>存在量词： $\exists$<br>存在唯一量词： $\exists !$</p>
 <h3 id="谓词公式与翻译"><a href="#谓词公式与翻译" class="headerlink" title="谓词公式与翻译"></a>谓词公式与翻译</h3><p>原子谓词公式：不出现命题联结词和量词的谓词表达式称为原子谓词公式，并用 $P(x_1,\cdots,x_n)$ 来表示。<br>其中： $P$ 称为 $n$ 元谓词， $x_1,\cdots,x_n$ 称为客体变元，当 $n=0$ 时称为零元谓词公式。</p>
 <p>谓词公式的归纳法定义<br>（1）原子谓词公式是谓词公式；<br>（2）若 $A$ 是谓词公式，则 $\neg A$ 也是谓词公式；<br>（3）若 $A, B$ 都是谓词公式，则 $A\vee B,A\wedge B$， $A\rightarrow B,A\leftrightarrow B$ 都是谓词公式；<br>（4）若 $A$ 是谓词公式，x是任何变元，则 $(\forall x)A,(\exists x)A,$ 也都是谓词公式；<br>（5）只有按⑴-⑷所求得的那些公式才是谓词公式（谓词公式又简称“公式”）。</p>
 <h3 id="变元的约束"><a href="#变元的约束" class="headerlink" title="变元的约束"></a>变元的约束</h3><p>指导变元：给定 $x$ 为一个谓词公式，其中一部分公式形式为 $(\forall x)P(x)$ 或 $(\exists x)P(x)$ ，这里的 $\forall$ ， $\exists$ 后面所跟的 $x$ 称为相应的量词的指导变元。</p>
@@ -567,14 +567,10 @@
 <p>一个 $\mathrm{wff} A$ ，若在所有赋值下均为“F”，则称该 $\mathrm{wff} A$  为不可满足的。</p>
 <p>给定 $\mathrm{wff} A$ ， $E$ 是 $A$ 的个体域。若至少一种赋值下为真，则称 $A$ 是可满足的。</p>
 <h4 id="谓词演算的一些等价式与蕴含式"><a href="#谓词演算的一些等价式与蕴含式" class="headerlink" title="谓词演算的一些等价式与蕴含式"></a>谓词演算的一些等价式与蕴含式</h4><ol>
-<li>命题公式的推广</li>
-</ol>
-<p>谓词演算中的公式代替命题演算中的永真公式的变元时，所得的谓词公式即为永真式。</p>
-<ol start="2">
-<li>量词转换律</li>
-</ol>
-<p>出现在量词之前的否定，不是否定该量词，而是否定被量化了的整个命题。</p>
-<ol start="3">
+<li><p>命题公式的推广 谓词演算中的公式代替命题演算中的永真公式的变元时，所得的谓词公式即为永真式。</p>
+</li>
+<li><p>量词转换律 出现在量词之前的否定，不是否定该量词，而是否定被量化了的整个命题。</p>
+</li>
 <li><p>量词辖域的扩张及其收缩律</p>
 </li>
 <li><p>量词与命题联结词之间的一些等价式</p>
@@ -585,7 +581,7 @@
 </li>
 </ol>
 <p>（a）量词出现的次序直接关系到命题的含义<br>（b）在含有多个量词的谓词公式中,xy, xy的位置是可以改变的,且不影响命题的真值。<br>（c）量词转换律的推广应用:把¬深入到谓词公式前面去的方法。<br>（d）两个量词, 所组成的谓词公式的等价式和永真蕴含式（8个）</p>
-<h3 id="前束范式"><a href="#前束范式" class="headerlink" title="前束范式"></a>前束范式</h3><h4 id="前束范式-1"><a href="#前束范式-1" class="headerlink" title="前束范式"></a>前束范式</h4><p>前束范式：一个公式，如果量词均非否定地在全式的开头，它们的作用域延伸到整个公式的末尾，则称此公式叫前束范式。</p>
+<h3 id="前束范式"><a href="#前束范式" class="headerlink" title="前束范式"></a>前束范式</h3><h4 id="前束范式定义"><a href="#前束范式定义" class="headerlink" title="前束范式定义"></a>前束范式定义</h4><p>前束范式：一个公式，如果量词均非否定地在全式的开头，它们的作用域延伸到整个公式的末尾，则称此公式叫前束范式。</p>
 <p>定理：任何一个谓词公式均和一个前束范式等价。</p>
 <p>化前束范式的步骤：</p>
 <p>（1）否定深入（量词转化式）<br>（2）量词前提（必要时需换名）</p>
@@ -607,13 +603,9 @@
 <h4 id="推论规则及使用说明"><a href="#推论规则及使用说明" class="headerlink" title="推论规则及使用说明"></a>推论规则及使用说明</h4><p>命题逻辑中的$P，T，CP$规则和间接证明法，都可引用到谓词逻辑的推论规则中来，但要注意对量词做适当处理。<br>方法：用US，ES在推导中去掉量词；<br>用UG，EG使结论量化。</p>
 <p>规则使用说明：<br>（1）在使用ES、US时，量词一定在最前面。<br>（2）推导中连续使用US规则，可用相同变元。<br>$$<br>(\forall x)P(x)\Rightarrow P(a) \\ (\forall x)Q(x)\Rightarrow Q(a)<br>$$<br>（3）推导中既用ES又用US时，必须先用ES后用US，方可取相同变元，反之不行。</p>
 <p>$$<br>(\exists x)P(x)\Rightarrow P(a) \\ (\forall x)Q(x)\Rightarrow Q(a)<br>$$<br>注意：在推理中，不能在量词后面的辖域范围内进行蕴含推证或等价变换。必须消去量词后，才能对谓词公式进行蕴含或等价推证。</p>
-<h2 id="非经典逻辑简介"><a href="#非经典逻辑简介" class="headerlink" title="非经典逻辑简介"></a>非经典逻辑简介</h2><h3 id="模态逻辑基础"><a href="#模态逻辑基础" class="headerlink" title="模态逻辑基础"></a>模态逻辑基础</h3><ol>
-<li>可能世界语义学</li>
-</ol>
+<h2 id="非经典逻辑简介"><a href="#非经典逻辑简介" class="headerlink" title="非经典逻辑简介"></a>非经典逻辑简介</h2><h3 id="模态逻辑基础"><a href="#模态逻辑基础" class="headerlink" title="模态逻辑基础"></a>模态逻辑基础</h3><p>(1) 可能世界语义学</p>
 <p>一个表达式的内涵是指该表达式的概念内容，而一个表达式的外延则是指该概念内容囊括的全体实例，内涵逻辑强调的是表达式在不同的语境可以有不同的指称（外延）。</p>
-<ol start="2">
-<li>模态逻辑的非形式讨论</li>
-</ol>
+<p>(2) 模态逻辑的非形式讨论</p>
 <p>必然：必然 $\Box$ ，记为 $\Box A$ ，即无论在什么场合（现实的场合或者可以想象到的非现实的场合）均有事实 $A$ 。<br>可能：可能 $\lozenge$ ，记为 $\lozenge A$ ，即对某些场合（也许只有一个，甚至只是想象到的某个场合）有事实 $A$ 。</p>
 <p>根据以上定义，显然有以下的性质：<br> $\Box A\Leftrightarrow \neg \lozenge \neg A$ ，必然 $A$ 当且仅当不可能 $\neg A$ 。<br> $\lozenge A\Leftrightarrow \neg \Box \neg A$ ，可能 $A$ 当且仅当并非必然 $\neg A$ 。<br> $\lozenge A\vee \lozenge \neg A$ ，可能 $A$ 或者可能 $\neg A$ 。<br> $\neg(\Box A\wedge \Box \neg A)$ ，决不能既有必然 $A$ ，又有必然 $\neg A$ 。<br> $\Box (A\vee \neg A)$ ，必然地“ $A$ 成立或者不成立”。<br> $\neg \lozenge (A\wedge \neg A)$ ，不可能 $A$ 与 $\neg A$ 同时成立。<br> $\Box(A\wedge B)\Leftrightarrow(\Box A\wedge\Box B)$ ，必然有 $A$ 并且 $B$ 的充要条件为必然 $A$ 并且必然 $B$ 。<br> $(\Box A\vee\Box B)\rightarrow \Box(A\vee B)$ ，如果必然 $A$ 和必然 $B$ 有一为真，那么必然有“ $A$ 真或 $B$ 真”。<br> $\lozenge(A\vee B)\Leftrightarrow(\lozenge A\vee \lozenge B)$ ，可能“ $A$ 或者 $B$ ”当且仅当可能 $A$ 或者可能 $B$ 。<br> $\lozenge(A\wedge B)\rightarrow(\lozenge A\wedge \lozenge B)$ ，如果可能有“ $A$ 并且 $B$ ”，那么可能 $A$ 并且可能 $B$ 。<br> $\Box A\rightarrow A$ ，必然 $A$ 真则 $A$ 真。<br> $A\rightarrow\lozenge A$ ，若 $A$ 真则可能 $A$ 真。<br> $\Box A\rightarrow\lozenge A$ ，必然 $A$ 真则可能 $A$ 为真。</p>
 <hr>
