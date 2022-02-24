@@ -385,6 +385,50 @@
     xmlhttp.send();
 </script>
 
+<!-- Comments -->
+<div class="container comments mx-auto" id="comments" lazyload>
+  
+  <br><br>
+  
+  
+
+  <style>
+    .v[data-class=v] .veditor {
+        background-image: url(https://th.bing.com/th/id/R.0ef55b8eb59d725797a28aee2a72ce6a?rik=op23xL3hY4wEOg&riu=http%3a%2f%2fwww.sport.gov.cn%2fn316%2fn343%2fn1194%2fc927555%2fpart%2f573165.jpg&ehk=eY8UMEgeLEcEIv44Dev2PjCvjS%2baygI1n4fN5BX0OLU%3d&risl=&pid=ImgRaw&r=0);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+  </style>
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function () {
+        new Waline({
+          el: "#waline",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "identicon",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          serverURL: "https://myblog-lti2c7o13-david2013777.vercel.app/",
+          avatarCDN: "",
+          avatarForce: true,
+          requiredFields: [],
+          emojiCDN: "",
+          emojiMaps: null,
+          anonymous: null,
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  
+</div>
               </div>
             </div>
           </div>

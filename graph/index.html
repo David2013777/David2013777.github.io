@@ -55,7 +55,7 @@
   <meta name="author" content="David">
   <meta name="keywords" content="">
   
-  <title>导航 - Blog</title>
+  <title>图谱 - Blog</title>
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -112,7 +112,7 @@
     <div class="slideshow-image" style="background-image: url('img/background-sunrise.jpg')"></div>
 </div> -->
 <!-- 图片 -->
-  <header style = "height: 60vh;">
+  <header style = "height: 50vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -331,7 +331,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="网址导航">
+            <span class="h2" id="subtitle" title="图谱">
               
             </span>
 
@@ -355,441 +355,1239 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+<!-- <iframe src="../html/graph/frame.html" style="width: 100%;height: 600px;"></iframe> -->
+<!-- <iframe src="../html/graph/frame.html" width="100%" name="demo"
+        id="demo" frameborder="0" onload="this.height=this.contentWindow.document.body.scrollHeight"
+        sandbox="allow-same-origin allow-top-navigation allow-forms allow-scripts allow-popups">
+</iframe> -->
 
+<main class="content">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=8">
+    <link rel="stylesheet" type="text/css" href="css/kmsjsmap.css">
+    <style>
+        #jsmind_container {
+            height: 900px;
+            background: #ffffff00;
+        }
+    </style>
+    <script src="js/jquery.min.mind.js"></script>
+    <script src="js/kmsjsmap.js" type="text/javascript"></script>
+    <div id="jsmind_container"></div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-p1KAotb3W9ndluCsqePPYnjRm3c6abdnIjo0tQwYUv83VsbsYd43RuofnFAaDo0E" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-E5Sj1saJVFNzWWK3YIJB4LEDEEVEGaOdfmCprPDkfWUo+xkb6Ep52Q1TMEtgcFwi" crossorigin="anonymous"></script>
-
-
-<div class="row links">
-  <div class="col-lg-2 col-md-2 col-sm-1"></div>
-  <div class="col-lg-8 col-md-8 col-sm-10">
-    <form action="https://www.bing.com/search?" method="get" style="height: 70px;">
-        <div class="input-group">
-          <input type="text" class="form-control" name="q" value="" placeholder="搜索">
-          <span class= "input-group-btn">
-            <input type="submit" value="搜索" class="btn btn-info btn-search">
-          </span>
-        </div>
-    </form>
-  </div>
-  <div class="col-lg-2 col-md-2 col-sm-1"></div>
-</div>
-
-
-
-<div class="row links">
-  
-  
+    <!--引入图JSON数据-->
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.baidu.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/baidu.jpg" srcset="/img/loading.gif" lazyload alt="百度"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">百度</div>
-            <div class="link-intro">一个搜索引擎</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+
+    <p id="graphsValue" hidden>[
+            
+        {
+        "id": "root",
+        "isroot": true,
+        "parentid": "",
+        "direction":"right",
+        "topic": "知识图谱",
+        "expanded":"",
+        "badge":"",
+        "isLink": false ,
+        "link":"https://www.hnbian.cn/"
+        },
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.nankai.edu.cn/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/nankai.jpg" srcset="/img/loading.gif" lazyload alt="南开大学"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">南开大学</div>
-            <div class="link-intro">南开大学官网</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.jiumodiary.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/jiumodiary.jpg" srcset="/img/loading.gif" lazyload alt="鸠摩搜索"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">鸠摩搜索</div>
-            <div class="link-intro">搜索电子书必备</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.zhihu.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/zhihu.jpg" srcset="/img/loading.gif" lazyload alt="知乎"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">知乎</div>
-            <div class="link-intro">有问题，上知乎</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+        {
+        "id": "1",
+        "parentid": "root",
+        "direction":"right",
+        "topic": "基础语言",
+        "expanded":"true",
+        "badge":"",
+        "isLink": false ,
+        "link":"https://www.hnbian.cn/"
+        },
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.bilibili.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/bilibili.jpg" srcset="/img/loading.gif" lazyload alt="B站"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">B站</div>
-            <div class="link-intro">哔哩哔哩大学</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://gitee.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/gitee.jpg" srcset="/img/loading.gif" lazyload alt="Gitee"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Gitee</div>
-            <div class="link-intro">Gitee</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://github.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/github.jpg" srcset="/img/loading.gif" lazyload alt="Github"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Github</div>
-            <div class="link-intro">Github</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+        {
+        "id": "11",
+        "parentid": "1",
+        "direction":"right",
+        "topic": "Java",
+        "expanded":"true",
+        "badge":"",
+        "isLink": false ,
+        "link":"https://www.hnbian.cn/"
+        },
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.overleaf.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/overleaf.jpg" srcset="/img/loading.gif" lazyload alt="Overleaf"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Overleaf</div>
-            <div class="link-intro">在线书写编译LaTex</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.yuketang.cn/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/yuketang.jpg" srcset="/img/loading.gif" lazyload alt="雨课堂"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">雨课堂</div>
-            <div class="link-intro">雨课堂</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://changjiang.yuketang.cn/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/changjiangyuketang.jpg" srcset="/img/loading.gif" lazyload alt="长江雨课堂"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">长江雨课堂</div>
-            <div class="link-intro">长江雨课堂</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+        {
+        "id": "111",
+        "parentid": "11",
+        "direction":"right",
+        "topic": "JVM",
+        "expanded":"",
+        "badge":"8",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/tags/jvm/"
+        },
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.zhihuishu.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/zhihuishu.jpg" srcset="/img/loading.gif" lazyload alt="智慧树"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">智慧树</div>
-            <div class="link-intro">智慧树</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.icourse163.org/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/icourse163.jpg" srcset="/img/loading.gif" lazyload alt="中国大学MOOC"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">中国大学MOOC</div>
-            <div class="link-intro">中国大学MOOC</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://weread.qq.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/navigation/ico/weread.jpg" srcset="/img/loading.gif" lazyload alt="微信读书"
-                   onerror="this.onerror=null; this.src=this.srcset='/navigation/ico/defaultlink.jpg'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">微信读书</div>
-            <div class="link-intro">微信读书</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-</div>
+        {
+        "id": "111-1",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "1.Java类加载机制",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/86f40e46.html"
+        },
+    
 
-<div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-</div>
+    
+    
+        {
+        "id": "111-2",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "2.Jvm内存结构：堆",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/2d4937ad.html"
+        },
+    
 
-  <!-- 爱心 -->
+    
+    
+        {
+        "id": "111-3",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "3.Jvm内存结构：方法区、栈",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/d9df677f.html"
+        },
+    
 
-  <style>
-      .heart{
-          position:relative;
-          display:flex;
-          list-style-type:none;
-          height: 200px;
-      }
-      .heart::heartafter{
-          content: '爱心怦怦跳';
-          position: absolute;
-          top: 0;
-          left: 50%;
-          color: darkturquoise;
-          font-size: 30px;
-          font-weight: 700;
-          transform: translate(-50%,-700%);
-      }
+    
+    
+        {
+        "id": "111-4",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "4.GC算法",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/fd997f04.html"
+        },
+    
 
+    
+    
+        {
+        "id": "111-5",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "5.垃圾收集器",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/d12162c.html"
+        },
+    
 
-      .liheart{
-          width: 20px;
-          height: 20px;
-          border-radius: 10px;
-          margin: 0 10px;
-      }
-      .liheart:nth-child(1){
-          background-color: red;
-          animation: love1 5s 0s infinite;
-      }
-      .liheart:nth-child(2){
-          background-color: darkturquoise;
-          animation: love2 5s 0.2s infinite;
-      }
-      .liheart:nth-child(3){
-          background-color: darksalmon;
-          animation: love3 5s 0.4s infinite;
-      }
-      .liheart:nth-child(4){
-          background-color: deeppink;
-          animation: love4 5s 0.6s infinite;
-      }
-      .liheart:nth-child(5){
-          background-color: yellow;
-          animation: love5 5s 0.8s infinite;
-      }
-      .liheart:nth-child(6){
-          background-color: deeppink;
-          animation: love4 5s 1s infinite;
-      }
+    
+    
+        {
+        "id": "111-6",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "6.常用命令：jps、jstat、jinfo",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/90dc673c.html"
+        },
+    
 
-      .liheart:nth-child(7) {
-          background-color: darksalmon;
-          animation: love3 5s 1.2s infinite;
-      }
+    
+    
+        {
+        "id": "111-7",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "7.常用命令：jmap、jhat、jstack",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/28600059.html"
+        },
+    
 
-      .liheart:nth-child(8) {
-          background-color: darkturquoise;
-          animation: love2 5s 1.4s infinite;
-      }
+    
+    
+        {
+        "id": "111-8",
+        "parentid": "111",
+        "direction":"right",
+        "topic": "8.可视化工具介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7b5a8ef6.html"
+        },
+    
 
-      .liheart:nth-child(9) {
-          background-color: red;
-          animation: love1 5s 1.6s infinite;
-      }
-      /* 下面定义动画 */
-      @keyframes love1{
-          30%,50%{
-              height: 60px;
-              transform: translateY(-30px);
-          }
-          70%,100%{
-              height: 20px;
-              transform: translateY(0);
-          }
-      }
+    
+    
+        {
+        "id": "12",
+        "parentid": "1",
+        "direction":"right",
+        "topic": "Scala",
+        "expanded":"",
+        "badge":"14",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/categories/scala/"
+        },
+    
 
-      @keyframes love2 {
+    
+    
+        {
+        "id": "12-1",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "1.基本语法介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/eee34976.html"
+        },
+    
 
-          30%,
-          50% {
-              height: 125px;
-              transform: translateY(-60px);
-          }
+    
+    
+        {
+        "id": "12-2",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "2.基本数据类型介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/38a2a838.html"
+        },
+    
 
-          70%,
-          100% {
-              height: 20px;
-              transform: translateY(0);
-          }
-      }
+    
+    
+        {
+        "id": "12-3",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "3.变量/常量的定义，操作符介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/4772177d.html"
+        },
+    
 
-      @keyframes love3 {
+    
+    
+        {
+        "id": "12-4",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "4.流程控制、循环介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/e7c9f434.html"
+        },
+    
 
-          30%,
-          50% {
-              height: 160px;
-              transform: translateY(-75px);
-          }
+    
+    
+        {
+        "id": "12-5",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "5.容器类型：Array、List、Range",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/ef446212.html"
+        },
+    
 
-          70%,
-          100% {
-              height: 20px;
-              transform: translateY(0);
-          }
-      }
+    
+    
+        {
+        "id": "12-6",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "6.容器类型：Set、Seq、Tuple...",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/4de23f29.html"
+        },
+    
 
-      @keyframes love4 {
+    
+    
+        {
+        "id": "12-7",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "7.容器类型：Map、Scala与Java容器类型转换介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/c1fda96d.html"
+        },
+    
 
-          30%,
-          50% {
-              height: 180px;
-              transform: translateY(-60px);
-          }
+    
+    
+        {
+        "id": "12-8",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "8.方法与函数",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/f51bc211.html"
+        },
+    
 
-          70%,
-          100% {
-              height: 20px;
-              transform: translateY(0);
-          }
-      }
+    
+    
+        {
+        "id": "12-9",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "9.Scala模式匹配",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/148c9f4d.html"
+        },
+    
 
-      @keyframes love5 {
+    
+    
+        {
+        "id": "12-a",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "10.class(类)、object(对象)、trait(特质)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/b0d80798.html"
+        },
+    
 
-          30%,
-          50% {
-              height: 200px;
-              transform: translateY(-45px);
-          }
+    
+    
+        {
+        "id": "12-b",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "11.泛型、上下边界、协变、逆变",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/ed404d56.html"
+        },
+    
 
-          70%,
-          100% {
-              height: 20px;
-              transform: translateY(0);
-          }
-      }
-  </style>
+    
+    
+        {
+        "id": "12-c",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "12.隐式转换、视图界定，上下文界定",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/9905713e.html"
+        },
+    
 
+    
+    
+        {
+        "id": "12-d",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "13.IO、XML 相关介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/c80c36e5.html"
+        },
+    
 
-  <div class="row links">
-    <div class="col-lg-3 col-md-2 col-sm-1"></div>
-    <div class="col-lg-6 col-md-8 col-sm-10">
-      <ul class="heart">
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-        <li class="liheart"></li>
-    </ul>
-    </div>
-    <div class="col-lg-3 col-md-2 col-sm-1"></div>
-  </div>
+    
+    
+        {
+        "id": "12-e",
+        "parentid": "12",
+        "direction":"right",
+        "topic": "14.Akka相关介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/159611d3.html"
+        },
+    
 
-  <!-- 爱心 -->
+    
+    
+        {
+        "id": "2",
+        "parentid": "root",
+        "direction":"right",
+        "topic": "计算引擎",
+        "expanded":"true",
+        "badge":"",
+        "isLink": false ,
+        "link":"https://www.hnbian.cn/"
+        },
+    
+
+    
+    
+        {
+        "id": "21",
+        "parentid": "2",
+        "direction":"right",
+        "topic": "flink",
+        "expanded":"",
+        "badge":"17",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/tags/flink/"
+        },
+    
+
+    
+    
+        {
+        "id": "21-1",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "1.什么是Flink",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/f5001810.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-2",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "2.standalone模式部署与任务提交",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/56a1d2a4.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-3",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "3.flinkOnYarn两种部署模式与提交任务",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/382bcbe0.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-4",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "4.flink架构与组件介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/46aa150e.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-5",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "5.flinkAPI：Source、Channel、Sink",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/ca73496c.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-6",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "6.flink数据传输策略与任务链",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/4f974f4c.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-7",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "7.flink中的时间语义与waterMark",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/dfb2174e.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-8",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "8.flink窗口1-窗口类型与相关操作",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/dbaa157a.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-9",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "9.flink窗口(2)-触发器、移除器与延迟数据处理",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/a459ab50.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-a",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "10.flink窗口(3)-window function的使用",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7efccec9.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-b",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "11.flink中ProcessFunction 的使用",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/51227818.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-c",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "12.Flink中 Timer 的使用",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7d5aa59b.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-d",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "13.flink状态(1)operator state 和 keyed state",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/1dadc314.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-e",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "14.flink状态(2)状态后端",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7dc825b3.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-f",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "15.flink中 CheckPoint与 SavePoint",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7095f91f.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-g",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "16.flink中状态一致性的保证",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/6adf75db.html"
+        },
+    
+
+    
+    
+        {
+        "id": "21-h",
+        "parentid": "21",
+        "direction":"right",
+        "topic": "17.flink CEP 复杂事件处理",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7f1f750c.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22",
+        "parentid": "2",
+        "direction":"right",
+        "topic": "spark",
+        "expanded":"true",
+        "badge":"3",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/tags/spark/"
+        },
+    
+
+    
+    
+        {
+        "id": "221",
+        "parentid": "22",
+        "direction":"right",
+        "topic": "sparkCore",
+        "expanded":"",
+        "badge":"6",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/tags/sparkCore/"
+        },
+    
+
+    
+    
+        {
+        "id": "2211",
+        "parentid": "221",
+        "direction":"right",
+        "topic": "1.Spark RDD 介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/14696fcc.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2212",
+        "parentid": "221",
+        "direction":"right",
+        "topic": "2.Spark 中的基本概念",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/e502dedc.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2213",
+        "parentid": "221",
+        "direction":"right",
+        "topic": "3.Spark 任务调度解析",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/3974552e.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2214",
+        "parentid": "221",
+        "direction":"right",
+        "topic": "4.yarn-cluster和yarn-client",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7fc3d2ae.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2215",
+        "parentid": "221",
+        "direction":"right",
+        "topic": "5.Spark 常用配置参数",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/ae21dddf.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2216",
+        "parentid": "221",
+        "direction":"right",
+        "topic": "6.Spark 常用参数解析",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/3fbd5f27.html"
+        },
+    
+
+    
+    
+        {
+        "id": "222",
+        "parentid": "22",
+        "direction":"right",
+        "topic": "sparkSQL",
+        "expanded":"",
+        "badge":"6",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/tags/spark-sql"
+        },
+    
+
+    
+    
+        {
+        "id": "2221",
+        "parentid": "222",
+        "direction":"right",
+        "topic": "1.介绍什么是 SparkSQL",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/b05123af.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2222",
+        "parentid": "222",
+        "direction":"right",
+        "topic": "2.自定义函数",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/191f89ce.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2223",
+        "parentid": "222",
+        "direction":"right",
+        "topic": "3.Hive On Spark",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/23fb6e0e.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2224",
+        "parentid": "222",
+        "direction":"right",
+        "topic": "4.架构介绍",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7049ff8.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2225",
+        "parentid": "222",
+        "direction":"right",
+        "topic": "5.Spark SQL调优",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/9f1182e3.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2226",
+        "parentid": "222",
+        "direction":"right",
+        "topic": "6.资源动态划分",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/59d53d02.html"
+        },
+    
+
+    
+    
+        {
+        "id": "223",
+        "parentid": "22",
+        "direction":"right",
+        "topic": "sparkStreaming",
+        "expanded":"",
+        "badge":"5",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/tags/spark-streaming"
+        },
+    
+
+    
+    
+        {
+        "id": "2231",
+        "parentid": "223",
+        "direction":"right",
+        "topic": "1.介绍Spark Streaming",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/667711ec.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2232",
+        "parentid": "223",
+        "direction":"right",
+        "topic": "2.介绍DStream",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/f66955d3.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2233",
+        "parentid": "223",
+        "direction":"right",
+        "topic": "3.数据广播与检查点",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/91e47788.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2234",
+        "parentid": "223",
+        "direction":"right",
+        "topic": "4.程序部署监控调优",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/f2c10eb1.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2235",
+        "parentid": "223",
+        "direction":"right",
+        "topic": "5.容错语义",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/56e4ed93.html"
+        },
+    
+
+    
+    
+        {
+        "id": "224",
+        "parentid": "22",
+        "direction":"right",
+        "topic": "sparkMl",
+        "expanded":"",
+        "badge":"16",
+        "isLink": false ,
+        "link":"https://www.hnbian.cn/tags/spark-ml"
+        },
+    
+
+    
+    
+        {
+        "id": "2241",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "1.什么是机器学习",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/7ea711e3.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2242",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "2.管道与工作流",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/5dbcf621.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2243",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "3.模型评价指标，准确率、精确率、召回率",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/c82a366f.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2244",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "4.特征提取",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/a0d169fc.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2245",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "5.特征转换(分词器,停用词移除,n-gram,二值化,升维,降维)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/3089eee2.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2246",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "6.特征转换(离散余弦变换,字符串-索引变换,索引–字符串变换,独热编码,向量-索引变换)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/80480baa.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2247",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "7.特征转换(正则化,标准缩放,归一化,最大值-平均值缩放,离散化重组,分数求解器,元素乘积,SQL转换器,向量汇编)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/70ef1e5f.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2248",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "8.特征选择(向量机,R公式,卡方选择)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/33cf518f.html"
+        },
+    
+
+    
+    
+        {
+        "id": "2249",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "9.分类算法(二项式逻辑回归,多项式逻辑回归)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/fed3e61.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22410",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "10.分类算法(决策树,随机森林,梯度提升树)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/159a0696.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22411",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "11.分类算法(多层感知机,一对多分类器,朴素贝叶斯,支持向量机)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/ccf5a791.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22412",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "12.回归算法(广义线性模型,决策树回归,随机森林回归)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/64e84eee.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22413",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "13.回归算法(梯度提升树回归,生存回归,保序回归)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/53898ec5.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22414",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "14.聚类算法(K均值,文档主题生成模型,二分K均值,高斯混合模型)",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/50ebbab3.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22415",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "15.协同过滤",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/8bf08298.html"
+        },
+    
+
+    
+    
+        {
+        "id": "22416",
+        "parentid": "224",
+        "direction":"right",
+        "topic": "16.模型选择和调试",
+        "expanded":"",
+        "badge":"",
+        "isLink": true ,
+        "link":"https://www.hnbian.cn/posts/8eb42d85.html"
+        }
+    
+
+]
+</p>
+
+    <script type="text/javascript">
+        var jsondata = jQuery.parseJSON( $("#graphsValue").text());
+
+        kmsjsmap.init({
+            container: "jsmind_container",
+            data: jsondata,
+            editable: false,
+            onRelation: function (item) {
+                //console.log('当前选择中的是', item)
+
+                kmsjsmap.setLinkStatus({
+                    id: item.id,
+                    isLink: item.data.isLink === true ? true : false
+                })
+                if (true == item.data.isLink) {
+                    window.open(item.data.link);
+                }
+            }
+        });
+    </script>
+
+</main>
+
 
 <!-- Comments -->
 <div class="container comments mx-auto" id="comments" lazyload>
-  
-  <br><br>
-  
-  
+    
+    <br><br>
+    
+    
 
   <style>
     .v[data-class=v] .veditor {
@@ -826,11 +1624,8 @@
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-  
+    
 </div>
-
-
-
               </div>
             </div>
           </div>
