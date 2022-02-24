@@ -407,61 +407,12 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：几秒前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="拓扑学"><a href="#拓扑学" class="headerlink" title="拓扑学"></a>拓扑学</h1><h2 id="拓扑空间"><a href="#拓扑空间" class="headerlink" title="拓扑空间"></a>拓扑空间</h2><!-- 
-$$
-mathcal \\\\
-\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathcal{abcdefghijklmnopqrstuvwxyz} \\\\
-mathfrak \\\\
-\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathfrak{abcdefghijklmnopqrstuvwxyz} \\\\
-mathbb \\\\
-\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathbb{abcdefghijklmnopqrstuvwxyz} \\\\
-mathrel \\\\
-\mathrel{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathrel{abcdefghijklmnopqrstuvwxyz} \\\\
-mathring \\\\
-\mathring{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathring{abcdefghijklmnopqrstuvwxyz} \\\\
-mathrlap \\\\
-\mathrlap{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathrlap{abcdefghijklmnopqrstuvwxyz} \\\\
-mathrm \\\\
-\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathrm{abcdefghijklmnopqrstuvwxyz} \\\\
-mathbf \\\\
-\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathbf{abcdefghijklmnopqrstuvwxyz} \\\\
-mathbin \\\\
-\mathbin{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathbin{abcdefghijklmnopqrstuvwxyz} \\\\
-mathclose \\\\
-\mathclose{}{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathclose{}{abcdefghijklmnopqrstuvwxyz} \\\\
-mathcalp \\\\
-\mathclap{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathclap{abcdefghijklmnopqrstuvwxyz} \\\\
-mathellipsis \\\\
-\mathellipsis{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathellipsis{abcdefghijklmnopqrstuvwxyz} \\\\
-mathinner \\\\
-\mathinner{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathinner{abcdefghijklmnopqrstuvwxyz} \\\\
-mathit \\\\
-\mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathit{abcdefghijklmnopqrstuvwxyz} \\\\
-mathrel \\\\
-\mathllap{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \\\\
-\mathllap{abcdefghijklmnopqrstuvwxyz} \\\\
-$$ -->
-
-<h3 id="拓扑空间和连续映射"><a href="#拓扑空间和连续映射" class="headerlink" title="拓扑空间和连续映射"></a>拓扑空间和连续映射</h3><p>拓扑空间：设 $X$ 是一个集合， $\mathscr{P}(X)$ 表 $X$ 的幂集合， $\mathscr{T}\subset \mathscr{P}(X)$ 为 $X$ 的一个子集族，若它满足：</p>
+              <h1 id="拓扑学"><a href="#拓扑学" class="headerlink" title="拓扑学"></a>拓扑学</h1><h2 id="拓扑空间"><a href="#拓扑空间" class="headerlink" title="拓扑空间"></a>拓扑空间</h2><h3 id="拓扑空间和连续映射"><a href="#拓扑空间和连续映射" class="headerlink" title="拓扑空间和连续映射"></a>拓扑空间和连续映射</h3><p>拓扑空间：设 $X$ 是一个集合， $\mathscr{P}(X)$ 表 $X$ 的幂集合， $\mathscr{T}\subset \mathscr{P}(X)$ 为 $X$ 的一个子集族，若它满足：</p>
 <ol>
 <li>$X$ 和 $\varnothing$ 属于 $\mathscr{T}$ ；</li>
 <li>$\mathscr{T}$ 中任意个集合的并集属于 $\mathscr{T}$ ；</li>
@@ -470,7 +421,7 @@ $$ -->
 <p>则称 $\mathscr{T}$ 为 $X$ 上的一个拓扑，称 $(X,\mathscr{T})$ 为拓扑空间，当 $\mathscr{T}$ 的含义清楚时，简记为 $X$ ， $\mathscr{T}$ 中的集合称为开集。</p>
 <p>平凡拓扑：设 $X$ 是任意集合， $\mathscr{T}_T:=\{ X,\varnothing \}$ ，则 $(X,\mathscr{T}_T)$ 是拓扑空间， $\mathscr{T}_T$ 称为平凡拓扑。</p>
 <p>离散拓扑：设 $X$ 是任意集合， $\mathscr{T}_D:=\{ \mathscr{P}(X) \}$ ，则 $(X,\mathscr{T}_D)$ 是拓扑空间， $\mathscr{T}_D$ 称为离散拓扑。</p>
-<p>度量拓扑：设 $(X,d)$ 为度量空间，对任意 $x\in X$ 及正数 $r$ ，称 $B(x,r):=\{ y\in X|d(x,y)&lt;r \}$ 为以 $x$ 为中心、半径为 $r$ 的球形邻域。设 $U\subset X$ ，若对任意 $x\in U$ ，存在 $r&gt;0$ ，使得 $B(x,r)\subset U$ ，则称 $U$ 为开集，所有这样的开集构成 $X$ 的一个拓扑，称为由度量 $d$ 决定的度量拓扑，记为 $\mathscr{T}_d$ 。</p>
+<p>度量拓扑：设 $(X,d)$ 为度量空间，对任意 $x\in X$ 及正数 $r$ ，称 $B(x,r):=\{ y\in X|d(x,y) &lt; r \}$ 为以 $x$ 为中心、半径为 $r$ 的球形邻域。设 $U\subset X$ ，若对任意 $x\in U$ ，存在 $r &gt; 0$ ，使得 $B(x,r)\subset U$ ，则称 $U$ 为开集，所有这样的开集构成 $X$ 的一个拓扑，称为由度量 $d$ 决定的度量拓扑，记为 $\mathscr{T}_d$ 。</p>
 <p>设 $\mathscr{T}_1$ 和 $\mathscr{T}_2$ 为 $X$ 上的两个拓扑，若 $\mathscr{T}_1\subset \mathscr{T}_2$ ，则称拓扑 $\mathscr{T}_1$ 比 $\mathscr{T}_2$ 粗（ $\mathscr{T}_2$ 比 $\mathscr{T}_1$ 细），记为 $\mathscr{T}_1\prec\mathscr{T}_2(\mathscr{T}_2\succ\mathscr{T}_1)$ 。显然 $X$ 上的拓扑按关系 $\prec$ 构成偏序。设 $\mathscr{T}$ 为 $X$ 上任一拓扑，则恒有 $\mathscr{T}_T\prec\mathscr{T}\prec\mathscr{T}_D$ 。</p>
 <p>设 $(X,\mathscr{T})$ 为一拓扑空间，则有</p>
 <ol>
