@@ -355,7 +355,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2k 字
+      2.2k 字
     </span>
   
 
@@ -365,7 +365,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      26
+      30
        分钟
     </span>
   
@@ -407,7 +407,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 小时前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -452,25 +452,26 @@
 <li>对任意 $\alpha,\beta\in D$ ，存在 $\gamma\in D$ ，使得 $\gamma\succcurlyeq\alpha,\gamma\succcurlyeq\beta$ ，则称 $(D,\succcurlyeq)$ 是一个有向集， $\succcurlyeq$ 称为 $D$ 上的一个定向。</li>
 </ol>
 <p>设 $D$ 为一有向集， $X$ 为一集合， $A\subset X$ ，映射 $N:D\rightarrow A$ 称为 $A$ 中的网，对 $\alpha\in N,x_\alpha:=N(\alpha)$ ，映射 $N$ 记为 $\{ x_{\alpha}|\alpha\in D \}$ 或 $\{ x_\alpha \}$ 。当 $D=Z^{+}$ ，且 $\succcurlyeq$ 即为自然数的大小关系，则网即为通常的序列 $\{ x_n|n\in Z^{+} \}$ 。</p>
-<p>设 $$ 为拓扑空间  中的网，  。若对  的任意邻域  ，存在  ，使得当  且  时，有  ，则称网  收敛于  ，记作  或  。</p>
-<p>设  为拓扑空间，  ，则  的充要条件为：在  中存在收敛于  的网。</p>
-<p>设  为拓扑空间，  为映射。若对任意  ，有  ，则称  为连续。</p>
-<p>设  为拓扑空间，  为从  到  的函数，则下列断言等价：</p>
+<p>设 $\{ x_{\alpha} \vert \alpha \in D \}$ 为拓扑空间 $X$ 中的网， $x\in X$ 。若对 $x$ 的任意邻域 $U$ ，存在 $\alpha\in D$ ，使得当 $\beta \in D$ 且 $\beta\succ \alpha$ 时，有 $x_{\beta}\in U$ ，则称网 ${x_{\alpha}}$ 收敛于 $x$ ，记作 $\lim_{D}x_{\alpha}=x$ 或 $\x_{\alpha}\rightarrow x$ 。</p>
+<p>设 $X$ 为拓扑空间， $A\subset X,x\in X$ ，则 $x\in \overline{A}$ 的充要条件为：在 $A$ 中存在收敛于 $x$ 的网。</p>
+<p>设 $(X,\mathscr{T}_X),(Y,\mathscr{T}_Y)$ 为拓扑空间， $f:X\rightarrow Y$ 为映射。若对任意 $U\in \mathscr{T}_Y$ ，有 $f^{-1}(U)\in \mathscr{T}_X$ ，则称 $f$ 为连续。</p>
+<p>设 $X,Y$ 为拓扑空间， $f$ 为从 $X$ 到 $Y$ 的函数，则下列断言等价：</p>
 <ol>
-<li> 为连续映射；</li>
-<li> 中每一个闭集的原像为  中的闭集；</li>
-<li> 的一个拓扑亚基的每一个成员的原像为  中的开集；</li>
-<li> 的一个拓扑基的每一个成员的原像为  中的开集；</li>
-<li> 对任一  ，  的一个邻域的原像为  的一个邻域。</li>
-<li> 对任一  ，以及  的每一邻域  有  的邻域  ，使得  ；</li>
-<li> 对  中每一个收敛于  的网  （或  ）复合而成的  中的网  （或  ）收敛于  ；</li>
-<li> 对任意  ，有  ；</li>
-<li> 对任意  ，有  。<br>拓扑空间之间的连续映射常简称为映射。</li>
+<li>$f$ 为连续映射；</li>
+<li>$Y$ 中每一个闭集的原像为 $X$ 中的闭集；</li>
+<li>$Y$ 的一个拓扑亚基的每一个成员的原像为 $X$ 中的开集；</li>
+<li>$Y$ 的一个拓扑基的每一个成员的原像为 $X$ 中的开集；</li>
+<li>对任一 $x\in X$ ， $f(x)$ 的一个邻域的原像为 $$ 的一个邻域。</li>
+<li>对任一 $x\in X$ ，以及 $f(x)$ 的每一邻域 $V$ 有 $x$ 的邻域 $U$ ，使得 $f(U)\subset V$ ；</li>
+<li>对 $X$ 中每一个收敛于 $x\in X$ 的网 $N$ （或 $\{ x_{\alpha} \vert \alpha\in D \}$ ）复合而成的 $Y$ 中的网 $f\cdot N$ （或 $\{ f(x_{\alpha}) \vert \alpha\in D \}$ ）收敛于 $f(x)$ ；</li>
+<li>对任意 $A\subset X$ ，有 $f(\overline{A})\subset \overline{f(A)}$ ；</li>
+<li>对任意 $B\subset Y$ ，有 $\overline{f^{-1}(B)}\subset f^{-1}(\overline{B})$ 。</li>
 </ol>
-<p>设  为拓扑空间，如果  的任意邻域关于  的逆为  的一个邻域，则称函数  在点  处连续。</p>
-<p>设  为拓扑空间，  为映射，若  及  均为连续，则称  为同胚映射，简称同胚。若两个拓扑空间  和  之间存在同胚映射，则称这二个拓扑空间是同胚的，也称  同胚与  ，记为  。由于空间之间的同胚关系显然是一个等价关系，所以也称  拓扑等价于  。若拓扑空间的某一种性质，对于拓扑等价的空间是保持不变的，则此性质称为（空间的）拓扑不变量。</p>
-<p>设  为拓扑空间，对任意子集  ，令  ，则  构成  上的拓扑，  称为  在  上的子空间拓扑，也称为相对拓扑，  称为相对开集。类似的，有相对邻域，相对闭集，相对闭包等等概念。凡是说到  的子空间  ，即指  有拓扑  。</p>
-<p>设  为一族拓扑空间，  表集族  的笛卡尔乘积，令  表第  个射影，  ，则由  所生成的  上的拓扑  称为积拓扑，  称为积空间，简记为  。</p>
+<p>拓扑空间之间的连续映射常简称为映射。</p>
+<p>设 $X,Y$ 为拓扑空间，如果 $f(x)$ 的任意邻域关于 $f$ 的逆为 $x$ 的一个邻域，则称函数 $f:X\rightarrow Y$ 在点 $x\in X$ 处连续。</p>
+<p>设 $X,Y$ 为拓扑空间， $f:X\rightarrow Y$ 为映射，若 $f$ 及 $f^{-1}$ 均为连续，则称 $f$ 为同胚映射，简称同胚。若两个拓扑空间 $X$ 和 $Y$ 之间存在同胚映射，则称这二个拓扑空间是同胚的，也称 $X$ 同胚于 $Y$ ，记为 $X\cong Y$ 。由于空间之间的同胚关系显然是一个等价关系，所以也称 $X$ 拓扑等价于 $Y$ 。若拓扑空间的某一种性质，对于拓扑等价的空间是保持不变的，则此性质称为（空间的）拓扑不变量。</p>
+<p>设 $(X,\mathscr{T})$ 为拓扑空间，对任意子集 $Y\subset X$ ，令 $\mathscr{T}_{Y}:\{ Y\cap U \vert U\in \mathscr{T} \}$ ，则 $\mathscr{T}_Y$ 构成 $Y$ 上的拓扑， $\mathscr{T}_Y$ 称为 $\mathscr{T}$ 在 $Y$ 上的子空间拓扑，也称为相对拓扑， $Y\cap U$ 称为相对开集。类似的，有相对邻域，相对闭集，相对闭包等等概念。凡是说到 $X$ 的子空间 $Y$ ，即指 $Y$ 有拓扑 $\mathscr{T}_Y$ 。</p>
+<p>设 $$ 为一族拓扑空间， $$ 表集族 $$ 的笛卡尔乘积，令 $$ 表第 $$ 个射影， $$ ，则由 $$ 所生成的 $$ 上的拓扑 $$ 称为积拓扑， $$ 称为积空间，简记为 $$ 。</p>
 <p>设 $(X,\mathscr{T})$ 为拓扑空间， $\sim$ 为 $X$ 上的等价关系， $X\backslash \sim$ 为对应商集合，</p>
 <h3 id="可数性和分离性"><a href="#可数性和分离性" class="headerlink" title="可数性和分离性"></a>可数性和分离性</h3><h3 id="连通和道路连通"><a href="#连通和道路连通" class="headerlink" title="连通和道路连通"></a>连通和道路连通</h3><h3 id="覆盖和紧性"><a href="#覆盖和紧性" class="headerlink" title="覆盖和紧性"></a>覆盖和紧性</h3><h2 id="同伦与同调伦"><a href="#同伦与同调伦" class="headerlink" title="同伦与同调伦"></a>同伦与同调伦</h2><h3 id="同伦"><a href="#同伦" class="headerlink" title="同伦"></a>同伦</h3><h3 id="几类常用空间"><a href="#几类常用空间" class="headerlink" title="几类常用空间"></a>几类常用空间</h3><h3 id="同伦群"><a href="#同伦群" class="headerlink" title="同伦群"></a>同伦群</h3><h3 id="同调与上同调"><a href="#同调与上同调" class="headerlink" title="同调与上同调"></a>同调与上同调</h3><h2 id="微分拓扑学"><a href="#微分拓扑学" class="headerlink" title="微分拓扑学"></a>微分拓扑学</h2><h3 id="映射空间"><a href="#映射空间" class="headerlink" title="映射空间"></a>映射空间</h3><h3 id="横截性"><a href="#横截性" class="headerlink" title="横截性"></a>横截性</h3><h3 id="莫尔斯理论"><a href="#莫尔斯理论" class="headerlink" title="莫尔斯理论"></a>莫尔斯理论</h3><h3 id="示性类、广义上同调"><a href="#示性类、广义上同调" class="headerlink" title="示性类、广义上同调"></a>示性类、广义上同调</h3><h3 id="关于低维流形分类的某些结果"><a href="#关于低维流形分类的某些结果" class="headerlink" title="关于低维流形分类的某些结果"></a>关于低维流形分类的某些结果</h3>
             </div>
