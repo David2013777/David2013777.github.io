@@ -181,6 +181,26 @@
       </div>
     </div>
 
+
+    <input x-webkit-speech />
+
+    <input type="text" class="text" name="test" id="test" x-webkit-speech lang="zh-CN" x-webkit-grammar="bUIltin:search">
+
+
+    <input type="text" name="" value="" x-webkit-speech/>
+
+    <input type="text" x-webkit-speech id="d1" lang="zh-CN" x-webkit-grammar="bUIltin:search" onwebkitspeechchange="foo()"/>
+    <script>
+    function foo(){
+    var n = document.getElementById("d1").value;
+    if(n == "百度"){
+    window.location.href = "http://www.baidu.com";
+    }else{
+    window.location.href = "http://www.ahsdxy.ah.edu.cn/";
+    }
+    }
+    </script>
+
 </body>
 <script>
 var slideIndex = 0;
