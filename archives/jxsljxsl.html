@@ -55,7 +55,7 @@
   <meta name="author" content="David">
   <meta name="keywords" content="">
   
-  <title>格与布尔代数 - Blog</title>
+  <title>解析数论 - Blog</title>
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -335,7 +335,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="格与布尔代数">
+            <span class="h2" id="subtitle" title="解析数论">
               
             </span>
 
@@ -345,8 +345,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-30 22:23" pubdate>
-        2021年10月30日 晚上
+      <time datetime="2022-02-10 22:23" pubdate>
+        2022年2月10日 晚上
       </time>
     </span>
   
@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7 字
+      370 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -405,16 +405,33 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">格与布尔代数</h1>
+            <h1 style="display: none">解析数论</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="格与布尔代数"><a href="#格与布尔代数" class="headerlink" title="格与布尔代数"></a>格与布尔代数</h1><h2 id="格"><a href="#格" class="headerlink" title="格"></a>格</h2>
+              <h1 id="解析数论"><a href="#解析数论" class="headerlink" title="解析数论"></a>解析数论</h1><h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><h3 id="傅里叶积分与傅里叶变换"><a href="#傅里叶积分与傅里叶变换" class="headerlink" title="傅里叶积分与傅里叶变换"></a>傅里叶积分与傅里叶变换</h3><p>本节所讨论的函数 $f(x)$ 均假定为定义在 $(-\infty,\infty)$ 上的实值函数，只有第一类间断点，且积分</p>
+<p>$$<br>\int_{-\infty}^{\infty}\vert f(x) \vert \mathrm{d}x&lt;+\infty<br>$$</p>
+<p>如果 $f(x)$ 是复值函数，就要求它的实，虚部都满足上述条件，那么只要分开实，虚部来讨论，一些定理都成立。我们设</p>
+<p>$$<br>\overline{f}(x)=\dfrac{1}{2}(f(x+0)+f(x-0))<br>$$</p>
+<p>把积分</p>
+<p>$$<br>\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\mathrm{d}y\int_{-\infty}^{\infty}f(u)\cos(y(u-x))\mathrm{d}u=\int_{-\infty}^{\infty}\mathrm{d}y\int_{-\infty}^{\infty}f(u)\cos(2\pi(u-x))\mathrm{d}u<br>$$</p>
+<p>称为是 $f(x)$ 的傅里叶积分。它也可以写为复数形式</p>
+<p>$$<br>\lim_{A\to \infty}\int_{-A}^{A}e(-xy)\mathrm{d}y\int_{-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
+<p>傅里叶节分不一定收敛，关于它的收敛性有以下的 Dirichlet-Jordan 判别法。</p>
+<p>定理：若存在正数 $h&gt;0$ ，使得 $f(x)$ 在区间 $[x_0-h,x_0+h]$ 上是有界变差，则</p>
+<p>$$<br>\overline{f}(x_0)=\int_{-\infty}^{\infty}\mathrm{d}y\int_{-\infty}^{\infty}f(u)\cos(2\pi(u-x_0))\mathrm{d}u<br>$$</p>
+<p>或</p>
+<p>$$<br>\lim_{A\to \infty}\int_{-A}^{A}e(-x_0y)\mathrm{d}y\int_{-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
+<p>如果 $f(x)$ 在任一有限区间上是有界变差，则该式在 $-\infty&lt;x_0&lt;\infty$ 上成立。</p>
+<p>我们把函数</p>
+<p>$$<br>\hat{f}(y)=\int_{-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
+<p>称为是 $f(x)$ 的傅里叶变换。</p>
+
             </div>
             <hr>
             <div>
@@ -427,7 +444,7 @@
                     
                       <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E7%BA%AF%E6%95%B0%E5%AD%A6/">纯数学</a>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E7%BA%AF%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/">代数</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E7%BA%AF%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/">数论</a>
                     
                   </div>
                 
@@ -435,7 +452,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%A0%BC%E8%AE%BA/">格论</a>
+                      <a class="hover-with-bg" href="/tags/%E8%A7%A3%E6%9E%90%E6%95%B0%E8%AE%BA/">解析数论</a>
                     
                   </div>
                 
