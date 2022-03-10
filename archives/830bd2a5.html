@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：28 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -496,7 +496,7 @@
 <h3 id="均差和牛顿插值公式"><a href="#均差和牛顿插值公式" class="headerlink" title="均差和牛顿插值公式"></a>均差和牛顿插值公式</h3><p>均差：称 $f[x_0,x_k]=\dfrac{f(x_k)-f(x_0)}{x_k-x_0}$ 为函数 $f(x)$ 关于点 $x_0,x_k$ 的一阶均差， $f[x_0,x_1,x_k]=\dfrac{f[x_0,x_k]-f[x_0,x_1]}{x_k-x_1}$ 称为函数 $f(x)$ 的二阶均差。一般的，称</p>
 <p>$$<br>f[x_0,\cdots ,x_k]=\dfrac{f[x_0,\cdots,x_{k-2} ,x_k]-f[x_0,\cdots ,x_{k-1}]}{x_k-x_{k-1}}<br>$$</p>
 <p>为 $f(x)$ 的 $k$ 阶均差。均差也称为差商。</p>
-<p>$$<br>p_n(x)=f(x_0)+f[x_0,x_1]{(x_0+x_1)}+f[x_0,x_1,x_2]{(x-x_0)(x-x_1)}+\cdots +f[x_0,\cdots ,x_n]{(x-x_0)\cdots (x-x_{n-1})}<br>$$</p>
+<p>$$<br>p_n(x)=f(x_0)+f[x_0,x_1]{(x_0-x_1)}+f[x_0,x_1,x_2]{(x-x_0)(x-x_1)}+\cdots +f[x_0,\cdots ,x_n]{(x-x_0)\cdots (x-x_{n-1})}<br>$$</p>
 <p>称为牛顿均差插值多项式。</p>
 <p>均差性质：</p>
 <ul>
