@@ -18,7 +18,7 @@ document.body.oncopy = function () {
 var myDate = new Date;
 var mon = myDate.getMonth() + 1;
 var date = myDate.getDate();
-var days = ['4.4', '5.12', '7.7', '9.9', '9.18', '12.13']; // 自定义纪念日
+var days = ['3.22','3.23','3.24','3.25','3.26','3.27','3.28','3.29','3.30','3.31','4.4','5.12', '7.7', '9.9', '9.18', '12.13']; // 自定义纪念日
 for (var day of days) {
     var d = day.split('.');
     if (mon == d[0] && date == d[1]) {
