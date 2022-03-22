@@ -32,8 +32,8 @@ for (var day of days) {
             position: 'topRight',
             icon: 'iconfont icon-mail',
             backgroundColor: '#fff',
-            title: '今天是国家纪念日',
-            message: '历史不会忘记，人民永远铭记！<p style="margin-top: 4px;">全站已切换为黑白模式</p>'
+            title: '东航03.21空难',
+            message: '<p style="margin-top: 4px;">全站已切换为黑白模式</p>'
         });
         document.write('<style>html{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none}</style>')
         break;
