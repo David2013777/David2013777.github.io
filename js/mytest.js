@@ -23,7 +23,7 @@ for (var day of days) {
     var d = day.split('.');
     if (mon == d[0] && date == d[1]) {
         iziToast.info({
-            timeout: 14000,
+            timeout: 2000,
             icon: 'Fontawesome',
             closeOnEscape: 'true',
             transitionOut: 'fadeOutRight',
