@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：17 天前
+                  本文最后更新于：27 分钟前
                 
               </p>
             
@@ -540,7 +540,8 @@
 </ol>
 <p>一般集合 $X$ 的幂集 $2^{X}$ 的势记为 $2^{|X|}$ 。</p>
 <p>定理：任何集合 $X$ 满足势的不等式： $|X|&lt;2^{|X|}$ 。</p>
-<p>连续统的势记为 $\aleph$ 并称为连续势，可列集的势记为 $\aleph _{0}$ 。在势的意义下，<br>$$<br>0&lt;1&lt;\cdots&lt;\aleph _{0}&lt;\aleph =2^{\aleph _{0}}<br>$$</p>
+<p>连续统的势记为 $\aleph$ 并称为连续势，可列集的势记为 $\aleph _{0}$ 。在势的意义下，</p>
+<p>$$<br>0&lt;1&lt;\cdots&lt;\aleph _{0}&lt;\aleph =2^{\aleph _{0}}<br>$$</p>
 <p>Konig 不等式：设 $i\in I$ 时 $|A_i|&lt;|B_i|$ ，则 $| \bigcup_{i\in I}A_i |&lt;| \prod_{i\in I}B_i |$ 。</p>
 <p>以 $\alpha$ 和 $\beta$ 分别记 $A$ 和 $B$ 的势。笛卡尔积 $A\times B$ 的势记为 $\alpha \beta$ 。当 $A\cap B=\emptyset$ 时，将 $A\bigsqcup B$ 的势记为 $\alpha+\beta$ 。两个集合之间的映射 $f:A\rightarrow B$ 全体 $B^A$ 的势记为 $\beta ^{\alpha}$ 。</p>
 <ol>
@@ -577,11 +578,11 @@
 <p>定理：广义数集 $A$ 在广义实数系中有上确界 $\sup A$ 和下确界 $\inf A$ 。</p>
 <p>上极限与下极限：广义实数序列 $(x_n)$ 有上极限<br>$$<br>\varlimsup_{n\to \infty}x_n=\inf_{n\geq 1}\sup_{k\geq n}x_k<br>$$<br>也有下极限<br>$$<br>\varliminf_{n\to \infty}x_n=\sup_{n\geq 1}\inf_{k\geq n}x_k<br>$$<br>总有不等式<br>$$<br>\varliminf_{n\to \infty}x_n\leq \varlimsup_{n\to \infty}x_n<br>$$<br>它们相等时记为 $\lim_{n\to \infty}x_n$ 并称为 $(x_n)$ 的极限。</p>
 <ol>
-<li> $\varlimsup (-x_n)=-\varliminf x_n$ 而 $\varliminf (-x_n)=-\varlimsup x_n$ 。</li>
+<li>$\varlimsup (-x_n)=-\varliminf x_n$ 而 $\varliminf (-x_n)=-\varlimsup x_n$ 。</li>
 <li>对于子列 $(k_n)$ ，有 $\varliminf x_n\leq \varliminf x_{k_n}$ 且 $\varlimsup x_{k_n}\leq \varlimsup x_{n}$ 。</li>
 <li>从某项起 $x_n\leq y_n$ ，则 $\varliminf x_n\leq \varliminf y_n$ 且 $\varlimsup x_n\leq \varlimsup y_n$ 。</li>
-<li> $0&lt;\lim x_n&lt;\infty$ 时， $\varlimsup (x_ny_n)=\lim x_n\varlimsup y_n$ 。</li>
-<li> $0&lt;\lim x_n&lt;\infty$ 时， $\varliminf (x_ny_n)=\lim x_n\varliminf y_n$ 。</li>
+<li>$0&lt;\lim x_n&lt;\infty$ 时， $\varlimsup (x_ny_n)=\lim x_n\varlimsup y_n$ 。</li>
+<li>$0&lt;\lim x_n&lt;\infty$ 时， $\varliminf (x_ny_n)=\lim x_n\varliminf y_n$ 。</li>
 <li>在有意义时， $\varlimsup (x_n+y_n)\leq \varlimsup x_n+\varlimsup y_n$ 。</li>
 <li>在有意义时， $\varliminf (x_n+y_n)\geq \varliminf x_n+\varliminf y_n$ 。</li>
 <li>在有意义时，$$\varliminf (x_n+y_n)\leq \varliminf x_n+\varlimsup y_n\leq \varlimsup (x_n+y_n)$$</li>
@@ -592,7 +593,7 @@
 </li>
 <li><p>$(x_n)$ 是基本数列：<br>$$<br>\forall \epsilon &gt;0 , \exists m\leq 1,\forall n,l&gt;m:|x_n-x_l|&lt;\epsilon<br>$$</p>
 </li>
-<li><p> $(x_n)$ 是有界数列并且极限存在。此时 $x=\lim_{n\to \infty}x_n$ 。</p>
+<li><p>$(x_n)$ 是有界数列并且极限存在。此时 $x=\lim_{n\to \infty}x_n$ 。</p>
 </li>
 </ol>
 <p>单调完备性：单调广义数列 $(x_n)$ 有极限。在递增情形， $\lim_{n\to \infty}x_n=\sup_{n\geq 1}x_n$ ；在递减情形， $\lim_{n\to \infty}x_n=\inf_{n\geq 1}x_n$ 。</p>
@@ -611,13 +612,13 @@
 <li>任意个开集的并集是开集，任意个闭集的交集是闭集。</li>
 <li>有限个开集的交集是开集，有限个闭集的并集是闭集。</li>
 <li>开集减闭集是开集，闭集减开集是闭集。</li>
-<li> Euclid 空间的开集都是 $G_{\delta}-$ 型集而闭集都是 $F_{\sigma}-$ 型集。</li>
+<li>Euclid 空间的开集都是 $G_{\delta}-$ 型集而闭集都是 $F_{\sigma}-$ 型集。</li>
 </ol>
 <p>定理（Heine-Borel）： Euclid 空间的子集为紧集当且仅当它是有界闭集。</p>
 <p>定理（Cantor）：实直线上非空开集 $U$ 可唯一地表示为至多可列个相互不交开区间的并。这些开区间称为 $U$ 的构成区间，它们的端点不在 $U$ 中。</p>
 <p>定理：对于函数 $f:X\rightarrow Y$ ，以下条件等价：</p>
 <ol>
-<li> $f$ 是连续函数——逐点连续的函数。</li>
+<li>$f$ 是连续函数——逐点连续的函数。</li>
 <li>对于 ${\mathbb{R}}^m$ 的开集 $V$ ，存在 ${\mathbb{R}}^n$ 的开集 $U$ 使 $f^{-1}(V\cap Y)=U\cap X$ 。</li>
 <li>对于 ${\mathbb{R}}^m$ 的开集 $F$ ，存在 ${\mathbb{R}}^n$ 的开集 $E$ 使 $f^{-1}(F\cap Y)=E\cap X$ 。</li>
 </ol>
@@ -628,11 +629,16 @@
 <p>康托集与康托函数：将闭区间 $[0,1]$ 三等分后移去中间的开区间 $(0.1,0.2)$ ，其中小数为三进制的。剩下的两个闭区间 $[0,0.1]$ 与 $[0.2,1]$ 分别三等分后各移去中间的开区间 $(0.01,0.02)$ 和 $(0.21,0.22)$ 。如此下去，这些被移去的开区间作为构成区间并成一个开集 $O$ 。剩下的集 $K$ 称为康托集。等式 $K=[0,1]-O$ 表明 $K$ 是紧集。</p>
 <p>线性组合：以 $\mathbb{K}$ 代表一个数域，设 $X$ 是数域 $\mathbb{K}$ 上线性空间。如果 $x,x_i$ 是 $X$ 中向量而 $a_i$ 是 $\mathbb{K}$ 中数使得<br>$$<br>x=a_1x_1+\cdots +a_nx_n<br>$$<br>称 $x$ 是 $x_1,\cdots ,x_n$ 的线性组合。如果 $x=0$ 必导致 $a_1=\cdots =a_n=0$ ，称 $x_1,\cdots,x_n$ 是线性无关组。</p>
 <ol>
-<li>对于线性组合封闭的子集称为线性子空间。一般非空子集 $S$ 的线性包<br>$$<br>\mathrm{span} S=\bigcup_{n=1}^{\infty} \{\sum_{i=1}^{n}a_ix_i|a_i\in\mathbb{K};x_i\in S \}<br>$$<br>这是包含 $S$ 的最小线性子子空间。</li>
-<li>称 $S$ 为线性无关集是指 $S$ 中任何有限个互异向量线性无关。这即 $S$ 对 $\mathrm{span} S$ 中向量都有唯一线性表示。一个非零向量构成一个线性无关集。</li>
-<li>对于 $a\in \mathbb{K}$ ，命 $aS=\{ax|x\in S\}$ 。对于 $S_i\subseteq X$ ，作代数和差 $S_1\pm S_2=\{ x_1\pm x_2|x_1\in S_1,x_2\in S_2 \}$ 。</li>
-<li>当 $a_i$ 都非负且 $a_1+\cdots +a_n$ 时，称 $a_1x_1+\cdots+a_nx_n$ 是 $x_1,\cdots ,x_n$ 的凸组合。非空子集 $E$ 对凸组合封闭当且仅当满足 $0&lt;t&lt;1$ 的实数 $t$ 使 $tE+(1-t)E=E$ 当且仅当 $a$ 和 $b$ 是非负实数时 $aE+bE=(a+b)E$ ，此时称 $E$ 是凸集。</li>
-<li>包含非空子集 $S$ 的所有凸集之交 $\mathrm{cov} S$ 是 $S$ 的凸包——包含 $S$ 的最小凸集：<br>$$<br>\mathrm{cov}=\bigcup_{n=1}^{\infty}\{ \sum_{i=1}^nt_ix_i|t_i\geq 0:\sum_{i\leq n}t_i=1;x_i\in S \}<br>$$<br>定理：设 $X$ 是数域 $\mathbb{K}$ 上非平凡线性空间【而 $S$ 是其线性无关集】，则 $X$ 有个【含 $S$ 的】线性基或 Hamel 基——使 $\mathbb{span}B$ 的线性无关集 $B$ 。</li>
+<li><p>对于线性组合封闭的子集称为线性子空间。一般非空子集 $S$ 的线性包<br>$$<br>\mathrm{span} S=\bigcup_{n=1}^{\infty} \{\sum_{i=1}^{n}a_ix_i|a_i\in\mathbb{K};x_i\in S \}<br>$$<br>这是包含 $S$ 的最小线性子子空间。</p>
+</li>
+<li><p>称 $S$ 为线性无关集是指 $S$ 中任何有限个互异向量线性无关。这即 $S$ 对 $\mathrm{span} S$ 中向量都有唯一线性表示。一个非零向量构成一个线性无关集。</p>
+</li>
+<li><p>对于 $a\in \mathbb{K}$ ，命 $aS=\{ax|x\in S\}$ 。对于 $S_i\subseteq X$ ，作代数和差 $S_1\pm S_2=\{ x_1\pm x_2|x_1\in S_1,x_2\in S_2 \}$ 。</p>
+</li>
+<li><p>当 $a_i$ 都非负且 $a_1+\cdots +a_n$ 时，称 $a_1x_1+\cdots+a_nx_n$ 是 $x_1,\cdots ,x_n$ 的凸组合。非空子集 $E$ 对凸组合封闭当且仅当满足 $0&lt;t&lt;1$ 的实数 $t$ 使 $tE+(1-t)E=E$ 当且仅当 $a$ 和 $b$ 是非负实数时 $aE+bE=(a+b)E$ ，此时称 $E$ 是凸集。</p>
+</li>
+<li><p>包含非空子集 $S$ 的所有凸集之交 $\mathrm{cov} S$ 是 $S$ 的凸包——包含 $S$ 的最小凸集：<br>$$<br>\mathrm{cov}=\bigcup_{n=1}^{\infty}\{ \sum_{i=1}^nt_ix_i|t_i\geq 0:\sum_{i\leq n}t_i=1;x_i\in S \}<br>$$<br>定理：设 $X$ 是数域 $\mathbb{K}$ 上非平凡线性空间【而 $S$ 是其线性无关集】，则 $X$ 有个【含 $S$ 的】线性基或 Hamel 基——使 $\mathbb{span}B$ 的线性无关集 $B$ 。</p>
+</li>
 </ol>
 <p>平移：对于线性空间 $X$ 的子集 $E$ 与向量 $x$ ，作平移<br>$$<br>x+E={x+y|y\in E}<br>$$<br>这是 $S$ 在双射 $X\rightarrow X,y\rightarrow x+y$ 下的像集。它有如下性质：</p>
 <ol>
@@ -645,13 +651,13 @@
 </ol>
 <h2 id="测度与可测性"><a href="#测度与可测性" class="headerlink" title="测度与可测性"></a>测度与可测性</h2><h3 id="环与测度"><a href="#环与测度" class="headerlink" title="环与测度"></a>环与测度</h3><p>设某些集合组成集类 $\mathcal{A}$ 使 $X=\bigcup \mathcal{A}$ ，称 $X$ 为 $\mathcal{A}$ 的基本空间。</p>
 <ul>
-<li> $\mathcal{A}$ 对有限并运算封闭。</li>
-<li> $\mathcal{A}$ 对有限无交并运算封闭。</li>
-<li> $\mathcal{A}$ 对有限交运算封闭。</li>
-<li> $\mathcal{A}$ 对差运算封闭。</li>
-<li> $\mathcal{A}$ 对补运算封闭。</li>
-<li> $\mathcal{A}$ 对可列并运算封闭。</li>
-<li> $\mathcal{A}$ 对可列无交并运算封闭。</li>
+<li>$\mathcal{A}$ 对有限并运算封闭。</li>
+<li>$\mathcal{A}$ 对有限无交并运算封闭。</li>
+<li>$\mathcal{A}$ 对有限交运算封闭。</li>
+<li>$\mathcal{A}$ 对差运算封闭。</li>
+<li>$\mathcal{A}$ 对补运算封闭。</li>
+<li>$\mathcal{A}$ 对可列并运算封闭。</li>
+<li>$\mathcal{A}$ 对可列无交并运算封闭。</li>
 </ul>
 <p>环与代数：对于集合差运算与有限无交并运算封闭的集类 $\mathcal{R}$ 称为一个环。以基本空间 $X$ 为其成员的环也称为一个代数。</p>
 <ol>
@@ -678,7 +684,7 @@
 <li>下连续性： $(E_n)$ 递增至 $E$ 时， $\lim_{n\to \infty}\mu(E_n)=\mu(E)$ 。</li>
 <li>上连续性： $(E_n)$ 递减至 $E$ 且某项测度有限时， $\lim_{n\to \infty}\mu(E_n)=\mu(E)$ 。</li>
 <li>序列 $(E_n)$ 的下限集为 $E$ 时， $\mu(E)\leq \varliminf_{n \to \infty}\mu(E_n)$ 。</li>
-<li> $E=\varlimsup_{n\to \infty}E_n$ 且有 $k$ 使 $\mu(\cup_{n\geq k}E_n$ 有限时， $\varlimsup_{n\to \infty}\leq \mu(E)$ 。</li>
+<li>$E=\varlimsup_{n\to \infty}E_n$ 且有 $k$ 使 $\mu(\cup_{n\geq k}E_n$ 有限时， $\varlimsup_{n\to \infty}\leq \mu(E)$ 。</li>
 </ol>
 <p>任何环 $\mathcal{R}$ 上都有一个计数测度——有限集 $E$ 的计数测度 $|E|_0$ 是 $E$ 中元素的个数而无限集 $E$ 的计数测度 $|E|_0=+\infty$ 。</p>
 <p>Borel-Cantelli 引理：设 $\mu$ 是环 $\mathcal{R}$ 上的测度，设 $(E_n)$ 是 $\mathcal{R}$ 中序列使 $E=\varlimsup_{n\to \infty}E_n$ 在 $\mathcal{R}$ 中。若有 $k$ 使 $\sum_{n\geq k}\mu(E_n)&lt;+\infty$ ，则 $\mu(E)=0$ 。</p>
@@ -701,7 +707,7 @@
 <p>定理：设 $\mu$ 是环 $\mathcal{R}$ 上 $\sigma- $ 有限测度而 $E$ 是 $\mu^*-$ 可测集，则 $\mathcal{R}$ 中有个测度有限的递增序列 $(H_n)$ 覆盖 $E$ （因而 $\mu^*$ 在 $\mathcal{R}^*$ 与 $S(\mathcal{R})$ 上都 $\sigma-$ 有限）。进而，</p>
 <ol>
 <li>有 $D,F\in S(\mathcal{R})$ 使 $D\subseteq E\subseteq F$ 且 $\mu^*(F-D)=0$ 。</li>
-<li> $\mu^*(E)&lt;+\infty$ 且 $\varepsilon&gt;0$ 时，有 $F\in\mathcal{R}$ 使 $\mu^*(E\Delta F)&lt;\varepsilon$ 。</li>
+<li>$\mu^*(E)&lt;+\infty$ 且 $\varepsilon&gt;0$ 时，有 $F\in\mathcal{R}$ 使 $\mu^*(E\Delta F)&lt;\varepsilon$ 。</li>
 </ol>
 <p>定理：环 $\mathcal{R}$ 上的 $\sigma -$ 有限测度在 $S(\mathcal{R})$ 上有唯一测度延拓。 </p>
 <h3 id="勒贝格测度"><a href="#勒贝格测度" class="headerlink" title="勒贝格测度"></a>勒贝格测度</h3><p>定理：环  上有唯一有限测度  使任何  维区间  的测度就是它的  维体积——各边长度之积  。而  诱导的外测度是</p>
@@ -747,7 +753,7 @@
                     
                       <a href="/archives/e9faf39c.html">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">复变函数与积分变换</span>
+                        <span class="hidden-mobile">复变函数</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
