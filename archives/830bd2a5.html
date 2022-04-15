@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.4k 字
+      5.6k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      65
+      85
        分钟
     </span>
   
@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：4 分钟前
                 
               </p>
             
@@ -520,14 +520,14 @@
 <p>差分的性质：</p>
 <ul>
 <li><p>性质1：各阶差分均可用函数值表示</p>
-<p>$$<br>\begin{array}{l}{ {\Delta^{n}f_{k}=(E-I)^{n}f_{k}=\sum_{j=0}^{n}(-1)^{j}C_{n}^{j}f_{n+k-j} }}\\ { {\nabla^{n}f_{k}=(I-E^{-1})^{n}f_{k}=\sum_{j=0}^{n}(-1)^{n-j}C_{n}^{j}f_{k+j-n} }}\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}{ {\Delta^{n}f_{k}=(E-I)^{n}f_{k}=\sum_{j=0}^{n}(-1)^{j}C_{n}^{j}f_{n+k-j} } }\\ { {\nabla^{n}f_{k}=(I-E^{-1})^{n}f_{k}=\sum_{j=0}^{n}(-1)^{n-j}C_{n}^{j}f_{k+j-n} } }\end{array}<br>$$</p>
 </li>
 <li><p>性质2：可用各阶差分表示函数值</p>
 <p>$$<br>f_{n+k}=\Sigma_{j=0}^{n},C_{n}^{j}\Delta^{j}f_{k}<br>$$</p>
 </li>
 <li><p>性质3：均差与差分的关系</p>
-<p>$$<br>\begin{array}{l l}{ {f[x_{k},x_{k+1}]=\frac{f_{k+1}-f_{k} }{x_{k+1}-x_{k} }=\frac{\Delta f_{k} }{h} }}\\ { {f[x_{k},x_{k+1},x_{k+2}]=\frac{1}{2h^{2} }\Delta^{2}f_{k} }}\\ f[x_{k},\cdots,x_{k+m}]=\frac{1}{m!}\frac{1}{h^{m} }\Delta^{m}f_{k}\quad (m=\mathop{1},2,\cdots,n)\end{array}<br>$$<br>同理：</p>
-<p>$$<br>f[x_{k},x_{k-1}\cdots,x_{k-m}]={\frac{1}{m!} }{\frac{1}{h^{m} }}\nabla^{m}f_{k}<br>$$</p>
+<p>$$<br>\begin{array}{l l}{ {f[x_{k},x_{k+1}]=\frac{f_{k+1}-f_{k} }{x_{k+1}-x_{k} }=\frac{\Delta f_{k} }{h} } }\\ { {f[x_{k},x_{k+1},x_{k+2}]=\frac{1}{2h^{2} }\Delta^{2}f_{k} } }\\ f[x_{k},\cdots,x_{k+m}]=\frac{1}{m!}\frac{1}{h^{m} }\Delta^{m}f_{k}\quad (m=\mathop{1},2,\cdots,n)\end{array}<br>$$<br>同理：</p>
+<p>$$<br>f[x_{k},x_{k-1}\cdots,x_{k-m}]={\frac{1}{m!} }{\frac{1}{h^{m} } }\nabla^{m}f_{k}<br>$$</p>
 </li>
 </ul>
 <h4 id="等距节点插值公式"><a href="#等距节点插值公式" class="headerlink" title="等距节点插值公式"></a>等距节点插值公式</h4><p>等距节点插值公式分为向前插值公式和向后插值公式。</p>
@@ -555,16 +555,16 @@
 <p>埃尔米特插值余项为：</p>
 <p>$$<br>R(x)=f(x)-H_{2n+1}(x)={\frac{f^{(2n+2)}(\xi)}{(2n+2)!} }\omega_{n+1}^{2}(x)\qquad\xi\in(a,b)<br>$$</p>
 <p>实际应用时，多用 $n=1$ 的情形，即三次埃尔米特插值。<br>插值基函数为 $\alpha_k(x),\alpha_{k+1}(x),\beta_k(x),\beta_{k+1}(x)$</p>
-<p>$$<br>\begin{array}{l}{ {\alpha_{k}(x)=(1+2\frac{x-x_{k} }{x_{k+1}-x_{k} })(\frac{x-x_{k+1} }{x_{k}-x_{k+1} })^{2} }}\\ { {\alpha_{k+1}(x)=(1+2\frac{x-x_{k+1} }{x_{k}-x_{k+1} })(\frac{x-x_{k} }{x_{k+1}-x_{k} })^{2} }}\\ { {\beta_{k}(x)=(x-x_{k})(\frac{x-x_{k+1} }{x_{k}-x_{k+1} })^{2} }} \\ \beta_{k+1}(x)=(x-x_{k+1})({\frac{x-x_{k} }{x_{k+1}-x_{k} }})^{2}\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}{ {\alpha_{k}(x)=(1+2\frac{x-x_{k} }{x_{k+1}-x_{k} })(\frac{x-x_{k+1} }{x_{k}-x_{k+1} })^{2} } }\\ { {\alpha_{k+1}(x)=(1+2\frac{x-x_{k+1} }{x_{k}-x_{k+1} })(\frac{x-x_{k} }{x_{k+1}-x_{k} })^{2} } }\\ { {\beta_{k}(x)=(x-x_{k})(\frac{x-x_{k+1} }{x_{k}-x_{k+1} })^{2} } } \\ \beta_{k+1}(x)=(x-x_{k+1})({\frac{x-x_{k} }{x_{k+1}-x_{k} } })^{2}\end{array}<br>$$</p>
 <p>相应多项式为：</p>
 <p>$$<br>H_3(x)=y_{k}\alpha_{k}(x)+\ y_{k+1}\alpha_{k+1}(x)+\ m_{k}\beta_{k}(x)+m_{k+1}\beta_{k+1}(x)<br>$$</p>
 <p>余项为：</p>
 <p>$$<br>R_3(x)=f(x)-H_{3}(x)=\frac{1}{4!}~f^{(4)}(\xi)(x-x_{k})^{2}(x-x_{k+1})^{2}<br>$$</p>
 <h2 id="解线性方程组的直接方法"><a href="#解线性方程组的直接方法" class="headerlink" title="解线性方程组的直接方法"></a>解线性方程组的直接方法</h2><h3 id="高斯消去法"><a href="#高斯消去法" class="headerlink" title="高斯消去法"></a>高斯消去法</h3><p>定理：设方程组 $Ax=b$ 的系数矩阵 $A$ 的顺序主子式全不为零，即</p>
-<p>$$<br>\Delta_{i}=\left[\begin{array}{c c c}{ {a_{11} }}&amp;{ {\cdots} }&amp;{ {a_{1i} }}\\ { {\vdots} }&amp;{ {\ddots} }&amp;{ {\vdots} }\\ { {a_{i1} }}&amp;{ {\cdots} }&amp;{ {a_{i i} }}\end{array}\right]\neq0 \quad i=1,2,\ldots,n<br>$$</p>
+<p>$$<br>\Delta_{i}=\left[\begin{array}{c c c}{ {a_{11} } }&amp;{ {\cdots} }&amp;{ {a_{1i} } }\\ { {\vdots} }&amp;{ {\ddots} }&amp;{ {\vdots} }\\ { {a_{i1} } }&amp;{ {\cdots} }&amp;{ {a_{i i} } }\end{array}\right]\neq0 \quad i=1,2,\ldots,n<br>$$</p>
 <p>则使用高斯消去法能实现方程组 $Ax=b$ 的求解。</p>
 <p>推论：若上个定理的条件成立，则</p>
-<p>$$<br>\begin{array}{l}{ {a_{11}^{(1)}=\Delta_{1} }}\\ { {a_{11}^{(i)}=\Delta_{i}/\Delta_{i-1} }} \quad i=2,\cdots,n\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}{ {a_{11}^{(1)}=\Delta_{1} } }\\ { {a_{11}^{(i)}=\Delta_{i}/\Delta_{i-1} } } \quad i=2,\cdots,n\end{array}<br>$$</p>
 <p>定理：设方程组满足上个定理中的条件，使用高斯消去法求解时，共需乘除法次数为 $\dfrac{n^3}{3}+n^2-\dfrac{n}{3}$ ，加减法次数为 $\dfrac{n(n-1)(2n+5)}{6}$ 。</p>
 <p>定理：设矩阵 $A$ 满足顺序主子式全不为零的条件，则 $A$ 存在唯一的分解 $A=LU$ ，其中 $L$ 是单位下三角矩阵（对角线）全为 $1$ 的下三角矩阵， $U$ 是上三角矩阵。</p>
 <h3 id="高斯主元素消去法"><a href="#高斯主元素消去法" class="headerlink" title="高斯主元素消去法"></a>高斯主元素消去法</h3><h4 id="完全主元素消去法"><a href="#完全主元素消去法" class="headerlink" title="完全主元素消去法"></a>完全主元素消去法</h4><p>完全主元素消去法是在高斯消去法的基础上，每次消去之前，选取特定区域的绝对值最大的元素，然后通过交换行和列使其在主元素位置，进行消去。特点是如果选出主元素为零，可直接判定方程组无解。注意，在进行行交换时不会对解产生影响，但在列交换后需要还原才能得到正确的结果。</p>
@@ -591,7 +591,71 @@
 <li>$l_{jj}=(a_{jj}-\sum_{k=1}^{j-1}l_{jk}^2)^{1/2}$</li>
 <li>对 $i=j+1,\cdots ,n$<br>$l_{ij}=(a_{ij}-\sum_{k=1}^{j-1}l_{ik}l_{jk})/l_{jj}$</li>
 </ol>
-
+<h4 id="改进的平方根法"><a href="#改进的平方根法" class="headerlink" title="改进的平方根法"></a>改进的平方根法</h4><p>改进的平方根法通过将正定矩阵 $A$ 采用形如 $LDL^T$ 这样的分解形式（其中 $D$ 是对角阵），可以避免开方运算。</p>
+<p>$$<br>A=<br>\begin{bmatrix}<br>1&amp;&amp;&amp;\\<br>l_{21}&amp;1&amp;&amp;\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\\<br>l_{n1}&amp;l_{n2}&amp;\cdots&amp;1<br>\end{bmatrix}<br>\begin{bmatrix}<br>d_1&amp;&amp;&amp;\\<br>&amp;d_2&amp;&amp;\\<br>&amp;&amp;\ddots&amp;\\<br>&amp;&amp;&amp;d_n<br>\end{bmatrix}<br>\begin{bmatrix}<br>1&amp;l_{21}&amp;\cdots&amp;l_{n1}\\<br>&amp;1&amp;\cdots&amp;l_{n2}\\<br>&amp;&amp;\ddots&amp;\vdots\\<br>&amp;&amp;&amp;1<br>\end{bmatrix}<br>$$</p>
+<p>分解过程:</p>
+<p>对  </p>
+<ol>
+<li>对 $i=1,2,\cdots,n$<br>$$t_{ij}=a_{ij}-\sum_{k=1}^{j-1}t_{ik}l_{jk}$$</li>
+<li>对 $j=1,2,\cdots,i-1$<br>$$l_{ij}=t_{ij}/d_{j}$$</li>
+<li>$$d_i=a_{ii}-\sum_{k=1}^{i-1}t_{ik}l_{ik}$$</li>
+</ol>
+<h4 id="追赶法"><a href="#追赶法" class="headerlink" title="追赶法"></a>追赶法</h4><p>当矩阵为三对角矩阵时，可以用追赶法计算。</p>
+<p>考虑三对角矩阵</p>
+<p>$$<br>A=\begin{bmatrix}<br>b_1&amp;c_1&amp;&amp;&amp;\\<br>a_2&amp;b_2&amp;c_2&amp;&amp;\\<br>&amp;a_3&amp;b_3&amp;\ddots&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;c_{n-1}\\<br>&amp;&amp;&amp;a_n&amp;b_n<br>\end{bmatrix}<br>$$</p>
+<p>该矩阵可分解为</p>
+<p>$$<br>L=\begin{bmatrix}<br>1&amp;&amp;&amp;&amp;\\<br>l_2&amp;1&amp;&amp;&amp;\\<br>&amp;l_3&amp;1&amp;&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;\\<br>&amp;&amp;&amp;l_n&amp;1<br>\end{bmatrix},<br>U=\begin{bmatrix}<br>u_1&amp;v_1&amp;&amp;&amp;\\<br>&amp;u_2&amp;v_2&amp;&amp;\\<br>&amp;&amp;u_3&amp;\ddots&amp;\\<br>&amp;&amp;&amp;\ddots&amp;v_{n-1}\\<br>&amp;&amp;&amp;&amp;u_n<br>\end{bmatrix}<br>$$</p>
+<p>其中</p>
+<p>$$<br>v_i = c_i \quad i=1,2,\cdots,n-1<br>$$</p>
+<p>$$<br>u_1=b_1 ,\quad l_i = \frac{a_i}{u_{i-1} } ,\quad u_i = b_i-l_iv_{i-1} \quad i=2,\cdots,n<br>$$</p>
+<p>分解后只需要依次求解 $Ly=x$ 和 $Ux=y$ 。</p>
+<h3 id="向量和矩阵的范数"><a href="#向量和矩阵的范数" class="headerlink" title="向量和矩阵的范数"></a>向量和矩阵的范数</h3><p>向量范数：如果向量 $\in \mathrm{R}^n$ （或 $\mathrm{C}^{n}$ ）的某个实值函数 $N(x)=\Vert x\Vert$ ，满足条件</p>
+<ul>
+<li>非负性： $\Vert x \Vert \geq 0$ ，当且仅当 $x=0$ 时， $\Vert x \Vert = 0$ 。</li>
+<li>齐次性：对任一数 $\alpha\in \mathrm{R}$ （或 $\mathrm{C}$ ），有 $\Vert\alpha x\Vert = \vert \alpha \vert \Vert x \Vert$ 。</li>
+<li>三角不等式成立： $\Vert x+y \Vert \leq \Vert x\Vert + \Vert y \Vert$ 。</li>
+</ul>
+<p>则称 $N(x)$ 是 $\mathrm{R}^{n}$ （或 $\mathrm{C}^{n}$ ）上的一个向量范数（或称作模）。</p>
+<p>定理：对 $\mathrm{R}^n$ 中的任一向量</p>
+<p>$$<br>x=(x_1,x_2,\cdots,x_n)^T<br>$$</p>
+<p>记：</p>
+<p>$$<br>\begin{array}{c}{ { {\Vert x\Vert }_{1}=\sum_{i=1}^{n}\vert x_{i}\vert } }\\ { { {\Vert x\Vert }_{2}=(\sum_{i=1}^{n}x_{i}^{2})^{1/2} } }\\ { { {\Vert x\Vert }_{\infty}=\operatorname{max}_{1\leq i\leq n}\vert x_{i}\vert } }\end{array}<br>$$</p>
+<p>分别为向量的1-范数，2-范数，和 $\infty$-范数。</p>
+<p>矩阵范数：称定义在 $\mathrm{R}^{n\times n}$ 上的实值函数为矩阵范数，如果对于 $\mathrm{R}^{n\times n}$ 中的任意矩阵 $A$ 和 $B$ ，它满足</p>
+<ul>
+<li>非负性： $\Vert A \Vert \geq 0$，当且仅当 $A=0$ 时， $\Vert A \Vert = 0$ 。</li>
+<li>齐次性：对任一数 $k\in \mathrm{R}$ ，有 $\Vert kA\Vert=\vert k\vert \Vert A\Vert$ 。</li>
+<li>三角不等式成立：$\Vert A+B\Vert\leq \Vert A\Vert + \Vert B\Vert$，$\Vert AB\Vert\leq \Vert A\Vert \Vert B\Vert$</li>
+</ul>
+<p>定理：设 $A=(a_{ij})\in \mathrm{R}^{n \times n}$ ，则</p>
+<p>$$<br>\begin{array}{l}{ {\Vert A\Vert _{1}=\max_{1\leq j\leq n}\sum_{i=1}^n\vert a_{ij}\vert} } \quad \text{列范数}\\<br>{ {\Vert A\Vert _{2}={\sqrt{\lambda_{m a x}(A^{T}A)} } } } \quad \text{2-范数} \\<br>{ {\Vert A\Vert _{\infty}=\max_{1\leq i\leq n}\sum_{j=1}^n\vert a_{ij}\vert} } \quad \text{行范数}<br>\end{array}<br>$$</p>
+<p>其中 $\lambda_{max}(A^TA)$ 表示矩阵 $A^TA$ 的最大特征值。</p>
+<h3 id="误差分析"><a href="#误差分析" class="headerlink" title="误差分析"></a>误差分析</h3><p>定义：如果矩阵 $A$ 或常数项 $b$ 的微小变化，引起方程组 $Ax=b$ 解的巨大变化，则称此方程组为“病态”方程组，矩阵 $A$ 称为“病态”矩阵，否则称方程组为“良态”方程组，矩阵 $A$ 称为“良态”矩阵。</p>
+<p>定理：设 $A$ 是非奇异矩阵， $Ax=b\neq 0$ ，且</p>
+<p>$$<br>A(x+\delta x) = b + \delta b<br>$$</p>
+<p>则</p>
+<p>$$<br>\dfrac{\Vert \delta x \Vert}{\Vert x\Vert}\leq \Vert A^{-1} \Vert \Vert A \Vert \dfrac{\Vert \delta b \Vert}{\Vert b\Vert}<br>$$</p>
+<p>常数项 $b$ 的相对误差在解中可能放大 $\Vert A^{-1} \Vert \Vert A \Vert$ 倍。</p>
+<p>条件数：设  为非奇异矩阵，称数</p>
+<p>$$<br>\operatorname{cond}(A)_{v}=\Vert A^{-1}\Vert_{v}\Vert A\Vert_{v}(v=1,2,\infty)<br>$$</p>
+<p>为矩阵 $A$ 的条件数。</p>
+<p>当 $A$ 的条件数相对大时， $Ax=b$ 是病态的。</p>
+<p>$A$ 的谱条件数</p>
+<p>$$<br>\operatorname{cond}(A)_{2}=\Vert A^{-1}\Vert_{2}\Vert A\Vert_{2} = \sqrt{\dfrac{\lambda _{max}(A^TA)}{\lambda _{min}(A^TA)} }<br>$$</p>
+<p>当 $A$ 为对称矩阵时， $\operatorname{cond}(A)_{2}=\dfrac{\lambda_1}{\lambda_n}$ ，其中 $\lambda_1,\lambda_n$ 为 $A$ 的绝对值最大，最小的特征值。</p>
+<p>条件数的性质：</p>
+<ol>
+<li>对任何的非奇异矩阵 $A$ ，都有 $\operatorname{cond}(A)_{v}\geq 1$<br>$$\operatorname{cond}(A)_{v}=\Vert A^{-1}\Vert _{v}\Vert A\Vert _{v}\geq\Vert A^{-1}A\Vert _{v}=1$$</li>
+<li>设 $A$ 为非奇异矩阵，且 $c\neq 0$ （常数），则<br>$$\operatorname{cond}(cA)_{v} = \operatorname{cond}(A)_{v}$$</li>
+<li>如果 $A$ 为正交矩阵，则 $\operatorname{cond}(A)_{2}=1$ 。如果 $A$ 为非奇异矩阵， $R$ 为正交矩阵，则<br>$$\operatorname{cond}(RA)_{2}=\operatorname{cond}(AR)_{2}=\operatorname{cond}(A)_{2}$$</li>
+</ol>
+<p>近似的方法：</p>
+<ul>
+<li>$A$ 的三角约化时，出现小主元</li>
+<li>系数矩阵的行列式值相对很小，或系数矩阵某些行近似相关</li>
+<li>系数矩阵 $A$ 元素间数量级相差很大，并且无规则</li>
+</ul>
+<h2 id="数值积分方法"><a href="#数值积分方法" class="headerlink" title="数值积分方法"></a>数值积分方法</h2>
             </div>
             <hr>
             <div>
