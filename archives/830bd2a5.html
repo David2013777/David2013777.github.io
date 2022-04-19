@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.6k 字
+      6.5k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      85
+      97
        分钟
     </span>
   
@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：5 小时前
                 
               </p>
             
@@ -645,7 +645,7 @@
 <p>当 $A$ 为对称矩阵时， $\operatorname{cond}(A)_{2}=\dfrac{\lambda_1}{\lambda_n}$ ，其中 $\lambda_1,\lambda_n$ 为 $A$ 的绝对值最大，最小的特征值。</p>
 <p>条件数的性质：</p>
 <ol>
-<li>对任何的非奇异矩阵 $A$ ，都有 $\operatorname{cond}(A)_{v}\geq 1$<br>$$\operatorname{cond}(A)_{v}=\Vert A^{-1}\Vert _{v}\Vert A\Vert _{v}\geq\Vert A^{-1}A\Vert _{v}=1$$</li>
+<li>对任何的非奇异矩阵 $A$ ，都有 $\operatorname{cond}(A)_{v}\geq 1$<br>$$\operatorname{cond}(A)_{v}=\Vert A^{-1}\Vert_{v}\Vert A\Vert_{v}\geq\Vert A^{-1}A\Vert _{v}=1$$</li>
 <li>设 $A$ 为非奇异矩阵，且 $c\neq 0$ （常数），则<br>$$\operatorname{cond}(cA)_{v} = \operatorname{cond}(A)_{v}$$</li>
 <li>如果 $A$ 为正交矩阵，则 $\operatorname{cond}(A)_{2}=1$ 。如果 $A$ 为非奇异矩阵， $R$ 为正交矩阵，则<br>$$\operatorname{cond}(RA)_{2}=\operatorname{cond}(AR)_{2}=\operatorname{cond}(A)_{2}$$</li>
 </ol>
@@ -655,7 +655,44 @@
 <li>系数矩阵的行列式值相对很小，或系数矩阵某些行近似相关</li>
 <li>系数矩阵 $A$ 元素间数量级相差很大，并且无规则</li>
 </ul>
-<h2 id="数值积分方法"><a href="#数值积分方法" class="headerlink" title="数值积分方法"></a>数值积分方法</h2>
+<h2 id="数值积分方法"><a href="#数值积分方法" class="headerlink" title="数值积分方法"></a>数值积分方法</h2><p>在科学计算中，常常会遇到一元函数积分的计算，即</p>
+<p>$$<br>I(f)=\int_{a}^{b}f(x)\mathrm{d}x<br>$$</p>
+<p>在大多数情况下， $f$ 的原函数不易求出，而且在一些计算问题中， $f(x)$ 的值是通过列表给出的。在这些情况下，积分的近似数值计算有很重要的意义。</p>
+<p>利用一个函数序列 $\{ f_1,f_2,\cdots \}$ 逼近 $f$ ，再把</p>
+<p>$$<br>I_n(f)=\int_{a}^{b}f_n(x)\mathrm{d}x<br>$$</p>
+<p>作为 $I(f)$ 的一个近似值。误差为：</p>
+<p>$$<br>E_n=I(f)-I_n(f)=\int_{a}^{b}[f(x)-f_{n}(x)]\mathrm{d}x<br>$$</p>
+<p>可以作出一般估计：</p>
+<p>$$<br>\vert E_n(f)\vert \leq \int_a^b\vert f(x)-f_n(x)\vert \mathrm{d}x\leq (b-a)\Vert f-f_n\Vert _{\infty}<br>$$</p>
+<p>$f_n$ 常常取为 $f$ 的插值多项式或分段插值函数。</p>
+<p>现设 $[a,b]$ 上节点 $x_0,\cdots,x_n$ 是这些节点上 $f$ 的某种形式的插值多项式，则通过积分可以得到</p>
+<p>$$<br>I_n(f)=\sum_{j=1}^nA_jf(x_j)<br>$$</p>
+<p>称 $x_j$ 为求积节点， $A_j$ 为求积系数。</p>
+<p>几个简单的公式：</p>
+<p>设 $[a,b]$ 上有节点 $a=x_0&lt;\cdots&lt;x_n=b$ ，节点把 $[a,b]$ 分成 $n$ 个子区间 $[x_{j-1},x_j](j=1,\cdots ,n)$ 。每个子区间上积分用 $f(x_{j-1}(x_j-x_{j-1}))$ 近似，有：</p>
+<p>$$<br>I(f)\approx I_n(f)=\sum_{j=1}^n(x_j-x_{j-1})(x_j-x_{j-1})<br>$$</p>
+<p>这称为符合的左矩形公式。<br>当每个子区间长度趋于零时，有 $I_n(f)\rightarrow I(f)$<br>类似的，可以构造复合的中矩形公式：</p>
+<p>$$<br>I(f)\approx I_n(f)=\sum_{j=1}^n(x_j-x_{j-1})f(\dfrac{x_{j-1}+x_j}{2})<br>$$</p>
+<p>也可以有复合的右矩形公式。</p>
+<h3 id="梯形公式与辛普森公式"><a href="#梯形公式与辛普森公式" class="headerlink" title="梯形公式与辛普森公式"></a>梯形公式与辛普森公式</h3><h4 id="梯形公式"><a href="#梯形公式" class="headerlink" title="梯形公式"></a>梯形公式</h4><p>要计算积分 $I(f)$ ，一个简单的方法是用 $[a,b]$ 上线性插值函数近似 $f$ 。设插值节点为 $a$ 和 $b$ ，可得到 $f$ 的线性插值函数：</p>
+<p>$$<br>f_1(x)=\dfrac{b-x}{b-a}f(a)+\dfrac{x-a}{b-a}f(b)<br>$$</p>
+<p>对 $f_1(x)$ 积分，得：</p>
+<p>$$<br>I_1(f)=\int_{a}^{b}f_1(x)\mathrm{d}x = \dfrac{b-a}{2}f(a)+\dfrac{b-a}{2}f(b)<br>$$</p>
+<p>用 $I_1(f)$ 近似 $I(f)$ 的几何意义：用梯形面积近似曲面梯形面积。</p>
+<p>线性插值的误差为：</p>
+<p>$$<br>f(x)-f_1(x)=f[x,a,b]{(x-a)(x-b)}<br>$$</p>
+<p>现设 $f\in C^{2}[a,b]$ ，则积分误差</p>
+<p>$$<br>E_1(f)=I(f)-I_1(f)=\int_{a}^{b}[f(x)-f_1(x)]\mathrm{d}x = \int_{a}^{b}f[x,a,b]{(x-a)}(x-b)\mathrm{d}x<br>$$</p>
+<h4 id="辛普森公式"><a href="#辛普森公式" class="headerlink" title="辛普森公式"></a>辛普森公式</h4><p>用二次插值多项式逼近 $f$ ，插值节点为： $x=a,b$ 和 $c=\dfrac{a+b}{2}$ 得</p>
+<p>$$<br>f_2(x)=\dfrac{(x-c)(x-b)}{(a-c)(a-b)}f(a)+\dfrac{(x-a)(x-b)}{(c-a)(c-b)}f(c)+\dfrac{(x-a)(x-c)}{(b-a)(b-c)}f(b)<br>$$</p>
+<p>对 $f_2(x)$ 积分，得</p>
+<p>$$<br>I_2(f)=\int_{a}^{b}f_2(x)\mathrm{d}x=\dfrac{b-a}{6}[f(a)+4f(c)+f(b)]<br>$$</p>
+<p>$$<br>E_2(f)=I(f)-I_2(f)=\int_{a}^{b}f[x,a,c,d]{(x-a)(x-c)(x-b)}\mathrm{d}x<br>$$</p>
+<p>现设 $f\in C^{4}[a,b]$ ，则可得出辛普森公式的误差表达式为：</p>
+<p>$$<br>E_2(f)=-\dfrac{(b-a)^5}{2880}\dfrac{f^{(4)}(\eta )}{2}<br>$$</p>
+<p>其中 $\eta \in [a,b]$</p>
+<p>代数精度：如果 $\widetilde{I(f)}$ 式对所有不超过 $m$ 次的多项式 $p_m(x)$ 准确成立，即 $E(p_{m})=0$ ，而对某一次数为 $m+1$ 次多项式 $p_{m+1}$ 有 $E(p_{m+1}\neq 0)$ ，则称近似求积公式 $\widetilde{I(f)}$ 具有 $m$ 次代数精度。</p>
+
             </div>
             <hr>
             <div>

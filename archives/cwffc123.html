@@ -55,7 +55,7 @@
   <meta name="author" content="David">
   <meta name="keywords" content="">
   
-  <title>数据库系统 - Blog</title>
+  <title>常微分方程 - Blog</title>
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -335,7 +335,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数据库系统">
+            <span class="h2" id="subtitle" title="常微分方程">
               
             </span>
 
@@ -345,8 +345,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-16 20:23" pubdate>
-        2022年2月16日 晚上
+      <time datetime="2022-04-16 20:23" pubdate>
+        2022年4月16日 晚上
       </time>
     </span>
   
@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      17 字
+      2k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      28
        分钟
     </span>
   
@@ -405,16 +405,136 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">数据库系统</h1>
+            <h1 style="display: none">常微分方程</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：4 天前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h1><h2 id="数据库系统介绍"><a href="#数据库系统介绍" class="headerlink" title="数据库系统介绍"></a>数据库系统介绍</h2><h3 id="数据库定义"><a href="#数据库定义" class="headerlink" title="数据库定义"></a>数据库定义</h3>
+              <h1 id="常微分方程"><a href="#常微分方程" class="headerlink" title="常微分方程"></a>常微分方程</h1><h2 id="一阶微分方程的初等解法"><a href="#一阶微分方程的初等解法" class="headerlink" title="一阶微分方程的初等解法"></a>一阶微分方程的初等解法</h2><h3 id="变量分离方程与变量变换"><a href="#变量分离方程与变量变换" class="headerlink" title="变量分离方程与变量变换"></a>变量分离方程与变量变换</h3><h4 id="变量分离方程"><a href="#变量分离方程" class="headerlink" title="变量分离方程"></a>变量分离方程</h4><p>变量分离方程：形如</p>
+<p>$$<br>\dfrac{\mathrm{d}y}{\mathrm{d}x}=f(x)\varphi (y)<br>$$</p>
+<p>的方程，称为变量分离方程，这里 $f(x),\varphi(y)$ 分别是 $x,y$ 的连续函数。</p>
+<p>如果 $\varphi(y) \neq 0$ ，则有</p>
+<p>$$<br>\dfrac{\mathrm{d}y}{\varphi(y)}=f(x)\mathrm{d}x<br>$$</p>
+<p>此时，可以两边同时积分求解。</p>
+<h4 id="可化为变量分离方程的类型"><a href="#可化为变量分离方程的类型" class="headerlink" title="可化为变量分离方程的类型"></a>可化为变量分离方程的类型</h4><p>齐次微分方程：形如</p>
+<p>$$<br>\dfrac{ {\rm d}y}{ {\rm d}x} = g(\dfrac{y}{x})<br>$$</p>
+<p>的方程，称为齐次微分方程，这里 $g(u)$ 是 $u$ 的连续函数。</p>
+<p>作变量变换</p>
+<p>$$<br>u=\dfrac{y}{x}<br>$$</p>
+<p>则有</p>
+<p>$$<br>\dfrac{ {\rm d}y}{ {\rm d}x}=x\dfrac{ {\rm d}u}{ {\rm d}x}+u<br>$$</p>
+<p>代入原方程中，整理后得到</p>
+<p>$$<br>\dfrac{ {\rm d}u}{ {\rm d}x} = \dfrac{g(u)-u}{x}<br>$$</p>
+<p>可以转化为变量分离方程。</p>
+<p>形如</p>
+<p>$$<br>\dfrac{ {\rm d}y}{ {\rm d}x}=\dfrac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}<br>$$</p>
+<p>的方程也可经变量变换化为变量分离方程，这里 $a_1,a_2,b_1,b_2,c_1,c_2$ 均为常数。</p>
+<p>分三种情况讨论：</p>
+<ol>
+<li><p>$\dfrac{a_1}{a_2}=\dfrac{b_1}{b_2}=\dfrac{c_1}{c_2}=k$ 情形<br>此时方程化为 $\dfrac{\mathrm{d}y}{\mathrm{d}x}=k$<br>有通解 $y=kx+c$ 。</p>
+</li>
+<li><p>$\dfrac{a_1}{a_2}=\dfrac{b_1}{b_2}=k\neq \dfrac{c_1}{c_2}$ 情形<br>令 $u=a_2x+b_2y$ ，此时有</p>
+<p> $$<br> \dfrac{ {\rm d}u}{ {\rm d}x} = a_2 + b_2\dfrac{ {\rm d}y}{ {\rm d}x}=a_2+b_2\dfrac{ku+c_1}{u+c_2}<br> $$</p>
+<p>是变量分离方程。</p>
+</li>
+<li><p>$\dfrac{a_1}{a_2}\neq \dfrac{b_1}{b_2}$ 情形<br>如果方程中 $c_1,c_2$ 不全为零，则右端分子分母都是 $x,y$ 的一次多项式，因此</p>
+<p> $$<br> \begin{cases}<br> a_1x+b_1y+c_1=0 \\ a_2x+b_2y+c_2 = 0<br> \end{cases}<br> $$</p>
+<p>代表平面上两条相交的直线，设交点为 $( \alpha ,\beta )$ 。若令</p>
+<p> $$<br> \begin{cases}<br> X=x-\alpha \\Y = y-\beta<br> \end{cases}<br> $$</p>
+<p>则方程变为</p>
+<p>$$<br>\dfrac{ {\rm d}Y}{ {\rm d}X}=\dfrac{a_1X+b_1Y}{a_2X+b_2Y} = g(\dfrac{Y}{X})<br>$$</p>
+<p>可以变成变量分离方程。</p>
+</li>
+</ol>
+<h3 id="线性微分方程与常数变易法"><a href="#线性微分方程与常数变易法" class="headerlink" title="线性微分方程与常数变易法"></a>线性微分方程与常数变易法</h3><p>定义：一阶线性微分方程</p>
+<p>$$<br>\dfrac{\mathrm{d}y}{\mathrm{d}x} = P(x)y+Q(x)<br>$$</p>
+<p>其中 $P(x),Q(x)$ 在考虑的区间上是 $x$ 的连续函数。若 $Q(x)=0$ ，原方程变为</p>
+<p>$$<br>\dfrac{\mathrm{d}y}{\mathrm{d}x} = P(x)y<br>$$</p>
+<p>称为一阶齐次线性微分方程。若 $Q(x)\neq 0$ ，原方程称为一阶非齐次线性微分方程。</p>
+<p>对于一阶齐次线性微分方程，使用变量分离法可以求出通解为</p>
+<p>$$<br>y=c\mathrm{e}^{\int P(x)\mathrm{d}x}<br>$$</p>
+<p>这里 $c$ 是任意常数。</p>
+<p>使用常数变易法，可以得到一阶非齐次线性微分方程的通解为</p>
+<p>$$<br>y=\mathrm{e}^{\int P(x)\mathrm{d}x}(\int Q(x)\mathrm{e}^{-\int P(x)\mathrm{d}x}\mathrm{d}x+c)<br>$$</p>
+<p>伯努利微分方程：形如</p>
+<p>$$<br>\dfrac{\mathrm{d}y}{\mathrm{d}x}=P(x)y+Q(x)y^n<br>$$</p>
+<p>的方程，称为伯努利微分方程，这里 $P(x),Q(x)$ 为 $x$ 的连续函数， $n\neq 0,1$ 是常数。</p>
+<p>引入变量变换 $z=y^{1-n}$ 得到</p>
+<p>$$<br>\dfrac{\mathrm{d}z}{\mathrm{d}x}=(1-n)P(x)z+(1-n)Q(x)<br>$$</p>
+<h3 id="恰当微分方程与积分因子"><a href="#恰当微分方程与积分因子" class="headerlink" title="恰当微分方程与积分因子"></a>恰当微分方程与积分因子</h3><p>恰当微分方程：如果满足</p>
+<p>$$<br>M(x,y)\mathrm{d}x + N(x,y)\mathrm{d}y=\mathrm{d}u(x,y)=\dfrac{\partial u}{\partial x}\mathrm{d}x+\dfrac{\partial u}{\partial y}\mathrm{d}y<br>$$</p>
+<p>$M(x,y)\mathrm{d}x + N(x,y)\mathrm{d}y=0$ 称为恰当微分方程。</p>
+<p>通解是 $u(x,y)=c$ 这里 $c$ 是任意常数。</p>
+<p>令 $\dfrac{\partial u}{\partial x}=M,\dfrac{\partial u}{\partial y}=N$ ，恰当微分方程的充分必要条件 $\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}$ 。</p>
+<p>恰当方程的通解为</p>
+<p>$$<br>\int M(x,y),\mathrm{d}x,+,\int\left [N-{\dfrac{\partial}{\partial y} }\int M(x,y)\mathrm{d}x,\right ]\mathrm{d}y=c<br>$$</p>
+<p>这里 $c$ 是任意常数。</p>
+<h4 id="积分因子"><a href="#积分因子" class="headerlink" title="积分因子"></a>积分因子</h4><p>积分因子：如果存在连续可微的函数 $\mu=\mu(x,y)\neq 0$ ，使得</p>
+<p>$$<br>\mu\left(x,y\right)M(x,y)\mathrm{d}x+\mu\left(x,y\right)N(x,y)\mathrm{d}y=0<br>$$</p>
+<p>为一恰当微分方程，即存在函数 $v$ ，使</p>
+<p>$$<br>\mu M{\rm d}x + \mu N{\rm d}y\equiv {\rm d}v<br>$$</p>
+<p>则称 $\mu(x,y)$ 为方程的积分因子。</p>
+<h3 id="一阶隐式微分方程与参数表示"><a href="#一阶隐式微分方程与参数表示" class="headerlink" title="一阶隐式微分方程与参数表示"></a>一阶隐式微分方程与参数表示</h3><h4 id="可以解出-y-或-x-的方程"><a href="#可以解出-y-或-x-的方程" class="headerlink" title="可以解出 $y$ 或 $x$ 的方程"></a>可以解出 $y$ 或 $x$ 的方程</h4><p>考虑形如</p>
+<p>$$<br>y=f(x,\dfrac{\mathrm{d}y}{\mathrm{d}x})<br>$$</p>
+<p>的方程，设其有连续的偏导数，引入参数 $\dfrac{\mathrm{d}y}{\mathrm{d}x}=p$ ，两边对 $x$ 求导，则有</p>
+<p>$$<br>p=\dfrac{\partial f}{\partial x}+\dfrac{\partial f}{\partial p}\dfrac{\mathrm{d}p}{\mathrm{d}x}<br>$$</p>
+<p>该式可求出通解</p>
+<ol>
+<li><p>若通解形式为 $p=\varphi (x,c)$ 。代入原方程，得到 $y=f(x,\varphi(x,c))$ 为原方程通解。</p>
+</li>
+<li><p>若通解形式为 $x=\phi (p,c)$ 则得到的通解为</p>
+<p>$$<br>\begin{cases}<br> x=\phi(p,c) \\ y=f(\phi (p,c),p)<br>\end{cases}<br>$$</p>
+<p>其中 $p$ 是参数， $c$ 为任意常数。</p>
+</li>
+</ol>
+<p>考虑形如</p>
+<p>$$<br>x=f(y,\dfrac{\mathrm{d}y}{\mathrm{d}x})<br>$$</p>
+<p>类似的，引入参数 $\dfrac{\mathrm{d}y}{\mathrm{d}x}=p$ ，可以求出</p>
+<p>$$<br>\dfrac{1}{p}=\dfrac{\partial f}{\partial y}+\dfrac{\partial f}{\partial p}\dfrac{\mathrm{d}p}{\mathrm{d}y}<br>$$</p>
+<p>通解为</p>
+<p>$$<br>\phi (y,p,c)=0<br>$$</p>
+<p>则原方程的通解为</p>
+<p>$$<br>\begin{cases}<br>x=f(y,p) \\ \phi (y,p,c)=0<br>\end{cases}<br>$$</p>
+<h4 id="不显含-y-或-x-的方程"><a href="#不显含-y-或-x-的方程" class="headerlink" title="不显含 $y$ 或 $x$ 的方程"></a>不显含 $y$ 或 $x$ 的方程</h4><p>形如 $F(x,y^{\prime})=0$ 的方程，记 $p=y^{\prime}=\dfrac{\mathrm{d}y}{\mathrm{d}x}$ ，令</p>
+<p>$$<br>\begin{cases}<br>x=\varphi(t) \\ y = \psi(t)<br>\end{cases}<br>$$</p>
+<p>这里 $t$ 为参数。又有 $\mathrm{d}y=p\mathrm{d}x$ ，则有</p>
+<p>$$<br>\mathrm{d}y=\psi (t)\varphi^{\prime}(t)\mathrm{d}t<br>$$</p>
+<p>两边积分，最后得到通解为</p>
+<p>$$<br>\begin{cases}<br>x=\varphi(t) \\ y=\int \psi(t)\varphi^{\prime}\mathrm{d}t+c<br>\end{cases}<br>$$</p>
+<p>$c$ 为任意常数。</p>
+<p>形如 $F(y,y^{\prime })$ 的方程，类似的，记 $p=y^{\prime} $ ，引入参数 $t$ ，将方程表为适当的参数形式</p>
+<p>$$<br>\begin{cases}<br>y=\varphi(t) \\ p=\psi (t)<br>\end{cases}<br>$$</p>
+<p>有关系式 $\mathrm{d}y=p\mathrm{d}x$ 得到 $\varphi ^{\prime }(t)\mathrm{d}t = \psi (t)\mathrm{d}x$ ，由此得</p>
+<p>$$<br>\begin{cases}<br>x=\int \frac{\varphi^{\prime}(t)}{\psi(t)}\mathrm{d}t +c\\ y=\varphi (t)<br>\end{cases}<br>$$</p>
+<p>为方程的参数形式的通解，其中 $c$ 为任意常数。</p>
+<h2 id="一阶微分方程的解的存在定理"><a href="#一阶微分方程的解的存在定理" class="headerlink" title="一阶微分方程的解的存在定理"></a>一阶微分方程的解的存在定理</h2><h3 id="解的存在唯一性定理与逐步逼近法"><a href="#解的存在唯一性定理与逐步逼近法" class="headerlink" title="解的存在唯一性定理与逐步逼近法"></a>解的存在唯一性定理与逐步逼近法</h3><h4 id="存在唯一性定理"><a href="#存在唯一性定理" class="headerlink" title="存在唯一性定理"></a>存在唯一性定理</h4><p>考虑一阶微分方程</p>
+<p>$$<br>\dfrac{\mathrm{d}y}{\mathrm{d}x}=f(x,y)<br>$$</p>
+<p>这里 $f(x,y)$ 是在矩形域</p>
+<p>$$<br>R:\left| x-x_0 \right| \leq a,\left| y-y_0 \right| \leq b<br>$$</p>
+<p>上的连续函数。</p>
+<p>利普希茨条件：函数 $f(x,y)$ 称为在 $R$ 上关于 $y$ 满足利普希茨条件，如果存在常数 $L&gt;0$ ，使得不等式</p>
+<p>$$<br>\left| f(x,y_1)-f(x,y_2) \right|\leq L\left| y_1-y_2 \right|<br>$$</p>
+<p>对于所有 $(x,y_1),(x,y_2)\in R$ 都成立， $L$ 称为利普希茨常数。</p>
+<p>定理：如果 $f(x,y)$ 在矩形域 $R$ 上连续且关于 $y$ 满足利普希茨条件，则方程存在唯一的解 $y=\varphi (x)$ ，定义与区间 $\left| x-x_0 \right|\leq h $ 上，连续且满足初值条件 $\varphi (x_0)=y_0$ 。这里 $h=\min (a,\dfrac{b}{M}),M=\max _{(x,y)\in R}\left| f(x,y) \right| $ 。</p>
+<p>可以使用逐步逼近法证明。</p>
+<p>考虑一阶隐方程 $F(x,y,y^{\prime})$ ，根据隐函数存在定理，如于  的某一邻域内 $F$ 连续且 $F(x_0,y_0,y_0^{\prime})$ ，而 $\dfrac{\partial F}{\partial y^{\prime} }\neq 0$ ，则必可把 $y^{\prime}$ 唯一地表示为 $x,y$ 的函数 $y^{\prime} = f(x,y)$ ，并且 $f(x,y)$ 于 $(x_0,y_0)$ 的某一邻域内连续，且满足 $y_0^{\prime} = f(x_0,y_0)$ 。</p>
+<p>定理：如果在点 $(x_0,y_0,y_0^{\prime})$ 的某一邻域中，</p>
+<ol>
+<li>$F(x,y,y^{\prime})$ 对所有变元 $(x,y,y^{\prime})$ 连续，且存在连续偏导数。</li>
+<li>$F(x_0,y_0,y_0^{\prime})=0$</li>
+<li>$\dfrac{\partial F(x_0,y_0,y_0^{\prime})}{\partial y^{\prime} }\neq 0$</li>
+</ol>
+<p>则方程存在唯一解</p>
+<p>$$<br>y=y(x),\left| x-x_0 \right| \leq h (h\text{ 为足够小的正数})<br>$$</p>
+<p>满足初值条件</p>
+<p>$$<br>y(x_0)=y_0,y^{\prime}(x_0)=y_0^{\prime }<br>$$</p>
+<h4 id="近似计算与误差估计"><a href="#近似计算与误差估计" class="headerlink" title="近似计算与误差估计"></a>近似计算与误差估计</h4><p>第 $n$ 次近似解 $\varphi _n(x)$ 和真正解 $\varphi (x)$ 在区间  内的误差估计式</p>
+<p>$$<br>\left| \varphi _n(x)-\varphi (x) \right| \leq \dfrac{ML^n}{(n+1)!}h^{n+1}<br>$$</p>
+<h3 id="解的延拓"><a href="#解的延拓" class="headerlink" title="解的延拓"></a>解的延拓</h3>
             </div>
             <hr>
             <div>
@@ -423,9 +543,9 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
                     
-                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%A6/%E7%BA%AF%E6%95%B0%E5%AD%A6/">纯数学</a>
                     
                   </div>
                 
@@ -433,7 +553,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                      <a class="hover-with-bg" href="/tags/%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">常微分方程</a>
                     
                   </div>
                 
