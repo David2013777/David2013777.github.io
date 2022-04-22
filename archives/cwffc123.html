@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2k 字
+      6.3k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      28
+      90
        分钟
     </span>
   
@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 天前
                 
               </p>
             
@@ -534,7 +534,195 @@
 <p>$$<br>y(x_0)=y_0,y^{\prime}(x_0)=y_0^{\prime }<br>$$</p>
 <h4 id="近似计算与误差估计"><a href="#近似计算与误差估计" class="headerlink" title="近似计算与误差估计"></a>近似计算与误差估计</h4><p>第 $n$ 次近似解 $\varphi _n(x)$ 和真正解 $\varphi (x)$ 在区间  内的误差估计式</p>
 <p>$$<br>\left| \varphi _n(x)-\varphi (x) \right| \leq \dfrac{ML^n}{(n+1)!}h^{n+1}<br>$$</p>
-<h3 id="解的延拓"><a href="#解的延拓" class="headerlink" title="解的延拓"></a>解的延拓</h3>
+<h3 id="解的延拓"><a href="#解的延拓" class="headerlink" title="解的延拓"></a>解的延拓</h3><p>解的延拓定理：如果方程右端的函数 $f(x,y)$ 在有界区域 $G$ 中连续，且在 $G$ 内关于 $y$ 满足局部的利普希茨条件，那么方程的通过 $G$ 内任何一点 $(x_0,y_0)$ 的解 $y=\varphi (x)$ 可以延拓，直到点 $(x,\varphi (x))$ 任意接近区域 $G$ 的边界。</p>
+<p>推论：如果 $G$ 是无界区域，在上面解的延拓定理的条件下，方程的通过点 $(x_0,y_0)$ 的解 $y=\varphi (x)$ 可以延拓，以项 $x$ 增大的一方的延拓来说，有下面两种情况：</p>
+<ol>
+<li>解 $y=\varphi (x)$ 可以延拓到区间 $[x_0,+\infty )$ 。</li>
+<li>解 $y=\varphi (x)$ 只可以延拓到区间 $[x_0,d)$ ，其中 $d$ 为有限数，则当 $x\rightarrow d$ 时，或者 $y=\varphi (x)$ 无界，或者点 $(x,\varphi (x))$ 趋向于区域 $G$ 的边界。</li>
+</ol>
+<h3 id="解对初值的连续性和可微性定理"><a href="#解对初值的连续性和可微性定理" class="headerlink" title="解对初值的连续性和可微性定理"></a>解对初值的连续性和可微性定理</h3><h4 id="解关于初值的对称性"><a href="#解关于初值的对称性" class="headerlink" title="解关于初值的对称性"></a>解关于初值的对称性</h4><p>解关于初值的对称性定理：设方程满足初值条件 $y(x_0)=y_0$ 的解是唯一的，记为 $y=\varphi (x,x_0,y_0)$ ，则在此表达式中， $(x,y)$ 与 $(x_0,y_0)$ 可以调换其相对位置，即解的存在范围内成立着关系式 $y_0=\varphi (x_0,x,y)$ 。</p>
+<h4 id="解对初值的连续依赖性"><a href="#解对初值的连续依赖性" class="headerlink" title="解对初值的连续依赖性"></a>解对初值的连续依赖性</h4><p>引理：如果函数 $f(x,y)$ 与某域 $D$ 内连续，且关于 $y$ 满足利普希茨条件（利普希茨常数为 $L$ ），则对方程的任意两个解 $\varphi (x)$ 及 $\psi(x)$ ，在它们公共存在的区间内成立着不等式</p>
+<p>$$<br>\left| \varphi (x)-\psi (x) \right| \leq \left| \varphi (x_0)-\psi (x_0) \right| \mathrm{e}^{L\left| x-x_0 \right| }<br>$$</p>
+<p>其中 $x_0$ 为所考虑区间内的某一值。</p>
+<p>解对初值的连续依赖定理：假设 $f(x,y)$ 与域 $G$ 内连续且关于 $y$ 满足局部利普希茨条件， $(x_0,y_0)\in G$ ， $y=\varphi (x,x_0,y_0)$ 是方程的满足初值条件 $y(x_0)=y_0$ 的解，它与区间 $a\leq x\leq b$ 上有定义 $a\leq x_0\leq b$ ，那么对任意给定的 $\varepsilon &gt;0$ ，必能找到正数 $\delta =\delta (\varepsilon ,a,b)$ ，使得当</p>
+<p>$$<br>(\overline{x}_0-x_0)^2+(\overline{y}_0-y_0)^2\leq \delta^2<br>$$</p>
+<p>时，方程的满足条件 $y(\overline{x}_0)=y_0$ 的解 $y=\varphi (x,\overline{x}_0,\overline{y}_0)$ 在区间 $a\leq x\leq b$ 上也有定义，并且</p>
+<p>$$<br>\left| \varphi (x,\overline{x}_0,\overline{y}_0)-\varphi (x,{x}_0,{y}_0) \right| &lt;\varepsilon ,a\leq x\leq b<br>$$</p>
+<p>解对初值的连续性定理：若函数 $f(x,y)$ 在区域 $G$ 内连续，且关于 $y$ 满足局部利普希茨条件，则方程的解 $y=\varphi (x,{x}_0,{y}_0)$ 作为 $x,x_0,y_0$ 的函数在它的存在范围内是连续的。</p>
+<h4 id="解对初值的可微性"><a href="#解对初值的可微性" class="headerlink" title="解对初值的可微性"></a>解对初值的可微性</h4><p>解对初值的可微性定理：若函数 $f(x,y)$ 以及 $\dfrac{\partial f}{\partial y}$ 都在区域 $G$ 内连续，则方程的解 $y=\varphi (x,x_0,y_0)$ 作为 $x,x_0,y_0$ 的函数在它的存在范围镊是连续可微的。</p>
+<h3 id="奇解"><a href="#奇解" class="headerlink" title="奇解"></a>奇解</h3><h4 id="包络和奇解"><a href="#包络和奇解" class="headerlink" title="包络和奇解"></a>包络和奇解</h4><p>包络：设给定单参数曲线族</p>
+<p>$$<br>\varPhi(x,y,c)=0<br>$$</p>
+<p>其中 $c$ 是参数， $\varPhi (x,y,c)$ 是 $x,y,c$ 的连续可微函数。曲线族的包络是指这样的曲线，它本身并不包含在曲线族中，但过这曲线的每一点，有曲线族中的一条曲线和它在这一点相切。</p>
+<p>$c-$ 判别曲线：曲线族的包络包含在下列方程组</p>
+<p>$$<br>\begin{cases}<br>\varPhi(x,y,c)=0  \\ \varPhi_{c}^{\prime}(x,y,c)=0<br>\end{cases}<br>$$</p>
+<p>消去 $c$ 而得到的曲线中，此曲线称为$c-$ 判别曲线。</p>
+<p>奇解：微分方程的某一个解称为奇解，如果在这个解的每一点上至少还有方程的另外一个解存在，也就是说奇解是这样的一个解，在它上面的每一点唯一性都不成立，或者说，奇解对应的曲线上每一点至少有方程的两条积分曲线通过。</p>
+<p>定理：方程</p>
+<p>$$<br>F(x,y,\dfrac{\mathrm{d}y}{\mathrm{d}x})=0<br>$$</p>
+<p>的奇解包含在由方程组</p>
+<p>$$<br>\begin{cases}<br>F(x,y,p)=0 \\ F_p^{\prime}(x,y,p)=0<br>\end{cases}<br>$$</p>
+<p>消去 $p$ 而得到的曲线中，这里 $F(x,y,p)$ 是 $x,y,p$ 的连续可微函数。此曲线称为方程的 $p-$ 判别曲线。 $p-$ 判别曲线是否是方程的奇解，尚需进一步检验。</p>
+<h4 id="克莱罗微分方程"><a href="#克莱罗微分方程" class="headerlink" title="克莱罗微分方程"></a>克莱罗微分方程</h4><p>克莱罗微分方程：形如</p>
+<p>$$<br>y=xp+f(p)<br>$$</p>
+<p>的方程，称为克莱罗微分方程，这里 $p=\dfrac{\mathrm{d}y}{\mathrm{d}x}$ ， $f(p)$ 是 $p$ 的连续可微函数。</p>
+<h3 id="数值解"><a href="#数值解" class="headerlink" title="数值解"></a>数值解</h3><h2 id="高阶微分方程"><a href="#高阶微分方程" class="headerlink" title="高阶微分方程"></a>高阶微分方程</h2><h3 id="线性微分方程的一般理论"><a href="#线性微分方程的一般理论" class="headerlink" title="线性微分方程的一般理论"></a>线性微分方程的一般理论</h3><h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4><p>讨论如下的 $n$ 阶线性微分方程</p>
+<p>$$<br>{\frac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\frac{\mathrm{d}^{n-1}x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\frac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=f(t)<br>$$</p>
+<p>其中 $a_i(t)(i=1,\cdots,n)$ 及 $f(t)$ 都是区间 $a\leq t\leq b$ 上的连续函数。</p>
+<p>如果 $f(t)\equiv 0$ ，则方程变为</p>
+<p>$$<br>{\frac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\frac{\mathrm{d}^{n-1}x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\frac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=0<br>$$</p>
+<p>我们称它为 $n$ 阶齐次线性微分方程，简称齐次线性微分方程。而称一般的方程为 $n$ 阶非齐次线性微分方程，简称非齐次线性微分方程。</p>
+<p>定理：如果 $a_i(t)(i=1,\cdots,n)$ 及 $f(t)$ 都是区间 $a\leq t\leq b$ 上的连续函数，则对于任一 $t_0\in [a,b]$ 及任意的 $x_0,x_0^{(1)},\cdots ,x_0^{(n-1)}$ ，方程存在唯一解 $x=\varphi (t)$ ，定义与区间 $a\leq t\leq b$ 上，且满足初值条件</p>
+<p>$$<br>\varphi(t_{0})=x_{0},{\dfrac{\mathrm{d}\varphi(t_{0})}{\mathrm{d}t} }=x_{0}^{(1)},\cdots,{\dfrac{\mathrm{d}^{n-1}\varphi(t_{0})}{\mathrm{d}t^{n-1} } }=x_{0}^{(n-1)}<br>$$</p>
+<h4 id="齐次线性微分方程的解的性质与结构"><a href="#齐次线性微分方程的解的性质与结构" class="headerlink" title="齐次线性微分方程的解的性质与结构"></a>齐次线性微分方程的解的性质与结构</h4><p>考虑齐次线性微分方程</p>
+<p>$$<br>{\dfrac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\dfrac{\mathrm{d}^{n}-1x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\dfrac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=0<br>$$</p>
+<p>叠加原理：如果 $x_1(t),\cdots,x_k(t)$ 是方程的 $k$ 个解，则它们的线性组合 $c_1x_1(t)+\cdots+c_kx_k(t)$ 也是方程的解，这里 $c_1,\cdots,c_k$ 是任意常数。</p>
+<p>特别的，当 $k=n$ 时，即方程有解</p>
+<p>$$<br>x=c_1x_1(t)+\cdots+c_nx_n(t)<br>$$</p>
+<p>它含有 $n$ 个任意常数。</p>
+<p>定义：考虑定义在区间 $a\leq t\leq b$ 上的函数 $x_1(t),\cdots,x_k(t)$ ，如果存在不全为零的常数 $c_1,\cdots,c_k$ ，使得恒等式</p>
+<p>$$<br>c_1x_1(t)+c_2x_2(t)+\cdots+c_kx_k(t)\equiv 0<br>$$</p>
+<p>对于所有 $t\in [a,b]$ 都成立，我们称这些函数是线性相关的，否则就称这些函数在所给的区间上线性无关。</p>
+<p>朗斯基行列式：由定义在区间 $a\leq t\leq b$ 上的 $k$ 个可微 $k-1$ 次的函数 $x_1(t),\cdots,x_k(t)$ 所作成的行列式</p>
+<p>$$<br>W[x_1(t),\cdots,x_k(t)]\equiv W(t)\equiv<br>\begin{vmatrix}x_1(t)&amp;x_2(t)&amp;\cdots &amp;x_k(t)\\x_1(t)^{\prime}&amp;x_2(t)^{\prime}&amp;\cdots &amp;x_k(t)^{\prime}\\ \vdots&amp;\vdots&amp;\ddots &amp;\vdots \\x_1(t)^{(k-1)}&amp;x_2(t)^{(k-1)}&amp;\cdots &amp;x_k(t)^{(k-1)}\end{vmatrix}<br>$$</p>
+<p>称为这些函数的朗斯基行列式。</p>
+<p>定理：若函数 $x_1(t),\cdots,x_n(t)$ 在区间 $a\leq t\leq b$ 上线性相关，则在 $[a,b]$ 上它们的朗斯基行列式 $W(t)\equiv 0$ 。</p>
+<p>定理：如果方程的解 $x_1(t),\cdots,x_n(t)$ 在区间 $a\leq t\leq b$ 上线性无关，则 $W[x_1(t),\cdots,x_n(t)]$ 在这个区间的任何点上都不等于零，即 $W(t)\neq 0(a\leq t\leq b)$ 。</p>
+<p>定理： $n$ 阶齐次线性微分方程一定存在 $n$ 个线性无关的解。</p>
+<p>通解结构定理：如果 $x_1(t),\cdots,x_n(t)$ 是方程的 $n$ 个线性无关的解，则方程的通解可表为</p>
+<p>$$<br>x=c_1x_1(t)+c_2x_2(t)+\cdots+c_nx_n(t)<br>$$</p>
+<p>其中 $c_1,\cdots,c_n$ 是任意常数，且通解包括了方程的所有解。</p>
+<p>定理： $n$ 阶齐次线性微分方程的所有解构成一个 $n$ 维线性空间。</p>
+<p>方程的一组 $n$ 个线性无关解称为方程的一个基本解组。显然，基本解组不是唯一的。特别的，当 $W(t_0)=1$ 时称其为标准基本解组。</p>
+<h4 id="非齐次线性微分方程与常数变易法"><a href="#非齐次线性微分方程与常数变易法" class="headerlink" title="非齐次线性微分方程与常数变易法"></a>非齐次线性微分方程与常数变易法</h4><p>考虑 $n$ 阶非齐次线性微分方程</p>
+<p>$$<br>{\frac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\frac{\mathrm{d}^{n-1}x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\frac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=f(t)<br>$$</p>
+<p>及其对应的齐次线性微分方程，有以下两个性质</p>
+<p>性质：如果 $\overline{x}(t)$ 是非齐次线性微分方程的解，而 $x(t)$ 是齐次线性微分方程的解，则 $\overline{x}(t)+x(t)$ 也是非齐次线性微分方程的解。</p>
+<p>性质：非齐次微分方程的任意两个解之差必为对应齐次线性微分方程的解。</p>
+<p>定理：设 $x_1(t),\cdots,x_n(t)$ 为齐次线性微分方程的基本解组，而 $\overline{x}(t)$ 是对应的非齐次线性微分方程的某一解，则非齐次线性微分方程的通解可表为</p>
+<p>$$<br>x=c_1x_1(t)+c_2x_2(t)+\cdots +c_nx_n(t)+\overline{x}(t)<br>$$</p>
+<p>其中 $c_1,c_2,\cdots,c_n$ 为任意常数。而且这个通解包括方程的所有解。</p>
+<h3 id="常系数线性微分方程的解法"><a href="#常系数线性微分方程的解法" class="headerlink" title="常系数线性微分方程的解法"></a>常系数线性微分方程的解法</h3><h4 id="复值函数与复值解"><a href="#复值函数与复值解" class="headerlink" title="复值函数与复值解"></a>复值函数与复值解</h4><p>如果对于区间 $a\leq t\leq b$ 中的每一实数 $t$ ，有复数 $z(t)=\varphi (t)+\mathrm{i}\psi (t)$ 与它对应，其中 $\varphi (t)$ 和 $\psi(t)$ 是在区间 $a\leq t\leq b$ 上定义的实函数， $i=\sqrt{-1}$ 是虚数单位，我们就说在区间 $a\leq t\leq b$ 上给定一个复值函数 $z(t)$ 。如果实函数 $\varphi (t),\psi(t)$ 当 $t$ 趋于 $t_0$ 时有极限，我们就称复值函数 $t_0$ 当 $t$ 趋于 $t_0$ 时有极限，并且定义</p>
+<p>$$<br>\lim_{t \to t_0} z(t)=\lim_{t \to t_0} \varphi (t)+\mathrm{i}\lim_{t \to t_0}\psi(t)<br>$$</p>
+<p>如果 $\lim_{t \to t_0} z(t)=z(t_0)$ ，我们就称 $z(t)$ 在 $t_0$ 连续。显然 $z(t)$ 在 $t_0$ 连续相当于 $\varphi (t),\psi(t)$ 在 $t_0$ 连续。当 $z(t)$ 在区间 $a\leq t\leq b$ 上每点都连续时，就称 $z(t)$ 在区间 $a\leq t\leq b$ 上连续。如果极限 $\lim_{t \to t_0} \dfrac{z(t)-z(t_0)}{t-t_0}$ 存在，就称 $z(t)$ 在 $t_0$ 有导数（可微）。且记此极限为 $\dfrac{\mathrm{d}z(t_0)}{\mathrm{d}t}$ 或者 $z^{\prime }(t_0)$ 。显然 $z(t)$ 在 $t_0$ 处有导数相当于 $\varphi (t),\psi(t)$ 在 $t_0$ 处有导数，且</p>
+<p>$$<br>\dfrac{\mathrm{d}z(t_0)}{\mathrm{d}t}=\dfrac{\mathrm{d}\varphi (t_0)}{\mathrm{d}t}+\mathrm{i}\dfrac{\mathrm{d}\psi(t_0)}{\mathrm{d}t}<br>$$</p>
+<p>如果 $z(t)$ 在区间 $a\leq t\leq b$ 上每点都有导数，就称 $z(t)$ 在区间 $a\leq t\leq b$ 上有导数。对于高阶导数可以类似地定义。</p>
+<p>线性微分方程的复值解：定义于区间 $a\leq t\leq b$ 上的实变量复值函数 $x=z(t)$ 称为方程的复值解，如果</p>
+<p>$$<br>{\dfrac{\operatorname{d}^{n}z\left(t\right)}{\operatorname{d}t^{n} } }+a_{1}\left(t\right){\dfrac{\operatorname{d}^{n-1}z\left(t\right)}{\operatorname{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\dfrac{\operatorname{d}z\left(t\right)}{\operatorname{d}t} }+a_n(t)z(t)=f(t)<br>$$</p>
+<p>对于 $a\leq t\leq b$ 恒成立。</p>
+<p>定理：如果方程中的所有系数 $a_i(t)(i=1,2,\cdots,n)$ 都是实值函数，而 $x=z(t)=\varphi (t)+\mathrm{i}\psi(t)$ 是方程的复值解，则 $z(t)$ 的实部 $\varphi (t)$ 、虚部 $\psi(t)$ 和共轭复值函数 $\overline{z}(t)$ 也都是方程的解。</p>
+<p>定理：若方程</p>
+<p>$$<br>{\dfrac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\dfrac{\mathrm{d}^{n-1}x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\dfrac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=u\left(t\right)+\mathrm{i}v\left(t\right)<br>$$</p>
+<p>有复值解 $x=U(t)+\mathrm{i}V(t)$ ，这里 $a_i(t)(i=1,2,\cdots,n)$ 及 $u(t),v(t)$ 都是实函数，那么这个解的实部 $U(t)$ 和虚部 $V(t)$ 分别是方程</p>
+<p>$$<br>{\dfrac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\dfrac{\mathrm{d}^{n-1}x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\dfrac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=u\left(t\right)<br>$$</p>
+<p>和</p>
+<p>$$<br>{\dfrac{\mathrm{d}^{n}x}{\mathrm{d}t^{n} } }+a_{1}\left(t\right){\dfrac{\mathrm{d}^{n-1}x}{\mathrm{d}t^{n-1} } }+\cdots+a_{n-1}\left(t\right){\dfrac{\mathrm{d}x}{\mathrm{d}t} }+a_{n}\left(t\right)x=v\left(t\right)<br>$$</p>
+<p>的解。</p>
+<h4 id="常系数齐次线性微分方程和欧拉方程"><a href="#常系数齐次线性微分方程和欧拉方程" class="headerlink" title="常系数齐次线性微分方程和欧拉方程"></a>常系数齐次线性微分方程和欧拉方程</h4><p>常系数齐次线性微分方程：设齐次线性微分方程中所有系数都是常数，即方程有如下形状</p>
+<p>$$<br>L\left[x\right]\equiv\frac{ {\mathrm{d} }^{n}x}{ {\mathrm{d} }t^{n} }+a_{1}\frac{ {\mathrm{d} }^{n-1}x}{ {\mathrm{d} }t^{n-1} }+\cdots+a_{n-1}\frac{ {\mathrm{d} }x}{ {\mathrm{d} }t}+a_{n}x=0<br>$$</p>
+<p>其中 $a_1,\cdots,a_n$ 为常数。称为 $n$ 阶常系数齐次线性微分方程。</p>
+<p>接下来介绍特征根法：</p>
+<p>注意到</p>
+<p>$$<br>\begin{array}{c}{ { { L}[\mathrm{e}^{\lambda t}]\equiv \dfrac{\mathrm{d}^{n}\mathrm{e}^{\lambda t} }{\mathrm{d}t^{n} }+a_{1}\dfrac{\mathrm{d}^{n-1}\mathrm{e}^{\lambda t} }{\mathrm{d}t^{n-1} }+\cdots+a_{n-1}\dfrac{\mathrm{d}\mathrm{e}^{\lambda t} }{\mathrm{d}t}+a_{n}\mathrm{e}^{\lambda t} } }\\ { {=(\lambda^{n}+a_{1}\lambda^{n-1}+\cdots+a_{n-1}\lambda+a_{n})\mathrm{e}^{\lambda t}\equiv F(\lambda)\mathrm{e}^{\lambda t} } }\end{array}<br>$$</p>
+<p>其中 $F(\lambda )\equiv \lambda ^n+a_1\lambda ^{n-1}+\cdots +a_{n-1}\lambda +a_n$ 是 $\lambda $ 的 $n$ 次多项式。易知方程解的充要条件是 $\lambda $ 是代数方程</p>
+<p>$$<br>F(\lambda )\equiv \lambda ^n+a_1\lambda ^{n-1}+\cdots +a_{n-1}\lambda +a_n=0<br>$$</p>
+<p>的根。这个方程称为特征方程，它的根称为特征根。</p>
+<p>（1）特征根是单根的情形</p>
+<p>设 $\lambda _1,\cdots,\lambda _n$ 是特征方程的 $n$ 个彼此不相等的根，则相应地方程有如下 $n$ 个解：</p>
+<p>$$<br>\mathrm{e}^{\lambda_1t},\cdots,\mathrm{e}^{\lambda_nt}<br>$$</p>
+<p>如果 $\lambda _i(i=1,2,\cdots,n)$ 均为实数，则是方程的 $n$ 个线性无关的实值解，方程的通解可以表示为</p>
+<p>$$<br>x=c_1\mathrm{e}^{\lambda _1t}+\cdots+c_n\mathrm{e}^{\lambda _nt}<br>$$</p>
+<p>其中 $c_1,\cdots,c_n$ 为任意常数。</p>
+<p>如果特征方程有复根，则因方程的系数是实常数，复根将成对共轭地出现。设 $\lambda_1=\alpha +\mathrm{i}\beta$ 是一特征根，则 $\lambda _2=\alpha -\mathrm{i}\beta$ 也是特征根，因而与这对共轭复根对应的，方程有两个复值解</p>
+<p>$$<br>\begin{array}{l}{ {\mathbf{e}^{(a+1\beta),t}=\mathbf{e}^{a t}\left(\cos,\beta t+\mathbf{i},\sin,\beta t\right)} }\\ { {\mathbf{e}^{(a-{\mathrm{i} }\beta),t}=\mathbf{e}^{a t}\left(\cos,\beta t-\mathbf{i},\sin,\beta t\right)} }\end{array}<br>$$</p>
+<p>它们的实部和虚部也是方程的解，这样就可以求出两个实值解</p>
+<p>$$<br>\mathrm{e}^{\alpha t}\cos \beta t,\mathrm{e}^{\alpha t}\sin \beta t<br>$$</p>
+<p>（2）特征根有重根的情形</p>
+<p>设特征方程有 $k$ 重根 $\lambda =\lambda _1$ ，则如所周知</p>
+<p>$$<br>F(\lambda_1)=F(\lambda_1)^{\prime}=\cdots=F_{\lambda_1}^{(k-1)}<br>$$</p>
+<p>先设 $\lambda _1=0$ ，即特征方程有因子 $\lambda ^k$ ，于是</p>
+<p>$$<br>a_{n}=a_{n-1}=\cdots=a_{n-k+1}=0<br>$$</p>
+<p>也就是特征方程的形状为</p>
+<p>$$<br>\lambda^{n},+,a_{1},\lambda^{n-1}+\cdots +a_{n-k}\lambda^{k}=0<br>$$</p>
+<p>而对应的方程变为</p>
+<p>$$<br>{\dfrac{\operatorname{d}^{n}x}{\operatorname{d}t^{n} } }+a_{1}{\dfrac{\operatorname{d}^{n-1}x}{\operatorname{d}t^{n-1} } }+\cdots+a_{n-k}{\dfrac{\operatorname{d}^{k}x}{\operatorname{d}t^{k} } }=0<br>$$</p>
+<p>易见它有 $k$ 个解 $1,t,\cdots,t^{k-1}$ ，而且它们是线性无关的。</p>
+<blockquote>
+<p>此处以后完善。</p>
+</blockquote>
+<p>欧拉方程：形状为</p>
+<p>$$<br>x^{n}\frac{\mathrm{d}^{n}y}{\mathrm{d}x^{n} }+a_{1}x^{n-1}\frac{\mathrm{d}^{n}-1}{\mathrm{d}x^{n-1} }+\cdots+a_{n-1}x\frac{\mathrm{d}y}{\mathrm{d}x}+a_{n}y=0<br>$$</p>
+<p>的方程称为欧拉方程，这里 $a_1,a_2,\cdots,a_n$ 为常数。</p>
+<p>引入自变量的变换 $x=\mathrm{e}^{t},(x&lt;0,x=-\mathrm{e}^{t})$<br>计算可得到</p>
+<p>$$<br>{\dfrac{ {\mathrm{d} }^{n}y}{ {\mathrm{d} }t^{n} } }+b_{1}{\dfrac{ {\mathrm{d} }^{n}\cdot{\mathrm{l} } }{ {\mathrm{d} }t^{n} } }+\cdots+b_{n-1}{\dfrac{ {\mathrm{d} }y}{ {\mathrm{d} }t} }+b_{n}y=0<br>$$</p>
+<p>其中 $b_1,b_2,\cdots,b_n$ 是常数。可以求解。</p>
+<h4 id="非齐次线性微分方程-比较系数法与拉普拉斯变换法"><a href="#非齐次线性微分方程-比较系数法与拉普拉斯变换法" class="headerlink" title="非齐次线性微分方程-比较系数法与拉普拉斯变换法"></a>非齐次线性微分方程-比较系数法与拉普拉斯变换法</h4><p>现在讨论常系数非齐次线性微分方程</p>
+<p>$$<br>L\left[x\right]\equiv\frac{ {\mathrm{d} }^{n}x}{ {\mathrm{d} }t^{n} }+a_{1}\frac{ {\mathrm{d} }^{n-1}x}{ {\mathrm{d} }t^{n-1} }+\cdots+a_{n-1}\frac{ {\mathrm{d} }x}{ {\mathrm{d} }t}+a_{n}x=f(t)<br>$$</p>
+<p>这里 $a_1,\cdots,a_n$ 是常数，而 $f(t)$ 为连续函数。</p>
+<p>（1）比较系数法</p>
+<p>类型1：<br>设</p>
+<p>其中  及  为实常数，那么方程有形如</p>
+<p>的特解，其中  为特征方程  的根  的重数（单根相当于  ，当  不是特征根时，取  ），而  是待定常数，可以通过比较系数来确定。</p>
+<p>拉普拉斯变换表</p>
+<table>
+<thead>
+<tr>
+<th>原函数</th>
+<th>像函数</th>
+<th>定义域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$1$</td>
+<td>$\dfrac{1}{s}$</td>
+<td>$\operatorname{Re} s&gt;0$</td>
+</tr>
+<tr>
+<td>$t$</td>
+<td>$\dfrac{1}{s^2}$</td>
+<td>$\operatorname{Re} s&gt;0$</td>
+</tr>
+<tr>
+<td>$t^n$</td>
+<td>$\dfrac{n!}{s^{n+1} }$</td>
+<td>$\operatorname{Re} s&gt;0$</td>
+</tr>
+<tr>
+<td>$\mathrm{e}^{zt}$</td>
+<td>$\dfrac{1}{s-z}$</td>
+<td>$\operatorname{Re} s&gt;\operatorname{Re} z$</td>
+</tr>
+<tr>
+<td>$t\mathrm{e}^{zt}$</td>
+<td>$\dfrac{1}{(s-z)^2}$</td>
+<td>$\operatorname{Re} s&gt;\operatorname{Re} z$</td>
+</tr>
+<tr>
+<td>$t^n\mathrm{e}^{zt}$</td>
+<td>$\dfrac{n!}{(s-z)^{n+1} }$</td>
+<td>$\operatorname{Re} s&gt;\operatorname{Re} z$</td>
+</tr>
+<tr>
+<td>$\sin \omega t$</td>
+<td>$\dfrac{\omega }{s^2+\omega ^2}$</td>
+<td>$\operatorname{Re} s&gt;0$</td>
+</tr>
+<tr>
+<td>$\cos \omega t$</td>
+<td>$\dfrac{s }{s^2+\omega ^2}$</td>
+<td>$\operatorname{Re} s&gt;0$</td>
+</tr>
+<tr>
+<td>$\sinh  \omega t$</td>
+<td>$\dfrac{\omega }{s^2-\omega ^2}$</td>
+<td>$\operatorname{Re} s&gt;\vert \omega \vert $</td>
+</tr>
+<tr>
+<td>$\cosh \omega t$</td>
+<td>$\dfrac{s }{s^2-\omega ^2}$</td>
+<td>$\operatorname{Re} s&lt;\vert \omega \vert $</td>
+</tr>
+</tbody></table>
+<h4 id="质点振动"><a href="#质点振动" class="headerlink" title="质点振动"></a>质点振动</h4>
             </div>
             <hr>
             <div>
