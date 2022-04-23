@@ -440,4 +440,39 @@ name: '夏天的风.mp3',
 url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/XKkNw0LeIVEo4hlALqs0mxmhVg0hX063/%E5%A4%8F%E5%A4%A9%E7%9A%84%E9%A3%8E.mp3',
 cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
 },
+{
+name: '江南 - 林俊杰.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/1Vl6TLQCsA7Um9G0gTyxtJnCUouwLNLD/%E6%B1%9F%E5%8D%97%20-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: '爱情转移 - 陈奕迅.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/79DS6kCmv9M66w25eeJPgdQGwQ876E3g/%E7%88%B1%E6%83%85%E8%BD%AC%E7%A7%BB%20-%20%E9%99%88%E5%A5%95%E8%BF%85.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: '十年.mp3',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/CfdDPngEfc13hAk3xF0c2PKGqmmtbGif/%E5%8D%81%E5%B9%B4.mp3',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: '遇见 - 孙燕姿.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/uxM5hvoz5O0g4UvtjJAKtFnUWmWKS3bq/%E9%81%87%E8%A7%81%20-%20%E5%AD%99%E7%87%95%E5%A7%BF.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: '倔强 - 五月天.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/MPKQvi59NT95nOnY4Hpc7E5iJD85jP4W/%E5%80%94%E5%BC%BA%20-%20%E4%BA%94%E6%9C%88%E5%A4%A9.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: '銀の龍の背に乗って (骑在银龙的背上) - 中岛美雪.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/UpYMNM3DivucFMxWeWXXVLqIFYHPBRBg/%E9%8A%80%E3%81%AE%E9%BE%8D%E3%81%AE%E8%83%8C%E3%81%AB%E4%B9%97%E3%81%A3%E3%81%A6%20%28%E9%AA%91%E5%9C%A8%E9%93%B6%E9%BE%99%E7%9A%84%E8%83%8C%E4%B8%8A%29%20-%20%E4%B8%AD%E5%B2%9B%E7%BE%8E%E9%9B%AA.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: '月牙湾 - F.I.R.飞儿乐团.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/jpOuqO2vBvqXNgzAuJvuTc12y9BuL4jr/%E6%9C%88%E7%89%99%E6%B9%BE%20-%20F.I.R.%E9%A3%9E%E5%84%BF%E4%B9%90%E5%9B%A2.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
 ]});
