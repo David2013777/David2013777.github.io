@@ -475,4 +475,19 @@ name: '月牙湾 - F.I.R.飞儿乐团.flac',
 url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/jpOuqO2vBvqXNgzAuJvuTc12y9BuL4jr/%E6%9C%88%E7%89%99%E6%B9%BE%20-%20F.I.R.%E9%A3%9E%E5%84%BF%E4%B9%90%E5%9B%A2.flac',
 cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
 },
+{
+name: '我们的爱 - F.I.R..flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/0Hc7NY0dWslAFATucAQASxmwmvr7NMRf/%E6%88%91%E4%BB%AC%E7%9A%84%E7%88%B1%20-%20F.I.R..flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: 'attraction - 小泽正澄.flac',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/UPR6T3Lgy5QWvCIx5QOAspsgGDpofxBa/attraction%20-%20%E5%B0%8F%E6%B3%BD%E6%AD%A3%E6%BE%84.flac',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
+{
+name: 'weapp-domains-probe',
+url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/1650796131279/weapp-domains-probe',
+cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
+},
 ]});
