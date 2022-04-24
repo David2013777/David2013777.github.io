@@ -485,9 +485,4 @@ name: 'attraction - 小泽正澄.flac',
 url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/UPR6T3Lgy5QWvCIx5QOAspsgGDpofxBa/attraction%20-%20%E5%B0%8F%E6%B3%BD%E6%AD%A3%E6%BE%84.flac',
 cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
 },
-{
-name: 'weapp-domains-probe',
-url: 'https://lc-gluttony.s3.amazonaws.com/6wvnoH5leFq2/1650796131279/weapp-domains-probe',
-cover: 'https://justdoit520.gitee.io/img/myicon.jpg'
-},
 ]});
