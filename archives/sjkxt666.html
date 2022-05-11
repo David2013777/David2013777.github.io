@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      17 字
+      4.4k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      51
        分钟
     </span>
   
@@ -409,12 +409,202 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：16 天前
+                  本文最后更新于：12 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h1><h2 id="数据库系统介绍"><a href="#数据库系统介绍" class="headerlink" title="数据库系统介绍"></a>数据库系统介绍</h2><h3 id="数据库定义"><a href="#数据库定义" class="headerlink" title="数据库定义"></a>数据库定义</h3>
+              <h1 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h1><h2 id="数据库系统介绍"><a href="#数据库系统介绍" class="headerlink" title="数据库系统介绍"></a>数据库系统介绍</h2><h3 id="数据库定义"><a href="#数据库定义" class="headerlink" title="数据库定义"></a>数据库定义</h3><h1 id="数据库系统-笔记整理（2）——关系数据库"><a href="#数据库系统-笔记整理（2）——关系数据库" class="headerlink" title="数据库系统 | 笔记整理（2）——关系数据库"></a>数据库系统 | 笔记整理（2）——关系数据库</h1><h2 id="2-1-关系数据结构及形式化定义"><a href="#2-1-关系数据结构及形式化定义" class="headerlink" title="2.1 关系数据结构及形式化定义"></a>2.1 关系数据结构及形式化定义</h2><h3 id="2-1-1-关系"><a href="#2-1-1-关系" class="headerlink" title="2.1.1 关系"></a>2.1.1 关系</h3><ul>
+<li>  单一的数据结构——关系</li>
+</ul>
+<p>现实世界的实体以及实体间的各种联系均用关系来表示。</p>
+<ul>
+<li>  逻辑结构——二维表</li>
+</ul>
+<p>从用户角度，关系模型中数据的逻辑结构是一张扁平的二维表。</p>
+<ul>
+<li>  建立在集合代数的基础上</li>
+</ul>
+<p><strong>1. 域（domain）</strong></p>
+<p>定义：域是一组具有相同数据类型的值的集合。</p>
+<p><strong>2. 笛卡尔积（cartesian product）</strong></p>
+<p>定义：给定一组域 $D_{1},D_{2},\cdots, D_{n}$ ，允许其中某些域是相同的， $D_{1},D_{2},\cdots, D_{n}$ 的笛卡尔积为</p>
+<p>$D_{1} \times D_{2} \times \cdots \times D_{n}=\{(d_{1},d_{2},\cdots, d_{n})<del>|</del>d_{i} \in D_{i},~i=1,2,\cdots,n\}$</p>
+<p>其中，每一个元素 $(d_{1},d_{2},\cdots, d_{n})$ 叫做一个<strong>n元组</strong>（n-tuple），或简称<strong>元组</strong>（tuple）。元素中的每一个值 $d_{i}$ 叫做一个分量（component）。</p>
+<p>一个域允许的不同取值个数称为这个域的<strong>基数</strong>（cardinal number）。</p>
+<p>若 $D_{i}(i=1,2,\cdots,n)$ 为有限集，其基数为 $m_{i}(i=1,2,\cdots,n)$ ，则 $D_{1} \times D_{2} \times \cdots \times D_{n}$ 的基数为 $M=\prod_{i=1}^{n}m_{i}$ 。</p>
+<ul>
+<li>  笛卡尔积可表示为一张二维表。表中的每行对应一个元组，表中的每一列的值来自一个域。</li>
+<li>笛卡尔积是域上的一种集合运算。一般来说， $D_{1},D_{2},\cdots, D_{n}$ 的笛卡尔积是没有实际语义的，只有它的某个真子集才有实际含义。  </li>
+</ul>
+<p><strong>3. 关系（relation）</strong></p>
+<p>定义： $D_{1} \times D_{2} \times \cdots \times D_{n}$ 的子集叫做在域 $D_{1},D_{2},\cdots, D_{n}$ 上的<strong>关系</strong>，表示为 $R(D_{1},D_{2},\cdots, D_{n})$ 。这里 $R$ 表示关系的名字， $n$ 表示关系的<strong>目</strong>或<strong>度</strong>（degree）。</p>
+<ul>
+<li>  当 $n=1$ ，称该关系为单元关系（unary relation）或一元关系。当 $n=2$ ，称该关系为二元关系（binary relation）。</li>
+<li>关系也是一张二维表，表的每行对应一个元组，表的每列对应一个域。  </li>
+</ul>
+<p>属性（attribute）：为了加以区分，必须对每列起一个名字，称为属性。 $n$ 目关系必有 $n$ 个属性</p>
+<p>候选码（candidate key）：关系中的某一属性组的值能唯一地标识一个元组，而其子集不能，则称该属性组为<strong>候选码</strong>。</p>
+<p>主码（primary key）：若一个关系有多个候选码，则选定其中一个为<strong>主码</strong>。</p>
+<p>主属性（prime attribute）：候选码的诸属性称为<strong>主属性</strong>。</p>
+<p>不包含在任何侯选码中的属性称为<strong>非主属性</strong>（non-prime attribute）或<strong>非码属性</strong>（non-key attribute）。</p>
+<p>全码（all-key）：最极端的情况下，关系模式的所有属性是这个关系模式的候选码，称为<strong>全码</strong>。</p>
+<p>关系可以有三种类型：基本关系（基本表或基表）、查询表和视图表。</p>
+<ul>
+<li>  基本表：实际存在的表，是实际存储数据的逻辑表示</li>
+<li>  查询表：查询结果对应的表</li>
+<li>  视图表：由基本表或其他视图表导出的表，是虚表，不对应实际存储的数据。</li>
+</ul>
+<p>基本关系的性质：</p>
+<ol>
+<li> 列是同质的，即每一列中的分量是同一类型的数据，来自同一个域。</li>
+<li> 不同的列可出自同一个域，其中的每一列称为一个属性，不同的属性要给予不同的属性名。</li>
+<li> 列的顺序无所谓，即列的次序可以任意交换 。</li>
+<li> 任意两个元组的候选码不能取相同的值。</li>
+<li> 行的顺序无所谓，即行的次序可以任意交换。</li>
+<li> 分量必须取原子值，即每一个分量都必须是不可分的数据项。<strong>（最基本）</strong></li>
+</ol>
+<h3 id="2-1-2-关系模式"><a href="#2-1-2-关系模式" class="headerlink" title="2.1.2 关系模式"></a>2.1.2 关系模式</h3><p><strong>什么是关系模式</strong></p>
+<ul>
+<li>  关系数据库中，关系模式是型，关系是值。关系模式是对关系的描述。</li>
+<li>  关系是元组的集合，因此关系模式必须指出这个元组集合的结构，即它由哪些属性构成，这些属性来自哪些域，以及属性与域之间的映像关系。同时，关系模式应当刻画出完整性约束条件。</li>
+</ul>
+<p><strong>定义关系模式</strong></p>
+<p>定义：关系的描述称为<strong>关系模式</strong>（relation schema），它可以形式化地表示为 $R(U,D,\text{DOM},F)$ ，其中 $R$ 为关系名， $U$ 为组成该关系的属性名集合， $D$ 为 $U$ 中属性所来自的域， $\text{DOM}$ 为属性向域的映像集合， $F$ 为属性间数据的依赖关系集合。</p>
+<p>关系模式通常可以简记为 $R(U)$ 或 $R(A_{1},A_{2},\cdots,A_{n})$ ，其中 $R$ 为关系名， $A_{1},A_{2},\cdots,A_{n}$ 为属性名。</p>
+<p><strong>关系模式与关系</strong></p>
+<ul>
+<li>  关系是关系模式在某一时刻的状态或内容。</li>
+<li>  关系模式是静态的、稳定的，而关系是动态的、随时间不断变化的，因此关系操作在不断地更新着数据库中的数据。</li>
+</ul>
+<p>关系模式和关系往往笼统称为关系，通过上下文加以区别。</p>
+<h3 id="2-1-3-关系数据库"><a href="#2-1-3-关系数据库" class="headerlink" title="2.1.3 关系数据库"></a>2.1.3 关系数据库</h3><p>在一个给定的应用领域中，所有关系的集合构成一个关系数据库。</p>
+<ul>
+<li>  关系数据库的型：关系数据库模式，是对关系数据库的描述。</li>
+<li>关系数据库的值：关系模式在某一时刻对应的关系的集合，通常称为关系数据库。  </li>
+</ul>
+<h3 id="2-1-4-关系模型的存储结构"><a href="#2-1-4-关系模型的存储结构" class="headerlink" title="2.1.4 关系模型的存储结构"></a>2.1.4 关系模型的存储结构</h3><p>关系数据库的物理组织</p>
+<ul>
+<li>  有的关系数据库管理系统中一个表对应一个操作系统文件，将物理数据组织交给操作系统完成。</li>
+<li>  有的关系数据库管理系统从操作系统那里申请若干个大的文件，自己划分文件空间，组织表、索引等存储结构，并进行存储管理。</li>
+</ul>
+<h2 id="2-2-关系操作"><a href="#2-2-关系操作" class="headerlink" title="2.2 关系操作"></a>2.2 关系操作</h2><h3 id="2-2-1-基本的关系操作"><a href="#2-2-1-基本的关系操作" class="headerlink" title="2.2.1 基本的关系操作"></a>2.2.1 基本的关系操作</h3><p>查询操作：选择（select）、投影（project）、连接（join）、除（divide）、并（union）、差（except）、交（intersection）、笛卡尔积等</p>
+<p>数据更新：插入（insert）、删除（delete）、修改（update）</p>
+<p>基本操作：选择、投影、并、差、笛卡尔积</p>
+<p>关系操作的特点是集合操作方式，即<strong>操作的对象和结果都是集合</strong>。这种操作方式也称为一次一集合的方式。</p>
+<p>非关系数据模型的数据操作方式为一次一记录的方式。</p>
+<h3 id="2-2-2-关系数据语言的分类"><a href="#2-2-2-关系数据语言的分类" class="headerlink" title="2.2.2 关系数据语言的分类"></a>2.2.2 关系数据语言的分类</h3><p><img src="https://pic3.zhimg.com/v2-265555d80b65807e11de0e698e5fbab6_b.png" srcset="/img/loading.gif" lazyload><br>关系数据语言可以分为三类</p>
+<p>SQL（Structured Query Language）是集查询、数据定义语言、数据操纵语言和数据控制语言于一体的关系数据语言。</p>
+<h2 id="2-3-关系的完整性"><a href="#2-3-关系的完整性" class="headerlink" title="2.3 关系的完整性"></a>2.3 关系的完整性</h2><p>关系模型中有三类完整性约束：<strong>实体完整性</strong>（entity integrity）、<strong>参照完整性</strong>（referential integrity）和<strong>用户定义的完整性</strong>（user-defined integrity）。</p>
+<ul>
+<li>  实体完整性和参照完整性是关系模型必须满足的完整性约束条件，被称作是<strong>关系的两个不变性</strong>，应该由关系系统自动支持。</li>
+<li>  用户定义的完整性是应用领域需要遵循的约束条件，体现了具体领域中的语义约束。</li>
+</ul>
+<h3 id="2-3-1-实体完整性"><a href="#2-3-1-实体完整性" class="headerlink" title="2.3.1 实体完整性"></a>2.3.1 实体完整性</h3><p><strong>实体完整性规则</strong></p>
+<p>若属性 $A$ 是基本关系 $R$ 的主属性，则属性 $A$ 不能取空值（null value）。空值就是“不知道”、“不存在”或“无意义”的值。</p>
+<p>说明：</p>
+<ol>
+<li> 实体完整性规则是针对基本关系而言的。一个基本表通常对应现实世界的一个实体集。例如学生关系对应于学生的集合。</li>
+<li> 现实世界中的实体是可区分的，即它们具有某种唯一性标识。例如每个学生都是独立的个体，是不一样的。</li>
+<li> 相应地，关系模型中以主码作为唯一性标识。</li>
+<li> 主码中的属性即主属性不能取空值。如果主属性取空值，就说明存在某个不可标识的实体，即存在不可区分的实体，这与第 2 点相矛盾，因此这个规则称为实体完整性。</li>
+</ol>
+<h3 id="2-3-2-参照完整性"><a href="#2-3-2-参照完整性" class="headerlink" title="2.3.2 参照完整性"></a>2.3.2 参照完整性</h3><p>定义：设 $F$ 是基本关系 $R$ 的一个或一组属性，但不是关系 $R$ 的码， $K_s$ 是基本关系 $S$ 的主码。如果 $F$ 与 $K_s$ 相对应，则称 $F$ 是 $R$ 的外码（foreign key），基本关系 $R$ 称为参照关系（referencing relation），基本关系 $S$ 称为被参照关系（referenced relation）或目标关系（target relation）。</p>
+<p><img src="https://pic1.zhimg.com/v2-fe7587e0f732c04fd93401520c2b7118_b.jpg" srcset="/img/loading.gif" lazyload>  </p>
+<ul>
+<li>  关系 $R$ 和 $S$ 不一定是不同的关系。</li>
+<li>  目标关系 $S$ 的主码 $K_s$ 和参照关系 $R$ 的外码 $F$ 必须定义在同一个（或一组）域上。</li>
+<li>  外码不一定要与相应的主码同名。在实际应用中为了便于识别，当外码与相应的主码属于不同关系时，往往给它们取相同的名字。</li>
+</ul>
+<p><strong>参照完整性规则</strong></p>
+<p>若属性（或属性组） $F$ 是基本关系 $R$ 的外码，它与基本关系 $S$ 的主码 $K_s$ 相对应（基本关系 $R$ 和 $S$ 不一定是不同的关系），则对于 $R$ 中每个元组在 $F$ 上的值必须为：</p>
+<ul>
+<li>  或者取空值（ $F$ 的每个属性值均为空值）</li>
+<li>  或者等于 $S$ 中某个元组的主码值</li>
+</ul>
+<h3 id="2-3-3-用户定义的完整性"><a href="#2-3-3-用户定义的完整性" class="headerlink" title="2.3.3 用户定义的完整性"></a>2.3.3 用户定义的完整性</h3><p><strong>用户定义的完整性</strong></p>
+<ul>
+<li>  针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求。</li>
+<li>  关系模型应提供定义和检验这类完整性的机制，以便用统一的系统的方法处理它们，而不需由应用程序承担这一功能。</li>
+</ul>
+<h2 id="2-4-关系代数"><a href="#2-4-关系代数" class="headerlink" title="2.4 关系代数"></a>2.4 关系代数</h2><p>关系代数是一种抽象的查询语言，它用对关系的运算来表达查询。</p>
+<p>关系代数的运算对象和运算结果都是关系。</p>
+<p>关系代数的运算按运算符的不同可分为传统的集合运算和专门的关系运算两类。</p>
+<p>传统的集合运算将关系看成元组的集合，其运算是从关系的“水平”方向，即行的角度来进行；专门的关系运算不仅涉及行，而且涉及列。</p>
+<p><img src="https://pic4.zhimg.com/v2-7efb0369769d873cc28d961ce34349a3_b.jpg" srcset="/img/loading.gif" lazyload><br>关系代数运算符</p>
+<h3 id="2-4-1-传统的集合运算"><a href="#2-4-1-传统的集合运算" class="headerlink" title="2.4.1 传统的集合运算"></a>2.4.1 传统的集合运算</h3><p>传统的集合运算是二目运算，包括并、差、交、笛卡尔积。</p>
+<p>设关系 $R$ 和关系 $S$ 具有相同的目 $n$ （即两个关系都有 $n$ 个属性），且相应的属性取自同一个域， $t$ 是元组变量， $t \in R$ 表示 $t$ 是 $R$ 的一个元组。</p>
+<p><strong>1. 并（union）</strong></p>
+<p>关系 $R$ 与关系 $S$ 的并记作： $R \cup S = \{t<del>|</del>t\in R \vee t \in S \}$</p>
+<p>其结果仍为 $n$ 目关系，由属于 $R$ 或属于 $S$ 的元组组成。</p>
+<p><strong>2. 差（except）</strong></p>
+<p>关系 $R$ 与关系 $S$ 的差记作： $R - S = \{t<del>|</del>t\in R \wedge t \notin S \}$</p>
+<p>其结果仍为 $n$ 目关系，由属于 $R$ 而不属于 $S$ 的元组组成。</p>
+<p><strong>3. 交（intersection）</strong></p>
+<p>关系 $R$ 与关系 $S$ 的交记作： $R \cap S = \{t<del>|</del>t\in R \wedge t \in S \}$</p>
+<p>其结果仍为 $n$ 目关系，由既属于 $R$ 又属于 $S$ 的元组组成。</p>
+<ul>
+<li>  关系的交可以用差来表示，即 $R \cap S = R-(R-S)$ 。</li>
+</ul>
+<p><strong>4. 笛卡尔积（cartesian product）</strong></p>
+<p>关系 $R$ 与关系 $S$ 的笛卡尔积记作： $R \times S = \{t<del>|</del> \widehat{t_{r}t_{s} }\in R \wedge t_{s} \in S \}$ （注：书上 $t_{r}t_{s}$ 上面的符号为圆弧）</p>
+<ul>
+<li>  严格地讲应该是广义的笛卡尔积，这里的笛卡尔积的元素是元组。</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/v2-bd3554b313990f6119349dc18a62ce39_b.jpg" srcset="/img/loading.gif" lazyload><br>传统集合运算举例</p>
+<h3 id="2-4-2-专门的关系运算"><a href="#2-4-2-专门的关系运算" class="headerlink" title="2.4.2 专门的关系运算"></a>2.4.2 专门的关系运算</h3><p>专门的关系运算包括选择、投影、连接、除运算等。</p>
+<p>一些记号：</p>
+<ol>
+<li>设关系模式为 $R(A_{1} ,A_{2} ,\cdots, A_{n})$ ，它的一个关系设为 $R$ 。 $t \in R$ 表示 $t$ 是 $R$ 的一个元组。 $t[A_{i}]$ 则表示元组 $t$ 中相应于属性 $A_i$ 的一个分量。  </li>
+<li>若 $A=\{A_{i1},A_{i2},\cdots, A_{ik}\}$ ，其中 $A_{i1} ,A_{i2},\cdots, A_{ik}$ 是 $A_{1}, A_{2},\cdots, A_{n}$ 中的一部分，则 $A$ 称为属性列或属性组。 $t[A]=(t[A_{i1}], t[A_{i2}], \cdots, t[A_{ik}])$ 表示元组 $t$ 在属性列 $A$ 上诸分量的集合。 $\bar{A}$ 表示 ${A_{1}, A_{2}, \cdots,  A_{n} }$ 中去掉 $\{A_{i1}, A_{i2} , \cdots, A_{ik}\}$ 后剩余的属性组。  </li>
+<li>$R$ 为 $n$ 目关系， $S$ 为 $m$ 目关系。 $t_{r}\in R$ ， $t_{s}\in S$ ， $\widehat{t_{r}t_{s} }$ 称为元组的连接（concatenation）。它是一个 $n + m$ 列的元组，前 $n$ 个分量为 $R$ 中的一个 $n$ 元组， 后 $m$ 个分量为 $S$ 中的一个 $m$ 元组。  </li>
+<li> $X$ 和 $Z$ 为属性组。当 $t[X]=x$ 时， $x$ 在 $R$ 中的象集（images set）定义为 $Z_{x}=\{t[Z] <del>|</del> t\in R, t[X]=x\}$ ，它表示 $R$ 中属性组 $X$ 上值为 $x$ 的诸元组在 $Z$ 上分量的集合。</li>
+</ol>
+<p><strong>1. 选择（selection）</strong></p>
+<p>选择又称为限制（restriction），是在关系 $R$ 中选择满足给定条件的诸元组，记作： $\sigma_{F}(R) = \{t<del>|</del>t\in R \wedge F(t)=$ ‘真’ $\}$</p>
+<p>其中 $F$ 表示选择条件，它是一个逻辑表达式，取逻辑值“真”或“假”。</p>
+<ul>
+<li>  选择运算是从关系 $R$ 中选取使逻辑表达式 $F$ 为真的元组。</li>
+<li>  选择是从行的角度进行的运算。</li>
+</ul>
+<p><strong>2. 投影（projection）</strong></p>
+<p>关系 $R$ 上的投影是从 $R$ 中选择出若干属性列组成新的关系，记作： $\prod_{A}(R)=\{t[A] <del>|</del>t \in R\}$ ，其中 $A$ 为 $R$ 中的属性列。</p>
+<ul>
+<li>  投影操作是从列的角度进行的运算。</li>
+<li>  投影之后不仅取消了原关系中的某些列，而且还可能取消某些元组。（避免出现重复行）</li>
+</ul>
+<p><strong>3. 连接（join）</strong></p>
+<p>连接也称为 $\theta$ 连接。它是从两个关系的笛卡尔积中选取属性间满足一定条件的元组，记作：</p>
+<p>$R \underset{A\theta B }{\Join} S = \{ \widehat{t_{r}t_{s} } <del>|</del> t_{r}\in R \wedge t_{s} \in S \wedge t_{r}[A]\theta t_{s}[B]\}$</p>
+<p>其中， $A$ 和 $B$ 分别为 $R$ 和 $S$ 上列数相等且可比的属性组， $\theta$ 是比较运算符。</p>
+<p><strong>等值连接</strong>（equijoin）： $\theta$ 为 “=” 的连接运算。它是从关系 $R$ 与 $S$ 的广义笛卡尔积中选取 $A$ 、 $B$ 属性值相等的那些元组。记作： $R \underset{A=B }{\Join} S = \{ \widehat{t_{r}t_{s} } <del>|</del> t_{r}\in R \wedge t_{s} \in S \wedge t_{r}[A]=t_{s}[B]\}$</p>
+<p><strong>自然连接</strong>（natural join）是一种特殊的等值连接。它要求两个关系中进行比较的分量必须是相同的属性组，并且在结果中把重复的属性列去掉。</p>
+<p>若 $R$ 和 $S$ 中具有相同的属性组 $B$ ， $U$ 为 $R$ 和 $S$ 的全体属性集合，则自然连接可记作：$R \Join S = \{ \widehat{t_{r}t_{s} }[U-B] <del>|</del> t_{r}\in R \wedge t_{s} \in S \wedge t_{r}[B]=t_{s}[B]\}$</p>
+<p>一般的连接操作是从行的角度进行运算。 自然连接还需要取消重复列，所以是同时从行和列的角度进行运算。</p>
+<p><strong>悬浮元组</strong>（dangling tuple）：两个关系 $R$ 和 $S$ 在做自然连接时，关系 $R$ 中某些元组有可能在 $S$ 中不存在公共属性上值相等的元组，从而造成 $R$ 中这些元组在操作时被舍弃了，这些被舍弃的元组称为悬浮元组。</p>
+<ul>
+<li>  如果把悬浮元组也保存在结果关系中，而在其他属性上填空值（NULL），就叫做外连接（outer join），记作 $R$ ⟗ $S$ 。</li>
+<li>  左外连接（left outer join 或 left join）：只保留左边关系 $R$ 中的悬浮元组，记作 $R$ ⟕ $S$</li>
+<li>  右外连接（right outer join 或 right join）：只保留右边关系 $S$ 中的悬浮元组， $R$ ⟖ $S$</li>
+</ul>
+<p><strong>4. 除运算（division）</strong></p>
+<p>设关系 $R$ 除以关系 $S$ 的结果为关系 $T$ ，则 $T$ 包含所有在 $R$ 但不在 $S$ 中的属性及其值，且 $T$ 的元组与 $S$ 的元组的所有组合都在 $R$ 中。</p>
+<p>给定关系 $R (X, Y)$ 和 $S(Y, Z)$ ，其中 $X,Y,Z$ 为属性组。 $R$ 中的 $Y$ 与 $S$ 中的 $Y$ 可以有不同的属性名，但必须出自相同的域集。 $R$ 与 $S$ 的除运算得到一个新的关系 $P(X)$ ， $P$ 是 $R$ 中满足下列条件的元组在 $X$ 属性列上的投影：元组在 $X$ 上分量值 $x$ 的象集 $Y_{x}$ 包含 $S$ 在 $Y$ 上投影的集合，记作：</p>
+<p>$R \div S = \{ t_{r}[X] <del>|</del> t_{r}\in R \wedge \prod_{Y}(S) \subseteq Y_{x}\}$</p>
+<p>其中 $Y_{x}$ 为 $x$ 在 $R$ 中的象集，$x=t_{r}[X]$ 。</p>
+<ul>
+<li>除操作是同时从行和列角度进行运算。</li>
+</ul>
+<p>关系代数中，这些运算经有限次复合后形成的表达式称为关系代数表达式。</p>
+<h2 id="2-5-小结"><a href="#2-5-小结" class="headerlink" title="2.5 小结"></a>2.5 小结</h2><ul>
+<li>  关系数据库系统与非关系数据库系统的区别是，关系系统只有“表”这一种数据结构，而非关系数据库系统还有其他数据结构，以及对这些数据结构的操作。</li>
+<li>  本章系统地讲解了关系数据库的重要概念，包括关系模型的数据结构、关系操作以及关系的三类完整性。</li>
+<li>  本章介绍了用代数方式来表达的关系语言，即关系代数。<blockquote>
+<p>作者：cfzAlmighty<br>链接：undefined</p>
+</blockquote>
+</li>
+</ul>
+
             </div>
             <hr>
             <div>
