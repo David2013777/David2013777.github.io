@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      8.3k 字
+      8.4k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      126
+      128
        分钟
     </span>
   
@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：12 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -774,7 +774,11 @@
 <p>$$<br>G=\begin{bmatrix}<br>(\varphi _0,\varphi_0)&amp;(\varphi _0,\varphi_1)&amp;\cdots &amp;(\varphi _0,\varphi_n)\\<br>(\varphi _1,\varphi_0)&amp;(\varphi _1,\varphi_1)&amp;\cdots &amp;(\varphi _1,\varphi_n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _n,\varphi_0)&amp;(\varphi _n,\varphi_1)&amp;\cdots &amp;(\varphi _n,\varphi_n)\\<br>\end{bmatrix}<br>$$</p>
 <p>法方程组为：</p>
 <p>$$<br>\begin{bmatrix}<br>(\varphi _0,\varphi_0)&amp;(\varphi _0,\varphi_1)&amp;\cdots &amp;(\varphi _0,\varphi_n)\\<br>(\varphi _1,\varphi_0)&amp;(\varphi _1,\varphi_1)&amp;\cdots &amp;(\varphi _1,\varphi_n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _n,\varphi_0)&amp;(\varphi _n,\varphi_1)&amp;\cdots &amp;(\varphi _n,\varphi_n)\\<br>\end{bmatrix}\begin{bmatrix}c_0^{\ast}\\c_1^{\ast}\\ \vdots \\c_n^{\ast}\end{bmatrix}=\begin{bmatrix}(f,\varphi _0)\\(f,\varphi _1)\\ \vdots \\(f,\varphi _n)\end{bmatrix}<br>$$</p>
-<h3 id="曲线拟合的最小二乘法"><a href="#曲线拟合的最小二乘法" class="headerlink" title="曲线拟合的最小二乘法"></a>曲线拟合的最小二乘法</h3>
+<h3 id="曲线拟合的最小二乘法"><a href="#曲线拟合的最小二乘法" class="headerlink" title="曲线拟合的最小二乘法"></a>曲线拟合的最小二乘法</h3><p>曲线拟合的最小二乘法：对给定的一组数据 $(x_i,y_i)(i=1,\cdots ,m)$ ，要求在函数类 $\varphi =\{ \varphi_0,\cdots ,\varphi_n \}$ 中找一个函数 $y=S^{\ast}(x)$ ，使误差平方和</p>
+<p>$$<br>\Vert \delta \Vert _{2}^{2}=\sum_{i=0}^{m}[S^{\ast}(x_i)-y_i]^2=\mathrm{min}_{S(x)\in \varphi }\sum_{i=0}^{m}[S(x_i)-y_i]^2<br>$$</p>
+<p>这里， $S(x)=a_0\varphi _0(x)+\cdots+a_n\varphi_n (x)$ 。这就是曲线拟合的最小二乘法。</p>
+<p>类似的，我们也可以写出法方程。</p>
+
             </div>
             <hr>
             <div>
