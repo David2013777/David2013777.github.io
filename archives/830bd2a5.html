@@ -357,7 +357,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      8.4k 字
+      9.4k 字
     </span>
   
 
@@ -367,7 +367,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      128
+      142
        分钟
     </span>
   
@@ -409,7 +409,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：19 分钟前
                 
               </p>
             
@@ -778,6 +778,58 @@
 <p>$$<br>\Vert \delta \Vert _{2}^{2}=\sum_{i=0}^{m}[S^{\ast}(x_i)-y_i]^2=\mathrm{min}_{S(x)\in \varphi }\sum_{i=0}^{m}[S(x_i)-y_i]^2<br>$$</p>
 <p>这里， $S(x)=a_0\varphi _0(x)+\cdots+a_n\varphi_n (x)$ 。这就是曲线拟合的最小二乘法。</p>
 <p>类似的，我们也可以写出法方程。</p>
+<h2 id="方程求根"><a href="#方程求根" class="headerlink" title="方程求根"></a>方程求根</h2><h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><p>设函数 $f(x)$ 在区间 $[a,b]$ 上连续，且 $f(a)f(b)&lt;0$ ，根据连续函数的性质可知，方程 $f(x)$ 在 $(a,b)$ 内一定有实零点。 $[a,b]$ 称为 $f(x)=0$ 的有根区间。</p>
+<p>如果考虑有根区间 $[a,b]$ ，取其中点 $x_0=\dfrac{a+b}{2}$ ，检查 $f(x_0)$ 和 $f(a)$ 的符号</p>
+<ul>
+<li>如果同号，说明根在 $(x_0,b)$ 之间， $a=x_0$ 。</li>
+<li>如果异号，说明根在 $(a,x_0)$ 之间， $b=x_0$ 。</li>
+</ul>
+<p>重复这个过程。</p>
+<p>停止条件：</p>
+<ol>
+<li>找到中间点 $x_0,f(x_0)=0$ ，找到精确解。</li>
+<li>$\left| b-a \right| &lt;\varepsilon $ ， $\varepsilon &gt;0$ 为预先给定，取 $x=\dfrac{a+b}{2}$ 为方程的根，为近似解。</li>
+</ol>
+<h3 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h3><p>迭代法一般是由一个初始值 $x_0$ ，通过某一个公式 $x=\varphi (x)$ ，算出一个新值 $x_1$ ，用 $x_1$ 替代 $x_0$ ，继续计算新值，由此得到一个值的序列。如果该序列收敛，则收敛的极限就是所求的根。</p>
+<p>一般的， $x_{k+1}=\varphi (x_k)$ ；极限 $x^{\ast}=\lim_{k \to \infty} x_k$ 。</p>
+<p>定理：设方程 $x=\varphi (x)$ 在区间 $[a,b]$ 内有根 $x^{\ast }$ ，则迭代过程 $x_{k+1}=\varphi (x_k)$ 收敛的条件为，存在定数 $0&lt;L&lt;1$ ，使对任意 $x\in [a,b]$ ， $\left| \varphi ^{\prime }(x_k) \right| \leq L$ 成立。</p>
+<p>定理：设函数 $\varphi (x)$ 满足条件：</p>
+<ol>
+<li>对任意的 $x\in [a,b]$ 有 $a\leq \varphi (x)\leq b$ 。</li>
+<li>存在正数 $L&lt;1$ ，使对任意 $x\in [a,b]$ 有 $\left| \varphi ^{\prime }(x_k) \right| \leq L&lt;1$ 。</li>
+</ol>
+<p>则迭代过程 $x_{k+1}=\varphi (x_k)$ 对于任意初值 $x_0\in [a,b]$ 均收敛于方程 $x=\varphi (x)$ 的根 $x^{\ast }$ ，且误差估计为：</p>
+<p>$$<br>\left| x_k-x^{\ast } \right| \leq \dfrac{L^k\left| x_1-x_0 \right| }{1-L}<br>$$</p>
+<p>局部收敛性：如果存在 $x^{\ast }$ 的某个邻域 $R:\left| x-x^{\ast } \right| \leq \delta $ ，使迭代过程 $x_{k+1}=\varphi (x_k)$ 对于任意初值 $x_0\in R$ 均收敛，则成迭代过程 $x_{k+1}=\varphi (x_k)$ 在根 $x^{\ast }$ 邻近具有局部收敛性。</p>
+<p>定理：设 $x^{\ast }$ 为方程 $x=\varphi (x)$ 的根， $\varphi ^{\prime }(x)$ 在 $x^{\ast }$ 的邻近连续，且 $\left| \varphi ^{\prime }(x) \right| \leq 1$ ，则迭代过程 $x_{k+1}=\varphi (x_k)$ 在 $x^{\ast }$ 邻近具有局部收敛性。</p>
+<p>埃特金算法：由 $x_k$ 得到 $x_{k+1},x_{k+2}$ ，</p>
+<p>$$<br>x_{k+1}=\varphi (x_k)<br>$$</p>
+<p>$$<br>x_{k+2}=\varphi (x_{k+1})<br>$$</p>
+<p>计算</p>
+<p>$$<br>\overline{x_{k+1} }=x_k-\dfrac{(x_{k+1}-x_k)^2}{x_k-2x_{k+1}+x_{k+2} }<br>$$</p>
+<p>这样，在原序列 $\{ x_k \}$ 的基础上，得到收敛速度更快的新的序列 $\{ \overline{x_{k+1} } \}$ 。</p>
+<p>Steffensen 迭代法：将埃特金方法与方程迭代求根方法结合：</p>
+<p>$$<br>y_k=\varphi (x_k)<br>$$</p>
+<p>$$<br>z_k=\varphi (y_k)<br>$$</p>
+<p>则得到</p>
+<p>$$<br>x_{k+1}=x_k-\dfrac{(y_k-x_k)^2}{z_k-2y_k+x_k}<br>$$</p>
+<h3 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h3><p>对于方程 $f(x)=0$ 迭代公式为</p>
+<p>$$<br>x_{k+1}=x_k-\dfrac{f(x_k)}{f^{\prime }(x_k)}<br>$$</p>
+<p>$p$ 阶收敛：设迭代方程 $x_{k+1}=\varphi (x_k)$ 收敛于方程 $x=\varphi (x)$ 的根 $x^{\ast }$ ，如果迭代误差 $e_{k}=x_k-x^{\ast }$ 当 $k\rightarrow \infty $ 时成立下列渐近关系式：</p>
+<p>$$<br>\dfrac{e_{k+1} }{e_{k}^p}\rightarrow c<br>$$</p>
+<p>$c\neq 0$ 是一个常数，则称该迭代过程是 $p$ 阶收敛的。</p>
+<p>$p=1$ 时，称为线性收敛。<br>$p&gt;1$ 时，称为超线性收敛。<br>$p=2$ 时，称为平方收敛。</p>
+<p>定理：对于迭代过程 $x_{k+1}=\varphi (x_k)$ ，如果 $\varphi ^{(p)}(x)$ 在所求根 $x^{\ast }$ 的邻近连续，并且</p>
+<p>$$<br>\varphi ^{\prime }(x^{\ast })=\cdots =\varphi ^{(p-1)}(x^{\ast })=0 \quad \varphi ^{(p)}(x^\ast )\neq 0<br>$$</p>
+<p>则该迭代过程在点 $x^\ast $ 邻近是 $p$ 阶收敛的。</p>
+<p>定理：设函数 $f(x)$ 有 $m(&gt;2)$ 阶连续导数， $p$ 是方程 $f(x)=0$ 的单根，则当 $x_0$ 充分接近 $p$ 时，牛顿法收敛，且至少为二阶收敛。</p>
+<h3 id="弦截法与抛物线法"><a href="#弦截法与抛物线法" class="headerlink" title="弦截法与抛物线法"></a>弦截法与抛物线法</h3><p>弦截法迭代公式为</p>
+<p>$$<br>x_{k+1}=x_k-\dfrac{f(x_k)}{f(x_k)-f(x_{k-1})}(x_k-x_{k-1})<br>$$</p>
+<p>抛物线法迭代公式为</p>
+<p>$$<br>x_{k+1}=x_{k}-\dfrac{2f(x_k)}{\omega \pm \sqrt{\omega ^2-4f(x_k)f[x_k,x_{k-1},x_{k-2}]} }<br>$$</p>
+<p>其中</p>
+<p>$$<br>\omega =f[x_k,x_{k-1}]+f<a href="x_k-x_%7Bk-1%7D">x_k,x_{k-1},x_{k-2}</a><br>$$</p>
+<p>正负号通过取更接近 $x_k$ 的值作为新的近似根 $x_{k+1}$ 。</p>
 
             </div>
             <hr>
