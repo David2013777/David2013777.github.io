@@ -343,7 +343,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      454 字
+      920 字
     </span>
   
 
@@ -353,7 +353,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      11
        分钟
     </span>
   
@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：23 天前
+                  本文最后更新于：6 天前
                 
               </p>
             
@@ -403,7 +403,7 @@
               <p>抽代好难啊！</p>
 <span id="more"></span>
 
-<h1 id="抽象代数"><a href="#抽象代数" class="headerlink" title="抽象代数"></a>抽象代数</h1><h2 id="群-I"><a href="#群-I" class="headerlink" title="群 I"></a>群 I</h2><h3 id="置换"><a href="#置换" class="headerlink" title="置换"></a>置换</h3><p>置换：集合 $X$ 的置换是 $X$ 到其自身的双射。</p>
+<h1 id="抽象代数"><a href="#抽象代数" class="headerlink" title="抽象代数"></a>抽象代数</h1><h2 id="群论基础"><a href="#群论基础" class="headerlink" title="群论基础"></a>群论基础</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><h4 id="置换"><a href="#置换" class="headerlink" title="置换"></a>置换</h4><p>置换：集合 $X$ 的置换是 $X$ 到其自身的双射。</p>
 <p>对称群：称集合 $X$ 的全体置换的族为 $X$ 上的对称群，记为 $S_{X}$ 。当 $X=\{ 1,2,\cdots,n \}$ 时，常用 $S_n$ 来记 $S_X$ ，并称之为 $n$ 个字母上的对称群。</p>
 <p>轮换：设 $i_1,\cdots,i_r$ 是 $\{ 1,2,\cdots ,n \}$ 中的不同整数。如果 $\alpha \in S_n$ 固定其他整数（如果有的话），且</p>
 <p>$$<br>\alpha (i_1)=i_2,\cdots ,\alpha _{i_{r-1} }=i_{r},\alpha (i_r)=i_1<br>$$</p>
@@ -417,7 +417,25 @@
 <p>定理：轮换 $(i_1i_2\cdots i_r)$ 的逆是轮换 $i_ri_{r-1}\cdots i_1$ 。</p>
 <p>定理：如果 $\gamma \in S_n$ ，且 $\gamma =\beta _1\cdots \beta _k$ ，则 $\gamma ^{-1}=\beta_k^{-1}\cdots \beta _1^{-1}$ 。</p>
 <p>定义：称两个置换 $\alpha ,\beta \in S_n$ 有相同的轮换结构，如果在它们的完全轮换分解中，对每个 $r$ ，它所含的 $r-$ 轮换个数相等。</p>
-
+<p>定理： $S_n$ 中置换 $\gamma $ 和 $\sigma $ 有相同的轮换结构当且仅当存在 $\alpha \in S_n$ ，使得 $\sigma =\alpha \gamma \alpha ^{-1}$ 。</p>
+<p>定义：称置换 $\alpha \in S_n$ 为偶置换，如果它能被分解为偶数个对换的乘积；否则 $\alpha $ 为奇置换。</p>
+<p>符号函数：设 $\alpha \in S_n$ 且 $\alpha =\beta _1\cdots \beta _t$ 是分解为不相交轮换的完全轮换分解，定义 $\alpha $ 的符号函数为</p>
+<p>$$<br>\operatorname{sgn}(\alpha )=(-1)^{n-t}<br>$$</p>
+<p>定理：对所有的 $\alpha ,\beta \in S_n$ ，</p>
+<p>$$<br>\operatorname{sgn}(\alpha \beta )=\operatorname{sgn}(\alpha )\operatorname{sgn}(\beta )<br>$$</p>
+<p>定理：设 $\alpha \in S_n$ ，如果 $\operatorname{sgn}(\alpha )=1$ ，则 $\alpha $ 是偶置换；如果 $\operatorname{sgn}(\alpha )=-1$ ，则 $\alpha $ 是奇置换。</p>
+<h3 id="群的基本概念"><a href="#群的基本概念" class="headerlink" title="群的基本概念"></a>群的基本概念</h3><p>群：一个群是指一个非空集合 $G$ ，它满足下列四个条件：</p>
+<ol>
+<li>在 $G$ 上定义了一个二元代数运算；</li>
+<li>$G$ 上的运算适合结合律；</li>
+<li>$G$ 中有一个元素 $e$ ，具有性质 $ae=ea=a,\forall a\in G$ ，称 $e$ 是 $G$ 的单位元；</li>
+<li>$G$ 中每一个元素都有逆元。</li>
+</ol>
+<p>如果 $G$ 满足条件 $1,2$ ，则称 $G$ 为半群；如果 $G$ 满足条件 $1,2,3$ ，则称 $G$ 为幺半群。</p>
+<p>阶：如果群 $G$ 只有有限多个元素，称 $G$ 为有限群。此时， $G$ 中元素个数称为 $G$ 的阶，记作 $\left| G \right| $ 。如果群 $G$ 有无限多个元素，则称 $G$ 为无限群。</p>
+<p>循环群：如果群 $G$ 的每一个元素都能写成 $G$ 中某一个元素 $a$ 的方幂或者 $a$ 的倍元，则称 $G$ 为循环群，把 $a$ 叫做 $G$ 的生成元，此时可以把 $G$ 记成 $\langle a\rangle$ 。</p>
+<h3 id="子群和陪集"><a href="#子群和陪集" class="headerlink" title="子群和陪集"></a>子群和陪集</h3><p>子群：群 $G$ 的非空子集 $H$ 如果对于 $G$ 的运算也成一个群，则称 $H$ 为 $G$ 的子群。简记为 $H&lt;G$ 。</p>
+<h3 id="同构与直积"><a href="#同构与直积" class="headerlink" title="同构与直积"></a>同构与直积</h3><h3 id="同态，正规子群，商群，可解群"><a href="#同态，正规子群，商群，可解群" class="headerlink" title="同态，正规子群，商群，可解群"></a>同态，正规子群，商群，可解群</h3>
             </div>
             <hr>
             <div>

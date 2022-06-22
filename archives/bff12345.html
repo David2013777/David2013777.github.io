@@ -343,7 +343,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.3k 字
+      6.6k 字
     </span>
   
 
@@ -353,7 +353,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      91
+      97
        分钟
     </span>
   
@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：8 天前
+                  本文最后更新于：6 天前
                 
               </p>
             
@@ -646,7 +646,24 @@
 <h2 id="泛函极值的充分条件"><a href="#泛函极值的充分条件" class="headerlink" title="泛函极值的充分条件"></a>泛函极值的充分条件</h2><h3 id="极值曲线场"><a href="#极值曲线场" class="headerlink" title="极值曲线场"></a>极值曲线场</h3><p>设 $y=y(x,c)$ 为平面区域 $D$ 上的一单参数曲线族，如果对于区域 $D$ 内的每一点，有且仅有该曲线族中的一条曲线通过，则这个曲线族成为在区域 $D$ 内形成一个固有曲线场。</p>
 <p>设 $M(x_0,y_0)$ 为平面区域 $D$ 内的某一点。 $y=y(x,c)$ 是以 $M(x_0,y_0)$ 为束心的曲线族，该曲线族布满整个区域 $D$ ，且除束心  外，束中曲线在 $D$ 内没有其他交点，这时曲线族 $y=y(x,c)$ 称为在  内形成一个中心曲线场。</p>
 <p>如果固有曲线场或中心曲线场是由泛函的某一变分问题的极值曲线族所形成的，则这个曲线场成为极值曲线场或极值曲线中心场。</p>
-<h3 id="雅可比条件和雅可比方程"><a href="#雅可比条件和雅可比方程" class="headerlink" title="雅可比条件和雅可比方程"></a>雅可比条件和雅可比方程</h3>
+<h3 id="雅可比条件和雅可比方程"><a href="#雅可比条件和雅可比方程" class="headerlink" title="雅可比条件和雅可比方程"></a>雅可比条件和雅可比方程</h3><p>考虑最简泛函</p>
+<p>$$<br>J[y(x)]=\int_{x_0}^{x_1}F(x,y,y^{\prime })\mathrm{d}x<br>$$</p>
+<p>及边界条件</p>
+<p>式子中， $F(x,y,y^{\prime })$ 具有连续二阶偏导数。记边界点为 $A(x_0,y_0)$ 和 $B(x_1,y_1)$ 。</p>
+<p>最简泛函的增量可表示为</p>
+<p>$$<br>\Delta J = \delta J+\delta ^2J+\varepsilon _2<br>$$</p>
+<p>式子中， $\varepsilon _2$ 是比 $\mathrm{d}_1^2(y,y+\delta y)$ 更高阶的无穷小。</p>
+<p>最简泛函的二阶变分为</p>
+<p>$$<br>\begin{align*}<br>\delta ^2 J &amp;= \dfrac{1}{2}\int_{x_0}^{x_1}[F_{yy}(\delta y)^2+2F_{yy^\prime }\delta y\delta y^\prime +F_{y^\prime y^\prime }(\delta y^\prime )^2]\mathrm{d}x \\ &amp;=\dfrac{\varepsilon ^2}{2}\int_{x_0}^{x_1}(F_{yy}(\eta)^2+2F_{yy^\prime }\eta\eta^\prime +F_{y^\prime y^\prime }(\eta^\prime )^2)\mathrm{d}x \\ &amp;=\dfrac{\varepsilon ^2}{2}J_2<br>\end{align*}<br>$$</p>
+<p>式子中</p>
+<p>$$<br>J_2 = \int_{x_0}^{x_1}(F_{yy}(\eta)^2+2F_{yy^\prime }\eta\eta^\prime +F_{y^\prime y^\prime }(\eta^\prime )^2)\mathrm{d}x<br>$$</p>
+<p>可见， $\delta ^2 J$ 和 $J_2$ 有相同的符号。</p>
+<p>定理：若泛函 $J_2$ 取得极值 $\eta =u(x)$ ，那么</p>
+<p>$$<br>\left( F_{yy}-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{yy^\prime } \right)u-\dfrac{\mathrm{d} }{\mathrm{d}x}\left( F_{y^\prime y^\prime} \dfrac{\mathrm{d}u}{\mathrm{d}x} \right)=0<br>$$</p>
+<p>称为雅可比方程。</p>
+<p>定理：若 $\eta(x_0)=\eta (x_1)=0$ ，且 $u=u(x)$ 为雅可比方程的解，它在区间 $(x_0,x_1)$ 内不等于零，则泛函 $J_2$ 可写成</p>
+<p>$$<br>J_2=\int_{x_0}^{x_1}F_{y^\prime y^\prime }\left( \eta ^\prime -\eta \dfrac{u^\prime }{u} \right)^2\mathrm{d}x<br>$$</p>
+
             </div>
             <hr>
             <div>
