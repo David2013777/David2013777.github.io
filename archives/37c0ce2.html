@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 个月前
+                  本文最后更新于：5 分钟前
                 
               </p>
             
@@ -403,10 +403,10 @@
               <p>题目是高等代数，其实就是线性代数，线性代数大一已经考过了，这里整理一下备用，更新可能很慢。</p>
 <span id="more"></span>
 
-<h1 id="高等代数"><a href="#高等代数" class="headerlink" title="高等代数"></a>高等代数</h1><h2 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h2><h3 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h3><p>数域：设 $P$ 是由一些复数组成的集合，其中包括 0 与 1 。如果 $P$ 中任意两个数的和，差，积，商（除数不为0）仍然是 $P$ 中的数（封闭），那么 $P$ 就称为一个数域。</p>
+<h1 id="高等代数"><a href="#高等代数" class="headerlink" title="高等代数"></a>高等代数</h1><h2 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h2><h3 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h3><p>数域：设 $P$ 是由一些复数组成的集合，其中包括 0 与 1 。如果 $P$ 中任意两个数的和，差，积，商（除数不为 0）仍然是 $P$ 中的数（封闭），那么 $P$ 就称为一个数域。</p>
 <p>性质：所有的数域都包含有理数域作为它的一部分。</p>
 <h3 id="一元多项式"><a href="#一元多项式" class="headerlink" title="一元多项式"></a>一元多项式</h3><p>一元多项式：设 $n$ 是一个非负整数，形式表达式<br>$$<br>a_nx^n+a_{n-1}x^{n-1}+\cdots +a_0<br>$$<br>其中 $a_0,\cdots,a_n$ 全属于数域 $P$ ，称为系数在数域 $P$ 中的一个一元多项式，或者简称为数域 $P$ 上的一元多项式。</p>
-<p>相等：如果在多项式 $f(x)$ 与 $g(x)$ 中，除去系数为零的项外，同次项的系数全相等，那么 $f(x)$ 与 $g(x)$ 就称为相等，记为 $f(x)=g(x)$ 。<br>零多项式：系数全为零的多项式称为零多项式，记为0。</p>
+<p>相等：如果在多项式 $f(x)$ 与 $g(x)$ 中，除去系数为零的项外，同次项的系数全相等，那么 $f(x)$ 与 $g(x)$ 就称为相等，记为 $f(x)=g(x)$ 。<br>零多项式：系数全为零的多项式称为零多项式，记为 0。</p>
 <p>在多项式 $a_nx^n+a_{n-1}x^{n-1}+\cdots +a_0$ 中，如果 $a_n\neq 0$ ，那么 $a_nx^n$ 称为多项式的首项， $a_n$ 称为首项系数， $n$ 称为多项式的次数。零多项式是唯一不定义次数的多项式。多项式 $f(x)$ 的次数记为 $\partial(f(x))$ 。</p>
 <p>设<br>$$<br>f(x)=\sum_{i=0}^na_ix^i \\ g(x)=\sum_{j=0}^mb_jx^j<br>$$</p>
 <p>为数域 $P$ 上的两个多项式 $(n\geq m)$，则<br>$$<br>f(x)+g(x)=\sum_{i=0}^{n}(a_i+b_i)x^i \\ f(x)g(x)=\sum_{s=0}^{m+n}(\sum_{i+j=s}a_ib_j)x^s<br>$$<br>显然，数域 $P$ 上的两个多项式经过加，减，乘等运算后，所得结果仍然是数域 $P$ 上的多项式。</p>
@@ -437,7 +437,7 @@
 <h3 id="因式分解定理"><a href="#因式分解定理" class="headerlink" title="因式分解定理"></a>因式分解定理</h3><p>不可约多项式：数域 $P$ 上次数 $\geq 1$ 的多项式 $p(x)$ 称为域 $P$ 上的不可约多项式，如果它不能表成数域 $P$ 上的两个次数比 $p(x)$ 的次数低的多项式的乘积。</p>
 <p>定理：如果 $p(x)$ 是一个不可约多项式，那么对于任意的两个多项式 $f(x),g(x)$ ，由 $p(x)|f(x)g(x)$ 一定推出 $p(x)|f(x)$ 或者 $p(x)|g(x)$ 。</p>
 <p>因式分解及唯一性定理：数域 $P$ 上每一个次数 $\geq 1$ 的多项式 $f(x)$ 都可以唯一的分解成数域 $P$ 上一些不可约多项式的乘积，所谓唯一性是说，如果有两个分解式<br>$$<br>f(x)=p_1(x)p_2(x)\cdots p_s(x)=q_1(x)q_2(x)\cdots q_t(x)<br>$$<br>那么必有 $s=t$ ，并且适当排列后次序有<br>$$<br>p_i(x)=c_iq_i(x),i=1,2,\cdots,s<br>$$<br>其中 $c_i(i=1,2,\cdots,s)$ 是一些非零常数。</p>
-<p>在多项式 $f(x)$ 的分解式中，可以把每一个不可约因式的首项系数提出来，使他们成为首项系数为1的多项式，再把相同的不可约因式合并，于是 $f(x)$ 的分解式成为<br>$$<br>f(x)=cp_1^{r_1}(x)p_2^{r_2}(x)\cdots p_s^{r_s}(x)<br>$$<br>其中 $c$ 是 $f(x)$ 的首项系数， $p_1(x),p_2(x),\cdots, p_s(x)$ 是不同的首项系数为1的不可约多项式，而 $r_1,r_2,\cdots,r_s$ 是正整数，这种分解式称为标准分解式。</p>
+<p>在多项式 $f(x)$ 的分解式中，可以把每一个不可约因式的首项系数提出来，使他们成为首项系数为 1 的多项式，再把相同的不可约因式合并，于是 $f(x)$ 的分解式成为<br>$$<br>f(x)=cp_1^{r_1}(x)p_2^{r_2}(x)\cdots p_s^{r_s}(x)<br>$$<br>其中 $c$ 是 $f(x)$ 的首项系数， $p_1(x),p_2(x),\cdots, p_s(x)$ 是不同的首项系数为 1 的不可约多项式，而 $r_1,r_2,\cdots,r_s$ 是正整数，这种分解式称为标准分解式。</p>
 <h3 id="重因式"><a href="#重因式" class="headerlink" title="重因式"></a>重因式</h3><p>重因式：不可约多项式 $p(x)$ 称为多项式 $f(x)$ 的 $k$ 重因式，如果 $p^k(x)|f(x)$ ，而 $p^{k+1}(x)\not |f(x)$ 。</p>
 <p>如果 $k=0$ ，那么 $p(x)$ 根本不是 $f(x)$ 的因式，如果 $k=1$ ，那么 $p(x)$ 称为 $f(x)$ 的单因式，如果 $k&gt;1$ ，那么 $p(x)$ 称为 $f(x)$ 的重因式。</p>
 <p>定理：如果不可约多项式 $p(x)$ 是 $f(x)$ 的 $k$ 重因式 $k\geq 1$ ，那么它是微商 $f^{\prime}(x)$ 的 $k-1$ 重因式。</p>
@@ -474,21 +474,21 @@
 <h3 id="n-阶行列式的定义"><a href="#n-阶行列式的定义" class="headerlink" title="$n$ 阶行列式的定义"></a>$n$ 阶行列式的定义</h3><p> $n$ 阶行列式：由 $n^2$ 个数 $a_{ij}$ （称为行列式的元）排成一个 $n$ 行 $n$ 列的表，并在两边各画一条竖线的记号<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots&amp;\vdots&amp;\ddots&amp;\vdots \\ a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>称为 $n$ 阶行列式。</p>
 <p> $n$ 阶行列式表示的代数和的所有项，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;a_{13} \\ a_{21}&amp;a_{22}&amp;a_{23} \\ a_{31}&amp;a_{32}&amp;a_{33}\end{vmatrix}<br>$$<br>其中 $\sum_{j_1,j_2}$ 表示对 $$ 的一切排列取和。用符号 $$ 或 $$ 表示以 $$ 为元的 $n$ 阶行列式。</p>
 <p>上三角行列式：当 $i&gt;j$ 时， $a_{ij}=0$ 。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ 0&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  0&amp;0&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>上三角行列式的值等于其主对角线上各元之积。</p>
-<h3 id="n-阶行列式的性质"><a href="#n-阶行列式的性质" class="headerlink" title="$n$ 阶行列式的性质"></a>$n$ 阶行列式的性质</h3><p>性质1：行列式的行和列顺次互换，其值不变，即</p>
+<h3 id="n-阶行列式的性质"><a href="#n-阶行列式的性质" class="headerlink" title="$n$ 阶行列式的性质"></a>$n$ 阶行列式的性质</h3><p>性质 1：行列式的行和列顺次互换，其值不变，即</p>
 <p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{21}&amp;\cdots &amp;a_{n1} \\ a_{12}&amp;a_{22}&amp;\cdots &amp;a_{n2} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots  \\  a_{1n}&amp;a_{2n}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
 <p>上述两个行列式互称转置行列式。</p>
 <p>说明行列式中行与列的地位是对称的，平等的，因此行列式对行成立的性质，对列也同样成立。</p>
-<p>性质2：互换行列式的两行（或两列），行列式变号。</p>
-<p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{s1}&amp;a_{s2}&amp;\cdots &amp;a_{sn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=-\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{s1}&amp;a_{s2}&amp;\cdots &amp;a_{sn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>推论：行列式中两行（列）完全相同，则行列式为0。</p>
-<p>性质3：行列式中某行（列）的元有因子 $K$ ，则 $K$ 可提到行列式符号外边。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ Ka_{t1}&amp;Ka_{t2}&amp;\cdots &amp;Ka_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=K\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>若用 $K$ 乘某行列式的某行（列），则等于用 $K$ 乘该行列式。</p>
-<p>性质4：若行列式中某行（列）的元均可表示为两项之和，例如第 $i$ 行<br>$$<br>a_{ij}=b_{ij}+c_{ij},(j=1,2,\cdots ,n)<br>$$<br>则此行列式等于两个行列式之和，这两个行列式除第 $i$ 行的元分别为 $b_{ij}$ 与 $c_{ij}$ 外，其余各行都与原行列式一样，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ b_{i1}+c_{i1}&amp;b_{i2}+c_{i2}&amp;\cdots &amp;b_{in}+c_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ b_{i1}&amp;b_{i2}&amp;\cdots &amp;b_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}+\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ c_{i1}&amp;c_{i2}&amp;\cdots &amp;c_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
-<p>性质5：</p>
+<p>性质 2：互换行列式的两行（或两列），行列式变号。</p>
+<p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{s1}&amp;a_{s2}&amp;\cdots &amp;a_{sn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=-\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{s1}&amp;a_{s2}&amp;\cdots &amp;a_{sn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>推论：行列式中两行（列）完全相同，则行列式为 0。</p>
+<p>性质 3：行列式中某行（列）的元有因子 $K$ ，则 $K$ 可提到行列式符号外边。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ Ka_{t1}&amp;Ka_{t2}&amp;\cdots &amp;Ka_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=K\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{t1}&amp;a_{t2}&amp;\cdots &amp;a_{tn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>若用 $K$ 乘某行列式的某行（列），则等于用 $K$ 乘该行列式。</p>
+<p>性质 4：若行列式中某行（列）的元均可表示为两项之和，例如第 $i$ 行<br>$$<br>a_{ij}=b_{ij}+c_{ij},(j=1,2,\cdots ,n)<br>$$<br>则此行列式等于两个行列式之和，这两个行列式除第 $i$ 行的元分别为 $b_{ij}$ 与 $c_{ij}$ 外，其余各行都与原行列式一样，即<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ b_{i1}+c_{i1}&amp;b_{i2}+c_{i2}&amp;\cdots &amp;b_{in}+c_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ b_{i1}&amp;b_{i2}&amp;\cdots &amp;b_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}+\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ c_{i1}&amp;c_{i2}&amp;\cdots &amp;c_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
+<p>性质 5：</p>
 <ol>
 <li>行列式某行（列）的元全为零。</li>
 <li>行列式的两行（列）完全相同。</li>
 <li>行列式的两行（列）的元成比例。<br>若上述条件之一成立，该行列式的值为零。</li>
 </ol>
-<p>性质6：若把行列式的某行（列） $\lambda$ 倍后加到另一行（列）上，则行列式的值不变。</p>
+<p>性质 6：若把行列式的某行（列） $\lambda$ 倍后加到另一行（列）上，则行列式的值不变。</p>
 <p>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{i1}+\lambda a_{j1}&amp;a_{i2}+\lambda a_{j2}&amp;\cdots &amp;a_{in}+\lambda a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{j1}&amp;a_{j2}&amp;\cdots &amp;a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}=\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\ a_{i1}&amp;a_{i2}&amp;\cdots &amp;a_{in} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ a_{j1}&amp;a_{j2}&amp;\cdots &amp;a_{jn} \\  \vdots &amp;\vdots &amp;\ddots &amp;\vdots  \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$</p>
 <h3 id="行列式按行（列）展开"><a href="#行列式按行（列）展开" class="headerlink" title="行列式按行（列）展开"></a>行列式按行（列）展开</h3><p>代数余子式： $M_{ij}$ 是把行列式 $|A|$ 中元 $a_{ij}$ 所在的第 $i$ 行，第 $j$ 列划掉后所得到的 $n-1$ 阶行列式， $M_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的余子式，记 $A_{ij}=(-1)^{i+j}M_{ij}$ ， $A_{ij}$ 称为元 $a_{ij}$ 在 $|A|$ 中的代数余子式。<br>$$<br>\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots &amp;a_{1n} \\ a_{21}&amp;a_{22}&amp;\cdots &amp;a_{2n} \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots \\  a_{n1}&amp;a_{n2}&amp;\cdots &amp;a_{nn}\end{vmatrix}<br>$$<br>定理： $n$ 阶 $n\geq 2$ 行列式等于它的任一行的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{ik}A_{ik}(i=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式等于它的任何一列的各元与其代数余子式乘积之和，即<br>$$<br>|A|=\sum_{k=1}^na_{kj}A_{kj}(j=1,2,\cdots ,n)<br>$$<br>定理： $n$ 阶行列式的任一行的各元与另一行对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{jk}A_{ik}=0(i\neq j)<br>$$<br>定理： $n$ 阶行列式的任一列的各元与另一列对应元代数余子式乘积之和为零，即<br>$$<br>\sum_{k=1}^{n}a_{kj}A_{ki}=0(i\neq j)<br>$$<br>于是有</p>
 <p>$$<br>\sum_{k=1}^na_{jk}A_{ik}=\begin{cases} |A|,j = i \\ 0,j\neq i \end{cases},(i,j=1,2,\cdots ,n)<br>$$</p>
@@ -515,10 +515,10 @@
 <p>矩阵的加（减）法和数与矩阵的数乘统称为矩阵的线性运算。</p>
 <p>性质：</p>
 <ol>
-<li>加法交换律 $A+B=B+A$ </li>
-<li>加法结合律 $(A+B)+C=A+(B+C)$ </li>
+<li>加法交换律 $A+B=B+A$</li>
+<li>加法结合律 $(A+B)+C=A+(B+C)$</li>
 <li>数乘的分配律 $$\lambda (A+B)=\lambda A+\lambda B$$ $$(\lambda+\mu)A=\lambda A+\mu A$$</li>
-<li>数乘的结合律 $\lambda(\mu A)=(\lambda \mu)A$ </li>
+<li>数乘的结合律 $\lambda(\mu A)=(\lambda \mu)A$</li>
 <li>$1A=A$<br>其中 $A,B,C$ 是使上述矩阵线性运算有意义的矩阵， $\lambda,\mu $ 为数。</li>
 </ol>
 <p>线性组合：设给定了若干个同型矩阵 $A_1,\cdots,A_m$ ，经过线性运算<br>$$<br>\lambda_1A_1+\lambda_2A_2+\cdots+\lambda_mA_m=\sum_{j=1}^{m}\lambda_jA_j=B<br>$$<br>（其中 $\lambda_j$ 是常数， $j=1,2,\cdots,m$ ）得到的矩阵 $B$ 称为矩阵 $A_1,\cdots,A_m$ 的线性组合。或者称 $B$ 可经 $A_1,\cdots,A_m$ 线性表出。</p>
@@ -532,8 +532,8 @@
 <p>矩阵乘法不满足消去律，当 $A$ 和 $B$ 都是非零矩阵时，可能有 $AB=0$ 。</p>
 <p>矩阵乘法的性质：</p>
 <ol>
-<li>结合律 $$(AB)C=A(BC)$$ </li>
-<li>分配律 $$A(B+C)=AB+AC$$ $$(A+B)C=AC+BC$$ </li>
+<li>结合律 $$(AB)C=A(BC)$$</li>
+<li>分配律 $$A(B+C)=AB+AC$$ $$(A+B)C=AC+BC$$</li>
 <li>$\lambda (AB)=(\lambda A)B=A(\lambda B)$<br>其中 $A,B,C$ 是使上述矩阵乘法有意义的矩阵， $\lambda$ 是数。</li>
 </ol>
 <p>单位矩阵： $n$ 阶方阵<br>$$<br>E_n=\begin{pmatrix}1&amp;0&amp;\cdots &amp;0 \\ 0&amp;1&amp;\cdots &amp;0 \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 0&amp;0&amp;\cdots &amp;1\end{pmatrix}=\begin{pmatrix}1&amp;&amp;&amp; \\ &amp;1&amp;&amp; \\  &amp;&amp;\ddots &amp; \\ &amp;&amp;&amp;1\end{pmatrix}<br>$$<br>称为 $n$ 阶单位矩阵，也记为 $E$ 。容易验证对任意的 $n$ 阶矩阵 $A$ 有<br>$$AE=EA=A$$<br>设 $A$ 是 $n$ 阶矩阵，则乘积 ${A\cdots A}(\text{有限个})$ 有意义。 $k$ 个 $A$ 相乘称为 $A$ 的 $k$ 次幂，记为</p>
@@ -598,10 +598,10 @@
 </li>
 </ol>
 <p>$$<br>\sum_{k=1}^n{a_{ik}a_{jk} }=\begin{cases} 1,i=j \\ 0,i\neq j \end{cases},(i,j=1,2,\cdots,n)<br>$$</p>
-<p>$$<br>\sum_{k=1}^n{a_{ki}a_{kj} }=\begin{cases} 1,i=j \\ 0,i\neq j \end{cases},(i,j=1,2,\cdots,n)<br>$$<br>中至少有一组成立。也就是说，正交矩阵每一行（列）  个元的平方和为1，两个不同行（列）对应元乘积之和等于零。</p>
+<p>$$<br>\sum_{k=1}^n{a_{ki}a_{kj} }=\begin{cases} 1,i=j \\ 0,i\neq j \end{cases},(i,j=1,2,\cdots,n)<br>$$<br>中至少有一组成立。也就是说，正交矩阵每一行（列）  个元的平方和为 1，两个不同行（列）对应元乘积之和等于零。</p>
 <ol>
 <li> $A$ 为正交矩阵，则 $A^T=A^{-1}$ 也是正交矩阵。</li>
-<li> $A$ 为正交矩阵，则 $A$ 的行列式必为+1或-1，即 $|A|=\pm 1$ 。</li>
+<li> $A$ 为正交矩阵，则 $A$ 的行列式必为 +1 或 -1，即 $|A|=\pm 1$ 。</li>
 <li>若 $A$ 与 $B$ 均为 $n$ 阶正交矩阵，则乘积 $AB(BA)$ 也是正交矩阵。</li>
 </ol>
 <p>共轭矩阵：设 $n$ 阶矩阵 $A=(a_{ij})$ 的元 $a_{ij}$ 都是复数，则矩阵 $\overline{A}=(\overline{a}_{ij})$ 称为 $A$ 的共轭矩阵。</p>
@@ -642,7 +642,7 @@
 <p>矩阵消元法：</p>
 <ol>
 <li>写出方程组的增广矩阵，并用初等行变换把它化为阶梯型矩阵 $B_1$ ，即<br>$$<br>B=(A,b)\rightarrow B_1<br>$$<br>比较 $B_1$ 和 $B_1$ 中前 $n$ 列所成之矩阵的非零行个数立刻可知 $r_A=r_B$ 是否成立。<br>若 $r_A&lt;r_B$ （即 $r_B=r_A+1$ ），方程组无界。</li>
-<li>若 $r_A=r_B=n$ ，则解以 $B_1$ 为增广矩阵的阶梯形方程组。为了便于求解，可以继续用初等行变换把 $B_1$ 化成行最简形；每行非零首元都等于1，而且非零首元所在的列，除非零首元本身外其余元全为零的阶梯型矩阵。<br>$$<br>B_1\rightarrow<br>\begin{pmatrix}<br>1&amp;0&amp;\cdots &amp;0&amp;a_{1,r+1}^{\prime}&amp;\cdots &amp;a_{1,n}^{\prime}&amp;b_1^{\prime}\\<br>0&amp;1&amp;\cdots&amp;0&amp;a_{2,r+1}^{\prime}&amp;\cdots &amp;a_{2,n}^{\prime}&amp;b_2^{\prime}\\<br>\vdots&amp;\vdots &amp;&amp;\vdots&amp;\vdots &amp;&amp;\vdots &amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;1&amp;a_{r,r+1}^{\prime}&amp;\cdots &amp;a_{r,n}^{\prime}&amp;b_r^{\prime}\\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0\\<br>\vdots &amp;\vdots &amp;&amp;\vdots &amp;\vdots &amp;&amp;\vdots&amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0<br>\end{pmatrix}<br>$$<br>于是方程组的通解为<br>$$<br>\begin{cases}<br>x_1 = b_{1}^{\prime}-a_{1,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{1,n}\tilde{x}_n\\<br>x_2 =  b_{2}^{\prime}-a_{2,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{2,n}\tilde{x}_n\\<br>\cdots \\<br>x_r = b_{r}^{\prime}-a_{r,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{r,n}\tilde{x}_n\\<br>x_{r+1} = \tilde{x}_{r+1}\\<br>\cdots \\<br>x_n = \tilde{x}_n<br>\end{cases}<br>$$<br>其中 $\tilde{x}_{r+1},\cdots ,\tilde{x}_{n}$ 为任意常数。通解也可以写成向量形式<br>$$<br>\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_{r} \\ x_{r+1} \\ x_{r+2} \\ \vdots \\ x_{n}\end{pmatrix}=\begin{pmatrix}b_1^{\prime} \\ b_2^{\prime} \\ \vdots \\ b_{r}^{\prime} \\ 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}+\tilde{x}_{r+1}\begin{pmatrix} -a_{1,r+1}^{\prime} \\ -a_{2,r+1}^{\prime} \\ \vdots \\ -a_{r,r+1}^{\prime} \\ 1 \\ 0 \\ \vdots \\ 0\end{pmatrix}+\tilde{x}_{r+2}\begin{pmatrix} -a_{1,r+2}^{\prime} \\ -a_{2,r+2}^{\prime} \\ \vdots \\ -a_{r,r+2}^{\prime} \\ 0 \\ 1 \\ \vdots \\ 0\end{pmatrix}+\cdots +\tilde{x}_{n}\begin{pmatrix} -a_{1,n}^{\prime} \\ -a_{2,n}^{\prime} \\ \vdots \\ -a_{r,n}^{\prime} \\ 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix}<br>$$<br>特别当 $\tilde{x}_{r+1}=\cdots = \tilde{x}_{n}=0$ 时，得到方程组的一个特解 $(b_1^{\prime},b_2^{\prime},\cdots,b_r^{\prime},0,0,\cdots,0)$ 。</li>
+<li>若 $r_A=r_B=n$ ，则解以 $B_1$ 为增广矩阵的阶梯形方程组。为了便于求解，可以继续用初等行变换把 $B_1$ 化成行最简形；每行非零首元都等于 1，而且非零首元所在的列，除非零首元本身外其余元全为零的阶梯型矩阵。<br>$$<br>B_1\rightarrow<br>\begin{pmatrix}<br>1&amp;0&amp;\cdots &amp;0&amp;a_{1,r+1}^{\prime}&amp;\cdots &amp;a_{1,n}^{\prime}&amp;b_1^{\prime}\\<br>0&amp;1&amp;\cdots&amp;0&amp;a_{2,r+1}^{\prime}&amp;\cdots &amp;a_{2,n}^{\prime}&amp;b_2^{\prime}\\<br>\vdots&amp;\vdots &amp;&amp;\vdots&amp;\vdots &amp;&amp;\vdots &amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;1&amp;a_{r,r+1}^{\prime}&amp;\cdots &amp;a_{r,n}^{\prime}&amp;b_r^{\prime}\\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0\\<br>\vdots &amp;\vdots &amp;&amp;\vdots &amp;\vdots &amp;&amp;\vdots&amp;\vdots \\<br>0&amp;0&amp;\cdots &amp;0&amp;0&amp;\cdots &amp;0&amp;0<br>\end{pmatrix}<br>$$<br>于是方程组的通解为<br>$$<br>\begin{cases}<br>x_1 = b_{1}^{\prime}-a_{1,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{1,n}\tilde{x}_n\\<br>x_2 =  b_{2}^{\prime}-a_{2,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{2,n}\tilde{x}_n\\<br>\cdots \\<br>x_r = b_{r}^{\prime}-a_{r,r+1}^{\prime}\tilde{x}_{r+1}-\cdots -a_{r,n}\tilde{x}_n\\<br>x_{r+1} = \tilde{x}_{r+1}\\<br>\cdots \\<br>x_n = \tilde{x}_n<br>\end{cases}<br>$$<br>其中 $\tilde{x}_{r+1},\cdots ,\tilde{x}_{n}$ 为任意常数。通解也可以写成向量形式<br>$$<br>\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_{r} \\ x_{r+1} \\ x_{r+2} \\ \vdots \\ x_{n}\end{pmatrix}=\begin{pmatrix}b_1^{\prime} \\ b_2^{\prime} \\ \vdots \\ b_{r}^{\prime} \\ 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}+\tilde{x}_{r+1}\begin{pmatrix} -a_{1,r+1}^{\prime} \\ -a_{2,r+1}^{\prime} \\ \vdots \\ -a_{r,r+1}^{\prime} \\ 1 \\ 0 \\ \vdots \\ 0\end{pmatrix}+\tilde{x}_{r+2}\begin{pmatrix} -a_{1,r+2}^{\prime} \\ -a_{2,r+2}^{\prime} \\ \vdots \\ -a_{r,r+2}^{\prime} \\ 0 \\ 1 \\ \vdots \\ 0\end{pmatrix}+\cdots +\tilde{x}_{n}\begin{pmatrix} -a_{1,n}^{\prime} \\ -a_{2,n}^{\prime} \\ \vdots \\ -a_{r,n}^{\prime} \\ 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix}<br>$$<br>特别当 $\tilde{x}_{r+1}=\cdots = \tilde{x}_{n}=0$ 时，得到方程组的一个特解 $(b_1^{\prime},b_2^{\prime},\cdots,b_r^{\prime},0,0,\cdots,0)$ 。</li>
 </ol>
 <h4 id="齐次线性方程组的解法"><a href="#齐次线性方程组的解法" class="headerlink" title="齐次线性方程组的解法"></a>齐次线性方程组的解法</h4><p>齐次线性方程组<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_{2}+\cdot+a_{1n}x_n=0 \\ a_{21}x_1+a_{22}x_{2}+\cdot+a_{2n}x_n=0 \\<br>\cdots \\ a_{m1}x_1+a_{m2}x_{2}+\cdot+a_{mn}x_n=0<br>\end{cases}<br>$$<br>它的矩阵形式是 $AX=0$ 。它的向量形式是 $A_1x_1+\cdots+A_nx_n=0$ 。<br>增广矩阵 $B=(A,0)$ 。由于 $r_B=r_A$ 。故齐次线性方程组必定有解。 $(0,\cdots,0)$ 称为零解（平凡解）。当 $r_A=n$ 时，它只有唯一解，即零解。当 $r_A&lt;n$ 时，还有非零解。特别对 $n$ 个未知量 $n$ 个方程的齐次线性方程组，有非零解的充要条件是，系数行列式 $|A|=0$ 。</p>
 <h3 id="线性方程组的解的结构"><a href="#线性方程组的解的结构" class="headerlink" title="线性方程组的解的结构"></a>线性方程组的解的结构</h3><h4 id="齐次线性方程组的基础解系"><a href="#齐次线性方程组的基础解系" class="headerlink" title="齐次线性方程组的基础解系"></a>齐次线性方程组的基础解系</h4><p>基础解系：齐次线性方程组解集合的一个极大线性无关子组，称为该齐次线性方程组的一个基础解系。</p>
@@ -706,7 +706,7 @@
 <li>当 $\alpha\neq 0$ 时， $\langle \alpha,\alpha\rangle &gt; 0$ 。<br>则实数 $\langle \alpha,\beta \rangle$ 称为向量 $\alpha$ 与 $\beta$ 的标准内积，简称内积。定义了内积的实线性空间称为欧几里得空间，简称欧式空间。</li>
 </ol>
 <p>欧氏空间 $V$ 中的内积有下列基本性质：</p>
-<p>性质1：对于任意 $\alpha\in V$ ，有 $\langle 0,\alpha \rangle=0$ ，特别 $\langle 0,0 \rangle=0$ 。<br>性质2：设 $\alpha$ 为 $V$ 中某一向量，若对于 $V$ 中任何向量 $\beta$ 都有 $\langle \alpha,\beta \rangle$ ，则 $\alpha=0$ 。<br>性质3：对于任意的 $\alpha_i,\beta_j\in V$ 及 $a_i,b_j\in R(i=1,\cdots,l;j=1,\cdots,t)$ 恒有<br>$$<br>\left\langle \sum_{i=1}^la_i\alpha_i,\sum_{j=1}^tb_j\beta_j\right\rangle=\sum_{i=1}^l\sum_{j=1}^ta_ib_j\langle \alpha_i,\beta_j\rangle<br>$$</p>
+<p>性质 1：对于任意 $\alpha\in V$ ，有 $\langle 0,\alpha \rangle=0$ ，特别 $\langle 0,0 \rangle=0$ 。<br>性质 2：设 $\alpha$ 为 $V$ 中某一向量，若对于 $V$ 中任何向量 $\beta$ 都有 $\langle \alpha,\beta \rangle$ ，则 $\alpha=0$ 。<br>性质 3：对于任意的 $\alpha_i,\beta_j\in V$ 及 $a_i,b_j\in R(i=1,\cdots,l;j=1,\cdots,t)$ 恒有<br>$$<br>\left\langle \sum_{i=1}^la_i\alpha_i,\sum_{j=1}^tb_j\beta_j\right\rangle=\sum_{i=1}^l\sum_{j=1}^ta_ib_j\langle \alpha_i,\beta_j\rangle<br>$$</p>
 <p>模：设 $\alpha$ 是欧氏空间中的任一向量， $\langle \alpha,\alpha \rangle$ 的算术平方根 $\sqrt{\langle \alpha,\alpha \rangle}$ 称为向量 $\alpha$ 的模，记为 $\vert \alpha \vert$ ，即 $\vert \alpha \vert = \sqrt{\langle \alpha,\alpha \rangle}$ 。</p>
 <p>模为 $1$ 的向量称为单位向量。零向量的模为零。</p>
 <p>定理：对于欧氏空间中的任意两个向量 $\alpha,\beta$ 恒有<br>$$<br>{\langle \alpha,\beta \rangle }^2\leq \langle \alpha,\alpha \rangle \langle \beta,\beta \rangle<br>$$<br>其中等号成立的充要条件是 $\alpha$ 与 $\beta$ 线性相关。</p>
