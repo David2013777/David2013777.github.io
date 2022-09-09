@@ -395,33 +395,33 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：20 天前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="变分法"><a href="#变分法" class="headerlink" title="变分法"></a>变分法</h1><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><h3 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h3><h4 id="一元函数的情形"><a href="#一元函数的情形" class="headerlink" title="一元函数的情形"></a>一元函数的情形</h4><p>一元函数泰勒中值定理：若函数 $f(x)$ 在点 $x_0$ 的某个开区间 $(a,b)$ 内具有 $n+1$ 阶连续导数，则当 $x$ 在 $(a,b)$ 内时， $f(x)$ 可表示为</p>
+              <h1 id="变分法"><a href="#变分法" class="headerlink" title="变分法"></a>变分法</h1><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><h3 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h3><h4 id="一元函数的情形"><a href="#一元函数的情形" class="headerlink" title="一元函数的情形"></a>一元函数的情形</h4><p>一元函数泰勒中值定理：若函数 $f(x)$ 在点 $x_0$ 的某个开区间 $(a,b)$ 内具有 $n+1$ 阶连续导数，则当 $x$ 在 $(a,b)$ 内时，$f(x)$ 可表示为</p>
 <p>$$<br>f(x)=f(x_{0})+f^{\prime}(x_{0})(x-x_{0})+{\dfrac{f^{\prime\prime}(x_{0})}{2!} }(x-x_{0})^{2}+\cdots+{\dfrac{f^{(n)}(x_{0})}{n!} }(x-x_{0})^{n}+R_{n}<br>$$</p>
 <p>该式称为泰勒公式，式中</p>
 <p>$$<br>R_{n}=\frac{f^{(n+1)}({\xi})}{(n+1)!}(x-x_{0})^{n+1}<br>$$</p>
 <p>称为拉格朗日余项。这里 $\xi$ 是介于 $x_0$ 和 $x$ 之间的某个值。</p>
-<p>一元函数的极值定理：设可导函数 $f(x)$ 在点 $x_0$ 有极值，则在该点必有 $f^{\prime }(x_0)=0$ 。</p>
-<h4 id="多元函数的情形"><a href="#多元函数的情形" class="headerlink" title="多元函数的情形"></a>多元函数的情形</h4><p>定理：若函数 $f(x,y)$ 在点 $(x_0,y_0)$ 的某个邻域内连续且有直到 $n$ 阶的连续偏导数，并设 $(x=x_0+\Delta x,y=y_0+\Delta y)$ 为该邻域内的任意一点，则总存在 $\theta (0&lt;\theta&lt;1)$ ，使下面的 $n$ 阶泰勒公式成立：</p>
+<p>一元函数的极值定理：设可导函数 $f(x)$ 在点 $x_0$ 有极值，则在该点必有 $f^{\prime }(x_0)=0$。</p>
+<h4 id="多元函数的情形"><a href="#多元函数的情形" class="headerlink" title="多元函数的情形"></a>多元函数的情形</h4><p>定理：若函数 $f(x,y)$ 在点 $(x_0,y_0)$ 的某个邻域内连续且有直到 $n$ 阶的连续偏导数，并设 $(x=x_0+\Delta x,y=y_0+\Delta y)$ 为该邻域内的任意一点，则总存在 $\theta (0&lt;\theta&lt;1)$，使下面的 $n$ 阶泰勒公式成立：</p>
 <p>$$<br>{f(x_{0}+\Delta x,y_{0}+\Delta y)=} {f(x_{0},y_{0})+\left(\Delta x{\frac{\partial}{\partial x} }+\Delta y{\frac{\partial}{\partial y} }\right)f(x_{0},y_{0})+} {\frac{1}{2!}\left(\Delta x{\frac{\partial}{\partial x} }+\Delta y{\frac{\partial}{\partial y} }\right)^{2}f(x_{0},y_{0})+R_{n} }<br>$$</p>
 <p>式中</p>
 <p>$$<br>\left(\Delta x\dfrac{\partial}{\partial x}+\Delta y\dfrac{\partial}{\partial y}\right)^{k}!!f(x_{0},y_{0})=\sum_{r=0}^{k}C_{k}^{r}(\Delta x)^{r}(\Delta y)^{n-r},{\frac{\partial^{k}f(x_{0},y_{0})}{\partial x^{r}\partial y^{k-r} } }<br>$$</p>
 <p>$R_n$ 称为 $f(x,y)$ 在点 $(x_0,y_0)$ 的 $n$ 阶拉格朗日余项。</p>
 <p>该定理称为二元函数的泰勒中值定理。</p>
-<p>二元函数的极值定理：设可导函数 $f(x,y)$ 在点 $(x_0,y_0)$ 有极值，则在该点必有 $f_x(x_0,y_0)=f_y(x_0,y_0)=0$ 。</p>
-<p>多元函数的泰勒中值定理：若函数 $f(x_1,\cdots,x_m)$ 在点 $(x_1^0,\cdots,x_m^0)$ 的某个邻域内连续且有直到 $n$ 阶的连续偏导数，并设 $(x_1,\cdots,x_m)$ 为该邻域内的任意一点，则总存在 $\theta (0&lt;\theta &lt;1)$ ，使下面的 $n$ 阶泰勒公式成立：</p>
+<p>二元函数的极值定理：设可导函数 $f(x,y)$ 在点 $(x_0,y_0)$ 有极值，则在该点必有 $f_x(x_0,y_0)=f_y(x_0,y_0)=0$。</p>
+<p>多元函数的泰勒中值定理：若函数 $f(x_1,\cdots,x_m)$ 在点 $(x_1^0,\cdots,x_m^0)$ 的某个邻域内连续且有直到 $n$ 阶的连续偏导数，并设 $(x_1,\cdots,x_m)$ 为该邻域内的任意一点，则总存在 $\theta (0&lt;\theta &lt;1)$，使下面的 $n$ 阶泰勒公式成立：</p>
 <p>$$<br>\begin{array}{l}<br>f(x_1,\cdots,x_m)=f(x_1^0,\cdots,x_m^0)+\\<br>\dfrac{1}{1!}\left( \Delta x_1\dfrac{\partial }{\partial x_1}+\cdots +\Delta x_m\dfrac{\partial }{\partial x_m} \right)\times f(x_1^0,\cdots,x_m^0) \\<br>\dfrac{1}{2!}\left( \Delta x_1\dfrac{\partial }{\partial x_1}+\cdots +\Delta x_m\dfrac{\partial }{\partial x_m} \right)^2\times f(x_1^0,\cdots,x_m^0)+\cdots+\\<br>\dfrac{1}{n!}\left( \Delta x_1\dfrac{\partial }{\partial x_1}+\cdots +\Delta x_m\dfrac{\partial }{\partial x_m} \right)^n\times f(x_1^0,\cdots,x_m^0)+R_n<br>\end{array}<br>$$</p>
 <p>式中</p>
 <p>$$<br>\Delta x_k=x_k-x_k^0\quad (k=1,2,\cdots,m)<br>$$</p>
 <p>$$<br>R_n=\dfrac{1}{(n+1)!}\left( \Delta x_1\dfrac{\partial }{\partial x_1}+\cdots +\Delta x_m\dfrac{\partial }{\partial x_m} \right)^{n+1}\times f(x_1^0+\theta \Delta x_1,\cdots,x_m^0+\theta \Delta x_m)<br>$$</p>
-<p>多元函数极值定理：设可导函数 $f(x_1,\cdots,x_m)$ 在点 $(x_1^0,\cdots,x_m^0)$ 有极值，则在该点必有 $f_{xk}(x_1^0,\cdots,x_m^0)=0$ ，其中 $k=1,2,\cdots,m$ 。</p>
-<h3 id="含参变量的积分"><a href="#含参变量的积分" class="headerlink" title="含参变量的积分"></a>含参变量的积分</h3><p>含参变量积分：设函数 $f(x,y)$ 是矩形域 $D[a\leq x\leq b,c\leq y\leq d]$ 上的有界函数，对于 $[c,d]$ 上任何固定的 $y_0$ ，函数 $f(x,y_0)$ 就是 $[\int _{a}^{b}f(x,y_0)]$ 的函数，若这个函数在 $y_0$ 上可积，则可以有</p>
+<p>多元函数极值定理：设可导函数 $f(x_1,\cdots,x_m)$ 在点 $(x_1^0,\cdots,x_m^0)$ 有极值，则在该点必有 $f_{xk}(x_1^0,\cdots,x_m^0)=0$，其中 $k=1,2,\cdots,m$。</p>
+<h3 id="含参变量的积分"><a href="#含参变量的积分" class="headerlink" title="含参变量的积分"></a>含参变量的积分</h3><p>含参变量积分：设函数 $f(x,y)$ 是矩形域 $D[a\leq x\leq b,c\leq y\leq d]$ 上的有界函数，对于 $[c,d]$ 上任何固定的 $y_0$，函数 $f(x,y_0)$ 就是 $[\int _{a}^{b}f(x,y_0)]$ 的函数，若这个函数在 $y_0$ 上可积，则可以有</p>
 <p>$$<br>\varphi (y)=\int_{a}^{b}f(x,y)\mathrm{d}x<br>$$</p>
-<p>它是 $y$ 的函数，定义域为 $[c,d]$ ，通常 $y$ 称为参变量，并且积分 $\int_{a}^{b}f(x,y)$ 称为含参变量积分。</p>
+<p>它是 $y$ 的函数，定义域为 $[c,d]$，通常 $y$ 称为参变量，并且积分 $\int_{a}^{b}f(x,y)$ 称为含参变量积分。</p>
 <p>性质（连续性）：设函数 $f(x,y)$ 在闭区域 $[a,b;c,d]$ 上连续，则</p>
 <p>$$<br>\varphi (y)=\int_{a}^{b}f(x,y)\mathrm{d}x<br>$$</p>
 <p>在区间 $[c,d]$ 上连续。这个性质也可以写成</p>
@@ -433,17 +433,17 @@
 <p>性质（求导与积分顺序的可交换性）：若 $f(x,y)$ 及 $f_y(x,y)$ 在矩形域 $D[a,b;c,d]$ 上连续，则积分 $\varphi (y)=\int_{a}^{b}f(x,y)\mathrm{d}x$ 在 $[c,d]$ 上可导，且有</p>
 <p>$$<br>\dfrac{\mathrm{d} }{\mathrm{d}y}\int_{a}^{b}f(x,y)\mathrm{d}x=\int_{a}^{b}f_y(x,y)\mathrm{d}x<br>$$</p>
 <p>这个性质又称为积分号下求微商。</p>
-<p>莱布尼茨公式：设函数 $f(x,y)$ 与 $f^{\prime}(x,y)$ 都在闭形域 $D[a,b;c,d]$ 上连续，又函数 $\alpha (y),\beta (y)$ 在区间 $[c,d]$ 上可导，并且当 $c\leq y\leq d$ 时，有 $a\leq \alpha (y)\leq b$ ， $a\leq \beta (y)\leq b$ ，那么函数</p>
+<p>莱布尼茨公式：设函数 $f(x,y)$ 与 $f^{\prime}(x,y)$ 都在闭形域 $D[a,b;c,d]$ 上连续，又函数 $\alpha (y),\beta (y)$ 在区间 $[c,d]$ 上可导，并且当 $c\leq y\leq d$ 时，有 $a\leq \alpha (y)\leq b$，$a\leq \beta (y)\leq b$，那么函数</p>
 <p>$$<br>\varphi (y)=\int_{\alpha (y)}^{\beta (y)}f(x,y)\mathrm{d}x<br>$$</p>
 <p>在区间 $[c,d]$ 可导，且有</p>
 <p>$$<br>\varphi ^{\prime}(y)=\dfrac{\mathrm{d} }{\mathrm{d}y}\int_{\alpha (y)}^{\beta (y)}f(x,y)\mathrm{d}x=\int_{\alpha (y)}^{\beta (y)}f_y(x,y)\mathrm{d}x+f(\beta (y),y)\beta^{\prime} (y)-f(\alpha (y),y)\alpha ^{\prime}(y)<br>$$</p>
-<h3 id="场论基础"><a href="#场论基础" class="headerlink" title="场论基础"></a>场论基础</h3><h4 id="方向导数及梯度"><a href="#方向导数及梯度" class="headerlink" title="方向导数及梯度"></a>方向导数及梯度</h4><p>方向导数：设 $M_0$ 是函数 $\varphi (M)$ 中一个确定的点，过此点引一条直线 $L$ ，在此直线上取与 $M_0$ 相邻的一动点 $M$ ，当 $M\rightarrow M_0$ 时，若</p>
+<h3 id="场论基础"><a href="#场论基础" class="headerlink" title="场论基础"></a>场论基础</h3><h4 id="方向导数及梯度"><a href="#方向导数及梯度" class="headerlink" title="方向导数及梯度"></a>方向导数及梯度</h4><p>方向导数：设 $M_0$ 是函数 $\varphi (M)$ 中一个确定的点，过此点引一条直线 $L$，在此直线上取与 $M_0$ 相邻的一动点 $M$，当 $M\rightarrow M_0$ 时，若</p>
 <p>$$<br>\dfrac{\varphi (M)-\varphi (M_0)}{\overline{M_0M} }<br>$$</p>
 <p>的极限存在，则称它为函数 $\varphi (M)$ 在点 $M_0$ 沿着 $L$ 方向的方向导数，并且记作</p>
 <p>$$<br>\dfrac{\partial \varphi (M_0)}{\partial L}=\lim_{\overline{M_0M} \to 0} \dfrac{\varphi (M)-\varphi (M_0)}{\overline{M_0M} }<br>$$</p>
-<p>定理：若数量场 $\varphi =\varphi (x,y,z)$ 在点 $M_0(x_0,y_0,z_0)$ 处可微， $\cos \alpha ,\cos beta,\cos \gamma $ 为 $L$ 方向的方向余弦，则 $\varphi $ 在点 $M_0$ 处沿 $L$ 方向的方向导数必然存在，且由下式给出：</p>
+<p>定理：若数量场 $\varphi =\varphi (x,y,z)$ 在点 $M_0(x_0,y_0,z_0)$ 处可微，$\cos \alpha ,\cos beta,\cos \gamma $ 为 $L$ 方向的方向余弦，则 $\varphi $ 在点 $M_0$ 处沿 $L$ 方向的方向导数必然存在，且由下式给出：</p>
 <p>$$<br>\dfrac{\partial \varphi }{\partial L}=\dfrac{\partial \varphi }{\partial x}\cos \alpha +\dfrac{\partial \varphi }{\partial y}\cos \beta +\dfrac{\partial \varphi }{\partial z}\cos \gamma<br>$$</p>
-<p>式子中， $\dfrac{\partial \varphi }{\partial x},\dfrac{\partial \varphi }{\partial y},\dfrac{\partial \varphi }{\partial z}$ 是 $\varphi $ 在点 $M_0$ 处的导数。</p>
+<p>式子中，$\dfrac{\partial \varphi }{\partial x},\dfrac{\partial \varphi }{\partial y},\dfrac{\partial \varphi }{\partial z}$ 是 $\varphi $ 在点 $M_0$ 处的导数。</p>
 <p>考虑到 $\frac{\partial \varphi }{\partial L}$ 可以表示为两个矢量的数量积，即</p>
 <p>$$<br>\frac{\partial \varphi }{\partial L}\left( \frac{\partial \varphi }{\partial x}\mathrm{i} + \frac{\partial \varphi }{\partial y}\mathrm{j} + \frac{\partial \varphi }{\partial z}\mathrm{k}\right)\cdot (\cos \alpha \mathrm{i}+\cos \beta \mathrm{j}+\cos \gamma \mathrm{k})<br>$$</p>
 <p>令 $L^0$ 为 $L$ 的单位矢量：</p>
@@ -453,16 +453,16 @@
 <p>于是</p>
 <p>$$<br>\frac{\partial \varphi }{\partial L}=G\cdot L^0 =\left| G \right| \cos (G,L^0)<br>$$</p>
 <p>当选择 $L^0$ 的方向与 $G$ 方向一致时，即 $\cos (G,L^0)$ 时，方向导数取最大值。</p>
-<p>矢量 $G$ 称为函数 $\varphi (M)$ 在给定点 $M$ 处的梯度，记作 $\operatorname{grad}\varphi $ 或 $\nabla \varphi $ 。记号 $$ 称为哈密顿算子。在直角坐标系中可以表示为</p>
+<p>矢量 $G$ 称为函数 $\varphi (M)$ 在给定点 $M$ 处的梯度，记作 $\operatorname{grad}\varphi $ 或 $\nabla \varphi $。记号 $$ 称为哈密顿算子。在直角坐标系中可以表示为</p>
 <p>$$<br>\nabla  = \frac{\partial \varphi }{\partial x}\mathrm{i} + \frac{\partial \varphi }{\partial y}\mathrm{j} + \frac{\partial \varphi }{\partial z}\mathrm{k}<br>$$</p>
 <p>$\nabla $ 既是一个微分算子，又可以看做一个矢量，故它称为矢性微分算子。于是梯度为</p>
 <p>$$<br>\operatorname{\varphi }=\nabla =G=\frac{\partial \varphi }{\partial x}\mathrm{i} + \frac{\partial \varphi }{\partial y}\mathrm{j} + \frac{\partial \varphi }{\partial z}\mathrm{k}<br>$$</p>
-<h4 id="矢量场的通量及散度"><a href="#矢量场的通量及散度" class="headerlink" title="矢量场的通量及散度"></a>矢量场的通量及散度</h4><p>通量：设有矢量场 $a$ ，在场内取一有向曲面 $S$ ， $\mathrm{d}S$ 是 $S$ 上的曲面元素，在 $\mathrm{d}S$ 任取一点 $M$ ， $n$ 是点 $M$ 处外法线方向的单位矢量，若将 $a\cdot n\mathrm{d}S$ 对曲面 $S$ 积分</p>
+<h4 id="矢量场的通量及散度"><a href="#矢量场的通量及散度" class="headerlink" title="矢量场的通量及散度"></a>矢量场的通量及散度</h4><p>通量：设有矢量场 $a$，在场内取一有向曲面 $S$，$\mathrm{d}S$ 是 $S$ 上的曲面元素，在 $\mathrm{d}S$ 任取一点 $M$，$n$ 是点 $M$ 处外法线方向的单位矢量，若将 $a\cdot n\mathrm{d}S$ 对曲面 $S$ 积分</p>
 <p>$$<br>\Phi =\iint_{S} a\cdot \mathrm{d}S=\iint_{S} a\cdot n\mathrm{d}S=\iint_{S}a_n\mathrm{d}S<br>$$</p>
 <p>则 $\Phi$ 称为矢量 $a$ 沿外法向矢量 $n$ 的方向通过曲面 $S$ 的通量。</p>
-<p>设有矢量场 $a=a(M)$ ，在场中一点 $M$ 的某个邻域内作包含此点的任一封闭曲面 $\Delta S$ ， $\Delta S$ 所围成的体积为 $\Delta V$ ，计算矢量 $a$ 穿过 $\Delta S$ 面上的通量，当 $\Delta V$ 以任意方向向点 $M$ 收缩时，如果极限</p>
+<p>设有矢量场 $a=a(M)$，在场中一点 $M$ 的某个邻域内作包含此点的任一封闭曲面 $\Delta S$，$\Delta S$ 所围成的体积为 $\Delta V$，计算矢量 $a$ 穿过 $\Delta S$ 面上的通量，当 $\Delta V$ 以任意方向向点 $M$ 收缩时，如果极限</p>
 <p>$$<br>\lim_{\Delta V \to 0} \dfrac{\Delta \Phi}{\Delta V }=\lim_{\Delta V \to 0} \dfrac{\oiint_{\Delta S}a\cdot \mathrm{d}S}{\Delta V}<br>$$</p>
-<p>存在，则此极限称为矢量函数 $a$ 在点 $M$ 的散度，记作 $\mathrm{div}a$ 。当采用哈密顿算子是可以写作</p>
+<p>存在，则此极限称为矢量函数 $a$ 在点 $M$ 的散度，记作 $\mathrm{div}a$。当采用哈密顿算子是可以写作</p>
 <p>$$<br>\mathrm{div}=\nabla \cdot a=\lim_{\Delta V \to 0} \dfrac{\Delta \Phi}{\Delta V }=\lim_{\Delta V \to 0} \dfrac{\oiint_{\Delta S}a\cdot \mathrm{d}S}{\Delta V}<br>$$</p>
 <p>同时可以写出散度在直角坐标系中的表达式</p>
 <p>$$<br>\operatorname{div} a = \nabla \cdot a=\frac{\partial a_x}{\partial x}+\frac{\partial a_y}{\partial y}+\frac{\partial a_z}{\partial z}<br>$$</p>
@@ -473,41 +473,41 @@
 </ol>
 <h4 id="高斯定理与格林公式"><a href="#高斯定理与格林公式" class="headerlink" title="高斯定理与格林公式"></a>高斯定理与格林公式</h4><p>高斯定理：设矢量 $a$ 在一封闭曲面 $S$ 的内部有连续的一阶偏导数，则 $a$ 在 $S$ 上的通量等于该矢量的散度对 $S$ 所围成体积 $V$ 上的积分，即</p>
 <p>$$<br>\oiint _{S}a\cdot \mathrm{d}S=\oiint _{S} a\cdot n\mathrm{d}S=\iiint \operatorname{div}a\mathrm{d}V=\iiint \nabla \cdot a\mathrm{d}V<br>$$</p>
-<p>式中 $n$ 为 $S$ 上单位外法线矢量， $\Delta $ 为哈密顿算子。</p>
+<p>式中 $n$ 为 $S$ 上单位外法线矢量，$\Delta $ 为哈密顿算子。</p>
 <p>格林定理：设平面矢量 $a$ 在一封闭曲线 $\Gamma $ 的内部有连续一阶偏导数，则 $a$ 在 $\Gamma $ 上的通量等于该矢量的散度对 $\Gamma $ 所围成面积 $D$ 上的积分，即</p>
 <p>$$<br>\oint _{\Gamma }a\cdot n\mathrm{d}\Gamma =\iint_{D}\nabla \cdot a\mathrm{D}<br>$$</p>
-<p>式中， $n$ 为 $\Gamma $ 上外法线方向的单位矢量， $\nabla $ 为哈密顿算子。</p>
+<p>式中，$n$ 为 $\Gamma $ 上外法线方向的单位矢量，$\nabla $ 为哈密顿算子。</p>
 <h3 id="直角坐标与极坐标的坐标变换"><a href="#直角坐标与极坐标的坐标变换" class="headerlink" title="直角坐标与极坐标的坐标变换"></a>直角坐标与极坐标的坐标变换</h3><p>略</p>
-<h3 id="变分法基本引理"><a href="#变分法基本引理" class="headerlink" title="变分法基本引理"></a>变分法基本引理</h3><p>引理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta (x)$ 在区间  上具有 $n$ 阶连续导数，且对于某个正数 $m(m=0,\cdots ,n)$ ，当满足条件</p>
+<h3 id="变分法基本引理"><a href="#变分法基本引理" class="headerlink" title="变分法基本引理"></a>变分法基本引理</h3><p>引理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta (x)$ 在区间  上具有 $n$ 阶连续导数，且对于某个正数 $m(m=0,\cdots ,n)$，当满足条件</p>
 <p>$$<br>\eta ^{(k)}(a)=\eta ^{(k)}(b)=0\quad (k=0,1,\cdots,m)<br>$$</p>
 <p>时，如果积分</p>
 <p>$$<br>\int_{a}^{b}f(x)\eta(x)\mathrm{d}x=0<br>$$</p>
 <p>总成立，则在区间 $[a,b]$ 上必有</p>
 <p>$$<br>f(x)\equiv 0<br>$$</p>
-<p>引理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta(x)$ 在区间 $[a,b]$ 上连续，且当满足条件 $\eta (a)\eta (b)=0$ ，总使积分</p>
+<p>引理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta(x)$ 在区间 $[a,b]$ 上连续，且当满足条件 $\eta (a)\eta (b)=0$，总使积分</p>
 <p>$$<br>\int_{a}^{b}f(x)\eta(x)\mathrm{d}x<br>$$</p>
-<p>成立，则在区间 $[a,b]$ 上必有 $f(x)= 0$ 。</p>
+<p>成立，则在区间 $[a,b]$ 上必有 $f(x)= 0$。</p>
 <p>引理：设函数 $f(x,y)$ 在闭区域 $D$ 内连续，任意函数 $\eta (x,y)$ 及其一阶导数在区域 $D$ 内都连续，且在 $D$ 的边界线 $L$ 上 $\eta (x,y)$ 等于零，总使积分</p>
 <p>$$<br>\iint_{D}f(x,y)\eta(x,y)\mathrm{d}x\mathrm{d}y=0<br>$$</p>
-<p>成立，则在区域 $D$ 上必有 $f(x,y)\equiv 0$ 。</p>
-<p>引理：设函数 $f(x,y)$ 在闭区域 $D$ 内连续，任意函数 $\eta (x,y)$ 所有 $n$ 阶导数在区域 $D$ 内都连续， $L$ 为 $D$ 的边界，只要</p>
+<p>成立，则在区域 $D$ 上必有 $f(x,y)\equiv 0$。</p>
+<p>引理：设函数 $f(x,y)$ 在闭区域 $D$ 内连续，任意函数 $\eta (x,y)$ 所有 $n$ 阶导数在区域 $D$ 内都连续，$L$ 为 $D$ 的边界，只要</p>
 <p>$$<br>\dfrac{\partial^{k} \eta}{\partial x^{i}\partial y^{k-i} }\vert _{L}=0,k=0,\cdots,n-1\quad i=0,\cdots,k<br>$$</p>
 <p>总使积分</p>
 <p>$$<br>\iint_{D}f(x,y)\eta (x,y)\mathrm{d}x\mathrm{d}y=0<br>$$</p>
-<p>则在区域 $D$ 上，必有 $f(x,y)\equiv 0$ 。</p>
+<p>则在区域 $D$ 上，必有 $f(x,y)\equiv 0$。</p>
 <p>引理：设函数 $\eta (x)$ 在区间 $[a,b]$ 上连续可微，且 $\eta (a)=0$ （或 $\eta(b)=0$ ），则有</p>
 <p>$$<br>\int_{a}^{b}\eta ^{\prime 2}(x)\mathrm{d}x\geq \dfrac{2}{(b-a)^2}\int_{a}^{b}\eta ^2(x)\mathrm{d}x<br>$$</p>
-<p>黎曼定理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta (x)$ 在区间 $[a,b]$ 上具有一阶连续导数，且 $\eta (a)=\eta (b)=0$ ，若积分</p>
+<p>黎曼定理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta (x)$ 在区间 $[a,b]$ 上具有一阶连续导数，且 $\eta (a)=\eta (b)=0$，若积分</p>
 <p>$$<br>\int_{a}^{b}f(x)\eta^{\prime}(x)\mathrm{d}x=0<br>$$</p>
 <p>总成立，则在区间 $[a,b]$ 上必有</p>
 <p>$$<br>f(x)\equiv \text{常数}<br>$$</p>
-<p>引理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta (x)$ 在区间 $[a,b]$ 上具有 $n-1$ 阶连续导数，且 $\eta^{(k)}(a)=\eta^{(k)}(b)=0\quad (k=1,\cdots ,n-1)$ ，都有积分</p>
+<p>引理：设函数 $f(x)$ 在区间 $[a,b]$ 上连续，任意函数 $\eta (x)$ 在区间 $[a,b]$ 上具有 $n-1$ 阶连续导数，且 $\eta^{(k)}(a)=\eta^{(k)}(b)=0\quad (k=1,\cdots ,n-1)$，都有积分</p>
 <p>$$<br>\int_{a}^{b}f(x)\eta ^{(n)}(x)\mathrm{d}x=0<br>$$</p>
 <p>成立，则在区间 $[a,b]$ 上 $f(x)$ 是 $n-1$ 次多项式。</p>
-<h2 id="固定边界的变分问题"><a href="#固定边界的变分问题" class="headerlink" title="固定边界的变分问题"></a>固定边界的变分问题</h2><h3 id="古典变分问题举例"><a href="#古典变分问题举例" class="headerlink" title="古典变分问题举例"></a>古典变分问题举例</h3><h4 id="最速降线问题"><a href="#最速降线问题" class="headerlink" title="最速降线问题"></a>最速降线问题</h4><h4 id="短程线问题"><a href="#短程线问题" class="headerlink" title="短程线问题"></a>短程线问题</h4><h4 id="等周问题"><a href="#等周问题" class="headerlink" title="等周问题"></a>等周问题</h4><h3 id="变分法的基本概念"><a href="#变分法的基本概念" class="headerlink" title="变分法的基本概念"></a>变分法的基本概念</h3><p>函数类：具有某种共同性质的函数构成的集合称为函数类，记作 $F$ 。</p>
-<p>连续函数类：在开区间 $(x_0,x_1)$ 内连续的函数集，称为在区间 $(x_0,x_1)$ 上的连续函数类，记为 $C(x_0,x_1)$ ；在闭区间 $[x_0,x_1]$ 上连续的函数集，称为在区间 $[x_0,x_1]$ 上的连续函数列，记为 $C[x_0,x_1]$ ，其中函数在区间的左端点右连续，在区间的右端点左连续。这时它在区间端点的连续称为单边连续。</p>
-<p>在开区间 $(x_0,x_1)$ 内 $n$ 阶导数连续的函数集，称为在区间 $(x_0,x_1)$ 上 $n$ 阶导数连续的函数类，记为 $C^n(x_0,x_1)$ ；在闭区间 $[x_0,x_1]$ 上 n$$ 阶导数连续的函数集，称为区间 $[x_0,x_1]$ 上 $n$ 阶导数连续的函数类，记为 $C^n[x_0,x_1]$ ，其中函数的 $n$ 阶导数在区间端点单边连续。</p>
-<p>泛函：设 $F=\{ y(x) \}$ 给定的某一函数列， $R$ 为实数集合。如果对与函数类 $F$ 中的每一个函数 $y(x)$ ，在 $R$ 中变量 $J$ 都有一个确定的数值按照一定的规律与之对应，则 $J$ 称为函数 $y(x)$ 的泛函，记为 $J=J[y(x)]$ 或 $J=J[y]$ 。函数 $y(x)$ 称为泛函 $J$ 的宗量。函数类 $F$ 称为泛函 $J$ 的定义域。</p>
+<h2 id="固定边界的变分问题"><a href="#固定边界的变分问题" class="headerlink" title="固定边界的变分问题"></a>固定边界的变分问题</h2><h3 id="古典变分问题举例"><a href="#古典变分问题举例" class="headerlink" title="古典变分问题举例"></a>古典变分问题举例</h3><h4 id="最速降线问题"><a href="#最速降线问题" class="headerlink" title="最速降线问题"></a>最速降线问题</h4><h4 id="短程线问题"><a href="#短程线问题" class="headerlink" title="短程线问题"></a>短程线问题</h4><h4 id="等周问题"><a href="#等周问题" class="headerlink" title="等周问题"></a>等周问题</h4><h3 id="变分法的基本概念"><a href="#变分法的基本概念" class="headerlink" title="变分法的基本概念"></a>变分法的基本概念</h3><p>函数类：具有某种共同性质的函数构成的集合称为函数类，记作 $F$。</p>
+<p>连续函数类：在开区间 $(x_0,x_1)$ 内连续的函数集，称为在区间 $(x_0,x_1)$ 上的连续函数类，记为 $C(x_0,x_1)$ ；在闭区间 $[x_0,x_1]$ 上连续的函数集，称为在区间 $[x_0,x_1]$ 上的连续函数列，记为 $C[x_0,x_1]$，其中函数在区间的左端点右连续，在区间的右端点左连续。这时它在区间端点的连续称为单边连续。</p>
+<p>在开区间 $(x_0,x_1)$ 内 $n$ 阶导数连续的函数集，称为在区间 $(x_0,x_1)$ 上 $n$ 阶导数连续的函数类，记为 $C^n(x_0,x_1)$ ；在闭区间 $[x_0,x_1]$ 上 n$$ 阶导数连续的函数集，称为区间 $[x_0,x_1]$ 上 $n$ 阶导数连续的函数类，记为 $C^n[x_0,x_1]$，其中函数的 $n$ 阶导数在区间端点单边连续。</p>
+<p>泛函：设 $F=\{ y(x) \}$ 给定的某一函数列，$R$ 为实数集合。如果对与函数类 $F$ 中的每一个函数 $y(x)$，在 $R$ 中变量 $J$ 都有一个确定的数值按照一定的规律与之对应，则 $J$ 称为函数 $y(x)$ 的泛函，记为 $J=J[y(x)]$ 或 $J=J[y]$。函数 $y(x)$ 称为泛函 $J$ 的宗量。函数类 $F$ 称为泛函 $J$ 的定义域。</p>
 <p>一元函数的泛函称为曲线函数，二元函数的泛函称为曲面函数。</p>
 <p>同样的，可以定义多维域上的泛函。</p>
 <p>函数的距离：设函数 $y(x),y_0(x)$ 在区间 $[a,b]$ 上有连续的 $n$ 阶导数，则这两个函数 $0$ 到 $M$ 阶导数之差的绝对值中最大的那个数</p>
@@ -519,15 +519,15 @@
 <p>称为函数 $y(x)$ 与 $y_0(x)$ 在区间 $[a,b]$ 上的一级距离。</p>
 <p>显然：</p>
 <p>$$<br>\mathrm{d}_0[y,y_0]\leq \mathrm{d}_1[y,y_0]\leq \cdots \leq \mathrm{d}_n[y,y_0]<br>$$</p>
-<p>邻域：设已知函数 $y_0(x)$ 在区间 $[a,b]$ 上有连续的 $n$ 阶导数，则所有与函数 $y_0(x)$ 在区间 $[a,b]$ 上 $n$ 级距离小于正数 $\delta $ 的函数 $y(x)$ 所组成的集合称为函数 $y_0(x)$ 在区间 $[a,b]$ 上的 $n$ 级 $\delta $ 邻域，记为 $N_n[\delta ,y_0(x)]$ ，即</p>
+<p>邻域：设已知函数 $y_0(x)$ 在区间 $[a,b]$ 上有连续的 $n$ 阶导数，则所有与函数 $y_0(x)$ 在区间 $[a,b]$ 上 $n$ 级距离小于正数 $\delta $ 的函数 $y(x)$ 所组成的集合称为函数 $y_0(x)$ 在区间 $[a,b]$ 上的 $n$ 级 $\delta $ 邻域，记为 $N_n[\delta ,y_0(x)]$，即</p>
 <p>$$<br>N_n[\delta ,y_0(x)]=\{ y(x)\vert y(x)\in C^n[a,b],\mathrm{d}_n[y(x),y_0(x)]&lt;\delta \}<br>$$</p>
-<p>接近度：若 $y(x)\in N_n[\delta ,y_0(x)]$ ，则 $y(x)$ 与 $y_0(x)$ 称为具有 $n$ 阶 $\delta $ 接近度。</p>
-<p>连续泛函：设函数 $y(x)\in F=C^n[a,b]$ ， $J[y(x)]$ 时定义域为 $F$ 的泛函。若对于任意给定的一个正数 $\epsilon $ ，总可以找到一个 $\delta &gt;0$ ，只要</p>
+<p>接近度：若 $y(x)\in N_n[\delta ,y_0(x)]$，则 $y(x)$ 与 $y_0(x)$ 称为具有 $n$ 阶 $\delta $ 接近度。</p>
+<p>连续泛函：设函数 $y(x)\in F=C^n[a,b]$，$J[y(x)]$ 时定义域为 $F$ 的泛函。若对于任意给定的一个正数 $\epsilon $，总可以找到一个 $\delta &gt;0$，只要</p>
 <p>$$<br>\mathrm{d}_n[y(x),y_0(x)]&lt;\delta<br>$$</p>
 <p>都有</p>
 <p>$$<br>\left| J[y(x)]-J[y_0(x)] \right|&lt;\epsilon<br>$$</p>
 <p>成立，则 $J[y(x)]$ 称为在函数 $y_0(x)$ 处具有 $n$ 阶 $\delta $ 接近度的连续泛函。</p>
-<p>变分：对于任意定值 $x\in [x_0,x_1]$ ，可取函数 $y(x)$ 与另一可取函数 $y_0(x)$ 之差 $y(x)-y_0(x)$ 称为函数 $y(x)$ 在 $y_0(x)$ 处的变分，记作 $\delta y$ ， $\delta $ 称为变分符号，这时有<br>$$<br>\delta y=y(x)-y_0(x)=\epsilon \eta(x)<br>$$<br>式子中 $\epsilon $ 为一小参数， $\eta(x)$ 为 $x$ 的任意函数。</p>
+<p>变分：对于任意定值 $x\in [x_0,x_1]$，可取函数 $y(x)$ 与另一可取函数 $y_0(x)$ 之差 $y(x)-y_0(x)$ 称为函数 $y(x)$ 在 $y_0(x)$ 处的变分，记作 $\delta y$，$\delta $ 称为变分符号，这时有<br>$$<br>\delta y=y(x)-y_0(x)=\epsilon \eta(x)<br>$$<br>式子中 $\epsilon $ 为一小参数，$\eta(x)$ 为 $x$ 的任意函数。</p>
 <p>变分与微分的差别：</p>
 <p><img src="bff12345/%E5%8F%98%E5%88%86%E4%B8%8E%E5%BE%AE%E5%88%86%E5%B7%AE%E5%88%AB.jpg" srcset="/img/loading.gif" lazyload alt="变分与微分差别"></p>
 <p>特别的，变分符号与导数符号，哈密顿算子，拉普拉斯算子运算次序可交换，即</p>
@@ -542,8 +542,8 @@
 <li>$$ J[y_1(x)+y_2(x)]=J[y_1(x)+J[y_2(x)]] $$</li>
 <li>$$ J[Cy(x)]=CJ[y(x)] $$</li>
 </ol>
-<p>式子中， $C$ 为任意常数，则 $J[y(x)]$ 称为关于 $y=y(x)$ 的线性泛函。</p>
-<p>可微与变分：若泛函具有一阶连续性，且其增量可以表示为 $\Delta J=L[y(x),\delta y]+\mathrm{d}[y(x),\delta y]$ ，其中 $\mathrm{d}[y,\delta y]$ 为 $\delta y$ 的高阶无穷小量，则这个泛函为在 $y=y(x)$ 处可微，并把 $L[y,\delta y]$ 称为泛函 $J[y(x)]$ 在 $y(x)$ 上的一阶变分或一次变分，简称变分，记作 $\delta J[y(x)]$ 或 $\delta J$ ，即</p>
+<p>式子中，$C$ 为任意常数，则 $J[y(x)]$ 称为关于 $y=y(x)$ 的线性泛函。</p>
+<p>可微与变分：若泛函具有一阶连续性，且其增量可以表示为 $\Delta J=L[y(x),\delta y]+\mathrm{d}[y(x),\delta y]$，其中 $\mathrm{d}[y,\delta y]$ 为 $\delta y$ 的高阶无穷小量，则这个泛函为在 $y=y(x)$ 处可微，并把 $L[y,\delta y]$ 称为泛函 $J[y(x)]$ 在 $y(x)$ 上的一阶变分或一次变分，简称变分，记作 $\delta J[y(x)]$ 或 $\delta J$，即</p>
 <p>$$<br>\delta J[y(x)]=\epsilon  \int_{x_0}^{x_1}(F_y\eta+F_{y^{\prime} }\eta ^{\prime})\mathrm{d}x<br>$$</p>
 <p>设  是  的可微函数，则变分记号  有下列基本运算性质</p>
 <ol>
@@ -561,32 +561,32 @@
 <p>$$<br>y(x_0)=y_0,y(x_1)=y_1<br>$$</p>
 <p>的极值曲线 $y=y(x)$ 应满足必要条件</p>
 <p>$$<br>F_y-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y^\prime }=0<br>$$</p>
-<p>的解，式子中， $F$ 是 $x,y,y^\prime $ 的已知函数并有二阶连续偏导数。</p>
-<h3 id="欧拉方程的几种特殊类型及其积分"><a href="#欧拉方程的几种特殊类型及其积分" class="headerlink" title="欧拉方程的几种特殊类型及其积分"></a>欧拉方程的几种特殊类型及其积分</h3><p>（1） $F$ 不依赖 $y^{\prime}$ ，即 $F=F(x,y)$</p>
-<p>此时， $F_{y^\prime}\equiv 0$ ，所以欧拉方程 $F_y(x,y)=0$ ，这是一个函数方程，其解不含任意常数。这个函数的解不满足边界条件，则变分问题无解。如果 $F_y(x,y)=0$ 的解通过 $(x_0,y_0)$ 与 $(x_1,y_1)$ 时，才能称为极值曲线。</p>
-<p>（2） $F$ 线性依赖 $y^{\prime }$ ，即 $F(x,y,y^\prime =M(x,y)+N(x,y)y^{\prime }$ 。此时欧拉方程为</p>
+<p>的解，式子中，$F$ 是 $x,y,y^\prime $ 的已知函数并有二阶连续偏导数。</p>
+<h3 id="欧拉方程的几种特殊类型及其积分"><a href="#欧拉方程的几种特殊类型及其积分" class="headerlink" title="欧拉方程的几种特殊类型及其积分"></a>欧拉方程的几种特殊类型及其积分</h3><p>（1） $F$ 不依赖 $y^{\prime}$，即 $F=F(x,y)$</p>
+<p>此时，$F_{y^\prime}\equiv 0$，所以欧拉方程 $F_y(x,y)=0$，这是一个函数方程，其解不含任意常数。这个函数的解不满足边界条件，则变分问题无解。如果 $F_y(x,y)=0$ 的解通过 $(x_0,y_0)$ 与 $(x_1,y_1)$ 时，才能称为极值曲线。</p>
+<p>（2） $F$ 线性依赖 $y^{\prime }$，即 $F(x,y,y^\prime =M(x,y)+N(x,y)y^{\prime }$。此时欧拉方程为</p>
 <p>$$<br>\dfrac{\partial M}{\partial y}+\frac{\partial N}{\partial y}y^\prime -\dfrac{\mathrm{d} }{\mathrm{d}x}N=0<br>$$</p>
 <p>整理，得</p>
 <p>$$<br>\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}=0<br>$$</p>
-<p>从上式解出的 $y=y(x)$ ，仍然是函数方程，它不一定满足边界条件。</p>
-<p>若 $\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\equiv 0$ ，则表达式 $M\mathrm{d}x+N\mathrm{d}y$ 是全微分。此时积分 $\int_{x_0}^{x_1}M\mathrm{d}x+N\mathrm{d}y$ 与路径无关，因而泛函</p>
+<p>从上式解出的 $y=y(x)$，仍然是函数方程，它不一定满足边界条件。</p>
+<p>若 $\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\equiv 0$，则表达式 $M\mathrm{d}x+N\mathrm{d}y$ 是全微分。此时积分 $\int_{x_0}^{x_1}M\mathrm{d}x+N\mathrm{d}y$ 与路径无关，因而泛函</p>
 <p>$$<br>J[y(x)]=\int_{x_0}^{x_1}(M+N\dfrac{\mathrm{d}y}{\mathrm{d}x})\mathrm{d}x<br>$$</p>
 <p>的值不依赖于曲线 $y=y(x)$ 的选择，变分问题失去意义。</p>
-<p>（3） $F$ 不依赖于 $y$ ，即 $F=F(x,y^\prime )$</p>
+<p>（3） $F$ 不依赖于 $y$，即 $F=F(x,y^\prime )$</p>
 <p>此时欧拉方程为</p>
 <p>$$<br>\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y^\prime }(x,y^\prime)=0<br>$$</p>
-<p>将上式积分，得到 $F_{y^\prime }(x,y^\prime)=c_1$ ，由此可解出 $y^\prime =\varphi (x,c_1)$ ，再次积分得到可能是极值的极值曲线族</p>
+<p>将上式积分，得到 $F_{y^\prime }(x,y^\prime)=c_1$，由此可解出 $y^\prime =\varphi (x,c_1)$，再次积分得到可能是极值的极值曲线族</p>
 <p>$$<br>y=\int_{x_0}^{x_1}\varphi (x,c_1)\mathrm{d}x<br>$$</p>
-<p>（4） $F$ 只依赖于 $y^\prime $ ，即 $F=F(y^\prime )$</p>
+<p>（4） $F$ 只依赖于 $y^\prime $，即 $F=F(y^\prime )$</p>
 <p>此时，极值曲线必然是直线族。</p>
-<p>（5） $F$ 仅依赖于 $y$ 和 $y^\prime $ ，即 $F=F(y,y^\prime )$</p>
-<p>这时有 $F_{xy^\prime }=0$ ，欧拉方程为</p>
+<p>（5） $F$ 仅依赖于 $y$ 和 $y^\prime $，即 $F=F(y,y^\prime )$</p>
+<p>这时有 $F_{xy^\prime }=0$，欧拉方程为</p>
 <p>$$<br>F_y=F_{yy^\prime }y^\prime -F_{y^\prime y^\prime }y^{\prime \prime }=0<br>$$</p>
-<p>注意到 $F$ 不依赖于 $x$ ，于是有</p>
+<p>注意到 $F$ 不依赖于 $x$，于是有</p>
 <p>$$<br>\dfrac{\mathrm{d} }{\mathrm{d}x}(F-y^\prime F_{y^\prime })=y^\prime (F_y-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y^{\prime } })=0<br>$$</p>
 <p>其首次积分为</p>
 <p>$$<br>F-y^\prime F_{y^\prime }=c_1<br>$$</p>
-<p>由此解出 $y^{\prime }=\varphi (y,c_1)$ ，积分后可得到极值曲线族</p>
+<p>由此解出 $y^{\prime }=\varphi (y,c_1)$，积分后可得到极值曲线族</p>
 <p>$$<br>x=\int \dfrac{\mathrm{d}y}{\varphi (y,c_1)}+c_2<br>$$</p>
 <h3 id="依赖于多个一元函数的变分问题"><a href="#依赖于多个一元函数的变分问题" class="headerlink" title="依赖于多个一元函数的变分问题"></a>依赖于多个一元函数的变分问题</h3><p>定理：使泛函</p>
 <p>$$<br>J[y(x),z(x)]=\int_{x_0}^{x_1}F(x,y,y^\prime ,z,z^\prime )\mathrm{d}x<br>$$</p>
@@ -594,7 +594,7 @@
 <p>$$<br>y(x_0)=y_0,y(x_1)=y_1,z(x_0)=z_0,z(x_1)=z_1<br>$$</p>
 <p>的极值曲线 $y=y(x),z=z(x)$ 必满足欧拉方程组</p>
 <p>$$<br>\begin{cases}<br>F_y-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y^{\prime} }=0 \\ \\<br>F_z-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{z^\prime }=0<br>\end{cases}<br>$$</p>
-<p>推论：对于含有 $n$ 个未知函数 $y_1(x),\cdots,y_n(x)$ ，使泛函</p>
+<p>推论：对于含有 $n$ 个未知函数 $y_1(x),\cdots,y_n(x)$，使泛函</p>
 <p>$$<br>J[y_1,\cdots ,y_n]=\int_{x_0}^{x_1}F(x,y_1,\cdots ,y_n,y_1^{\prime },\cdots,y_n^{\prime})\mathrm{d}x<br>$$</p>
 <p>取得极值且满足边界条件</p>
 <p>$$<br>y_i(x_0)=y_i^{(0)},y_i(x_1)=y_i^{1} \quad (i=1,\cdots,n)<br>$$</p>
@@ -602,7 +602,7 @@
 <p>$$<br>F_{y_i}-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y_1^\prime }=0\quad (i=1,2,\cdots,n)<br>$$</p>
 <h3 id="依赖于高阶导数的变分问题"><a href="#依赖于高阶导数的变分问题" class="headerlink" title="依赖于高阶导数的变分问题"></a>依赖于高阶导数的变分问题</h3><p>考虑有二阶导数的泛函，即</p>
 <p>$$<br>J[y(x)]=\int_{x_0}^{x_1}F(x,y,y^\prime ,y^{\prime\prime} )\mathrm{d}x<br>$$</p>
-<p>式子中， $F$ 时具有三阶连续可微的函数， $y$ 时具有四阶连续可微的函数。</p>
+<p>式子中，$F$ 时具有三阶连续可微的函数，$y$ 时具有四阶连续可微的函数。</p>
 <p>定理：使泛函取极值且满足固定边界条件</p>
 <p>$$<br>y(x_0)=y_0,y(x_1)=y_1,y^{\prime}(x_0)=y_0^\prime ,y^\prime (x_1)=y_1^\prime<br>$$</p>
 <p>的极值曲线 $y=y(x)$ 必满足微分方程</p>
@@ -614,14 +614,14 @@
 <p>$$<br>y^{(i)}(x_0)=y_0^{(k)},y^{(i)}(x_1)=y_1^{(k)} \quad (k=0,1,\cdots,n-1)<br>$$</p>
 <p>的极值曲线 $y=y(x)$ 必满足欧拉泊松方程：</p>
 <p>$$<br>F_y-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y^\prime }+\dfrac{\mathrm{d}^2}{\mathrm{d}x^2}F_{y^{\prime \prime } }-\cdots +(-1)^n\dfrac{\mathrm{d}^n}{\mathrm{d}x^n}F_{y^{(n)} }=0<br>$$</p>
-<p>推论：使依赖于两个未知函数 $y(x)$ 的 $m$ 阶导数， $z(x)$ 的 $n$ 阶导数的泛函</p>
+<p>推论：使依赖于两个未知函数 $y(x)$ 的 $m$ 阶导数，$z(x)$ 的 $n$ 阶导数的泛函</p>
 <p>$$<br>J[y(x)]=\int_{x_0}^{x_1}F(x,y,y^\prime ,\cdots y^{(m)},z,z^\prime ,\cdots,z^{(n)})\mathrm{d}x<br>$$</p>
 <p>取极值且满足固定边界条件</p>
 <p>$$<br>y^{(i)}(x_0)=y_0^{(k)},y^{(i)}(x_1)=y_1^{(k)} \quad (k=0,1,\cdots,m-1)<br>$$</p>
 <p>$$<br>z^{(i)}(x_0)=z_0^{(k)},z^{(i)}(x_1)=z_1^{(k)} \quad (k=0,1,\cdots,n-1)<br>$$</p>
 <p>的极值曲线 $y=y(x),z=z(x)$ 必满足欧拉泊松方程组：</p>
 <p>$$<br>\begin{cases}<br>\sum_{k=0}^{m}(-1)^k\dfrac{\mathrm{d}^k}{\mathrm{d}x^k}F_{y^{(k)} }=0 \\ \\ \sum_{k=0}^{n}(-1)^k\dfrac{\mathrm{d}^k}{\mathrm{d}x^k}F_{z^{(k)} }=0<br>\end{cases}<br>$$</p>
-<h3 id="依赖于多元函数的变分问题"><a href="#依赖于多元函数的变分问题" class="headerlink" title="依赖于多元函数的变分问题"></a>依赖于多元函数的变分问题</h3><p>奥氏方程：设 $D$ 是平面区域， $(x,y)\in D$ ， $u(x,y)\in C^2(D)$ ，使泛函</p>
+<h3 id="依赖于多元函数的变分问题"><a href="#依赖于多元函数的变分问题" class="headerlink" title="依赖于多元函数的变分问题"></a>依赖于多元函数的变分问题</h3><p>奥氏方程：设 $D$ 是平面区域，$(x,y)\in D$，$u(x,y)\in C^2(D)$，使泛函</p>
 <p>$$<br>J[u(x,y)]=\iint_{D}F(x,y,u,u_x,u_y)\mathrm{d}x\mathrm{d}y<br>$$</p>
 <p>取极值且在区域 $D$ 的边界线 $L$ 上取已知的极值函数 $u=u(x,y)$ 必满足偏微分方程</p>
 <p>$$<br>F_u-\frac{\partial }{\partial x}F_{u_x}-\frac{\partial }{\partial y}F_{u_y}=0<br>$$</p>
@@ -632,7 +632,7 @@
 <p>$$<br>F_y-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{y^\prime }=0<br>$$</p>
 <p>设 $x$ 是 $\xi $ 的函数，则</p>
 <p>$$<br>x=x(\xi),y=y[x(\xi)]=y(\xi)<br>$$</p>
-<p>当 $x=x_0$ 时， $\xi = \xi_0$ ，当 $x=x_1$ 时， $\xi=\xi_1$ 且令</p>
+<p>当 $x=x_0$ 时，$\xi = \xi_0$，当 $x=x_1$ 时，$\xi=\xi_1$ 且令</p>
 <p>$$<br>F_1(\xi,y,\dfrac{\mathrm{d}y}{\mathrm{d}\xi})=F(x(\xi),y,\dfrac{\mathrm{d}y/\mathrm{d}\xi}{\mathrm{d}x/\mathrm{d}\xi})<br>$$</p>
 <p>则有</p>
 <p>$$<br>J[y]=\int_{\xi_0}^{\xi_1}G(\xi,y,\dfrac{\mathrm{d}y}{\mathrm{d}\xi})\dfrac{\mathrm{d}x}{\mathrm{d}\xi}\mathrm{d}\xi<br>$$</p>
@@ -644,24 +644,24 @@
 <p>$$<br>H_y-\dfrac{\mathrm{d} }{\mathrm{d}\xi}H_{\frac{\mathrm{d}y}{\mathrm{d}\xi} }=0<br>$$</p>
 <p>这就是欧拉方程的不变性。</p>
 <h2 id="泛函极值的充分条件"><a href="#泛函极值的充分条件" class="headerlink" title="泛函极值的充分条件"></a>泛函极值的充分条件</h2><h3 id="极值曲线场"><a href="#极值曲线场" class="headerlink" title="极值曲线场"></a>极值曲线场</h3><p>设 $y=y(x,c)$ 为平面区域 $D$ 上的一单参数曲线族，如果对于区域 $D$ 内的每一点，有且仅有该曲线族中的一条曲线通过，则这个曲线族成为在区域 $D$ 内形成一个固有曲线场。</p>
-<p>设 $M(x_0,y_0)$ 为平面区域 $D$ 内的某一点。 $y=y(x,c)$ 是以 $M(x_0,y_0)$ 为束心的曲线族，该曲线族布满整个区域 $D$ ，且除束心  外，束中曲线在 $D$ 内没有其他交点，这时曲线族 $y=y(x,c)$ 称为在  内形成一个中心曲线场。</p>
+<p>设 $M(x_0,y_0)$ 为平面区域 $D$ 内的某一点。$y=y(x,c)$ 是以 $M(x_0,y_0)$ 为束心的曲线族，该曲线族布满整个区域 $D$，且除束心  外，束中曲线在 $D$ 内没有其他交点，这时曲线族 $y=y(x,c)$ 称为在  内形成一个中心曲线场。</p>
 <p>如果固有曲线场或中心曲线场是由泛函的某一变分问题的极值曲线族所形成的，则这个曲线场成为极值曲线场或极值曲线中心场。</p>
 <h3 id="雅可比条件和雅可比方程"><a href="#雅可比条件和雅可比方程" class="headerlink" title="雅可比条件和雅可比方程"></a>雅可比条件和雅可比方程</h3><p>考虑最简泛函</p>
 <p>$$<br>J[y(x)]=\int_{x_0}^{x_1}F(x,y,y^{\prime })\mathrm{d}x<br>$$</p>
 <p>及边界条件</p>
-<p>式子中， $F(x,y,y^{\prime })$ 具有连续二阶偏导数。记边界点为 $A(x_0,y_0)$ 和 $B(x_1,y_1)$ 。</p>
+<p>式子中，$F(x,y,y^{\prime })$ 具有连续二阶偏导数。记边界点为 $A(x_0,y_0)$ 和 $B(x_1,y_1)$。</p>
 <p>最简泛函的增量可表示为</p>
 <p>$$<br>\Delta J = \delta J+\delta ^2J+\varepsilon _2<br>$$</p>
-<p>式子中， $\varepsilon _2$ 是比 $\mathrm{d}_1^2(y,y+\delta y)$ 更高阶的无穷小。</p>
+<p>式子中，$\varepsilon _2$ 是比 $\mathrm{d}_1^2(y,y+\delta y)$ 更高阶的无穷小。</p>
 <p>最简泛函的二阶变分为</p>
 <p>$$<br>\begin{align*}<br>\delta ^2 J &amp;= \dfrac{1}{2}\int_{x_0}^{x_1}[F_{yy}(\delta y)^2+2F_{yy^\prime }\delta y\delta y^\prime +F_{y^\prime y^\prime }(\delta y^\prime )^2]\mathrm{d}x \\ &amp;=\dfrac{\varepsilon ^2}{2}\int_{x_0}^{x_1}(F_{yy}(\eta)^2+2F_{yy^\prime }\eta\eta^\prime +F_{y^\prime y^\prime }(\eta^\prime )^2)\mathrm{d}x \\ &amp;=\dfrac{\varepsilon ^2}{2}J_2<br>\end{align*}<br>$$</p>
 <p>式子中</p>
 <p>$$<br>J_2 = \int_{x_0}^{x_1}(F_{yy}(\eta)^2+2F_{yy^\prime }\eta\eta^\prime +F_{y^\prime y^\prime }(\eta^\prime )^2)\mathrm{d}x<br>$$</p>
-<p>可见， $\delta ^2 J$ 和 $J_2$ 有相同的符号。</p>
-<p>定理：若泛函 $J_2$ 取得极值 $\eta =u(x)$ ，那么</p>
+<p>可见，$\delta ^2 J$ 和 $J_2$ 有相同的符号。</p>
+<p>定理：若泛函 $J_2$ 取得极值 $\eta =u(x)$，那么</p>
 <p>$$<br>\left( F_{yy}-\dfrac{\mathrm{d} }{\mathrm{d}x}F_{yy^\prime } \right)u-\dfrac{\mathrm{d} }{\mathrm{d}x}\left( F_{y^\prime y^\prime} \dfrac{\mathrm{d}u}{\mathrm{d}x} \right)=0<br>$$</p>
 <p>称为雅可比方程。</p>
-<p>定理：若 $\eta(x_0)=\eta (x_1)=0$ ，且 $u=u(x)$ 为雅可比方程的解，它在区间 $(x_0,x_1)$ 内不等于零，则泛函 $J_2$ 可写成</p>
+<p>定理：若 $\eta(x_0)=\eta (x_1)=0$，且 $u=u(x)$ 为雅可比方程的解，它在区间 $(x_0,x_1)$ 内不等于零，则泛函 $J_2$ 可写成</p>
 <p>$$<br>J_2=\int_{x_0}^{x_1}F_{y^\prime y^\prime }\left( \eta ^\prime -\eta \dfrac{u^\prime }{u} \right)^2\mathrm{d}x<br>$$</p>
 
             </div>
