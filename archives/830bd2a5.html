@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -410,190 +410,190 @@
 <p>误差：设 $x$ 为准确值，$x^{\ast }$ 为 $x$ 的一个近似值，称 $e^{\ast }=x^{\ast}-x$ 为近似值的绝对误差，简称误差。</p>
 <p>相对误差：我们把近似值的误差 $e^{\ast }$ 与准确值 $x$ 的比值</p>
 <p>$$<br>\dfrac{e^{\ast} }{x}=\dfrac{x^{\ast}-x}{x}<br>$$</p>
-<p>称为近似值 $x^{\ast }$ 的相对误差，记作 $e _ r^{\ast}$。当 $e^{\ast}/x^{\ast}$ 很小时，可以取 $e _ r^{\ast }=\dfrac{x^{\ast}-x}{x^{\ast} }$。</p>
-<p>相对误差可正可负，其绝对值上界叫做相对误差限，记作 $\varepsilon _ r^{\ast}$，即 $\varepsilon _ r^{\ast}=\dfrac{\varepsilon^{\ast} }{|x^{\ast}|}$。</p>
-<h2 id="插值法"><a href="#插值法" class="headerlink" title="插值法"></a>插值法</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>定义：设函数 $y=f(x)$ 在区间 $[a,b]$ 上有定义，且已知在点 $a\leq x _ 0&lt;x _ 1&lt;\cdots&lt;x _ n\leq b$ 上的值 $y _ 0,y _ 1,\cdots,y _ n$，若存在一个简单函数 $p(x)$，使 $p(x _ i)=y _ i(i=0,\cdots,n)$ 成立，则称 $p(x)$ 为 $f(x)$ 的插值函数，点 $x _ 0,x _ 1,\cdots,x _ n$ 称为插值节点，区间 $[a,b]$ 称为插值区间，求插值函数 $p(x)$ 的方法称为插值方法。</p>
+<p>称为近似值 $x^{\ast }$ 的相对误差，记作 $e _  r^{\ast}$。当 $e^{\ast}/x^{\ast}$ 很小时，可以取 $e _  r^{\ast }=\dfrac{x^{\ast}-x}{x^{\ast} }$。</p>
+<p>相对误差可正可负，其绝对值上界叫做相对误差限，记作 $\varepsilon _  r^{\ast}$，即 $\varepsilon _  r^{\ast}=\dfrac{\varepsilon^{\ast} }{|x^{\ast}|}$。</p>
+<h2 id="插值法"><a href="#插值法" class="headerlink" title="插值法"></a>插值法</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>定义：设函数 $y=f(x)$ 在区间 $[a,b]$ 上有定义，且已知在点 $a\leq x _  0&lt;x _  1&lt;\cdots&lt;x _  n\leq b$ 上的值 $y _  0,y _  1,\cdots,y _  n$，若存在一个简单函数 $p(x)$，使 $p(x _  i)=y _  i(i=0,\cdots,n)$ 成立，则称 $p(x)$ 为 $f(x)$ 的插值函数，点 $x _  0,x _  1,\cdots,x _  n$ 称为插值节点，区间 $[a,b]$ 称为插值区间，求插值函数 $p(x)$ 的方法称为插值方法。</p>
 <p>若 $p(x)$ 是次数不超过 $n$ 的代数多项式，即</p>
-<p>$$<br>p(x)=a _ 0+a _ 1x+\cdots+a _ nx^n<br>$$</p>
-<p>其中 $a _ i$ 为实数，则 $p(x)$ 称为插值多项式，相应的插值法称为多项式插值（代数插值）。<br>若 $p(x)$ 是分段的多项式，则为分段插值。<br>若 $p(x)$ 是三角多项式，则称为三角插值。</p>
-<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><p>定理：设给定 $n+1$ 个互异的点 $x _ {0},x _ {1}, \cdots ,x _ {n}$ 和 $n+1$ 个函数值 $ y _ {0},y _ {1}, \cdots ,y _ {n} $ ,则在次数不高于 $n$ 的代数多项式集合中，唯一的存在一个多项式 $p(x)=a _ 0+a _ 1x+\cdots+a _ nx^n$ ,它满足条件 $p(x _ i)=y _ i(i=0,\cdots,n)$。（可以使用范德蒙德行列式的性质证明）</p>
-<p>当 $n=1$ 时，有 $L _ 1(x)=y _ {k}l _ {k}(x)+y _ {k+1}l _ {k+1}(x)$，其中 $l _ k(x)=\dfrac{x-x _ {k+1} }{x _ {k}-x _ {k+1} }$，$l _ {k+1}(x)=\dfrac{x-x _ k}{x _ {k+1}-x _ k}$，$l _ k(x),l _ {k+1}(x)$ 称为线性插值基函数。</p>
+<p>$$<br>p(x)=a _  0+a _  1x+\cdots+a _  nx^n<br>$$</p>
+<p>其中 $a _  i$ 为实数，则 $p(x)$ 称为插值多项式，相应的插值法称为多项式插值（代数插值）。<br>若 $p(x)$ 是分段的多项式，则为分段插值。<br>若 $p(x)$ 是三角多项式，则称为三角插值。</p>
+<h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><p>定理：设给定 $n+1$ 个互异的点 $x _  {0},x _  {1}, \cdots ,x _  {n}$ 和 $n+1$ 个函数值 $ y _  {0},y _  {1}, \cdots ,y _  {n} $ ,则在次数不高于 $n$ 的代数多项式集合中，唯一的存在一个多项式 $p(x)=a _  0+a _  1x+\cdots+a _  nx^n$ ,它满足条件 $p(x _  i)=y _  i(i=0,\cdots,n)$。（可以使用范德蒙德行列式的性质证明）</p>
+<p>当 $n=1$ 时，有 $L _  1(x)=y _  {k}l _  {k}(x)+y _  {k+1}l _  {k+1}(x)$，其中 $l _  k(x)=\dfrac{x-x _  {k+1} }{x _  {k}-x _  {k+1} }$，$l _  {k+1}(x)=\dfrac{x-x _  k}{x _  {k+1}-x _  k}$，$l _  k(x),l _  {k+1}(x)$ 称为线性插值基函数。</p>
 <p>当 $n=2$ 时，三个插值基函数为</p>
-<p>$$<br>l _ {k-1}(x)=\dfrac{(x-x _ {k})(x-x _ {k+1})}{(x _ {k-1}-x _ k)(x _ {k-1}-x _ {k+1})} \\ l _ {k}(x)=\dfrac{(x-x _ {k-1})(x-x _ {k+1})}{(x _ {k}-x _ k-1)(x _ {k}-x _ {k+1})} \\ l _ {k+1}(x)=\dfrac{(x-x _ {k-1})(x-x _ {k})}{(x _ {k+1}-x _ {k-1})(x _ {k+1}-x _ {k})}<br>$$</p>
+<p>$$<br>l _  {k-1}(x)=\dfrac{(x-x _  {k})(x-x _  {k+1})}{(x _  {k-1}-x _  k)(x _  {k-1}-x _  {k+1})} \\ l _  {k}(x)=\dfrac{(x-x _  {k-1})(x-x _  {k+1})}{(x _  {k}-x _  k-1)(x _  {k}-x _  {k+1})} \\ l _  {k+1}(x)=\dfrac{(x-x _  {k-1})(x-x _  {k})}{(x _  {k+1}-x _  {k-1})(x _  {k+1}-x _  {k})}<br>$$</p>
 <p>二次插值函数为：</p>
-<p>$$<br>L _ 2(x)=y _ {k-1}l _ {k-1}(x)+y _ {k}l _ {k}(x)+y _ {k+1}l _ {k+1}(x)<br>$$</p>
-<p>插值基函数：若 $n$ 次多项式 $l _ j(x)(j=0,\cdots ,n)$ 在 $n+1$ 个节点 $x _ 0&lt;\cdots &lt;x _ n$ 上满足条件：</p>
-<p>$$<br>l _ j(x _ k)=\begin{cases} 1 \quad k=j(j,k=0,1,\cdots ,n)\\<br>0\quad k\neq j<br>\end{cases}<br>$$</p>
-<p>则称这 $n+1$ 个 $n$ 次多项式 $l _ 0(x),\cdots ,l _ n(x)$ 为节点 $x _ 0,\cdots ,x _ n$ 上的 $n$ 次插值基函数。</p>
+<p>$$<br>L _  2(x)=y _  {k-1}l _  {k-1}(x)+y _  {k}l _  {k}(x)+y _  {k+1}l _  {k+1}(x)<br>$$</p>
+<p>插值基函数：若 $n$ 次多项式 $l _  j(x)(j=0,\cdots ,n)$ 在 $n+1$ 个节点 $x _  0&lt;\cdots &lt;x _  n$ 上满足条件：</p>
+<p>$$<br>l _  j(x _  k)=\begin{cases} 1 \quad k=j(j,k=0,1,\cdots ,n)\\<br>0\quad k\neq j<br>\end{cases}<br>$$</p>
+<p>则称这 $n+1$ 个 $n$ 次多项式 $l _  0(x),\cdots ,l _  n(x)$ 为节点 $x _  0,\cdots ,x _  n$ 上的 $n$ 次插值基函数。</p>
 <p>可以得到</p>
-<p>$$<br>l _ k(x)=\dfrac{(x-x _ 0)\cdots (x-x _ {k-1})(x-x _ {k+1})\cdots (x-x _ n)}{(x _ k-x _ 0)\cdots (x _ k-x _ {k-1})(x _ k-x _ {k+1})\cdots (x _ k-x _ n)}<br>$$</p>
+<p>$$<br>l _  k(x)=\dfrac{(x-x _  0)\cdots (x-x _  {k-1})(x-x _  {k+1})\cdots (x-x _  n)}{(x _  k-x _  0)\cdots (x _  k-x _  {k-1})(x _  k-x _  {k+1})\cdots (x _  k-x _  n)}<br>$$</p>
 <p>则有</p>
-<p>$$<br>L _ n(x)=\sum _ {k=0}^ny _ kl _ k(x)<br>$$</p>
-<p>得到的 $L _ n(x)$ 即为插值函数，$L _ n(x)$ 为拉格朗日插值多项式。</p>
-<p>引入记号 $\omega _ {n+1}=(x-x _ 0)\cdots (x-x _ {n})$，求其导数</p>
-<p>$$<br>\omega _ {n+1}^{\prime}(x)=(x-x _ 1)\cdots(x-x _ n)+(x-x _ 0)(x-x _ 2)\cdots (x-x _ n)+\cdots +(x-x _ 0)\cdots (x-x _ {n-1})<br>$$</p>
-<p>代入 $x _ k$，得到</p>
-<p>$$<br>\omega _ {n+1}^{\prime}(x _ k)=(x _ k-x _ 0)\cdots (x _ k-x _ {k-1})(x _ k-x _ {k+1})\cdots (x _ k-x _ n)<br>$$</p>
+<p>$$<br>L _  n(x)=\sum _  {k=0}^ny _  kl _  k(x)<br>$$</p>
+<p>得到的 $L _  n(x)$ 即为插值函数，$L _  n(x)$ 为拉格朗日插值多项式。</p>
+<p>引入记号 $\omega _  {n+1}=(x-x _  0)\cdots (x-x _  {n})$，求其导数</p>
+<p>$$<br>\omega _  {n+1}^{\prime}(x)=(x-x _  1)\cdots(x-x _  n)+(x-x _  0)(x-x _  2)\cdots (x-x _  n)+\cdots +(x-x _  0)\cdots (x-x _  {n-1})<br>$$</p>
+<p>代入 $x _  k$，得到</p>
+<p>$$<br>\omega _  {n+1}^{\prime}(x _  k)=(x _  k-x _  0)\cdots (x _  k-x _  {k-1})(x _  k-x _  {k+1})\cdots (x _  k-x _  n)<br>$$</p>
 <p>则有</p>
-<p>$$<br>L _ n(x)=\sum _ {k=0}^ny _ k\dfrac{\omega _ {n+1}(x)}{(x-x _ k)\omega _ {n+1}^{\prime}(x _ k)}<br>$$</p>
-<p>插值余项：若在 $[a,b]$ 上用 $L _ n(x)$ 近似 $f(x)$，则其截断误差为 $R _ n(x)=f(x)-L _ n(x)$，称为插值多项式的余项。</p>
-<p>定理：设 $f^{(n)}(x)$ 在 $[a,b]$ 上连续，$f^{(n+1)}(x)$ 在 $(a,b)$ 内存在，节点 $a\leq x _ 0&lt;\cdots &lt;x _ n\leq b$。$L _ n(x)$ 是满足条件 $L _ n(x _ j)=y _ j(j=0,1,\cdots ,n)$ 的插值多项式，则对任何 $x\in [a,b]$，插值余项</p>
-<p>$$<br>R _ n(x)=f(x)-L _ n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\omega _ {n+1}(x)<br>$$</p>
+<p>$$<br>L _  n(x)=\sum _  {k=0}^ny _  k\dfrac{\omega _  {n+1}(x)}{(x-x _  k)\omega _  {n+1}^{\prime}(x _  k)}<br>$$</p>
+<p>插值余项：若在 $[a,b]$ 上用 $L _  n(x)$ 近似 $f(x)$，则其截断误差为 $R _  n(x)=f(x)-L _  n(x)$，称为插值多项式的余项。</p>
+<p>定理：设 $f^{(n)}(x)$ 在 $[a,b]$ 上连续，$f^{(n+1)}(x)$ 在 $(a,b)$ 内存在，节点 $a\leq x _  0&lt;\cdots &lt;x _  n\leq b$。$L _  n(x)$ 是满足条件 $L _  n(x _  j)=y _  j(j=0,1,\cdots ,n)$ 的插值多项式，则对任何 $x\in [a,b]$，插值余项</p>
+<p>$$<br>R _  n(x)=f(x)-L _  n(x)=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}\omega _  {n+1}(x)<br>$$</p>
 <p>这里，$\xi \in (a,b)$ 且依赖于 $x$。</p>
-<p>证明：根据题目，$x _ 0,x _ 1,\cdots ,x _ n$ 是 $R _ n(x)$ 的零点，则</p>
-<p>$$<br>R _ n(x)=K(x)(x-x _ 0)\cdots (x-x _ n)=K(x)\omega _ {n+1}(x)<br>$$</p>
+<p>证明：根据题目，$x _  0,x _  1,\cdots ,x _  n$ 是 $R _  n(x)$ 的零点，则</p>
+<p>$$<br>R _  n(x)=K(x)(x-x _  0)\cdots (x-x _  n)=K(x)\omega _  {n+1}(x)<br>$$</p>
 <p>$K(x)$ 是与 $x$ 有关的待定函数。</p>
 <p>现在构造一个函数：</p>
-<p>$$<br>\Phi(t)=f(t)-L _ n(t)-K(x)(t-x _ 0)(t-x _ 1)\cdots (t-x _ n)<br>$$</p>
+<p>$$<br>\Phi(t)=f(t)-L _  n(t)-K(x)(t-x _  0)(t-x _  1)\cdots (t-x _  n)<br>$$</p>
 <p>将 $t$ 作为函数的自变量，$x$ 认为是常量，是 $[a,b]$ 上一个固定点。</p>
-<p>由插值条件知，对插值节点 $x _ {0},x _ {1}, \cdots ,x _ {n}$，有</p>
-<p>$$<br>f(x _ i)=L _ n(x _ i)(i=0,1,\cdots ,n)<br>$$</p>
-<p>$\Phi(t)$ 后面的项 $K(x)(t-x _ 0)(t-x _ 1)\cdots (t-x _ n)$，在上述节点的值也是零，可知，对于 $t = x _ {0},x _ {1}, \cdots ,x _ {n}$ 有 $\Phi(t)=0$。</p>
+<p>由插值条件知，对插值节点 $x _  {0},x _  {1}, \cdots ,x _  {n}$，有</p>
+<p>$$<br>f(x _  i)=L _  n(x _  i)(i=0,1,\cdots ,n)<br>$$</p>
+<p>$\Phi(t)$ 后面的项 $K(x)(t-x _  0)(t-x _  1)\cdots (t-x _  n)$，在上述节点的值也是零，可知，对于 $t = x _  {0},x _  {1}, \cdots ,x _  {n}$ 有 $\Phi(t)=0$。</p>
 <p>而对于点 $x$，有</p>
-<p>$$<br>\Phi(x)=f(x)-L _ n(x)-K(x)(x-x _ 0)(x-x _ 1)\cdots (x-x _ n)<br>$$</p>
-<p>由余项定义，$\Phi(x)=0$。<br>因此，对函数 $\Phi(t)$，它在 $[a,b]$ 上有 $n+2$ 个零点 $(x _ 0,\cdots,x _ n,x)$。<br>根据罗尔定理，$\Phi^{\prime}(t)$ 在 $\Phi(t)$ 的两个零点之间至少有一个零点，故 $\Phi^{\prime}(t)$ 在区间 $[a,b]$ 上至少有 $n+1$ 个零点，$\Phi^{\prime\prime}(t)$ 在区间 $[a,b]$ 上至少有 $n$ 个零点，依此类推，$\Phi^{(n+1)}(t)$ 在区间 $[a,b]$ 上至少有 $1$ 个零点，设 $\xi \in(a,b)$，使 $\Phi^{(n+1)}(\xi)=0$，则有</p>
+<p>$$<br>\Phi(x)=f(x)-L _  n(x)-K(x)(x-x _  0)(x-x _  1)\cdots (x-x _  n)<br>$$</p>
+<p>由余项定义，$\Phi(x)=0$。<br>因此，对函数 $\Phi(t)$，它在 $[a,b]$ 上有 $n+2$ 个零点 $(x _  0,\cdots,x _  n,x)$。<br>根据罗尔定理，$\Phi^{\prime}(t)$ 在 $\Phi(t)$ 的两个零点之间至少有一个零点，故 $\Phi^{\prime}(t)$ 在区间 $[a,b]$ 上至少有 $n+1$ 个零点，$\Phi^{\prime\prime}(t)$ 在区间 $[a,b]$ 上至少有 $n$ 个零点，依此类推，$\Phi^{(n+1)}(t)$ 在区间 $[a,b]$ 上至少有 $1$ 个零点，设 $\xi \in(a,b)$，使 $\Phi^{(n+1)}(\xi)=0$，则有</p>
 <p>$$<br>\Phi^{(n+1)}(t)=f^{(n+1)}(x)-K(x)(n+1)!<br>$$</p>
 <p>$$<br>\Phi^{(n+1)}(\xi)=f^{(n+1)}(\xi)-K(x)(n+1)!=0<br>$$</p>
 <p>$$<br>K(x)=f^{(n+1)}(\xi)/(n+1)! \quad \xi \in (a,b)\text{且依赖于}x<br>$$</p>
 <p>则有</p>
-<p>$$<br>R _ {n}(x)=K(x)(x-x _ 0)(x-x _ 1)\cdots (x-x _ n)=f^{(n+1)}(\xi)/(n+1)!\omega _ {n+1}(x)<br>$$</p>
-<p>若设 $\max _ {a&lt;x&lt;b}\vert f^{(n+1)}(x)\vert = M _ {n+1}$，则有插值多项式 $L _ n(x)$ 逼近 $f(x)$ 的截断误差限是 $\vert R _ n(x) \vert \leq \dfrac{ M _ {n+1} }{(n+1)!}\vert \omega _ {n+1}(x)\vert$。</p>
+<p>$$<br>R _  {n}(x)=K(x)(x-x _  0)(x-x _  1)\cdots (x-x _  n)=f^{(n+1)}(\xi)/(n+1)!\omega _  {n+1}(x)<br>$$</p>
+<p>若设 $\max _  {a&lt;x&lt;b}\vert f^{(n+1)}(x)\vert = M _  {n+1}$，则有插值多项式 $L _  n(x)$ 逼近 $f(x)$ 的截断误差限是 $\vert R _  n(x) \vert \leq \dfrac{ M _  {n+1} }{(n+1)!}\vert \omega _  {n+1}(x)\vert$。</p>
 <p>余项分析</p>
-<h3 id="逐次线性插值法"><a href="#逐次线性插值法" class="headerlink" title="逐次线性插值法"></a>逐次线性插值法</h3><p>设插值节点为 $x _ {i1},x _ {i2},\cdots ,x _ {in}$，对应这些节点的插值多项式为： $n-1$ 次 $I _ {i1\cdots in}$。<br>记 $I _ {ik}(x)=f(x _ {ik})$，则 $I _ {ik}(x)$ 是常数值，即零次多项式。构造：</p>
-<p>$$<br>I _ {01\cdots kl}(x)=I _ {01\cdots k}(x)+\dfrac{I _ {01\cdots k-1l}(x)-I _ {01\cdots k}(x)}{x _ l-x _ k}(x-x _ k)<br>$$</p>
+<h3 id="逐次线性插值法"><a href="#逐次线性插值法" class="headerlink" title="逐次线性插值法"></a>逐次线性插值法</h3><p>设插值节点为 $x _  {i1},x _  {i2},\cdots ,x _  {in}$，对应这些节点的插值多项式为： $n-1$ 次 $I _  {i1\cdots in}$。<br>记 $I _  {ik}(x)=f(x _  {ik})$，则 $I _  {ik}(x)$ 是常数值，即零次多项式。构造：</p>
+<p>$$<br>I _  {01\cdots kl}(x)=I _  {01\cdots k}(x)+\dfrac{I _  {01\cdots k-1l}(x)-I _  {01\cdots k}(x)}{x _  l-x _  k}(x-x _  k)<br>$$</p>
 <p>当 $i=0,\cdots,k-1$ 时，有：</p>
-<p>$$<br>I _ {01\cdots kl}(x _ i)=I _ {01\cdots k}(x _ i)+\dfrac{I _ {01\cdots k-1l}(x _ i)-I _ {01\cdots k}(x _ i)}{x _ l-x _ k}(x _ i-x _ k)<br>$$</p>
-<p>$I _ {01\cdots k-1l}(x)$ 是关于节点 $x _ 0,\cdots,x _ {k-1},x _ l$ 的插值多项式，在这些节点上</p>
-<p>$$<br>I _ {01\cdots k-1l}(x _ i)=f(x _ i) i=0,1,\cdots ,k-1<br>$$</p>
-<p>同理，$I _ {01\cdots k}(x)$ 是关于节点 $x _ 0,\cdots,x _ {k}$ 的插值多项式，同样有</p>
-<p>$$<br>I _ {01\cdots k}(x _ i)=f(x _ i) i=0,1,\cdots ,k-1<br>$$</p>
+<p>$$<br>I _  {01\cdots kl}(x _  i)=I _  {01\cdots k}(x _  i)+\dfrac{I _  {01\cdots k-1l}(x _  i)-I _  {01\cdots k}(x _  i)}{x _  l-x _  k}(x _  i-x _  k)<br>$$</p>
+<p>$I _  {01\cdots k-1l}(x)$ 是关于节点 $x _  0,\cdots,x _  {k-1},x _  l$ 的插值多项式，在这些节点上</p>
+<p>$$<br>I _  {01\cdots k-1l}(x _  i)=f(x _  i) i=0,1,\cdots ,k-1<br>$$</p>
+<p>同理，$I _  {01\cdots k}(x)$ 是关于节点 $x _  0,\cdots,x _  {k}$ 的插值多项式，同样有</p>
+<p>$$<br>I _  {01\cdots k}(x _  i)=f(x _  i) i=0,1,\cdots ,k-1<br>$$</p>
 <p>所以有：</p>
-<p>$$<br>I _ {01\cdots kl}(x _ i)=I _ {01\cdots k}(x _ i)=f(x _ i) \quad i=0,1,\cdots,k-1<br>$$</p>
+<p>$$<br>I _  {01\cdots kl}(x _  i)=I _  {01\cdots k}(x _  i)=f(x _  i) \quad i=0,1,\cdots,k-1<br>$$</p>
 <p>则有</p>
-<p>$$<br>I _ {01\cdots kl}(x)=I _ {01\cdots k}(x)+\dfrac{I _ {01\cdots k-1l}(x)-I _ {01\cdots k}(x)}{x _ l-x _ k}(x-x _ k)<br>$$</p>
+<p>$$<br>I _  {01\cdots kl}(x)=I _  {01\cdots k}(x)+\dfrac{I _  {01\cdots k-1l}(x)-I _  {01\cdots k}(x)}{x _  l-x _  k}(x-x _  k)<br>$$</p>
 <p>这个式子称为埃特金逐次线性插值公式。</p>
 <p>计算过程：</p>
 <p><img src="830bd2a5/%E5%9F%83%E7%89%B9%E9%87%91%E6%8F%92%E5%80%BC%E8%A1%A8%E6%A0%BC.jpg" srcset="/img/loading.gif" lazyload alt="埃特金插值表格"></p>
 <p>埃特金插值公式可以改写，$l=k+1$，将节点顺序倒排，有 $k,\cdots,0,k+1$，则</p>
-<p>$$<br>I _ {01\cdots kk+1}(x)=I _ {01\cdots k}(x)+\dfrac{I _ {01\cdots k+1}(x)-I _ {01\cdots k}(x)}{x _ {k+1}-x _ 0}(x-x _ 0)<br>$$</p>
+<p>$$<br>I _  {01\cdots kk+1}(x)=I _  {01\cdots k}(x)+\dfrac{I _  {01\cdots k+1}(x)-I _  {01\cdots k}(x)}{x _  {k+1}-x _  0}(x-x _  0)<br>$$</p>
 <p>该公式称为列维尔算法。</p>
 <p>计算过程：</p>
 <p><img src="830bd2a5/%E5%88%97%E7%BB%B4%E5%B0%94%E7%AE%97%E6%B3%95%E8%A1%A8%E6%A0%BC.jpg" srcset="/img/loading.gif" lazyload alt="列维尔算法表格"></p>
-<h3 id="均差和牛顿插值公式"><a href="#均差和牛顿插值公式" class="headerlink" title="均差和牛顿插值公式"></a>均差和牛顿插值公式</h3><p>均差：称 $f[x _ 0,x _ k]=\dfrac{f(x _ k)-f(x _ 0)}{x _ k-x _ 0}$ 为函数 $f(x)$ 关于点 $x _ 0,x _ k$ 的一阶均差，$f[x _ 0,x _ 1,x _ k]=\dfrac{f[x _ 0,x _ k]-f[x _ 0,x _ 1]}{x _ k-x _ 1}$ 称为函数 $f(x)$ 的二阶均差。一般的，称</p>
-<p>$$<br>f[x _ 0,\cdots ,x _ k]=\dfrac{f[x _ 0,\cdots,x _ {k-2} ,x _ k]-f[x _ 0,\cdots ,x _ {k-1}]}{x _ k-x _ {k-1} }<br>$$</p>
+<h3 id="均差和牛顿插值公式"><a href="#均差和牛顿插值公式" class="headerlink" title="均差和牛顿插值公式"></a>均差和牛顿插值公式</h3><p>均差：称 $f[x _  0,x _  k]=\dfrac{f(x _  k)-f(x _  0)}{x _  k-x _  0}$ 为函数 $f(x)$ 关于点 $x _  0,x _  k$ 的一阶均差，$f[x _  0,x _  1,x _  k]=\dfrac{f[x _  0,x _  k]-f[x _  0,x _  1]}{x _  k-x _  1}$ 称为函数 $f(x)$ 的二阶均差。一般的，称</p>
+<p>$$<br>f[x _  0,\cdots ,x _  k]=\dfrac{f[x _  0,\cdots,x _  {k-2} ,x _  k]-f[x _  0,\cdots ,x _  {k-1}]}{x _  k-x _  {k-1} }<br>$$</p>
 <p>为 $f(x)$ 的 $k$ 阶均差。均差也称为差商。</p>
-<p>$$<br>p _ n(x)=f(x _ 0)+f[x _ 0,x _ 1]{(x _ 0-x _ 1)}+f[x _ 0,x _ 1,x _ 2]{(x-x _ 0)(x-x _ 1)}+\cdots +f[x _ 0,\cdots ,x _ n]{(x-x _ 0)\cdots (x-x _ {n-1})}<br>$$</p>
+<p>$$<br>p _  n(x)=f(x _  0)+f[x _  0,x _  1]{(x _  0-x _  1)}+f[x _  0,x _  1,x _  2]{(x-x _  0)(x-x _  1)}+\cdots +f[x _  0,\cdots ,x _  n]{(x-x _  0)\cdots (x-x _  {n-1})}<br>$$</p>
 <p>称为牛顿均差插值多项式。</p>
 <p>均差性质：</p>
 <ul>
 <li>性质1：均差与它所含节点的排列次序无关</li>
 <li>性质2：下列等式成立：</li>
 </ul>
-<p>$$<br>f[x _ i,x _ {i+1},\cdots,x _ {i+k}]=\dfrac{f[x _ {i+1},x _ {i+2},\cdots x _ {i+k}]-f[x _ {i},x _ {i+1},\cdots x _ {i+k-1}]}{x _ {i+k}-x _ i}<br>$$</p>
+<p>$$<br>f[x _  i,x _  {i+1},\cdots,x _  {i+k}]=\dfrac{f[x _  {i+1},x _  {i+2},\cdots x _  {i+k}]-f[x _  {i},x _  {i+1},\cdots x _  {i+k-1}]}{x _  {i+k}-x _  i}<br>$$</p>
 <ul>
-<li>性质3：若 $f(x)$ 在 $[a,b]$ 上存在 $n$ 阶导数，且节点 $x _ 0,x _ 1,\cdots ,x _ n \in [a,b]$，则 $n$ 阶均差与导数关系如下：</li>
+<li>性质3：若 $f(x)$ 在 $[a,b]$ 上存在 $n$ 阶导数，且节点 $x _  0,x _  1,\cdots ,x _  n \in [a,b]$，则 $n$ 阶均差与导数关系如下：</li>
 </ul>
-<p>$$<br>f[x _ 0,x _ 1,\cdots,x _ n]=\dfrac{f^{(n)}(\psi)}{n!} \quad \psi \in [a,b]<br>$$</p>
-<h3 id="差分与等距节点插值"><a href="#差分与等距节点插值" class="headerlink" title="差分与等距节点插值"></a>差分与等距节点插值</h3><h4 id="差分及其性质"><a href="#差分及其性质" class="headerlink" title="差分及其性质"></a>差分及其性质</h4><p>设有等距节点 $x _ k=x _ 0+kh$ , $k=0,1,\cdots,n$，其中，$h&gt;0$，称为步长。并已知 $f _ k=f(x _ k)$。</p>
+<p>$$<br>f[x _  0,x _  1,\cdots,x _  n]=\dfrac{f^{(n)}(\psi)}{n!} \quad \psi \in [a,b]<br>$$</p>
+<h3 id="差分与等距节点插值"><a href="#差分与等距节点插值" class="headerlink" title="差分与等距节点插值"></a>差分与等距节点插值</h3><h4 id="差分及其性质"><a href="#差分及其性质" class="headerlink" title="差分及其性质"></a>差分及其性质</h4><p>设有等距节点 $x _  k=x _  0+kh$ , $k=0,1,\cdots,n$，其中，$h&gt;0$，称为步长。并已知 $f _  k=f(x _  k)$。</p>
 <p>记号</p>
-<p>$$<br>\begin{align*}<br>\Delta f _ k &amp; = f _ {k+1}-f _ k \\<br>\nabla f _ k &amp; = f _ {k} - f _ {k+1} \\<br>\delta f _ k &amp; = f(x _ k+h/2)-f(x _ k-h/2) = f _ {k+1/2}-f _ {k-1/2}<br>\end{align*}<br>$$</p>
-<p>分别为 $f(x)$ 在 $x _ k$ 处以 $h$ 为步长的向前差分，向后差分及中心差分，符号 $\Delta,\nabla,\delta$ 分别称为向前差分算子，向后差分算子及中心差分算子。</p>
+<p>$$<br>\begin{align*}<br>\Delta f _  k &amp; = f _  {k+1}-f _  k \\<br>\nabla f _  k &amp; = f _  {k} - f _  {k+1} \\<br>\delta f _  k &amp; = f(x _  k+h/2)-f(x _  k-h/2) = f _  {k+1/2}-f _  {k-1/2}<br>\end{align*}<br>$$</p>
+<p>分别为 $f(x)$ 在 $x _  k$ 处以 $h$ 为步长的向前差分，向后差分及中心差分，符号 $\Delta,\nabla,\delta$ 分别称为向前差分算子，向后差分算子及中心差分算子。</p>
 <p>$m$ 阶差分：</p>
-<p>$$<br>\begin{align*}<br>\Delta^m f _ k &amp; = \Delta^{m-1} f _ {k+1} - \Delta^{m-1} f _ k \\<br>\nabla^m f _ k &amp; = \nabla^{m-1} f _ {k} - \nabla^{m-1} f _ {k-1}<br>\end{align*}<br>$$</p>
+<p>$$<br>\begin{align*}<br>\Delta^m f _  k &amp; = \Delta^{m-1} f _  {k+1} - \Delta^{m-1} f _  k \\<br>\nabla^m f _  k &amp; = \nabla^{m-1} f _  {k} - \nabla^{m-1} f _  {k-1}<br>\end{align*}<br>$$</p>
 <p>算子：</p>
-<p>不变算子 $I$ ：表示为 $If _ k=f _ k$。<br>移位算子 $E$ ：表示为 $Ef _ k=f _ {k+1}$。$E^{-1}f _ {k}=f _ {k-1}$。<br>则有</p>
+<p>不变算子 $I$ ：表示为 $If _  k=f _  k$。<br>移位算子 $E$ ：表示为 $Ef _  k=f _  {k+1}$。$E^{-1}f _  {k}=f _  {k-1}$。<br>则有</p>
 <p>$$<br>\begin{align*}<br>\Delta &amp; = E-I \\<br>\nabla &amp; = I-E^{-1} \\<br>\delta &amp; = E^{1/2}-E^{-1/2}<br>\end{align*}<br>$$</p>
 <p>差分的性质：</p>
 <ul>
 <li><p>性质1：各阶差分均可用函数值表示</p>
-<p>$$<br>\begin{array}{l}{ {\Delta^{n}f _ {k}=(E-I)^{n}f _ {k}=\sum _ {j=0}^{n}(-1)^{j}C _ {n}^{j}f _ {n+k-j} } }\\ { {\nabla^{n}f _ {k}=(I-E^{-1})^{n}f _ {k}=\sum _ {j=0}^{n}(-1)^{n-j}C _ {n}^{j}f _ {k+j-n} } }\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}{ {\Delta^{n}f _  {k}=(E-I)^{n}f _  {k}=\sum _  {j=0}^{n}(-1)^{j}C _  {n}^{j}f _  {n+k-j} } }\\ { {\nabla^{n}f _  {k}=(I-E^{-1})^{n}f _  {k}=\sum _  {j=0}^{n}(-1)^{n-j}C _  {n}^{j}f _  {k+j-n} } }\end{array}<br>$$</p>
 </li>
 <li><p>性质2：可用各阶差分表示函数值</p>
-<p>$$<br>f _ {n+k}=\Sigma _ {j=0}^{n},C _ {n}^{j}\Delta^{j}f _ {k}<br>$$</p>
+<p>$$<br>f _  {n+k}=\Sigma _  {j=0}^{n},C _  {n}^{j}\Delta^{j}f _  {k}<br>$$</p>
 </li>
 <li><p>性质3：均差与差分的关系</p>
-<p>$$<br>\begin{array}{l l}{ {f[x _ {k},x _ {k+1}]=\frac{f _ {k+1}-f _ {k} }{x _ {k+1}-x _ {k} }=\frac{\Delta f _ {k} }{h} } }\\ { {f[x _ {k},x _ {k+1},x _ {k+2}]=\frac{1}{2h^{2} }\Delta^{2}f _ {k} } }\\ f[x _ {k},\cdots,x _ {k+m}]=\frac{1}{m!}\frac{1}{h^{m} }\Delta^{m}f _ {k}\quad (m=\mathop{1},2,\cdots,n)\end{array}<br>$$<br>同理：</p>
-<p>$$<br>f[x _ {k},x _ {k-1}\cdots,x _ {k-m}]={\frac{1}{m!} }{\frac{1}{h^{m} } }\nabla^{m}f _ {k}<br>$$</p>
+<p>$$<br>\begin{array}{l l}{ {f[x _  {k},x _  {k+1}]=\frac{f _  {k+1}-f _  {k} }{x _  {k+1}-x _  {k} }=\frac{\Delta f _  {k} }{h} } }\\ { {f[x _  {k},x _  {k+1},x _  {k+2}]=\frac{1}{2h^{2} }\Delta^{2}f _  {k} } }\\ f[x _  {k},\cdots,x _  {k+m}]=\frac{1}{m!}\frac{1}{h^{m} }\Delta^{m}f _  {k}\quad (m=\mathop{1},2,\cdots,n)\end{array}<br>$$<br>同理：</p>
+<p>$$<br>f[x _  {k},x _  {k-1}\cdots,x _  {k-m}]={\frac{1}{m!} }{\frac{1}{h^{m} } }\nabla^{m}f _  {k}<br>$$</p>
 </li>
 </ul>
 <h4 id="等距节点插值公式"><a href="#等距节点插值公式" class="headerlink" title="等距节点插值公式"></a>等距节点插值公式</h4><p>等距节点插值公式分为向前插值公式和向后插值公式。</p>
-<p>利用差分与均差的关系，在牛顿均差插值多项式中，将均差替换为差分，并令 $x=x _ 0+th$，可得向前插值公式：</p>
-<p>$$<br>N _ {n}(x _ {0}+t h)=f _ {0}+t\Delta f _ {0}+\frac{t(t-1)}{2!}\Delta^{2}f _ {0}+\cdots+\frac{t(t-1)\cdots(t-n+1)}{n!}\Delta^{n}f _ {0}<br>$$</p>
+<p>利用差分与均差的关系，在牛顿均差插值多项式中，将均差替换为差分，并令 $x=x _  0+th$，可得向前插值公式：</p>
+<p>$$<br>N _  {n}(x _  {0}+t h)=f _  {0}+t\Delta f _  {0}+\frac{t(t-1)}{2!}\Delta^{2}f _  {0}+\cdots+\frac{t(t-1)\cdots(t-n+1)}{n!}\Delta^{n}f _  {0}<br>$$</p>
 <p>截断误差为：</p>
-<p>$$<br>R _ {n}(x _ {0}+t h)={\frac{t(t-1)^{\ldots+(t-n)} }{(n+1)!} }h^{n+1}f^{(n+1)}(\xi)\qquad\quad\xi\in(x _ {0},x _ {n})<br>$$</p>
-<p>向前插值公式用于求 $x _ 0$ 点附近点 $x$ 的函数 $f(x)$ 的近似值，如果要求 $x _ n$ 点附近 $x$ 的函数值，则有向后插值公式：</p>
-<p>$$<br>N _ {n}(x _ {n}+t h)=f _ {n}+t\nabla f _ {n}+{\frac{t(t+1)}{2!} }\nabla^{2}f _ {n}+\cdots+{\frac{t(t+1)\cdots(t+n-1)}{n!} }\nabla^{n}f _ {n}<br>$$</p>
+<p>$$<br>R _  {n}(x _  {0}+t h)={\frac{t(t-1)^{\ldots+(t-n)} }{(n+1)!} }h^{n+1}f^{(n+1)}(\xi)\qquad\quad\xi\in(x _  {0},x _  {n})<br>$$</p>
+<p>向前插值公式用于求 $x _  0$ 点附近点 $x$ 的函数 $f(x)$ 的近似值，如果要求 $x _  n$ 点附近 $x$ 的函数值，则有向后插值公式：</p>
+<p>$$<br>N _  {n}(x _  {n}+t h)=f _  {n}+t\nabla f _  {n}+{\frac{t(t+1)}{2!} }\nabla^{2}f _  {n}+\cdots+{\frac{t(t+1)\cdots(t+n-1)}{n!} }\nabla^{n}f _  {n}<br>$$</p>
 <p>余项为：</p>
-<p>$$<br>R _ {n}(x _ {0}+t h)={\frac{t(t+1)\cdots(t+n)}{(n+1)!} }h^{n+1}f^{(n+1)}(\xi)\qquad\quad\xi\in(x _ {0},x _ {n})<br>$$</p>
+<p>$$<br>R _  {n}(x _  {0}+t h)={\frac{t(t+1)\cdots(t+n)}{(n+1)!} }h^{n+1}f^{(n+1)}(\xi)\qquad\quad\xi\in(x _  {0},x _  {n})<br>$$</p>
 <p>向前差分表：</p>
-<p>$$<br>\Delta^{n}f(x _ i) = \Delta^{n-1}f(x _ {i+1})-\Delta^{n-1}f(x _ i)<br>$$</p>
+<p>$$<br>\Delta^{n}f(x _  i) = \Delta^{n-1}f(x _  {i+1})-\Delta^{n-1}f(x _  i)<br>$$</p>
 <p>向后差分表：</p>
-<p>$$<br>\nabla^{n}f(x _ i) = \nabla^{n-1}f(x _ {i})-\nabla^{n-1}f(x _ {i-1})<br>$$</p>
-<h3 id="埃尔米特插值"><a href="#埃尔米特插值" class="headerlink" title="埃尔米特插值"></a>埃尔米特插值</h3><p>定义：设在节点 $a\leq x _ 0&lt;x _ 1&lt;\cdots &lt;x _ n\leq b$ 上，</p>
-<p>$$<br>y _ i=f(x _ j) \quad m _ j=f^{\prime}(x _ j)\quad (j=0,1,\cdots ,n)<br>$$</p>
+<p>$$<br>\nabla^{n}f(x _  i) = \nabla^{n-1}f(x _  {i})-\nabla^{n-1}f(x _  {i-1})<br>$$</p>
+<h3 id="埃尔米特插值"><a href="#埃尔米特插值" class="headerlink" title="埃尔米特插值"></a>埃尔米特插值</h3><p>定义：设在节点 $a\leq x _  0&lt;x _  1&lt;\cdots &lt;x _  n\leq b$ 上，</p>
+<p>$$<br>y _  i=f(x _  j) \quad m _  j=f^{\prime}(x _  j)\quad (j=0,1,\cdots ,n)<br>$$</p>
 <p>现要求插值多项式 $H(x)$，满足条件</p>
-<p>$$<br>\begin{cases}<br>  H(x _ j)=y _ j \\<br>  H^{\prime}(x _ j) = m _ j \quad (j=0,1,\cdots ,n)<br>\end{cases}<br>$$</p>
+<p>$$<br>\begin{cases}<br>  H(x _  j)=y _  j \\<br>  H^{\prime}(x _  j) = m _  j \quad (j=0,1,\cdots ,n)<br>\end{cases}<br>$$</p>
 <p>满足这种条件的插值多项式称为埃尔米特插值多项式。</p>
-<p>定理：设 $n+1$ 个节点 $x _ 0,x _ 1,\cdots ,x _ n$ 互异，则在次数不高于 $2n+1$ 的代数多项式集合中，唯一地存在多项式</p>
-<p>$$<br>H _ {2n+1}(x)=a _ 0+a _ 1x+\cdots +a _ {2n+1}x^{2n+1}<br>$$</p>
+<p>定理：设 $n+1$ 个节点 $x _  0,x _  1,\cdots ,x _  n$ 互异，则在次数不高于 $2n+1$ 的代数多项式集合中，唯一地存在多项式</p>
+<p>$$<br>H _  {2n+1}(x)=a _  0+a _  1x+\cdots +a _  {2n+1}x^{2n+1}<br>$$</p>
 <p>它满足条件：</p>
-<p>$$<br>\begin{cases}<br>  H _ {2n+1}(x)=y _ j \\<br>  H _ {2n+1}^{\prime}(x) = m _ j = y _ {j}^{\prime}\quad (j=0,1,\cdots ,n)<br>\end{cases}<br>$$</p>
+<p>$$<br>\begin{cases}<br>  H _  {2n+1}(x)=y _  j \\<br>  H _  {2n+1}^{\prime}(x) = m _  j = y _  {j}^{\prime}\quad (j=0,1,\cdots ,n)<br>\end{cases}<br>$$</p>
 <p>埃尔米特插值余项为：</p>
-<p>$$<br>R(x)=f(x)-H _ {2n+1}(x)={\frac{f^{(2n+2)}(\xi)}{(2n+2)!} }\omega _ {n+1}^{2}(x)\qquad\xi\in(a,b)<br>$$</p>
-<p>实际应用时，多用 $n=1$ 的情形，即三次埃尔米特插值。<br>插值基函数为 $\alpha _ k(x),\alpha _ {k+1}(x),\beta _ k(x),\beta _ {k+1}(x)$</p>
-<p>$$<br>\begin{array}{l}{ {\alpha _ {k}(x)=(1+2\frac{x-x _ {k} }{x _ {k+1}-x _ {k} })(\frac{x-x _ {k+1} }{x _ {k}-x _ {k+1} })^{2} } }\\ { {\alpha _ {k+1}(x)=(1+2\frac{x-x _ {k+1} }{x _ {k}-x _ {k+1} })(\frac{x-x _ {k} }{x _ {k+1}-x _ {k} })^{2} } }\\ { {\beta _ {k}(x)=(x-x _ {k})(\frac{x-x _ {k+1} }{x _ {k}-x _ {k+1} })^{2} } } \\ \beta _ {k+1}(x)=(x-x _ {k+1})({\frac{x-x _ {k} }{x _ {k+1}-x _ {k} } })^{2}\end{array}<br>$$</p>
+<p>$$<br>R(x)=f(x)-H _  {2n+1}(x)={\frac{f^{(2n+2)}(\xi)}{(2n+2)!} }\omega _  {n+1}^{2}(x)\qquad\xi\in(a,b)<br>$$</p>
+<p>实际应用时，多用 $n=1$ 的情形，即三次埃尔米特插值。<br>插值基函数为 $\alpha _  k(x),\alpha _  {k+1}(x),\beta _  k(x),\beta _  {k+1}(x)$</p>
+<p>$$<br>\begin{array}{l}{ {\alpha _  {k}(x)=(1+2\frac{x-x _  {k} }{x _  {k+1}-x _  {k} })(\frac{x-x _  {k+1} }{x _  {k}-x _  {k+1} })^{2} } }\\ { {\alpha _  {k+1}(x)=(1+2\frac{x-x _  {k+1} }{x _  {k}-x _  {k+1} })(\frac{x-x _  {k} }{x _  {k+1}-x _  {k} })^{2} } }\\ { {\beta _  {k}(x)=(x-x _  {k})(\frac{x-x _  {k+1} }{x _  {k}-x _  {k+1} })^{2} } } \\ \beta _  {k+1}(x)=(x-x _  {k+1})({\frac{x-x _  {k} }{x _  {k+1}-x _  {k} } })^{2}\end{array}<br>$$</p>
 <p>相应多项式为：</p>
-<p>$$<br>H _ 3(x)=y _ {k}\alpha _ {k}(x)+\ y _ {k+1}\alpha _ {k+1}(x)+\ m _ {k}\beta _ {k}(x)+m _ {k+1}\beta _ {k+1}(x)<br>$$</p>
+<p>$$<br>H _  3(x)=y _  {k}\alpha _  {k}(x)+\ y _  {k+1}\alpha _  {k+1}(x)+\ m _  {k}\beta _  {k}(x)+m _  {k+1}\beta _  {k+1}(x)<br>$$</p>
 <p>余项为：</p>
-<p>$$<br>R _ 3(x)=f(x)-H _ {3}(x)=\frac{1}{4!}~f^{(4)}(\xi)(x-x _ {k})^{2}(x-x _ {k+1})^{2}<br>$$</p>
+<p>$$<br>R _  3(x)=f(x)-H _  {3}(x)=\frac{1}{4!}~f^{(4)}(\xi)(x-x _  {k})^{2}(x-x _  {k+1})^{2}<br>$$</p>
 <h2 id="解线性方程组的直接方法"><a href="#解线性方程组的直接方法" class="headerlink" title="解线性方程组的直接方法"></a>解线性方程组的直接方法</h2><h3 id="高斯消去法"><a href="#高斯消去法" class="headerlink" title="高斯消去法"></a>高斯消去法</h3><p>定理：设方程组 $Ax=b$ 的系数矩阵 $A$ 的顺序主子式全不为零，即</p>
-<p>$$<br>\Delta _ {i}=\left[\begin{array}{c c c}{ {a _ {11} } }&amp;{ {\cdots} }&amp;{ {a _ {1i} } }\\ { {\vdots} }&amp;{ {\ddots} }&amp;{ {\vdots} }\\ { {a _ {i1} } }&amp;{ {\cdots} }&amp;{ {a _ {i i} } }\end{array}\right]\neq0 \quad i=1,2,\ldots,n<br>$$</p>
+<p>$$<br>\Delta _  {i}=\left[\begin{array}{c c c}{ {a _  {11} } }&amp;{ {\cdots} }&amp;{ {a _  {1i} } }\\ { {\vdots} }&amp;{ {\ddots} }&amp;{ {\vdots} }\\ { {a _  {i1} } }&amp;{ {\cdots} }&amp;{ {a _  {i i} } }\end{array}\right]\neq0 \quad i=1,2,\ldots,n<br>$$</p>
 <p>则使用高斯消去法能实现方程组 $Ax=b$ 的求解。</p>
 <p>推论：若上个定理的条件成立，则</p>
-<p>$$<br>\begin{array}{l}{ {a _ {11}^{(1)}=\Delta _ {1} } }\\ { {a _ {11}^{(i)}=\Delta _ {i}/\Delta _ {i-1} } } \quad i=2,\cdots,n\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}{ {a _  {11}^{(1)}=\Delta _  {1} } }\\ { {a _  {11}^{(i)}=\Delta _  {i}/\Delta _  {i-1} } } \quad i=2,\cdots,n\end{array}<br>$$</p>
 <p>定理：设方程组满足上个定理中的条件，使用高斯消去法求解时，共需乘除法次数为 $\dfrac{n^3}{3}+n^2-\dfrac{n}{3}$，加减法次数为 $\dfrac{n(n-1)(2n+5)}{6}$。</p>
 <p>定理：设矩阵 $A$ 满足顺序主子式全不为零的条件，则 $A$ 存在唯一的分解 $A=LU$，其中 $L$ 是单位下三角矩阵（对角线）全为 $1$ 的下三角矩阵，$U$ 是上三角矩阵。</p>
 <h3 id="高斯主元素消去法"><a href="#高斯主元素消去法" class="headerlink" title="高斯主元素消去法"></a>高斯主元素消去法</h3><h4 id="完全主元素消去法"><a href="#完全主元素消去法" class="headerlink" title="完全主元素消去法"></a>完全主元素消去法</h4><p>完全主元素消去法是在高斯消去法的基础上，每次消去之前，选取特定区域的绝对值最大的元素，然后通过交换行和列使其在主元素位置，进行消去。特点是如果选出主元素为零，可直接判定方程组无解。注意，在进行行交换时不会对解产生影响，但在列交换后需要还原才能得到正确的结果。</p>
 <h4 id="列主元素消去法"><a href="#列主元素消去法" class="headerlink" title="列主元素消去法"></a>列主元素消去法</h4><p>列主元素消去法与完全主元素消去法不同的是，列主元素消去法在选取主元素时，只在当前列选取，选取后只需要进行行变换，不用还原。但是，主元素为零不能得出方程组无解的结论。</p>
-<h4 id="列主元素消去法的矩阵变换"><a href="#列主元素消去法的矩阵变换" class="headerlink" title="列主元素消去法的矩阵变换"></a>列主元素消去法的矩阵变换</h4><p>排列矩阵：如果矩阵 $P$ 可由单位矩阵经过若干次行交换而得到，即 $P$ 等于若干个 $I _ {ij}$ 类型的初等矩阵之积，则 $P$ 称为排列矩阵。</p>
+<h4 id="列主元素消去法的矩阵变换"><a href="#列主元素消去法的矩阵变换" class="headerlink" title="列主元素消去法的矩阵变换"></a>列主元素消去法的矩阵变换</h4><p>排列矩阵：如果矩阵 $P$ 可由单位矩阵经过若干次行交换而得到，即 $P$ 等于若干个 $I _  {ij}$ 类型的初等矩阵之积，则 $P$ 称为排列矩阵。</p>
 <p>定理：设 $A$ 是非奇异矩阵，则存在排列矩阵 $P$ 及单位下三角矩阵 $L$ 和上三角矩阵 $U$，使得 $PA=LU$ （列主元素三角分解）</p>
 <p>定理：设 $A$ 是非奇异矩阵，则存在排列矩阵 $P$ 和 $Q$，及单位下三角矩阵 $L$ 和上三角矩阵 $U$，使得 $PAQ=LU$ （完全主元素三角分解）</p>
 <h4 id="高斯约当消去法"><a href="#高斯约当消去法" class="headerlink" title="高斯约当消去法"></a>高斯约当消去法</h4><p>高斯约当消去法在消去时，同时消去对角线下方及上方的元素，可以取消回代过程。高斯约当消去后，$[A\vert b]$ 约化为如下的形式：</p>
-<p>$$<br>[A^{(n)}\vert b^{(n)}]={\left[\begin{array}{l l l l l}{1}&amp;{0}&amp;{\cdots}&amp;{0}&amp;{|}&amp;{a _ {1,,n+1}^{(n)} }\\ {0}&amp;{1}&amp;{\cdots}&amp;{0}&amp;{|}&amp;{a _ {2,,n+1}^{(n)} }\\ {\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}&amp;{|}&amp;{\vdots}\\ {0}&amp;{0}&amp;{\cdots}&amp;{1}&amp;{|}&amp;{a _ {n,,n+1}^{(n)} }\end{array}\right]}<br>$$</p>
+<p>$$<br>[A^{(n)}\vert b^{(n)}]={\left[\begin{array}{l l l l l}{1}&amp;{0}&amp;{\cdots}&amp;{0}&amp;{|}&amp;{a _  {1,,n+1}^{(n)} }\\ {0}&amp;{1}&amp;{\cdots}&amp;{0}&amp;{|}&amp;{a _  {2,,n+1}^{(n)} }\\ {\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}&amp;{|}&amp;{\vdots}\\ {0}&amp;{0}&amp;{\cdots}&amp;{1}&amp;{|}&amp;{a _  {n,,n+1}^{(n)} }\end{array}\right]}<br>$$</p>
 <p>高斯约当消去法主要用于求逆矩阵</p>
-<h3 id="高斯消去法的变形"><a href="#高斯消去法的变形" class="headerlink" title="高斯消去法的变形"></a>高斯消去法的变形</h3><h4 id="Doolittle-分解法"><a href="#Doolittle-分解法" class="headerlink" title="Doolittle 分解法"></a>Doolittle 分解法</h4><p>设矩阵 $A=(a _ {ij}) _ {n}$ 有 LU 分解，记</p>
-<p>$$<br>L=\begin{bmatrix}<br>1&amp;&amp;&amp;\\<br>l _ {21}&amp;1&amp;&amp;\\<br>\vdots &amp; \vdots &amp; \ddots &amp; \\<br>l _ {n1} &amp; l _ {n2} &amp;\cdots &amp;1<br>\end{bmatrix}<br>U=\begin{bmatrix}<br>u _ {11}&amp;u _ {12}&amp;\cdots&amp;u _ {1n}\\<br>&amp;u _ {22}&amp;\cdots&amp;u _ {2n}\\<br>&amp;&amp;\ddots&amp;\vdots\\<br>&amp;&amp;&amp;u _ {nn}<br>\end{bmatrix}<br>$$</p>
+<h3 id="高斯消去法的变形"><a href="#高斯消去法的变形" class="headerlink" title="高斯消去法的变形"></a>高斯消去法的变形</h3><h4 id="Doolittle-分解法"><a href="#Doolittle-分解法" class="headerlink" title="Doolittle 分解法"></a>Doolittle 分解法</h4><p>设矩阵 $A=(a _  {ij}) _  {n}$ 有 LU 分解，记</p>
+<p>$$<br>L=\begin{bmatrix}<br>1&amp;&amp;&amp;\\<br>l _  {21}&amp;1&amp;&amp;\\<br>\vdots &amp; \vdots &amp; \ddots &amp; \\<br>l _  {n1} &amp; l _  {n2} &amp;\cdots &amp;1<br>\end{bmatrix}<br>U=\begin{bmatrix}<br>u _  {11}&amp;u _  {12}&amp;\cdots&amp;u _  {1n}\\<br>&amp;u _  {22}&amp;\cdots&amp;u _  {2n}\\<br>&amp;&amp;\ddots&amp;\vdots\\<br>&amp;&amp;&amp;u _  {nn}<br>\end{bmatrix}<br>$$</p>
 <p>则有</p>
 <p>Doolittle 分解法的计算公式：</p>
 <ol>
-<li>$$u _ {1i} = a _ {1i},i=1,\cdots,n，l _ {i1} = a _ {i1}/u _ {11},i=2,\cdots,n$$</li>
-<li>$$u _ {ri}=a _ {ri}-\sum _ {k=1}^{r-1}l _ {rk}u _ {ki}(i=r,\cdots,n)$$</li>
-<li>$$l _ {ir}=(a _ {ir}-\sum _ {k=1}^{r-1}l _ {ik}u _ {kr})/u _ {rr}(i=r+1,\cdots,n,r\neq n)$$</li>
+<li>$$u _  {1i} = a _  {1i},i=1,\cdots,n，l _  {i1} = a _  {i1}/u _  {11},i=2,\cdots,n$$</li>
+<li>$$u _  {ri}=a _  {ri}-\sum _  {k=1}^{r-1}l _  {rk}u _  {ki}(i=r,\cdots,n)$$</li>
+<li>$$l _  {ir}=(a _  {ir}-\sum _  {k=1}^{r-1}l _  {ik}u _  {kr})/u _  {rr}(i=r+1,\cdots,n,r\neq n)$$</li>
 </ol>
 <h4 id="平方根法"><a href="#平方根法" class="headerlink" title="平方根法"></a>平方根法</h4><p>定理：若 $A$ 是正定矩阵，则存在唯一的对角元素均为正数的下三角矩阵 $L$，使 $A=LL^{T}$。</p>
 <p>计算方法：</p>
 <p>对于 $j=1,2,\cdots,n$</p>
 <ol>
-<li>$l _ {jj}=(a _ {jj}-\sum _ {k=1}^{j-1}l _ {jk}^2)^{1/2}$</li>
-<li>对 $i=j+1,\cdots ,n$<br>$l _ {ij}=(a _ {ij}-\sum _ {k=1}^{j-1}l _ {ik}l _ {jk})/l _ {jj}$</li>
+<li>$l _  {jj}=(a _  {jj}-\sum _  {k=1}^{j-1}l _  {jk}^2)^{1/2}$</li>
+<li>对 $i=j+1,\cdots ,n$<br>$l _  {ij}=(a _  {ij}-\sum _  {k=1}^{j-1}l _  {ik}l _  {jk})/l _  {jj}$</li>
 </ol>
 <h4 id="改进的平方根法"><a href="#改进的平方根法" class="headerlink" title="改进的平方根法"></a>改进的平方根法</h4><p>改进的平方根法通过将正定矩阵 $A$ 采用形如 $LDL^T$ 这样的分解形式（其中 $D$ 是对角阵），可以避免开方运算。</p>
-<p>$$<br>A=<br>\begin{bmatrix}<br>1&amp;&amp;&amp;\\<br>l _ {21}&amp;1&amp;&amp;\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\\<br>l _ {n1}&amp;l _ {n2}&amp;\cdots&amp;1<br>\end{bmatrix}<br>\begin{bmatrix}<br>d _ 1&amp;&amp;&amp;\\<br>&amp;d _ 2&amp;&amp;\\<br>&amp;&amp;\ddots&amp;\\<br>&amp;&amp;&amp;d _ n<br>\end{bmatrix}<br>\begin{bmatrix}<br>1&amp;l _ {21}&amp;\cdots&amp;l _ {n1}\\<br>&amp;1&amp;\cdots&amp;l _ {n2}\\<br>&amp;&amp;\ddots&amp;\vdots\\<br>&amp;&amp;&amp;1<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>A=<br>\begin{bmatrix}<br>1&amp;&amp;&amp;\\<br>l _  {21}&amp;1&amp;&amp;\\<br>\vdots&amp;\vdots&amp;\ddots&amp;\\<br>l _  {n1}&amp;l _  {n2}&amp;\cdots&amp;1<br>\end{bmatrix}<br>\begin{bmatrix}<br>d _  1&amp;&amp;&amp;\\<br>&amp;d _  2&amp;&amp;\\<br>&amp;&amp;\ddots&amp;\\<br>&amp;&amp;&amp;d _  n<br>\end{bmatrix}<br>\begin{bmatrix}<br>1&amp;l _  {21}&amp;\cdots&amp;l _  {n1}\\<br>&amp;1&amp;\cdots&amp;l _  {n2}\\<br>&amp;&amp;\ddots&amp;\vdots\\<br>&amp;&amp;&amp;1<br>\end{bmatrix}<br>$$</p>
 <p>分解过程:</p>
 <p>对  </p>
 <ol>
-<li>对 $i=1,2,\cdots,n$<br>$$t _ {ij}=a _ {ij}-\sum _ {k=1}^{j-1}t _ {ik}l _ {jk}$$</li>
-<li>对 $j=1,2,\cdots,i-1$<br>$$l _ {ij}=t _ {ij}/d _ {j}$$</li>
-<li>$$d _ i=a _ {ii}-\sum _ {k=1}^{i-1}t _ {ik}l _ {ik}$$</li>
+<li>对 $i=1,2,\cdots,n$<br>$$t _  {ij}=a _  {ij}-\sum _  {k=1}^{j-1}t _  {ik}l _  {jk}$$</li>
+<li>对 $j=1,2,\cdots,i-1$<br>$$l _  {ij}=t _  {ij}/d _  {j}$$</li>
+<li>$$d _  i=a _  {ii}-\sum _  {k=1}^{i-1}t _  {ik}l _  {ik}$$</li>
 </ol>
 <h4 id="追赶法"><a href="#追赶法" class="headerlink" title="追赶法"></a>追赶法</h4><p>当矩阵为三对角矩阵时，可以用追赶法计算。</p>
 <p>考虑三对角矩阵</p>
-<p>$$<br>A=\begin{bmatrix}<br>b _ 1&amp;c _ 1&amp;&amp;&amp;\\<br>a _ 2&amp;b _ 2&amp;c _ 2&amp;&amp;\\<br>&amp;a _ 3&amp;b _ 3&amp;\ddots&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;c _ {n-1}\\<br>&amp;&amp;&amp;a _ n&amp;b _ n<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>A=\begin{bmatrix}<br>b _  1&amp;c _  1&amp;&amp;&amp;\\<br>a _  2&amp;b _  2&amp;c _  2&amp;&amp;\\<br>&amp;a _  3&amp;b _  3&amp;\ddots&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;c _  {n-1}\\<br>&amp;&amp;&amp;a _  n&amp;b _  n<br>\end{bmatrix}<br>$$</p>
 <p>该矩阵可分解为</p>
-<p>$$<br>L=\begin{bmatrix}<br>1&amp;&amp;&amp;&amp;\\<br>l _ 2&amp;1&amp;&amp;&amp;\\<br>&amp;l _ 3&amp;1&amp;&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;\\<br>&amp;&amp;&amp;l _ n&amp;1<br>\end{bmatrix},<br>U=\begin{bmatrix}<br>u _ 1&amp;v _ 1&amp;&amp;&amp;\\<br>&amp;u _ 2&amp;v _ 2&amp;&amp;\\<br>&amp;&amp;u _ 3&amp;\ddots&amp;\\<br>&amp;&amp;&amp;\ddots&amp;v _ {n-1}\\<br>&amp;&amp;&amp;&amp;u _ n<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>L=\begin{bmatrix}<br>1&amp;&amp;&amp;&amp;\\<br>l _  2&amp;1&amp;&amp;&amp;\\<br>&amp;l _  3&amp;1&amp;&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;\\<br>&amp;&amp;&amp;l _  n&amp;1<br>\end{bmatrix},<br>U=\begin{bmatrix}<br>u _  1&amp;v _  1&amp;&amp;&amp;\\<br>&amp;u _  2&amp;v _  2&amp;&amp;\\<br>&amp;&amp;u _  3&amp;\ddots&amp;\\<br>&amp;&amp;&amp;\ddots&amp;v _  {n-1}\\<br>&amp;&amp;&amp;&amp;u _  n<br>\end{bmatrix}<br>$$</p>
 <p>其中</p>
-<p>$$<br>v _ i = c _ i \quad i=1,2,\cdots,n-1<br>$$</p>
-<p>$$<br>u _ 1=b _ 1 ,\quad l _ i = \frac{a _ i}{u _ {i-1} } ,\quad u _ i = b _ i-l _ iv _ {i-1} \quad i=2,\cdots,n<br>$$</p>
+<p>$$<br>v _  i = c _  i \quad i=1,2,\cdots,n-1<br>$$</p>
+<p>$$<br>u _  1=b _  1 ,\quad l _  i = \frac{a _  i}{u _  {i-1} } ,\quad u _  i = b _  i-l _  iv _  {i-1} \quad i=2,\cdots,n<br>$$</p>
 <p>分解后只需要依次求解 $Ly=x$ 和 $Ux=y$。</p>
 <h3 id="向量和矩阵的范数"><a href="#向量和矩阵的范数" class="headerlink" title="向量和矩阵的范数"></a>向量和矩阵的范数</h3><p>向量范数：如果向量 $\in \mathrm{R}^n$ （或 $\mathrm{C}^{n}$ ）的某个实值函数 $N(x)=\Vert x\Vert$，满足条件</p>
 <ul>
@@ -603,9 +603,9 @@
 </ul>
 <p>则称 $N(x)$ 是 $\mathrm{R}^{n}$ （或 $\mathrm{C}^{n}$ ）上的一个向量范数（或称作模）。</p>
 <p>定理：对 $\mathrm{R}^n$ 中的任一向量</p>
-<p>$$<br>x=(x _ 1,x _ 2,\cdots,x _ n)^T<br>$$</p>
+<p>$$<br>x=(x _  1,x _  2,\cdots,x _  n)^T<br>$$</p>
 <p>记：</p>
-<p>$$<br>\begin{array}{c}{ { {\Vert x\Vert } _ {1}=\sum _ {i=1}^{n}\vert x _ {i}\vert } }\\ { { {\Vert x\Vert } _ {2}=(\sum _ {i=1}^{n}x _ {i}^{2})^{1/2} } }\\ { { {\Vert x\Vert } _ {\infty}=\operatorname{max} _ {1\leq i\leq n}\vert x _ {i}\vert } }\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{c}{ { {\Vert x\Vert } _  {1}=\sum _  {i=1}^{n}\vert x _  {i}\vert } }\\ { { {\Vert x\Vert } _  {2}=(\sum _  {i=1}^{n}x _  {i}^{2})^{1/2} } }\\ { { {\Vert x\Vert } _  {\infty}=\operatorname{max} _  {1\leq i\leq n}\vert x _  {i}\vert } }\end{array}<br>$$</p>
 <p>分别为向量的1-范数，2-范数，和 $\infty$-范数。</p>
 <p>矩阵范数：称定义在 $\mathrm{R}^{n\times n}$ 上的实值函数为矩阵范数，如果对于 $\mathrm{R}^{n\times n}$ 中的任意矩阵 $A$ 和 $B$，它满足</p>
 <ul>
@@ -613,9 +613,9 @@
 <li>齐次性：对任一数 $k\in \mathrm{R}$，有 $\Vert kA\Vert=\vert k\vert \Vert A\Vert$。</li>
 <li>三角不等式成立：$\Vert A+B\Vert\leq \Vert A\Vert + \Vert B\Vert$，$\Vert AB\Vert\leq \Vert A\Vert \Vert B\Vert$</li>
 </ul>
-<p>定理：设 $A=(a _ {ij})\in \mathrm{R}^{n \times n}$，则</p>
-<p>$$<br>\begin{array}{l}{ {\Vert A\Vert _ {1}=\max _ {1\leq j\leq n}\sum _ {i=1}^n\vert a _ {ij}\vert} } \quad \text{列范数}\\<br>{ {\Vert A\Vert _ {2}={\sqrt{\lambda _ {m a x}(A^{T}A)} } } } \quad \text{2-范数} \\<br>{ {\Vert A\Vert _ {\infty}=\max _ {1\leq i\leq n}\sum _ {j=1}^n\vert a _ {ij}\vert} } \quad \text{行范数}<br>\end{array}<br>$$</p>
-<p>其中 $\lambda _ {max}(A^TA)$ 表示矩阵 $A^TA$ 的最大特征值。</p>
+<p>定理：设 $A=(a _  {ij})\in \mathrm{R}^{n \times n}$，则</p>
+<p>$$<br>\begin{array}{l}{ {\Vert A\Vert _  {1}=\max _  {1\leq j\leq n}\sum _  {i=1}^n\vert a _  {ij}\vert} } \quad \text{列范数}\\<br>{ {\Vert A\Vert _  {2}={\sqrt{\lambda _  {m a x}(A^{T}A)} } } } \quad \text{2-范数} \\<br>{ {\Vert A\Vert _  {\infty}=\max _  {1\leq i\leq n}\sum _  {j=1}^n\vert a _  {ij}\vert} } \quad \text{行范数}<br>\end{array}<br>$$</p>
+<p>其中 $\lambda _  {max}(A^TA)$ 表示矩阵 $A^TA$ 的最大特征值。</p>
 <h3 id="误差分析"><a href="#误差分析" class="headerlink" title="误差分析"></a>误差分析</h3><p>定义：如果矩阵 $A$ 或常数项 $b$ 的微小变化，引起方程组 $Ax=b$ 解的巨大变化，则称此方程组为“病态”方程组，矩阵 $A$ 称为“病态”矩阵，否则称方程组为“良态”方程组，矩阵 $A$ 称为“良态”矩阵。</p>
 <p>定理：设 $A$ 是非奇异矩阵，$Ax=b\neq 0$，且</p>
 <p>$$<br>A(x+\delta x) = b + \delta b<br>$$</p>
@@ -623,17 +623,17 @@
 <p>$$<br>\dfrac{\Vert \delta x \Vert}{\Vert x\Vert}\leq \Vert A^{-1} \Vert \Vert A \Vert \dfrac{\Vert \delta b \Vert}{\Vert b\Vert}<br>$$</p>
 <p>常数项 $b$ 的相对误差在解中可能放大 $\Vert A^{-1} \Vert \Vert A \Vert$ 倍。</p>
 <p>条件数：设  为非奇异矩阵，称数</p>
-<p>$$<br>\operatorname{cond}(A) _ {v}=\Vert A^{-1}\Vert _ {v}\Vert A\Vert _ {v}(v=1,2,\infty)<br>$$</p>
+<p>$$<br>\operatorname{cond}(A) _  {v}=\Vert A^{-1}\Vert _  {v}\Vert A\Vert _  {v}(v=1,2,\infty)<br>$$</p>
 <p>为矩阵 $A$ 的条件数。</p>
 <p>当 $A$ 的条件数相对大时，$Ax=b$ 是病态的。</p>
 <p>$A$ 的谱条件数</p>
-<p>$$<br>\operatorname{cond}(A) _ {2}=\Vert A^{-1}\Vert _ {2}\Vert A\Vert _ {2} = \sqrt{\dfrac{\lambda _ {max}(A^TA)}{\lambda _ {min}(A^TA)} }<br>$$</p>
-<p>当 $A$ 为对称矩阵时，$\operatorname{cond}(A) _ {2}=\dfrac{\lambda _ 1}{\lambda _ n}$，其中 $\lambda _ 1,\lambda _ n$ 为 $A$ 的绝对值最大，最小的特征值。</p>
+<p>$$<br>\operatorname{cond}(A) _  {2}=\Vert A^{-1}\Vert _  {2}\Vert A\Vert _  {2} = \sqrt{\dfrac{\lambda _  {max}(A^TA)}{\lambda _  {min}(A^TA)} }<br>$$</p>
+<p>当 $A$ 为对称矩阵时，$\operatorname{cond}(A) _  {2}=\dfrac{\lambda _  1}{\lambda _  n}$，其中 $\lambda _  1,\lambda _  n$ 为 $A$ 的绝对值最大，最小的特征值。</p>
 <p>条件数的性质：</p>
 <ol>
-<li>对任何的非奇异矩阵 $A$，都有 $\operatorname{cond}(A) _ {v}\geq 1$<br>$$\operatorname{cond}(A) _ {v}=\Vert A^{-1}\Vert _ {v}\Vert A\Vert _ {v}\geq\Vert A^{-1}A\Vert _ {v}=1$$</li>
-<li>设 $A$ 为非奇异矩阵，且 $c\neq 0$ （常数），则<br>$$\operatorname{cond}(cA) _ {v} = \operatorname{cond}(A) _ {v}$$</li>
-<li>如果 $A$ 为正交矩阵，则 $\operatorname{cond}(A) _ {2}=1$。如果 $A$ 为非奇异矩阵，$R$ 为正交矩阵，则<br>$$\operatorname{cond}(RA) _ {2}=\operatorname{cond}(AR) _ {2}=\operatorname{cond}(A) _ {2}$$</li>
+<li>对任何的非奇异矩阵 $A$，都有 $\operatorname{cond}(A) _  {v}\geq 1$<br>$$\operatorname{cond}(A) _  {v}=\Vert A^{-1}\Vert _  {v}\Vert A\Vert _  {v}\geq\Vert A^{-1}A\Vert _  {v}=1$$</li>
+<li>设 $A$ 为非奇异矩阵，且 $c\neq 0$ （常数），则<br>$$\operatorname{cond}(cA) _  {v} = \operatorname{cond}(A) _  {v}$$</li>
+<li>如果 $A$ 为正交矩阵，则 $\operatorname{cond}(A) _  {2}=1$。如果 $A$ 为非奇异矩阵，$R$ 为正交矩阵，则<br>$$\operatorname{cond}(RA) _  {2}=\operatorname{cond}(AR) _  {2}=\operatorname{cond}(A) _  {2}$$</li>
 </ol>
 <p>近似的方法：</p>
 <ul>
@@ -642,180 +642,180 @@
 <li>系数矩阵 $A$ 元素间数量级相差很大，并且无规则</li>
 </ul>
 <h2 id="数值积分方法"><a href="#数值积分方法" class="headerlink" title="数值积分方法"></a>数值积分方法</h2><p>在科学计算中，常常会遇到一元函数积分的计算，即</p>
-<p>$$<br>I(f)=\int _ {a}^{b}f(x)\mathrm{d}x<br>$$</p>
+<p>$$<br>I(f)=\int _  {a}^{b}f(x)\mathrm{d}x<br>$$</p>
 <p>在大多数情况下，$f$ 的原函数不易求出，而且在一些计算问题中，$f(x)$ 的值是通过列表给出的。在这些情况下，积分的近似数值计算有很重要的意义。</p>
-<p>利用一个函数序列 $\{ f _ 1,f _ 2,\cdots \}$ 逼近 $f$，再把</p>
-<p>$$<br>I _ n(f)=\int _ {a}^{b}f _ n(x)\mathrm{d}x<br>$$</p>
+<p>利用一个函数序列 $\{ f _  1,f _  2,\cdots \}$ 逼近 $f$，再把</p>
+<p>$$<br>I _  n(f)=\int _  {a}^{b}f _  n(x)\mathrm{d}x<br>$$</p>
 <p>作为 $I(f)$ 的一个近似值。误差为：</p>
-<p>$$<br>E _ n=I(f)-I _ n(f)=\int _ {a}^{b}[f(x)-f _ {n}(x)]\mathrm{d}x<br>$$</p>
+<p>$$<br>E _  n=I(f)-I _  n(f)=\int _  {a}^{b}[f(x)-f _  {n}(x)]\mathrm{d}x<br>$$</p>
 <p>可以作出一般估计：</p>
-<p>$$<br>\vert E _ n(f)\vert \leq \int _ a^b\vert f(x)-f _ n(x)\vert \mathrm{d}x\leq (b-a)\Vert f-f _ n\Vert _ {\infty}<br>$$</p>
-<p>$f _ n$ 常常取为 $f$ 的插值多项式或分段插值函数。</p>
-<p>现设 $[a,b]$ 上节点 $x _ 0,\cdots,x _ n$ 是这些节点上 $f$ 的某种形式的插值多项式，则通过积分可以得到</p>
-<p>$$<br>I _ n(f)=\sum _ {j=1}^nA _ jf(x _ j)<br>$$</p>
-<p>称 $x _ j$ 为求积节点，$A _ j$ 为求积系数。</p>
+<p>$$<br>\vert E _  n(f)\vert \leq \int _  a^b\vert f(x)-f _  n(x)\vert \mathrm{d}x\leq (b-a)\Vert f-f _  n\Vert _  {\infty}<br>$$</p>
+<p>$f _  n$ 常常取为 $f$ 的插值多项式或分段插值函数。</p>
+<p>现设 $[a,b]$ 上节点 $x _  0,\cdots,x _  n$ 是这些节点上 $f$ 的某种形式的插值多项式，则通过积分可以得到</p>
+<p>$$<br>I _  n(f)=\sum _  {j=1}^nA _  jf(x _  j)<br>$$</p>
+<p>称 $x _  j$ 为求积节点，$A _  j$ 为求积系数。</p>
 <p>几个简单的公式：</p>
-<p>设 $[a,b]$ 上有节点 $a=x _ 0&lt;\cdots&lt;x _ n=b$，节点把 $[a,b]$ 分成 $n$ 个子区间 $[x _ {j-1},x _ j](j=1,\cdots ,n)$。每个子区间上积分用 $f(x _ {j-1})(x _ j-x _ {j-1})$ 近似，有：</p>
-<p>$$<br>I(f)\approx I _ n(f)=\sum _ {j=1}^n(x _ j-x _ {j-1})(x _ j-x _ {j-1})<br>$$</p>
-<p>这称为符合的左矩形公式。<br>当每个子区间长度趋于零时，有 $I _ n(f)\rightarrow I(f)$<br>类似的，可以构造复合的中矩形公式：</p>
-<p>$$<br>I(f)\approx I _ n(f)=\sum _ {j=1}^n(x _ j-x _ {j-1})f(\dfrac{x _ {j-1}+x _ j}{2})<br>$$</p>
+<p>设 $[a,b]$ 上有节点 $a=x _  0&lt;\cdots&lt;x _  n=b$，节点把 $[a,b]$ 分成 $n$ 个子区间 $[x _  {j-1},x _  j](j=1,\cdots ,n)$。每个子区间上积分用 $f(x _  {j-1})(x _  j-x _  {j-1})$ 近似，有：</p>
+<p>$$<br>I(f)\approx I _  n(f)=\sum _  {j=1}^n(x _  j-x _  {j-1})(x _  j-x _  {j-1})<br>$$</p>
+<p>这称为符合的左矩形公式。<br>当每个子区间长度趋于零时，有 $I _  n(f)\rightarrow I(f)$<br>类似的，可以构造复合的中矩形公式：</p>
+<p>$$<br>I(f)\approx I _  n(f)=\sum _  {j=1}^n(x _  j-x _  {j-1})f(\dfrac{x _  {j-1}+x _  j}{2})<br>$$</p>
 <p>也可以有复合的右矩形公式。</p>
 <h3 id="梯形公式与辛普森公式"><a href="#梯形公式与辛普森公式" class="headerlink" title="梯形公式与辛普森公式"></a>梯形公式与辛普森公式</h3><h4 id="梯形公式"><a href="#梯形公式" class="headerlink" title="梯形公式"></a>梯形公式</h4><p>要计算积分 $I(f)$，一个简单的方法是用 $[a,b]$ 上线性插值函数近似 $f$。设插值节点为 $a$ 和 $b$，可得到 $f$ 的线性插值函数：</p>
-<p>$$<br>f _ 1(x)=\dfrac{b-x}{b-a}f(a)+\dfrac{x-a}{b-a}f(b)<br>$$</p>
-<p>对 $f _ 1(x)$ 积分，得：</p>
-<p>$$<br>I _ 1(f)=\int _ {a}^{b}f _ 1(x)\mathrm{d}x = \dfrac{b-a}{2}f(a)+\dfrac{b-a}{2}f(b)<br>$$</p>
-<p>用 $I _ 1(f)$ 近似 $I(f)$ 的几何意义：用梯形面积近似曲面梯形面积。</p>
+<p>$$<br>f _  1(x)=\dfrac{b-x}{b-a}f(a)+\dfrac{x-a}{b-a}f(b)<br>$$</p>
+<p>对 $f _  1(x)$ 积分，得：</p>
+<p>$$<br>I _  1(f)=\int _  {a}^{b}f _  1(x)\mathrm{d}x = \dfrac{b-a}{2}f(a)+\dfrac{b-a}{2}f(b)<br>$$</p>
+<p>用 $I _  1(f)$ 近似 $I(f)$ 的几何意义：用梯形面积近似曲面梯形面积。</p>
 <p>线性插值的误差为：</p>
-<p>$$<br>f(x)-f _ 1(x)=f[x,a,b]{(x-a)(x-b)}<br>$$</p>
+<p>$$<br>f(x)-f _  1(x)=f[x,a,b]{(x-a)(x-b)}<br>$$</p>
 <p>现设 $f\in C^{2}[a,b]$，则积分误差</p>
-<p>$$<br>E _ 1(f)=I(f)-I _ 1(f)=\int _ {a}^{b}[f(x)-f _ 1(x)]\mathrm{d}x = \int _ {a}^{b}f[x,a,b]{(x-a)}(x-b)\mathrm{d}x<br>$$</p>
+<p>$$<br>E _  1(f)=I(f)-I _  1(f)=\int _  {a}^{b}[f(x)-f _  1(x)]\mathrm{d}x = \int _  {a}^{b}f[x,a,b]{(x-a)}(x-b)\mathrm{d}x<br>$$</p>
 <p>考虑到：</p>
-<p>$$<br>\int _ {a}^{b}f(x)g(x)d x=f(\xi)\int _ {a}^{b}g(x)\mathrm{d}x<br>$$</p>
+<p>$$<br>\int _  {a}^{b}f(x)g(x)d x=f(\xi)\int _  {a}^{b}g(x)\mathrm{d}x<br>$$</p>
 <p>其中 $g(x)$ 不变号且可积。</p>
 <p>于是有</p>
-<p>$$<br>E _ {1}(f)=f[\xi,a,b]\int _ {a}^{b}(x-a)(x-b)\mathrm{d} x<br>$$</p>
+<p>$$<br>E _  {1}(f)=f[\xi,a,b]\int _  {a}^{b}(x-a)(x-b)\mathrm{d} x<br>$$</p>
 <p>根据均差的性质，$f[\xi,a,b]={\dfrac{f^{\prime\prime}(\eta)}{2} }$，其中 $\eta\in [a,b]$。</p>
-<p>则得到 $E _ {1}(f)=-{\frac{(b-a)^{3} }{12} }{f^{\prime\prime}(\eta)}$，其中 $\eta \in [a,b]$。</p>
+<p>则得到 $E _  {1}(f)=-{\frac{(b-a)^{3} }{12} }{f^{\prime\prime}(\eta)}$，其中 $\eta \in [a,b]$。</p>
 <h4 id="辛普森公式"><a href="#辛普森公式" class="headerlink" title="辛普森公式"></a>辛普森公式</h4><p>用二次插值多项式逼近 $f$，插值节点为： $x=a,b$ 和 $c=\dfrac{a+b}{2}$ 得</p>
-<p>$$<br>f _ 2(x)=\dfrac{(x-c)(x-b)}{(a-c)(a-b)}f(a)+\dfrac{(x-a)(x-b)}{(c-a)(c-b)}f(c)+\dfrac{(x-a)(x-c)}{(b-a)(b-c)}f(b)<br>$$</p>
-<p>对 $f _ 2(x)$ 积分，得</p>
-<p>$$<br>I _ 2(f)=\int _ {a}^{b}f _ 2(x)\mathrm{d}x=\dfrac{b-a}{6}[f(a)+4f(c)+f(b)]<br>$$</p>
-<p>$$<br>E _ 2(f)=I(f)-I _ 2(f)=\int _ {a}^{b}f[x,a,c,d]{(x-a)(x-c)(x-b)}\mathrm{d}x<br>$$</p>
+<p>$$<br>f _  2(x)=\dfrac{(x-c)(x-b)}{(a-c)(a-b)}f(a)+\dfrac{(x-a)(x-b)}{(c-a)(c-b)}f(c)+\dfrac{(x-a)(x-c)}{(b-a)(b-c)}f(b)<br>$$</p>
+<p>对 $f _  2(x)$ 积分，得</p>
+<p>$$<br>I _  2(f)=\int _  {a}^{b}f _  2(x)\mathrm{d}x=\dfrac{b-a}{6}[f(a)+4f(c)+f(b)]<br>$$</p>
+<p>$$<br>E _  2(f)=I(f)-I _  2(f)=\int _  {a}^{b}f[x,a,c,d]{(x-a)(x-c)(x-b)}\mathrm{d}x<br>$$</p>
 <p>现设 $f\in C^{4}[a,b]$，则可得出辛普森公式的误差表达式为：</p>
-<p>$$<br>E _ 2(f)=-\dfrac{(b-a)^5}{2880}\dfrac{f^{(4)}(\eta )}{2}<br>$$</p>
+<p>$$<br>E _  2(f)=-\dfrac{(b-a)^5}{2880}\dfrac{f^{(4)}(\eta )}{2}<br>$$</p>
 <p>其中 $\eta \in [a,b]$</p>
-<p>代数精度：如果 $\widetilde{I(f)}$ 式对所有不超过 $m$ 次的多项式 $p _ m(x)$ 准确成立，即 $E(p _ {m})=0$，而对某一次数为 $m+1$ 次多项式 $p _ {m+1}$ 有 $E(p _ {m+1}\neq 0)$，则称近似求积公式 $\widetilde{I(f)}$ 具有 $m$ 次代数精度。</p>
-<h3 id="插值型求积公式及其截断误差"><a href="#插值型求积公式及其截断误差" class="headerlink" title="插值型求积公式及其截断误差"></a>插值型求积公式及其截断误差</h3><p>插值型求积公式：在区间 $[a,b]$ 内给定求积节点 $x _ k(k=0,\cdots ,n)$，并且 $a\leq x _ 0&lt;x _ 1&lt;\cdots,&lt;x _ n$，以所给求积节点为插值节点，构造函数 $$ 的拉格朗日插值多项式</p>
-<p>$$<br>P _ n(x)=\textstyle{\sum _ {k=0}^{n}{l _ {k}(x)}f(x _ {k})}<br>$$</p>
-<p>其中，$l _ k(x)$ 是拉格朗日插值基函数，</p>
-<p>$$<br>l _ k(x)=\prod _ {i=0，i\neq k}^{n}\dfrac{x-x _ i}{x _ k-x _ i}<br>$$</p>
-<p>用 $P _ n(x)$ 近似代替 $f(x)$，在区间 $[a,b]$ 上作定积分，得到近似等式</p>
-<p>$$<br>\int _ {a}^{b}f(x)\mathrm{d}x\approx \sum _ {k=1}^n\lambda _ kf(x _ k)<br>$$</p>
+<p>代数精度：如果 $\widetilde{I(f)}$ 式对所有不超过 $m$ 次的多项式 $p _  m(x)$ 准确成立，即 $E(p _  {m})=0$，而对某一次数为 $m+1$ 次多项式 $p _  {m+1}$ 有 $E(p _  {m+1}\neq 0)$，则称近似求积公式 $\widetilde{I(f)}$ 具有 $m$ 次代数精度。</p>
+<h3 id="插值型求积公式及其截断误差"><a href="#插值型求积公式及其截断误差" class="headerlink" title="插值型求积公式及其截断误差"></a>插值型求积公式及其截断误差</h3><p>插值型求积公式：在区间 $[a,b]$ 内给定求积节点 $x _  k(k=0,\cdots ,n)$，并且 $a\leq x _  0&lt;x _  1&lt;\cdots,&lt;x _  n$，以所给求积节点为插值节点，构造函数 $$ 的拉格朗日插值多项式</p>
+<p>$$<br>P _  n(x)=\textstyle{\sum _  {k=0}^{n}{l _  {k}(x)}f(x _  {k})}<br>$$</p>
+<p>其中，$l _  k(x)$ 是拉格朗日插值基函数，</p>
+<p>$$<br>l _  k(x)=\prod _  {i=0，i\neq k}^{n}\dfrac{x-x _  i}{x _  k-x _  i}<br>$$</p>
+<p>用 $P _  n(x)$ 近似代替 $f(x)$，在区间 $[a,b]$ 上作定积分，得到近似等式</p>
+<p>$$<br>\int _  {a}^{b}f(x)\mathrm{d}x\approx \sum _  {k=1}^n\lambda _  kf(x _  k)<br>$$</p>
 <p>其中</p>
-<p>$$<br>\lambda _ k=\int _ {a}^{b}l _ k(x)\mathrm{d}x\quad k=0,\cdots,n<br>$$</p>
+<p>$$<br>\lambda _  k=\int _  {a}^{b}l _  k(x)\mathrm{d}x\quad k=0,\cdots,n<br>$$</p>
 <p>得到插值型求积公式。</p>
 <p>设 $f(x)$ 在区间 $[a,b]$ 上足够光滑，则有</p>
-<p>$$<br>f(x)=\sum _ {k=0}^{n}l _ {k}(x)\ f(x _ {k})+{ {\dfrac{f^{(n+1)}(\xi)}{(n+1)!} } }\omega _ {n+1}(x)<br>$$</p>
+<p>$$<br>f(x)=\sum _  {k=0}^{n}l _  {k}(x)\ f(x _  {k})+{ {\dfrac{f^{(n+1)}(\xi)}{(n+1)!} } }\omega _  {n+1}(x)<br>$$</p>
 <p>$\xi\in (a,b)$ 且依赖于 $x$。其截断误差为</p>
-<p>$$<br>R _ {n}(x)=\int _ {a}^{b}f(x)d x-\sum _ {k=0}^{n}\lambda _ {k}f(x _ {k})=\int _ {a}^{b}{\frac{f^{(n+1)}(\xi)}{(n+1)!} }\omega _ {n+1}(x)\mathrm{d}x<br>$$</p>
+<p>$$<br>R _  {n}(x)=\int _  {a}^{b}f(x)d x-\sum _  {k=0}^{n}\lambda _  {k}f(x _  {k})=\int _  {a}^{b}{\frac{f^{(n+1)}(\xi)}{(n+1)!} }\omega _  {n+1}(x)\mathrm{d}x<br>$$</p>
 <p>定理： $n+1$ 个节点的插值型求积公式至少具有 $n$ 次代数精度。</p>
-<h3 id="等距节点积分公式"><a href="#等距节点积分公式" class="headerlink" title="等距节点积分公式"></a>等距节点积分公式</h3><p>设将 $[a,b]$ $n$ 等分，$h=\dfrac{b-a}{n}$，取等距节点为 $x _ i=a+ih,i=0,1,\cdots,n$，其中 $n$ 为大于零的整数，则</p>
-<p>$$<br>L _ n(x)=\sum _ {i=1}^nf(x _ i)l _ i(x) \quad l _ i(x)=\prod _ {j=0,j\neq i}^{n}\dfrac{x-x _ j}{x _ i-x _ j}<br>$$</p>
-<p>对 $L _ n(x)$ 积分，得到</p>
-<p>$$<br>\int _ {a}^{b}f(x)\mathrm{d}x\approx I _ n(f)=\int _ {a}^{b}L _ n(x)\mathrm{d}x=\sum _ {i=0}^nA _ if(x _ i)<br>$$</p>
+<h3 id="等距节点积分公式"><a href="#等距节点积分公式" class="headerlink" title="等距节点积分公式"></a>等距节点积分公式</h3><p>设将 $[a,b]$ $n$ 等分，$h=\dfrac{b-a}{n}$，取等距节点为 $x _  i=a+ih,i=0,1,\cdots,n$，其中 $n$ 为大于零的整数，则</p>
+<p>$$<br>L _  n(x)=\sum _  {i=1}^nf(x _  i)l _  i(x) \quad l _  i(x)=\prod _  {j=0,j\neq i}^{n}\dfrac{x-x _  j}{x _  i-x _  j}<br>$$</p>
+<p>对 $L _  n(x)$ 积分，得到</p>
+<p>$$<br>\int _  {a}^{b}f(x)\mathrm{d}x\approx I _  n(f)=\int _  {a}^{b}L _  n(x)\mathrm{d}x=\sum _  {i=0}^nA _  if(x _  i)<br>$$</p>
 <p>其中，</p>
-<p>$$<br>A _ i=\int _ {a}^{b}l _ i(x)\mathrm{d}x<br>$$</p>
+<p>$$<br>A _  i=\int _  {a}^{b}l _  i(x)\mathrm{d}x<br>$$</p>
 <p>进一步，令 $t=\dfrac{x-a}{h}$，可得</p>
-<p>$$<br>I _ n=(b-a)\sum _ {i=0}^{n}C _ if(x _ i)<br>$$</p>
+<p>$$<br>I _  n=(b-a)\sum _  {i=0}^{n}C _  if(x _  i)<br>$$</p>
 <p>其中</p>
-<p>$$<br>C _ i=\dfrac{A _ i}{b-a}=\dfrac{h}{b-a}\int _ {0}^{n}\prod _ {j=0,j\neq i}^{n}\dfrac{t-j}{i-j}\mathrm{d}t<br>$$</p>
-<p>闭型 Newton-Cotes 积分公式，$C _ i$ 称为 N-C 系数，可计算 $C _ i$。</p>
+<p>$$<br>C _  i=\dfrac{A _  i}{b-a}=\dfrac{h}{b-a}\int _  {0}^{n}\prod _  {j=0,j\neq i}^{n}\dfrac{t-j}{i-j}\mathrm{d}t<br>$$</p>
+<p>闭型 Newton-Cotes 积分公式，$C _  i$ 称为 N-C 系数，可计算 $C _  i$。</p>
 <p><img src="830bd2a5/N-C%E7%B3%BB%E6%95%B0.jpg" srcset="/img/loading.gif" lazyload alt="N-C 系数"></p>
-<h3 id="复合积分公式"><a href="#复合积分公式" class="headerlink" title="复合积分公式"></a>复合积分公式</h3><h4 id="复合梯形公式"><a href="#复合梯形公式" class="headerlink" title="复合梯形公式"></a>复合梯形公式</h4><p>设 $f\in C^2[a,b]$，将 $[a,b]$ 等分为 $n$ 个子区间 $[x _ {i-1},x _ i]$，$i=1,2,\cdots,n$，其长度为 $h=\dfrac{b-a}{n}$，节点为 $x _ i=a+ih,i=0,\cdots,n$。</p>
+<h3 id="复合积分公式"><a href="#复合积分公式" class="headerlink" title="复合积分公式"></a>复合积分公式</h3><h4 id="复合梯形公式"><a href="#复合梯形公式" class="headerlink" title="复合梯形公式"></a>复合梯形公式</h4><p>设 $f\in C^2[a,b]$，将 $[a,b]$ 等分为 $n$ 个子区间 $[x _  {i-1},x _  i]$，$i=1,2,\cdots,n$，其长度为 $h=\dfrac{b-a}{n}$，节点为 $x _  i=a+ih,i=0,\cdots,n$。</p>
 <p>在每个子区间上，用梯形公式及误差公式，得到：</p>
-<p>$$<br>\begin{array}{l}<br>{ {I(f)=\int _ {a}^{b}f(x)\mathrm{d} x=\sum _ {i=1}^{n}\int _ {x _ {i-1} }^{x _ {i} }f(x)\mathrm{d} x} }\\ { {=\sum _ {i=1}^{n}\{\dfrac{h}{2}[f(x _ {i-1})+f(x _ {i})]-\dfrac{h^{3} }{12}f^{\prime\prime}(\eta _ {i})\} } }&amp;{ {\quad\eta _ {i}\in\ [x _ {i-1},x _ {i}]} }\\=I _ n(f)+E _ n(f)<br>\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}<br>{ {I(f)=\int _  {a}^{b}f(x)\mathrm{d} x=\sum _  {i=1}^{n}\int _  {x _  {i-1} }^{x _  {i} }f(x)\mathrm{d} x} }\\ { {=\sum _  {i=1}^{n}\{\dfrac{h}{2}[f(x _  {i-1})+f(x _  {i})]-\dfrac{h^{3} }{12}f^{\prime\prime}(\eta _  {i})\} } }&amp;{ {\quad\eta _  {i}\in\ [x _  {i-1},x _  {i}]} }\\=I _  n(f)+E _  n(f)<br>\end{array}<br>$$</p>
 <p>复合梯形公式：</p>
-<p>$$<br>I _ n(f)=\dfrac{h}{2}[f(x _ 0)+2\sum _ {i=1}^{n-1}f(x _ i)+f(x _ n)]<br>$$</p>
+<p>$$<br>I _  n(f)=\dfrac{h}{2}[f(x _  0)+2\sum _  {i=1}^{n-1}f(x _  i)+f(x _  n)]<br>$$</p>
 <p>其误差为</p>
-<p>$$<br>E _ n(f)=-\dfrac{(b-a)}{12}h^2f^{\prime\prime}(\eta)\quad \eta \in [a,b]<br>$$</p>
-<h4 id="复合辛普森公式"><a href="#复合辛普森公式" class="headerlink" title="复合辛普森公式"></a>复合辛普森公式</h4><p>设 $f\in C^4[a,b]$，对整数 $n\geq 1$，设 $h=\dfrac{b-a}{2n}$，$x _ i=a+ih$，$i=0,1,\cdots n$，将 $[a,b]$ 等分为 $n$ 个子区间 $[x _ {2i-2},x _ {2i}]$，$i=1,2,\cdots ,n$。子区间长度为 $2h$，其中有三个节点 $x _ {2i-2},x _ {2i-1},x _ {2i}$。</p>
+<p>$$<br>E _  n(f)=-\dfrac{(b-a)}{12}h^2f^{\prime\prime}(\eta)\quad \eta \in [a,b]<br>$$</p>
+<h4 id="复合辛普森公式"><a href="#复合辛普森公式" class="headerlink" title="复合辛普森公式"></a>复合辛普森公式</h4><p>设 $f\in C^4[a,b]$，对整数 $n\geq 1$，设 $h=\dfrac{b-a}{2n}$，$x _  i=a+ih$，$i=0,1,\cdots n$，将 $[a,b]$ 等分为 $n$ 个子区间 $[x _  {2i-2},x _  {2i}]$，$i=1,2,\cdots ,n$。子区间长度为 $2h$，其中有三个节点 $x _  {2i-2},x _  {2i-1},x _  {2i}$。</p>
 <p>在每个子区间上，用辛普森公式及误差公式，得</p>
-<p>$$<br>\begin{array}{l}<br>I(f)=\int _ {a}^{b}f(x)\mathrm{d}x  \\  =\sum _ {i=1}^{n}\int _ {2i-2}^{2i}f(x)\mathrm{d}x \\  =\sum _ {i=1}^{n}\{ \dfrac{h}{3}[f(x _ {2i-2})+4f(x _ {2i-1})+f(x _ {2i})]-\dfrac{(2h)^2}{2880}f^{(4)}(\eta _ i) \} \\ =I _ n(f)+E _ n(f)<br>\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}<br>I(f)=\int _  {a}^{b}f(x)\mathrm{d}x  \\  =\sum _  {i=1}^{n}\int _  {2i-2}^{2i}f(x)\mathrm{d}x \\  =\sum _  {i=1}^{n}\{ \dfrac{h}{3}[f(x _  {2i-2})+4f(x _  {2i-1})+f(x _  {2i})]-\dfrac{(2h)^2}{2880}f^{(4)}(\eta _  i) \} \\ =I _  n(f)+E _  n(f)<br>\end{array}<br>$$</p>
 <p>复合辛普森公式：</p>
-<p>$$<br>I _ n(f)=\dfrac{h}{3}[f(x _ 0)+4\sum _ {i=1}^{n}f(x _ {2i-1})+2\sum _ {i=1}^{n}-1f(x _ {2i})+f(x _ {2n})]<br>$$</p>
+<p>$$<br>I _  n(f)=\dfrac{h}{3}[f(x _  0)+4\sum _  {i=1}^{n}f(x _  {2i-1})+2\sum _  {i=1}^{n}-1f(x _  {2i})+f(x _  {2n})]<br>$$</p>
 <p>误差为：</p>
-<p>$$<br>E _ n(f)=-\dfrac{h^4(b-a)}{180}f^{(4)}(\eta) \quad \eta \in [a,b]<br>$$</p>
+<p>$$<br>E _  n(f)=-\dfrac{h^4(b-a)}{180}f^{(4)}(\eta) \quad \eta \in [a,b]<br>$$</p>
 <h3 id="外推技术与龙贝格积分法"><a href="#外推技术与龙贝格积分法" class="headerlink" title="外推技术与龙贝格积分法"></a>外推技术与龙贝格积分法</h3><p>Richardson外推技术</p>
-<p>收敛：设复化求积公式为 $\int _ {a}^{b}f(x)\mathrm{d}x\approx  I _ n$，其中 $n$ 是区间 $[a,b]$ 的等分数，如果</p>
-<p>$$<br>\lim _ {h \to 0(n\rightarrow \infty )}\dfrac{\int _ {a}^{b}f(x)\mathrm{d}x-I _ n}{h^p}=c<br>$$</p>
-<p>其中 $c$ 是一个非零常数，$p$ 是一个正实数，则称 $I _ n$ 是 $p$ 阶收敛的。</p>
-<h2 id="函数逼近"><a href="#函数逼近" class="headerlink" title="函数逼近"></a>函数逼近</h2><h3 id="函数的最佳平方逼近"><a href="#函数的最佳平方逼近" class="headerlink" title="函数的最佳平方逼近"></a>函数的最佳平方逼近</h3><p>设函数组 $\varphi _ 0(x), \varphi _ 1(x),\cdots,\varphi _ n(x)$ 都是 $[a,b]$ 上的连续函数，并在 $C[a,b]$ 上线性无关，以此函数组为基底，生成空间 $C[a,b]$ 的一个子空间</p>
-<p>$$<br>H _ n=\operatorname{Span}\{ \varphi _ 0(x),\varphi _ 1(x),\cdots,\varphi _ n \}<br>$$</p>
-<p>则 $H _ n$ 中的任一个元素为：</p>
-<p>$$<br>p(x)=\sum _ {j=0}^{n}c _ j\varphi _ j<br>$$</p>
+<p>收敛：设复化求积公式为 $\int _  {a}^{b}f(x)\mathrm{d}x\approx  I _  n$，其中 $n$ 是区间 $[a,b]$ 的等分数，如果</p>
+<p>$$<br>\lim _  {h \to 0(n\rightarrow \infty )}\dfrac{\int _  {a}^{b}f(x)\mathrm{d}x-I _  n}{h^p}=c<br>$$</p>
+<p>其中 $c$ 是一个非零常数，$p$ 是一个正实数，则称 $I _  n$ 是 $p$ 阶收敛的。</p>
+<h2 id="函数逼近"><a href="#函数逼近" class="headerlink" title="函数逼近"></a>函数逼近</h2><h3 id="函数的最佳平方逼近"><a href="#函数的最佳平方逼近" class="headerlink" title="函数的最佳平方逼近"></a>函数的最佳平方逼近</h3><p>设函数组 $\varphi _  0(x), \varphi _  1(x),\cdots,\varphi _  n(x)$ 都是 $[a,b]$ 上的连续函数，并在 $C[a,b]$ 上线性无关，以此函数组为基底，生成空间 $C[a,b]$ 的一个子空间</p>
+<p>$$<br>H _  n=\operatorname{Span}\{ \varphi _  0(x),\varphi _  1(x),\cdots,\varphi _  n \}<br>$$</p>
+<p>则 $H _  n$ 中的任一个元素为：</p>
+<p>$$<br>p(x)=\sum _  {j=0}^{n}c _  j\varphi _  j<br>$$</p>
 <p>对空间 $C[a,b]$ 中的任意两个函数 $f$ 和 $g$，定义内积</p>
-<p>$$<br>(f,g)=\int _ {a}^{b}\rho (x)f(x)g(x)\mathrm{d}x<br>$$</p>
+<p>$$<br>(f,g)=\int _  {a}^{b}\rho (x)f(x)g(x)\mathrm{d}x<br>$$</p>
 <p>其中，$\rho (x)$ 是 $[a,b]$ 上的一个权函数。</p>
-<p>带权正交：若内积 $(f,g)=\int _ {a}^{b}\rho (x)f(x)g(x)\mathrm{d}x=0$，则称 $f(x)$ 与 $g(x)$ 在区间 $[a,b]$ 上带权 $\rho(x)$ 正交。</p>
-<p>正交多项式系：若 $\{ \varphi _ 0(x),\varphi _ 1(x),\cdots,\varphi _ n \}$ 满足</p>
-<p>$$<br>(\varphi _ i,\varphi _ j)=\int _ {a}^{b}\rho(x)\varphi _ i(x)\varphi _ j(x)\mathrm{d}x=\begin{cases} 0 &amp;i\neq j \\ \alpha _ i&gt;0 &amp;i=j \end{cases}<br>$$</p>
-<p>则称 $\{ \varphi _ k(x) \}$ 是 $[a,b]$ 上带权 $\rho(x)$ 的正交多项式系。</p>
-<p>最佳平方逼近元素：对于给定的函数 $f(x)\in C[a,b]$，若 $p^{\ast}(x)\in H _ n$，满足</p>
-<p>$$<br>(f-p^{\ast},f-p^{\ast})=\min _ {p\in H _ n}(f-p,f-p)<br>$$</p>
-<p>则称 $p^{\ast}(x)$ 为子空间 $H _ n$ 中对 $f(x)$ 的最佳平方逼近元素。</p>
-<p>特别的，如果 $\varphi _ {j}(x)=x _ j$，$j=0,1,\cdots,n$，则满足上述条件的 $p^{\ast}(x)$，可称为函数 $f(x)$ 在区间 $[a,b]$ 上带权 $\rho(x)$ 的 $n$ 次最佳平方多项式。</p>
-<p>定理：设 $f(x)\in C[a,b]$，$p^{\ast}(x)\in H _ n$ 是子空间  中对于 $f(x)$ 的最佳平方逼近元素的充分必要条件是</p>
-<p>$$<br>(f-p^{\ast},\varphi _ j)=0,j=0,1,\cdots,n<br>$$</p>
-<p>或对任一个 $p(x)\in H _ n$，总有 $(f-p^{\ast},p)=0$。</p>
-<p>定理：设 $f(x)\in C[a,b]$，则在子空间 $H _ n$ 中对于 $f(x)$ 的最佳平方逼近元素是唯一的。</p>
-<p>求解最佳平方逼近元素的方法：求最佳平方逼近元素 $p^{\ast}(x)=\sum _ {k=0}^{n}c _ k^{\ast}\varphi _ {k}(x)$，就是求它所含的系数 $c _ k^{\ast}(k=0,1,\cdots,n)$</p>
+<p>带权正交：若内积 $(f,g)=\int _  {a}^{b}\rho (x)f(x)g(x)\mathrm{d}x=0$，则称 $f(x)$ 与 $g(x)$ 在区间 $[a,b]$ 上带权 $\rho(x)$ 正交。</p>
+<p>正交多项式系：若 $\{ \varphi _  0(x),\varphi _  1(x),\cdots,\varphi _  n \}$ 满足</p>
+<p>$$<br>(\varphi _  i,\varphi _  j)=\int _  {a}^{b}\rho(x)\varphi _  i(x)\varphi _  j(x)\mathrm{d}x=\begin{cases} 0 &amp;i\neq j \\ \alpha _  i&gt;0 &amp;i=j \end{cases}<br>$$</p>
+<p>则称 $\{ \varphi _  k(x) \}$ 是 $[a,b]$ 上带权 $\rho(x)$ 的正交多项式系。</p>
+<p>最佳平方逼近元素：对于给定的函数 $f(x)\in C[a,b]$，若 $p^{\ast}(x)\in H _  n$，满足</p>
+<p>$$<br>(f-p^{\ast},f-p^{\ast})=\min _  {p\in H _  n}(f-p,f-p)<br>$$</p>
+<p>则称 $p^{\ast}(x)$ 为子空间 $H _  n$ 中对 $f(x)$ 的最佳平方逼近元素。</p>
+<p>特别的，如果 $\varphi _  {j}(x)=x _  j$，$j=0,1,\cdots,n$，则满足上述条件的 $p^{\ast}(x)$，可称为函数 $f(x)$ 在区间 $[a,b]$ 上带权 $\rho(x)$ 的 $n$ 次最佳平方多项式。</p>
+<p>定理：设 $f(x)\in C[a,b]$，$p^{\ast}(x)\in H _  n$ 是子空间  中对于 $f(x)$ 的最佳平方逼近元素的充分必要条件是</p>
+<p>$$<br>(f-p^{\ast},\varphi _  j)=0,j=0,1,\cdots,n<br>$$</p>
+<p>或对任一个 $p(x)\in H _  n$，总有 $(f-p^{\ast},p)=0$。</p>
+<p>定理：设 $f(x)\in C[a,b]$，则在子空间 $H _  n$ 中对于 $f(x)$ 的最佳平方逼近元素是唯一的。</p>
+<p>求解最佳平方逼近元素的方法：求最佳平方逼近元素 $p^{\ast}(x)=\sum _  {k=0}^{n}c _  k^{\ast}\varphi _  {k}(x)$，就是求它所含的系数 $c _  k^{\ast}(k=0,1,\cdots,n)$</p>
 <p>因为</p>
-<p>$$<br>(f-p^{\ast},\varphi _ j)=(f,\varphi _ j)-\sum _ {k=0}^{n}c _ k^{\ast}(\varphi _ k,\varphi _ j)<br>$$</p>
+<p>$$<br>(f-p^{\ast},\varphi _  j)=(f,\varphi _  j)-\sum _  {k=0}^{n}c _  k^{\ast}(\varphi _  k,\varphi _  j)<br>$$</p>
 <p>由充要条件</p>
-<p>$$<br>(f-p^{\ast},\varphi _ j)=0<br>$$</p>
+<p>$$<br>(f-p^{\ast},\varphi _  j)=0<br>$$</p>
 <p>故有</p>
-<p>$$<br>\sum _ {k=0}^{n}c _ k^{\ast}(\varphi _ k,\varphi _ j)=(f,\varphi _ j)\quad j=0,1,\cdots,n<br>$$</p>
-<p>这是一个以 $c _ 0^{\ast},\cdots,c _ n^{\ast}$ 为未知数的 $n+1$ 阶线性方程，称为法方程组，或正规方程组。</p>
+<p>$$<br>\sum _  {k=0}^{n}c _  k^{\ast}(\varphi _  k,\varphi _  j)=(f,\varphi _  j)\quad j=0,1,\cdots,n<br>$$</p>
+<p>这是一个以 $c _  0^{\ast},\cdots,c _  n^{\ast}$ 为未知数的 $n+1$ 阶线性方程，称为法方程组，或正规方程组。</p>
 <p>法方程组的系数矩阵是：</p>
-<p>$$<br>G=\begin{bmatrix}<br>(\varphi _ 0,\varphi _ 0)&amp;(\varphi _ 0,\varphi _ 1)&amp;\cdots &amp;(\varphi _ 0,\varphi _ n)\\<br>(\varphi _ 1,\varphi _ 0)&amp;(\varphi _ 1,\varphi _ 1)&amp;\cdots &amp;(\varphi _ 1,\varphi _ n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _ n,\varphi _ 0)&amp;(\varphi _ n,\varphi _ 1)&amp;\cdots &amp;(\varphi _ n,\varphi _ n)\\<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>G=\begin{bmatrix}<br>(\varphi _  0,\varphi _  0)&amp;(\varphi _  0,\varphi _  1)&amp;\cdots &amp;(\varphi _  0,\varphi _  n)\\<br>(\varphi _  1,\varphi _  0)&amp;(\varphi _  1,\varphi _  1)&amp;\cdots &amp;(\varphi _  1,\varphi _  n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _  n,\varphi _  0)&amp;(\varphi _  n,\varphi _  1)&amp;\cdots &amp;(\varphi _  n,\varphi _  n)\\<br>\end{bmatrix}<br>$$</p>
 <p>法方程组为：</p>
-<p>$$<br>\begin{bmatrix}<br>(\varphi _ 0,\varphi _ 0)&amp;(\varphi _ 0,\varphi _ 1)&amp;\cdots &amp;(\varphi _ 0,\varphi _ n)\\<br>(\varphi _ 1,\varphi _ 0)&amp;(\varphi _ 1,\varphi _ 1)&amp;\cdots &amp;(\varphi _ 1,\varphi _ n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _ n,\varphi _ 0)&amp;(\varphi _ n,\varphi _ 1)&amp;\cdots &amp;(\varphi _ n,\varphi _ n)\\<br>\end{bmatrix}\begin{bmatrix}c _ 0^{\ast}\\c _ 1^{\ast}\\ \vdots \\c _ n^{\ast}\end{bmatrix}=\begin{bmatrix}(f,\varphi _ 0)\\(f,\varphi _ 1)\\ \vdots \\(f,\varphi _ n)\end{bmatrix}<br>$$</p>
-<h3 id="曲线拟合的最小二乘法"><a href="#曲线拟合的最小二乘法" class="headerlink" title="曲线拟合的最小二乘法"></a>曲线拟合的最小二乘法</h3><p>曲线拟合的最小二乘法：对给定的一组数据 $(x _ i,y _ i)(i=1,\cdots ,m)$，要求在函数类 $\varphi =\{ \varphi _ 0,\cdots ,\varphi _ n \}$ 中找一个函数 $y=S^{\ast}(x)$，使误差平方和</p>
-<p>$$<br>\Vert \delta \Vert _ {2}^{2}=\sum _ {i=0}^{m}[S^{\ast}(x _ i)-y _ i]^2=\mathrm{min} _ {S(x)\in \varphi }\sum _ {i=0}^{m}[S(x _ i)-y _ i]^2<br>$$</p>
-<p>这里，$S(x)=a _ 0\varphi _ 0(x)+\cdots+a _ n\varphi _ n (x)$。这就是曲线拟合的最小二乘法。</p>
+<p>$$<br>\begin{bmatrix}<br>(\varphi _  0,\varphi _  0)&amp;(\varphi _  0,\varphi _  1)&amp;\cdots &amp;(\varphi _  0,\varphi _  n)\\<br>(\varphi _  1,\varphi _  0)&amp;(\varphi _  1,\varphi _  1)&amp;\cdots &amp;(\varphi _  1,\varphi _  n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _  n,\varphi _  0)&amp;(\varphi _  n,\varphi _  1)&amp;\cdots &amp;(\varphi _  n,\varphi _  n)\\<br>\end{bmatrix}\begin{bmatrix}c _  0^{\ast}\\c _  1^{\ast}\\ \vdots \\c _  n^{\ast}\end{bmatrix}=\begin{bmatrix}(f,\varphi _  0)\\(f,\varphi _  1)\\ \vdots \\(f,\varphi _  n)\end{bmatrix}<br>$$</p>
+<h3 id="曲线拟合的最小二乘法"><a href="#曲线拟合的最小二乘法" class="headerlink" title="曲线拟合的最小二乘法"></a>曲线拟合的最小二乘法</h3><p>曲线拟合的最小二乘法：对给定的一组数据 $(x _  i,y _  i)(i=1,\cdots ,m)$，要求在函数类 $\varphi =\{ \varphi _  0,\cdots ,\varphi _  n \}$ 中找一个函数 $y=S^{\ast}(x)$，使误差平方和</p>
+<p>$$<br>\Vert \delta \Vert _  {2}^{2}=\sum _  {i=0}^{m}[S^{\ast}(x _  i)-y _  i]^2=\mathrm{min} _  {S(x)\in \varphi }\sum _  {i=0}^{m}[S(x _  i)-y _  i]^2<br>$$</p>
+<p>这里，$S(x)=a _  0\varphi _  0(x)+\cdots+a _  n\varphi _  n (x)$。这就是曲线拟合的最小二乘法。</p>
 <p>类似的，我们也可以写出法方程。</p>
 <h2 id="方程求根"><a href="#方程求根" class="headerlink" title="方程求根"></a>方程求根</h2><h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><p>设函数 $f(x)$ 在区间 $[a,b]$ 上连续，且 $f(a)f(b)&lt;0$，根据连续函数的性质可知，方程 $f(x)$ 在 $(a,b)$ 内一定有实零点。$[a,b]$ 称为 $f(x)=0$ 的有根区间。</p>
-<p>如果考虑有根区间 $[a,b]$，取其中点 $x _ 0=\dfrac{a+b}{2}$，检查 $f(x _ 0)$ 和 $f(a)$ 的符号</p>
+<p>如果考虑有根区间 $[a,b]$，取其中点 $x _  0=\dfrac{a+b}{2}$，检查 $f(x _  0)$ 和 $f(a)$ 的符号</p>
 <ul>
-<li>如果同号，说明根在 $(x _ 0,b)$ 之间，$a=x _ 0$。</li>
-<li>如果异号，说明根在 $(a,x _ 0)$ 之间，$b=x _ 0$。</li>
+<li>如果同号，说明根在 $(x _  0,b)$ 之间，$a=x _  0$。</li>
+<li>如果异号，说明根在 $(a,x _  0)$ 之间，$b=x _  0$。</li>
 </ul>
 <p>重复这个过程。</p>
 <p>停止条件：</p>
 <ol>
-<li>找到中间点 $x _ 0,f(x _ 0)=0$，找到精确解。</li>
+<li>找到中间点 $x _  0,f(x _  0)=0$，找到精确解。</li>
 <li>$\left| b-a \right| &lt;\varepsilon $，$\varepsilon &gt;0$ 为预先给定，取 $x=\dfrac{a+b}{2}$ 为方程的根，为近似解。</li>
 </ol>
-<h3 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h3><p>迭代法一般是由一个初始值 $x _ 0$，通过某一个公式 $x=\varphi (x)$，算出一个新值 $x _ 1$，用 $x _ 1$ 替代 $x _ 0$，继续计算新值，由此得到一个值的序列。如果该序列收敛，则收敛的极限就是所求的根。</p>
-<p>一般的，$x _ {k+1}=\varphi (x _ k)$ ；极限 $x^{\ast}=\lim _ {k \to \infty} x _ k$。</p>
-<p>定理：设方程 $x=\varphi (x)$ 在区间 $[a,b]$ 内有根 $x^{\ast }$，则迭代过程 $x _ {k+1}=\varphi (x _ k)$ 收敛的条件为，存在定数 $0&lt;L&lt;1$，使对任意 $x\in [a,b]$，$\left| \varphi ^{\prime }(x _ k) \right| \leq L$ 成立。</p>
+<h3 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h3><p>迭代法一般是由一个初始值 $x _  0$，通过某一个公式 $x=\varphi (x)$，算出一个新值 $x _  1$，用 $x _  1$ 替代 $x _  0$，继续计算新值，由此得到一个值的序列。如果该序列收敛，则收敛的极限就是所求的根。</p>
+<p>一般的，$x _  {k+1}=\varphi (x _  k)$ ；极限 $x^{\ast}=\lim _  {k \to \infty} x _  k$。</p>
+<p>定理：设方程 $x=\varphi (x)$ 在区间 $[a,b]$ 内有根 $x^{\ast }$，则迭代过程 $x _  {k+1}=\varphi (x _  k)$ 收敛的条件为，存在定数 $0&lt;L&lt;1$，使对任意 $x\in [a,b]$，$\left| \varphi ^{\prime }(x _  k) \right| \leq L$ 成立。</p>
 <p>定理：设函数 $\varphi (x)$ 满足条件：</p>
 <ol>
 <li>对任意的 $x\in [a,b]$ 有 $a\leq \varphi (x)\leq b$。</li>
-<li>存在正数 $L&lt;1$，使对任意 $x\in [a,b]$ 有 $\left| \varphi ^{\prime }(x _ k) \right| \leq L&lt;1$。</li>
+<li>存在正数 $L&lt;1$，使对任意 $x\in [a,b]$ 有 $\left| \varphi ^{\prime }(x _  k) \right| \leq L&lt;1$。</li>
 </ol>
-<p>则迭代过程 $x _ {k+1}=\varphi (x _ k)$ 对于任意初值 $x _ 0\in [a,b]$ 均收敛于方程 $x=\varphi (x)$ 的根 $x^{\ast }$，且误差估计为：</p>
-<p>$$<br>\left| x _ k-x^{\ast } \right| \leq \dfrac{L^k\left| x _ 1-x _ 0 \right| }{1-L}<br>$$</p>
-<p>局部收敛性：如果存在 $x^{\ast }$ 的某个邻域 $R:\left| x-x^{\ast } \right| \leq \delta $，使迭代过程 $x _ {k+1}=\varphi (x _ k)$ 对于任意初值 $x _ 0\in R$ 均收敛，则成迭代过程 $x _ {k+1}=\varphi (x _ k)$ 在根 $x^{\ast }$ 邻近具有局部收敛性。</p>
-<p>定理：设 $x^{\ast }$ 为方程 $x=\varphi (x)$ 的根，$\varphi ^{\prime }(x)$ 在 $x^{\ast }$ 的邻近连续，且 $\left| \varphi ^{\prime }(x) \right| \leq 1$，则迭代过程 $x _ {k+1}=\varphi (x _ k)$ 在 $x^{\ast }$ 邻近具有局部收敛性。</p>
-<p>埃特金算法：由 $x _ k$ 得到 $x _ {k+1},x _ {k+2}$，</p>
-<p>$$<br>x _ {k+1}=\varphi (x _ k)<br>$$</p>
-<p>$$<br>x _ {k+2}=\varphi (x _ {k+1})<br>$$</p>
+<p>则迭代过程 $x _  {k+1}=\varphi (x _  k)$ 对于任意初值 $x _  0\in [a,b]$ 均收敛于方程 $x=\varphi (x)$ 的根 $x^{\ast }$，且误差估计为：</p>
+<p>$$<br>\left| x _  k-x^{\ast } \right| \leq \dfrac{L^k\left| x _  1-x _  0 \right| }{1-L}<br>$$</p>
+<p>局部收敛性：如果存在 $x^{\ast }$ 的某个邻域 $R:\left| x-x^{\ast } \right| \leq \delta $，使迭代过程 $x _  {k+1}=\varphi (x _  k)$ 对于任意初值 $x _  0\in R$ 均收敛，则成迭代过程 $x _  {k+1}=\varphi (x _  k)$ 在根 $x^{\ast }$ 邻近具有局部收敛性。</p>
+<p>定理：设 $x^{\ast }$ 为方程 $x=\varphi (x)$ 的根，$\varphi ^{\prime }(x)$ 在 $x^{\ast }$ 的邻近连续，且 $\left| \varphi ^{\prime }(x) \right| \leq 1$，则迭代过程 $x _  {k+1}=\varphi (x _  k)$ 在 $x^{\ast }$ 邻近具有局部收敛性。</p>
+<p>埃特金算法：由 $x _  k$ 得到 $x _  {k+1},x _  {k+2}$，</p>
+<p>$$<br>x _  {k+1}=\varphi (x _  k)<br>$$</p>
+<p>$$<br>x _  {k+2}=\varphi (x _  {k+1})<br>$$</p>
 <p>计算</p>
-<p>$$<br>\overline{x _ {k+1} }=x _ k-\dfrac{(x _ {k+1}-x _ k)^2}{x _ k-2x _ {k+1}+x _ {k+2} }<br>$$</p>
-<p>这样，在原序列 $\{ x _ k \}$ 的基础上，得到收敛速度更快的新的序列 $\{ \overline{x _ {k+1} } \}$。</p>
+<p>$$<br>\overline{x _  {k+1} }=x _  k-\dfrac{(x _  {k+1}-x _  k)^2}{x _  k-2x _  {k+1}+x _  {k+2} }<br>$$</p>
+<p>这样，在原序列 $\{ x _  k \}$ 的基础上，得到收敛速度更快的新的序列 $\{ \overline{x _  {k+1} } \}$。</p>
 <p>Steffensen 迭代法：将埃特金方法与方程迭代求根方法结合：</p>
-<p>$$<br>y _ k=\varphi (x _ k)<br>$$</p>
-<p>$$<br>z _ k=\varphi (y _ k)<br>$$</p>
+<p>$$<br>y _  k=\varphi (x _  k)<br>$$</p>
+<p>$$<br>z _  k=\varphi (y _  k)<br>$$</p>
 <p>则得到</p>
-<p>$$<br>x _ {k+1}=x _ k-\dfrac{(y _ k-x _ k)^2}{z _ k-2y _ k+x _ k}<br>$$</p>
+<p>$$<br>x _  {k+1}=x _  k-\dfrac{(y _  k-x _  k)^2}{z _  k-2y _  k+x _  k}<br>$$</p>
 <h3 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h3><p>对于方程 $f(x)=0$ 迭代公式为</p>
-<p>$$<br>x _ {k+1}=x _ k-\dfrac{f(x _ k)}{f^{\prime }(x _ k)}<br>$$</p>
-<p>$p$ 阶收敛：设迭代方程 $x _ {k+1}=\varphi (x _ k)$ 收敛于方程 $x=\varphi (x)$ 的根 $x^{\ast }$，如果迭代误差 $e _ {k}=x _ k-x^{\ast }$ 当 $k\rightarrow \infty $ 时成立下列渐近关系式：</p>
-<p>$$<br>\dfrac{e _ {k+1} }{e _ {k}^p}\rightarrow c<br>$$</p>
+<p>$$<br>x _  {k+1}=x _  k-\dfrac{f(x _  k)}{f^{\prime }(x _  k)}<br>$$</p>
+<p>$p$ 阶收敛：设迭代方程 $x _  {k+1}=\varphi (x _  k)$ 收敛于方程 $x=\varphi (x)$ 的根 $x^{\ast }$，如果迭代误差 $e _  {k}=x _  k-x^{\ast }$ 当 $k\rightarrow \infty $ 时成立下列渐近关系式：</p>
+<p>$$<br>\dfrac{e _  {k+1} }{e _  {k}^p}\rightarrow c<br>$$</p>
 <p>$c\neq 0$ 是一个常数，则称该迭代过程是 $p$ 阶收敛的。</p>
 <p>$p=1$ 时，称为线性收敛。<br>$p&gt;1$ 时，称为超线性收敛。<br>$p=2$ 时，称为平方收敛。</p>
-<p>定理：对于迭代过程 $x _ {k+1}=\varphi (x _ k)$，如果 $\varphi ^{(p)}(x)$ 在所求根 $x^{\ast }$ 的邻近连续，并且</p>
+<p>定理：对于迭代过程 $x _  {k+1}=\varphi (x _  k)$，如果 $\varphi ^{(p)}(x)$ 在所求根 $x^{\ast }$ 的邻近连续，并且</p>
 <p>$$<br>\varphi ^{\prime }(x^{\ast })=\cdots =\varphi ^{(p-1)}(x^{\ast })=0 \quad \varphi ^{(p)}(x^\ast )\neq 0<br>$$</p>
 <p>则该迭代过程在点 $x^\ast $ 邻近是 $p$ 阶收敛的。</p>
-<p>定理：设函数 $f(x)$ 有 $m(&gt;2)$ 阶连续导数，$p$ 是方程 $f(x)=0$ 的单根，则当 $x _ 0$ 充分接近 $p$ 时，牛顿法收敛，且至少为二阶收敛。</p>
+<p>定理：设函数 $f(x)$ 有 $m(&gt;2)$ 阶连续导数，$p$ 是方程 $f(x)=0$ 的单根，则当 $x _  0$ 充分接近 $p$ 时，牛顿法收敛，且至少为二阶收敛。</p>
 <h3 id="弦截法与抛物线法"><a href="#弦截法与抛物线法" class="headerlink" title="弦截法与抛物线法"></a>弦截法与抛物线法</h3><p>弦截法迭代公式为</p>
-<p>$$<br>x _ {k+1}=x _ k-\dfrac{f(x _ k)}{f(x _ k)-f(x _ {k-1})}(x _ k-x _ {k-1})<br>$$</p>
+<p>$$<br>x _  {k+1}=x _  k-\dfrac{f(x _  k)}{f(x _  k)-f(x _  {k-1})}(x _  k-x _  {k-1})<br>$$</p>
 <p>抛物线法迭代公式为</p>
-<p>$$<br>x _ {k+1}=x _ {k}-\dfrac{2f(x _ k)}{\omega \pm \sqrt{\omega ^2-4f(x _ k)f[x _ k,x _ {k-1},x _ {k-2}]} }<br>$$</p>
+<p>$$<br>x _  {k+1}=x _  {k}-\dfrac{2f(x _  k)}{\omega \pm \sqrt{\omega ^2-4f(x _  k)f[x _  k,x _  {k-1},x _  {k-2}]} }<br>$$</p>
 <p>其中</p>
-<p>$$<br>\omega =f[x _ k,x _ {k-1}]+f[x _ k,x _ {k-1},x _ {k-2}]{(x _ k-x _ {k-1})}<br>$$</p>
-<p>正负号通过取更接近 $x _ k$ 的值作为新的近似根 $x _ {k+1}$。</p>
+<p>$$<br>\omega =f[x _  k,x _  {k-1}]+f[x _  k,x _  {k-1},x _  {k-2}]{(x _  k-x _  {k-1})}<br>$$</p>
+<p>正负号通过取更接近 $x _  k$ 的值作为新的近似根 $x _  {k+1}$。</p>
 <hr>
 <p>$$<br>\mathscr{THE} \quad \mathscr{END}<br>$$</p>
 

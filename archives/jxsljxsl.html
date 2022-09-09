@@ -343,7 +343,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      432 字
+      462 字
     </span>
   
 
@@ -395,32 +395,32 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <div class="markdown-body">
               <h1 id="解析数论"><a href="#解析数论" class="headerlink" title="解析数论"></a>解析数论</h1><h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><h3 id="傅里叶积分与傅里叶变换"><a href="#傅里叶积分与傅里叶变换" class="headerlink" title="傅里叶积分与傅里叶变换"></a>傅里叶积分与傅里叶变换</h3><p>本节所讨论的函数 $f(x)$ 均假定为定义在 $(-\infty,\infty)$ 上的实值函数，只有第一类间断点，且积分</p>
-<p>$$<br>\int_{-\infty}^{\infty}\vert f(x) \vert \mathrm{d}x&lt;+\infty<br>$$</p>
+<p>$$<br>\int _ {-\infty}^{\infty}\vert f(x) \vert \mathrm{d}x&lt;+\infty<br>$$</p>
 <p>如果 $f(x)$ 是复值函数，就要求它的实，虚部都满足上述条件，那么只要分开实，虚部来讨论，一些定理都成立。我们设</p>
 <p>$$<br>\overline{f}(x)=\dfrac{1}{2}(f(x+0)+f(x-0))<br>$$</p>
 <p>把积分</p>
-<p>$$<br>\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\mathrm{d}y\int_{-\infty}^{\infty}f(u)\cos(y(u-x))\mathrm{d}u=\int_{-\infty}^{\infty}\mathrm{d}y\int_{-\infty}^{\infty}f(u)\cos(2\pi(u-x))\mathrm{d}u<br>$$</p>
+<p>$$<br>\dfrac{1}{2\pi}\int _ {-\infty}^{\infty}\mathrm{d}y\int _ {-\infty}^{\infty}f(u)\cos(y(u-x))\mathrm{d}u=\int _ {-\infty}^{\infty}\mathrm{d}y\int _ {-\infty}^{\infty}f(u)\cos(2\pi(u-x))\mathrm{d}u<br>$$</p>
 <p>称为是 $f(x)$ 的傅里叶积分。它也可以写为复数形式</p>
-<p>$$<br>\lim_{A\to \infty}\int_{-A}^{A}e(-xy)\mathrm{d}y\int_{-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
+<p>$$<br>\lim _ {A\to \infty}\int _ {-A}^{A}e(-xy)\mathrm{d}y\int _ {-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
 <p>傅里叶积分不一定收敛，关于它的收敛性有以下的 Dirichlet-Jordan 判别法。</p>
-<p>定理：若存在正数 $h&gt;0$，使得 $f(x)$ 在区间 $[x_0-h,x_0+h]$ 上是有界变差，则</p>
-<p>$$<br>\overline{f}(x_0)=\int_{-\infty}^{\infty}\mathrm{d}y\int_{-\infty}^{\infty}f(u)\cos(2\pi(u-x_0))\mathrm{d}u<br>$$</p>
+<p>定理：若存在正数 $h&gt;0$，使得 $f(x)$ 在区间 $[x _ 0-h,x _ 0+h]$ 上是有界变差，则</p>
+<p>$$<br>\overline{f}(x _ 0)=\int _ {-\infty}^{\infty}\mathrm{d}y\int _ {-\infty}^{\infty}f(u)\cos(2\pi(u-x _ 0))\mathrm{d}u<br>$$</p>
 <p>或</p>
-<p>$$<br>\lim_{A\to \infty}\int_{-A}^{A}e(-x_0y)\mathrm{d}y\int_{-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
-<p>如果 $f(x)$ 在任一有限区间上是有界变差，则该式在 $-\infty&lt;x_0&lt;\infty$ 上成立。</p>
+<p>$$<br>\lim _ {A\to \infty}\int _ {-A}^{A}e(-x _ 0y)\mathrm{d}y\int _ {-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
+<p>如果 $f(x)$ 在任一有限区间上是有界变差，则该式在 $-\infty&lt;x _ 0&lt;\infty$ 上成立。</p>
 <p>我们把函数</p>
-<p>$$<br>\hat{f}(y)=\int_{-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
+<p>$$<br>\hat{f}(y)=\int _ {-\infty}^{\infty}f(u)e(yu)\mathrm{d}u<br>$$</p>
 <p>称为是 $f(x)$ 的傅里叶变换。</p>
 <p>黎曼 - 勒贝格定理： $\hat{f}(y)$ 是 $(-\infty ,\infty )$ 上的有界连续函数，且</p>
-<p>$$<br>\lim_{\left| y \right|  \to \infty} \int_{-A}^{A}\hat{f}(y)=0<br>$$</p>
+<p>$$<br>\lim _ {\left| y \right|  \to \infty} \int _ {-A}^{A}\hat{f}(y)=0<br>$$</p>
 <p>定理：如果  在任一有限区间上是有界变差，则有</p>
-<p>$$<br>\lim_{A \to \infty} \int_{\hat{f}(y)}^{}<br>$$</p>
+<p>$$<br>\lim _ {A \to \infty} \int _ {\hat{f}(y)}^{}<br>$$</p>
 
             </div>
             <hr>

@@ -343,7 +343,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      764 字
+      810 字
     </span>
   
 
@@ -353,7 +353,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      12
        分钟
     </span>
   
@@ -395,13 +395,13 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
             <div class="markdown-body">
               <h1 id="积分变换"><a href="#积分变换" class="headerlink" title="积分变换"></a>积分变换</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>积分变换：积分变换就是通过积分运算，把一个函数变成另一个函数的变换，一般是含有参变量 $\alpha $ 的积分</p>
-<p>$$<br>F(\alpha )=\int_{a}^{b}f(t)K(t,\alpha )\mathrm{d}t<br>$$</p>
+<p>$$<br>F(\alpha )=\int _ {a}^{b}f(t)K(t,\alpha )\mathrm{d}t<br>$$</p>
 <p>它的实质就是把某函数类 $A$ 中的函数 $f(t)$ 通过上述积分运算变成另一函数类 $B$ 中的函数 $F(\alpha )$，这里 $K(t,\alpha )$ 是一个确定的二元函数，称为积分变换的核。当选取不同的积分域和变换核时，就得到不同名称的积分变换。在此变换中，$f(t)$ 称为象原函数，$F(\alpha )$ 称为 $f(t)$ 的象函数，在一定条件下，它们是一一对应的，而且变换是可逆的。</p>
 <table>
 <thead>
@@ -417,36 +417,36 @@
 <td>傅里叶变换</td>
 <td>$\mathscr{F}$</td>
 <td>$\mathrm{e}^{-2\pi \mathrm{i}ut}$</td>
-<td>$L_1$</td>
-<td>$\mathscr{F}[f(t)] =F(u)=  \int_{-\infty }^{\infty }\mathrm{e}^{-2\pi \mathrm{i}ut}f(t)\mathrm{d}t$</td>
+<td>$L _ 1$</td>
+<td>$\mathscr{F}[f(t)] =F(u)=  \int _ {-\infty }^{\infty }\mathrm{e}^{-2\pi \mathrm{i}ut}f(t)\mathrm{d}t$</td>
 </tr>
 <tr>
 <td>傅里叶正弦变换</td>
-<td>$\mathscr{F}_s$</td>
+<td>$\mathscr{F} _ s$</td>
 <td>$\sqrt{\dfrac{2}{\pi} }\sin (ut)$</td>
 <td>$[0,\infty )$ 实数值</td>
-<td>$\mathscr{F}_s[f(t)]=F(u) = \int_{0 }^{\infty }\sqrt{\dfrac{2}{\pi} }\sin (ut)f(t)\mathrm{d}t$</td>
+<td>$\mathscr{F} _ s[f(t)]=F(u) = \int _ {0 }^{\infty }\sqrt{\dfrac{2}{\pi} }\sin (ut)f(t)\mathrm{d}t$</td>
 </tr>
 <tr>
 <td>傅里叶余弦变换</td>
-<td>$\mathscr{F}_c$</td>
+<td>$\mathscr{F} _ c$</td>
 <td>$\sqrt{\dfrac{2}{\pi} }\cos (ut)$</td>
 <td>$[0,\infty )$ 实数值</td>
-<td>$\mathscr{F}_c[f(t)]=F(u) = \int_{0 }^{\infty }\sqrt{\dfrac{2}{\pi} }\cos (ut)f(t)\mathrm{d}t$</td>
+<td>$\mathscr{F} _ c[f(t)]=F(u) = \int _ {0 }^{\infty }\sqrt{\dfrac{2}{\pi} }\cos (ut)f(t)\mathrm{d}t$</td>
 </tr>
 <tr>
 <td>拉普拉斯变换</td>
 <td>$\mathscr{L}$</td>
 <td>$\mathrm{e}^{-ut}$</td>
 <td></td>
-<td>$\mathscr{L}[f(t)]=F(u) = \int_{0}^{\infty }\mathrm{e}^{-ut}f(t)\mathrm{d}t$</td>
+<td>$\mathscr{L}[f(t)]=F(u) = \int _ {0}^{\infty }\mathrm{e}^{-ut}f(t)\mathrm{d}t$</td>
 </tr>
 <tr>
 <td>双边拉普拉斯变换</td>
 <td>$\mathscr{B}$</td>
 <td>$\mathrm{e}^{-ut}$</td>
 <td></td>
-<td>$\mathscr{B}[f(t)] = F(u) = \int_{-\infty }^{\infty }\mathrm{e}^{-ut}f(t)\mathrm{d}t$</td>
+<td>$\mathscr{B}[f(t)] = F(u) = \int _ {-\infty }^{\infty }\mathrm{e}^{-ut}f(t)\mathrm{d}t$</td>
 </tr>
 </tbody></table>
 <h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><h3 id="傅里叶积分"><a href="#傅里叶积分" class="headerlink" title="傅里叶积分"></a>傅里叶积分</h3><p>狄利克雷条件：函数满足</p>
@@ -454,22 +454,22 @@
 <li>连续或只有有限个第一类间断点。</li>
 <li>只有有限个极值点。</li>
 </ol>
-<p>一个以 $T$ 为周期的函数 $f_{T}(t)$，如果在 $\left[-\dfrac{T}{2},\dfrac{T}{2}\right]$ 上满足狄利克雷条件，则在 $\left[-\dfrac{T}{2},\dfrac{T}{2}\right]$ 上就可以展成傅里叶级数。在 $f_{T}(t)$ 的连续点处，级数的三角形式为</p>
-<p>$$<br>f_{T}(t)=\dfrac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos n\omega t+b_n\sin n\omega t)<br>$$</p>
+<p>一个以 $T$ 为周期的函数 $f _ {T}(t)$，如果在 $\left[-\dfrac{T}{2},\dfrac{T}{2}\right]$ 上满足狄利克雷条件，则在 $\left[-\dfrac{T}{2},\dfrac{T}{2}\right]$ 上就可以展成傅里叶级数。在 $f _ {T}(t)$ 的连续点处，级数的三角形式为</p>
+<p>$$<br>f _ {T}(t)=\dfrac{a _ 0}{2}+\sum _ {n=1}^{\infty}(a _ n\cos n\omega t+b _ n\sin n\omega t)<br>$$</p>
 <p>其中</p>
 <p>$$<br>\omega =\dfrac{2\pi}{T}<br>$$</p>
-<p>$$<br>a_0=\dfrac{2}{T}\int_{-\frac{T}{2} }^{\frac{T}{2} }f_{T}(t)\mathrm{d}t<br>$$</p>
-<p>$$<br>a_n=\dfrac{2}{T}\int_{-\frac{T}{2} }^{\frac{T}{2} }f_{T}(t)\cos n\omega t\mathrm{d}t \quad (n=1,2,3,\cdots )<br>$$</p>
-<p>$$<br>b_n=\dfrac{2}{T}\int_{-\frac{T}{2} }^{\frac{T}{2} }f_{T}(t)\sin n\omega t\mathrm{d}t \quad (n=1,2,3,\cdots )<br>$$</p>
+<p>$$<br>a _ 0=\dfrac{2}{T}\int _ {-\frac{T}{2} }^{\frac{T}{2} }f _ {T}(t)\mathrm{d}t<br>$$</p>
+<p>$$<br>a _ n=\dfrac{2}{T}\int _ {-\frac{T}{2} }^{\frac{T}{2} }f _ {T}(t)\cos n\omega t\mathrm{d}t \quad (n=1,2,3,\cdots )<br>$$</p>
+<p>$$<br>b _ n=\dfrac{2}{T}\int _ {-\frac{T}{2} }^{\frac{T}{2} }f _ {T}(t)\sin n\omega t\mathrm{d}t \quad (n=1,2,3,\cdots )<br>$$</p>
 <p>也可以将傅里叶级数写成复指数形式</p>
-<p>$$<br>f_T(t)=\dfrac{1}{T}\sum_{n=-\infty }^{+\infty }\left[ \int_{-\frac{T}{2} }^{\frac{T}{2} }f_T(\tau )\mathrm{e}^{-\mathrm{j}\omega_n \tau}\mathrm{d}\tau \right]\mathrm{e}^{\mathrm{j}\omega_n t}<br>$$</p>
+<p>$$<br>f _ T(t)=\dfrac{1}{T}\sum _ {n=-\infty }^{+\infty }\left[ \int _ {-\frac{T}{2} }^{\frac{T}{2} }f _ T(\tau )\mathrm{e}^{-\mathrm{j}\omega _ n \tau}\mathrm{d}\tau \right]\mathrm{e}^{\mathrm{j}\omega _ n t}<br>$$</p>
 <p>傅里叶积分定理：若 $f(t)$ 在 $(-\infty ,+\infty)$ 上满足下列条件：</p>
 <ol>
 <li>$f(t)$ 在任一有限区间上满足狄利克雷条件；</li>
 <li>$f(t)$ 在无限区间 $(-\infty ,+\infty )$ 上绝对可积。</li>
 </ol>
 <p>则有</p>
-<p>$$<br>f(t)=\dfrac{1}{2\pi}\int_{-\infty }^{+\infty }\left[ \int_{-\infty }^{+\infty }f(\tau)\mathrm{e}^{-\mathrm{j}\omega \tau} \right]\mathrm{e}^{\mathrm{j}\omega t}\mathrm{d}\omega<br>$$</p>
+<p>$$<br>f(t)=\dfrac{1}{2\pi}\int _ {-\infty }^{+\infty }\left[ \int _ {-\infty }^{+\infty }f(\tau)\mathrm{e}^{-\mathrm{j}\omega \tau} \right]\mathrm{e}^{\mathrm{j}\omega t}\mathrm{d}\omega<br>$$</p>
 <p>成立，而左端的 $f(t)$ 在它的间断点 $t$ 处，应以 $\dfrac{f(t+0)+f(t-0)}{2}$ 来代替。</p>
 
             </div>

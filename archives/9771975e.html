@@ -343,7 +343,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.6k 字
+      1.7k 字
     </span>
   
 
@@ -353,7 +353,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      21
        分钟
     </span>
   
@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -404,26 +404,26 @@
 <span id="more"></span>
 
 <h1 id="抽象代数"><a href="#抽象代数" class="headerlink" title="抽象代数"></a>抽象代数</h1><h2 id="群论基础"><a href="#群论基础" class="headerlink" title="群论基础"></a>群论基础</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><h4 id="置换"><a href="#置换" class="headerlink" title="置换"></a>置换</h4><p>置换：集合 $X$ 的置换是 $X$ 到其自身的双射。</p>
-<p>对称群：称集合 $X$ 的全体置换的族为 $X$ 上的对称群，记为 $S_{X}$。当 $X=\{ 1,2,\cdots,n \}$ 时，常用 $S_n$ 来记 $S_X$，并称之为 $n$ 个字母上的对称群。</p>
-<p>轮换：设 $i_1,\cdots,i_r$ 是 $\{ 1,2,\cdots ,n \}$ 中的不同整数。如果 $\alpha \in S_n$ 固定其他整数（如果有的话），且</p>
-<p>$$<br>\alpha (i_1)=i_2,\cdots ,\alpha _{i_{r-1} }=i_{r},\alpha (i_r)=i_1<br>$$</p>
+<p>对称群：称集合 $X$ 的全体置换的族为 $X$ 上的对称群，记为 $S _ {X}$。当 $X=\{ 1,2,\cdots,n \}$ 时，常用 $S _ n$ 来记 $S _ X$，并称之为 $n$ 个字母上的对称群。</p>
+<p>轮换：设 $i _ 1,\cdots,i _ r$ 是 $\{ 1,2,\cdots ,n \}$ 中的不同整数。如果 $\alpha \in S _ n$ 固定其他整数（如果有的话），且</p>
+<p>$$<br>\alpha (i _ 1)=i _ 2,\cdots ,\alpha _ {i _ {r-1} }=i _ {r},\alpha (i _ r)=i _ 1<br>$$</p>
 <p>则称 $\alpha $ 为一个 $r-$ 轮换，也称 $\alpha $ 为长 $r$ 的轮换，记为</p>
-<p>$$<br>\alpha =(i_1i_2\cdots i_r)<br>$$</p>
-<p>不相交：成两个置换 $\alpha ,\beta \in S_n$ 不相交，如果每个 $i$ 被一个移动而被另一个固定：如果 $\alpha (i)\neq i$，则 $\beta (i)=i$，且如果 $\beta (j)\neq j$，则 $\alpha (j)=j$，称置换族 $\beta _1,\cdots \beta _t$ 不相交，如果它们两两不相交。</p>
+<p>$$<br>\alpha =(i _ 1i _ 2\cdots i _ r)<br>$$</p>
+<p>不相交：成两个置换 $\alpha ,\beta \in S _ n$ 不相交，如果每个 $i$ 被一个移动而被另一个固定：如果 $\alpha (i)\neq i$，则 $\beta (i)=i$，且如果 $\beta (j)\neq j$，则 $\alpha (j)=j$，称置换族 $\beta _ 1,\cdots \beta _ t$ 不相交，如果它们两两不相交。</p>
 <p>引理：不相交置换 $\alpha ,\beta \in S$ 可交换。</p>
 <p>每个置换 $\alpha \in S$ 不是一个轮换就是不相交轮换的乘积。</p>
 <p>完全轮换分解：置换 $\alpha$ 的完全轮换分解是指 $\alpha $ 分解为不相交轮换的轮换分解，其中对每个被 $\alpha $ 固定的 $i$ 恰有一个 $1-$ 轮换 $(i)$。</p>
-<p>定理：设 $\alpha \in S_n$，并设 $\alpha =\beta _1\cdots \beta _t$ 是分解为不相交轮换的完全轮换分解。如果不计分解中轮换出现的次序，则该分解是唯一的。</p>
-<p>定理：轮换 $(i_1i_2\cdots i_r)$ 的逆是轮换 $i_ri_{r-1}\cdots i_1$。</p>
-<p>定理：如果 $\gamma \in S_n$，且 $\gamma =\beta _1\cdots \beta _k$，则 $\gamma ^{-1}=\beta_k^{-1}\cdots \beta _1^{-1}$。</p>
-<p>定义：称两个置换 $\alpha ,\beta \in S_n$ 有相同的轮换结构，如果在它们的完全轮换分解中，对每个 $r$，它所含的 $r-$ 轮换个数相等。</p>
-<p>定理： $S_n$ 中置换 $\gamma $ 和 $\sigma $ 有相同的轮换结构当且仅当存在 $\alpha \in S_n$，使得 $\sigma =\alpha \gamma \alpha ^{-1}$。</p>
-<p>定义：称置换 $\alpha \in S_n$ 为偶置换，如果它能被分解为偶数个对换的乘积；否则 $\alpha $ 为奇置换。</p>
-<p>符号函数：设 $\alpha \in S_n$ 且 $\alpha =\beta _1\cdots \beta _t$ 是分解为不相交轮换的完全轮换分解，定义 $\alpha $ 的符号函数为</p>
+<p>定理：设 $\alpha \in S _ n$，并设 $\alpha =\beta _ 1\cdots \beta _ t$ 是分解为不相交轮换的完全轮换分解。如果不计分解中轮换出现的次序，则该分解是唯一的。</p>
+<p>定理：轮换 $(i _ 1i _ 2\cdots i _ r)$ 的逆是轮换 $i _ ri _ {r-1}\cdots i _ 1$。</p>
+<p>定理：如果 $\gamma \in S _ n$，且 $\gamma =\beta _ 1\cdots \beta _ k$，则 $\gamma ^{-1}=\beta _ k^{-1}\cdots \beta _ 1^{-1}$。</p>
+<p>定义：称两个置换 $\alpha ,\beta \in S _ n$ 有相同的轮换结构，如果在它们的完全轮换分解中，对每个 $r$，它所含的 $r-$ 轮换个数相等。</p>
+<p>定理： $S _ n$ 中置换 $\gamma $ 和 $\sigma $ 有相同的轮换结构当且仅当存在 $\alpha \in S _ n$，使得 $\sigma =\alpha \gamma \alpha ^{-1}$。</p>
+<p>定义：称置换 $\alpha \in S _ n$ 为偶置换，如果它能被分解为偶数个对换的乘积；否则 $\alpha $ 为奇置换。</p>
+<p>符号函数：设 $\alpha \in S _ n$ 且 $\alpha =\beta _ 1\cdots \beta _ t$ 是分解为不相交轮换的完全轮换分解，定义 $\alpha $ 的符号函数为</p>
 <p>$$<br>\operatorname{sgn}(\alpha )=(-1)^{n-t}<br>$$</p>
-<p>定理：对所有的 $\alpha ,\beta \in S_n$，</p>
+<p>定理：对所有的 $\alpha ,\beta \in S _ n$，</p>
 <p>$$<br>\operatorname{sgn}(\alpha \beta )=\operatorname{sgn}(\alpha )\operatorname{sgn}(\beta )<br>$$</p>
-<p>定理：设 $\alpha \in S_n$，如果 $\operatorname{sgn}(\alpha )=1$，则 $\alpha $ 是偶置换；如果 $\operatorname{sgn}(\alpha )=-1$，则 $\alpha $ 是奇置换。</p>
+<p>定理：设 $\alpha \in S _ n$，如果 $\operatorname{sgn}(\alpha )=1$，则 $\alpha $ 是偶置换；如果 $\operatorname{sgn}(\alpha )=-1$，则 $\alpha $ 是奇置换。</p>
 <h3 id="群的基本概念"><a href="#群的基本概念" class="headerlink" title="群的基本概念"></a>群的基本概念</h3><p>群：一个群是指一个非空集合 $G$，它满足下列四个条件：</p>
 <ol>
 <li>在 $G$ 上定义了一个二元代数运算；</li>
@@ -435,21 +435,21 @@
 <p>阶：如果群 $G$ 只有有限多个元素，称 $G$ 为有限群。此时，$G$ 中元素个数称为 $G$ 的阶，记作 $\left| G \right| $。如果群 $G$ 有无限多个元素，则称 $G$ 为无限群。</p>
 <p>循环群：如果群 $G$ 的每一个元素都能写成 $G$ 中某一个元素 $a$ 的方幂或者 $a$ 的倍元，则称 $G$ 为循环群，把 $a$ 叫做 $G$ 的生成元，此时可以把 $G$ 记成 $\langle a\rangle$。</p>
 <h3 id="子群和陪集"><a href="#子群和陪集" class="headerlink" title="子群和陪集"></a>子群和陪集</h3><p>子群：群 $G$ 的非空子集 $H$ 如果对于 $G$ 的运算也成一个群，则称 $H$ 为 $G$ 的子群。简记为 $H&lt;G$。</p>
-<p>$n$ 元对称群 $S_n$ 的任一子群称为 $n$ 元置换群。</p>
-<p>非空集合 $\Omega $ 的全变换群 $S_{\Omega }$ 的任一子群称为 $\Omega $ 的变换群。</p>
+<p>$n$ 元对称群 $S _ n$ 的任一子群称为 $n$ 元置换群。</p>
+<p>非空集合 $\Omega $ 的全变换群 $S _ {\Omega }$ 的任一子群称为 $\Omega $ 的变换群。</p>
 <p>$\{ e \}$ 和 $G$ 称为 $G$ 的平凡子群。</p>
 <p>子群的判定：设  是群 $G$ 的非空子集，如果 $H$ 满足：</p>
 <p>$$<br>a,b\in H\Rightarrow ab^{-1}\in H<br>$$</p>
 <p>则 $H$ 是 $G$ 的子群。</p>
-<p>群 $G$ 的任意子群族 $\{H_i\vert i\in I\}$ 的交 $\bigcap _{i\in I}H_i$ 仍是 $G$ 的子群。</p>
-<p>考虑群 $G$ 的一个非空子集 $S$，可以构造出一个包含 $S$ 的最小的子群，取 $G$ 的包含 $S$ 的所有子群的交 $\bigcap_{S\subseteq H&lt;G}^H$，得到这是一个 $G$ 的子群。称它是由 $S$ 生成的子群，记作 $\langle S \rangle $。此时称 $S$ 是子群 $\left\langle S \right\rangle $ 的生成元集。</p>
+<p>群 $G$ 的任意子群族 $\{H _ i\vert i\in I\}$ 的交 $\bigcap _ {i\in I}H _ i$ 仍是 $G$ 的子群。</p>
+<p>考虑群 $G$ 的一个非空子集 $S$，可以构造出一个包含 $S$ 的最小的子群，取 $G$ 的包含 $S$ 的所有子群的交 $\bigcap _ {S\subseteq H&lt;G}^H$，得到这是一个 $G$ 的子群。称它是由 $S$ 生成的子群，记作 $\langle S \rangle $。此时称 $S$ 是子群 $\left\langle S \right\rangle $ 的生成元集。</p>
 <p>特别的，如果 $\left\langle S \right\rangle =G$，则称 $S$ 是群 $G$ 的生成元集，或者说 $S$ 的所有元素生成 $G$。</p>
-<p>如果群 $G$ 有一个生成元集是有限集，则称 $G$ 是有限生成的群。如果这个生成元集是 $\{ a_1,a_2,\cdots ,a_i \}$，则记 $G=\left\langle a_1,a_2,\cdots,a_i \right\rangle $。</p>
+<p>如果群 $G$ 有一个生成元集是有限集，则称 $G$ 是有限生成的群。如果这个生成元集是 $\{ a _ 1,a _ 2,\cdots ,a _ i \}$，则记 $G=\left\langle a _ 1,a _ 2,\cdots,a _ i \right\rangle $。</p>
 <p>有限群一定是有限生成的，反之不对。</p>
 <p>群 $G$ 中，由一个元素 $a$ 生成的子群 $\left\langle a \right\rangle $ 是循环群。如果 $\left\langle a \right\rangle $ 是无限群，则称 $a$ 是无限阶元素，记作 $\left| a \right| =\infty $。如果 $\left\langle a \right\rangle $ 的阶为 $n$，则称元素 $a$ 的阶为 $n$，记作 $\left| a \right| =n$。</p>
 <p>群 $G$ 中元素 $a$ 的阶为 $\infty $ 当且仅当对一切正整数 $m$，都有 $a^m\neq e$。</p>
 <p>群 $G$ 中元素 $a$ 的阶为 $n$ 当且仅当 $n$ 是使 $a^n=e$ 成立的最小正整数。</p>
-<p>$S_n$ 中，设 $\sigma =(a_1a_2\cdots a_n)$，则 $\sigma ^{r}=(1)$ ；而当 $1\leq l&lt; r$ 时，$\sigma ^{l}\neq (1)$。因此 $\sigma $ 的阶为 $r$，即 $r-$ 轮换的阶为 $r$。</p>
+<p>$S _ n$ 中，设 $\sigma =(a _ 1a _ 2\cdots a _ n)$，则 $\sigma ^{r}=(1)$ ；而当 $1\leq l&lt; r$ 时，$\sigma ^{l}\neq (1)$。因此 $\sigma $ 的阶为 $r$，即 $r-$ 轮换的阶为 $r$。</p>
 <p>域 $F$ 的单位元用 $e$ 表示。如果 $e$ 在 $F$ 的加法群中的阶为 $\infty$，则称域 $F$ 的特征为 $0$ ；如果 $e$ 在 $F$ 的加法群中的阶为正整数 $p$，则称域的特征为 $p$。域的特征记作 $\operatorname{char}F$。可以证明：域 $F$ 的特征或者为 $0$，或者为一个素数。还可以证明：域 $F$ 的任一非零元 $a$ 与 $e$ 在加法群中的阶相同。</p>
 <p>群 $G$ 中，设元素 $a$ 的阶为 $n$，则</p>
 <ol>
