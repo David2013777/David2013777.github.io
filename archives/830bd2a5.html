@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -644,7 +644,7 @@
 <h2 id="数值积分方法"><a href="#数值积分方法" class="headerlink" title="数值积分方法"></a>数值积分方法</h2><p>在科学计算中，常常会遇到一元函数积分的计算，即</p>
 <p>$$<br>I(f)=\int _  {a}^{b}f(x)\mathrm{d}x<br>$$</p>
 <p>在大多数情况下，$f$ 的原函数不易求出，而且在一些计算问题中，$f(x)$ 的值是通过列表给出的。在这些情况下，积分的近似数值计算有很重要的意义。</p>
-<p>利用一个函数序列 $\lbrace f _  1,f _  2,\cdots \rbrace$ 逼近 $f$，再把</p>
+<p>利用一个函数序列 $\lbrace f _  1,f _  2,\cdots \rbrace $ 逼近 $f$，再把</p>
 <p>$$<br>I _  n(f)=\int _  {a}^{b}f _  n(x)\mathrm{d}x<br>$$</p>
 <p>作为 $I(f)$ 的一个近似值。误差为：</p>
 <p>$$<br>E _  n=I(f)-I _  n(f)=\int _  {a}^{b}[f(x)-f _  {n}(x)]\mathrm{d}x<br>$$</p>
@@ -713,7 +713,7 @@
 <p><img src="830bd2a5/N-C%E7%B3%BB%E6%95%B0.jpg" srcset="/img/loading.gif" lazyload alt="N-C 系数"></p>
 <h3 id="复合积分公式"><a href="#复合积分公式" class="headerlink" title="复合积分公式"></a>复合积分公式</h3><h4 id="复合梯形公式"><a href="#复合梯形公式" class="headerlink" title="复合梯形公式"></a>复合梯形公式</h4><p>设 $f\in C^2[a,b]$，将 $[a,b]$ 等分为 $n$ 个子区间 $[x _  {i-1},x _  i]$，$i=1,2,\cdots,n$，其长度为 $h=\dfrac{b-a}{n}$，节点为 $x _  i=a+ih,i=0,\cdots,n$。</p>
 <p>在每个子区间上，用梯形公式及误差公式，得到：</p>
-<p>$$<br>\begin{array}{l}<br>{ {I(f)=\int _  {a}^{b}f(x)\mathrm{d} x=\sum _  {i=1}^{n}\int _  {x _  {i-1} }^{x _  {i} }f(x)\mathrm{d} x} }\\ { {=\sum _  {i=1}^{n}\lbrace\dfrac{h}{2}[f(x _  {i-1})+f(x _  {i})]-\dfrac{h^{3} }{12}f^{\prime\prime}(\eta _  {i})\rbrace} }&amp;{ {\quad\eta _  {i}\in\ [x _  {i-1},x _  {i}]} }\\=I _  n(f)+E _  n(f)<br>\end{array}<br>$$</p>
+<p>$$<br>\begin{array}{l}<br>{ {I(f)=\int _  {a}^{b}f(x)\mathrm{d} x=\sum _  {i=1}^{n}\int _  {x _  {i-1} }^{x _  {i} }f(x)\mathrm{d} x} }\\ { {=\sum _  {i=1}^{n}\lbrace \dfrac{h}{2}[f(x _  {i-1})+f(x _  {i})]-\dfrac{h^{3} }{12}f^{\prime\prime}(\eta _  {i})\rbrace } }&amp;{ {\quad\eta _  {i}\in\ [x _  {i-1},x _  {i}]} }\\=I _  n(f)+E _  n(f)<br>\end{array}<br>$$</p>
 <p>复合梯形公式：</p>
 <p>$$<br>I _  n(f)=\dfrac{h}{2}[f(x _  0)+2\sum _  {i=1}^{n-1}f(x _  i)+f(x _  n)]<br>$$</p>
 <p>其误差为</p>
@@ -737,9 +737,9 @@
 <p>$$<br>(f,g)=\int _  {a}^{b}\rho (x)f(x)g(x)\mathrm{d}x<br>$$</p>
 <p>其中，$\rho (x)$ 是 $[a,b]$ 上的一个权函数。</p>
 <p>带权正交：若内积 $(f,g)=\int _  {a}^{b}\rho (x)f(x)g(x)\mathrm{d}x=0$，则称 $f(x)$ 与 $g(x)$ 在区间 $[a,b]$ 上带权 $\rho(x)$ 正交。</p>
-<p>正交多项式系：若 $\lbrace \varphi _  0(x),\varphi _  1(x),\cdots,\varphi _  n \rbrace$ 满足</p>
+<p>正交多项式系：若 $\lbrace \varphi _  0(x),\varphi _  1(x),\cdots,\varphi _  n \rbrace $ 满足</p>
 <p>$$<br>(\varphi _  i,\varphi _  j)=\int _  {a}^{b}\rho(x)\varphi _  i(x)\varphi _  j(x)\mathrm{d}x=\begin{cases} 0 &amp;i\neq j \\ \alpha _  i&gt;0 &amp;i=j \end{cases}<br>$$</p>
-<p>则称 $\lbrace \varphi _  k(x) \rbrace$ 是 $[a,b]$ 上带权 $\rho(x)$ 的正交多项式系。</p>
+<p>则称 $\lbrace \varphi _  k(x) \rbrace $ 是 $[a,b]$ 上带权 $\rho(x)$ 的正交多项式系。</p>
 <p>最佳平方逼近元素：对于给定的函数 $f(x)\in C[a,b]$，若 $p^{\ast}(x)\in H _  n$，满足</p>
 <p>$$<br>(f-p^{\ast},f-p^{\ast})=\min _  {p\in H _  n}(f-p,f-p)<br>$$</p>
 <p>则称 $p^{\ast}(x)$ 为子空间 $H _  n$ 中对 $f(x)$ 的最佳平方逼近元素。</p>
@@ -760,7 +760,7 @@
 <p>$$<br>G=\begin{bmatrix}<br>(\varphi _  0,\varphi _  0)&amp;(\varphi _  0,\varphi _  1)&amp;\cdots &amp;(\varphi _  0,\varphi _  n)\\<br>(\varphi _  1,\varphi _  0)&amp;(\varphi _  1,\varphi _  1)&amp;\cdots &amp;(\varphi _  1,\varphi _  n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _  n,\varphi _  0)&amp;(\varphi _  n,\varphi _  1)&amp;\cdots &amp;(\varphi _  n,\varphi _  n)\\<br>\end{bmatrix}<br>$$</p>
 <p>法方程组为：</p>
 <p>$$<br>\begin{bmatrix}<br>(\varphi _  0,\varphi _  0)&amp;(\varphi _  0,\varphi _  1)&amp;\cdots &amp;(\varphi _  0,\varphi _  n)\\<br>(\varphi _  1,\varphi _  0)&amp;(\varphi _  1,\varphi _  1)&amp;\cdots &amp;(\varphi _  1,\varphi _  n)\\<br>\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\<br>(\varphi _  n,\varphi _  0)&amp;(\varphi _  n,\varphi _  1)&amp;\cdots &amp;(\varphi _  n,\varphi _  n)\\<br>\end{bmatrix}\begin{bmatrix}c _  0^{\ast}\\c _  1^{\ast}\\ \vdots \\c _  n^{\ast}\end{bmatrix}=\begin{bmatrix}(f,\varphi _  0)\\(f,\varphi _  1)\\ \vdots \\(f,\varphi _  n)\end{bmatrix}<br>$$</p>
-<h3 id="曲线拟合的最小二乘法"><a href="#曲线拟合的最小二乘法" class="headerlink" title="曲线拟合的最小二乘法"></a>曲线拟合的最小二乘法</h3><p>曲线拟合的最小二乘法：对给定的一组数据 $(x _  i,y _  i)(i=1,\cdots ,m)$，要求在函数类 $\varphi =\lbrace \varphi _  0,\cdots ,\varphi _  n \rbrace$ 中找一个函数 $y=S^{\ast}(x)$，使误差平方和</p>
+<h3 id="曲线拟合的最小二乘法"><a href="#曲线拟合的最小二乘法" class="headerlink" title="曲线拟合的最小二乘法"></a>曲线拟合的最小二乘法</h3><p>曲线拟合的最小二乘法：对给定的一组数据 $(x _  i,y _  i)(i=1,\cdots ,m)$，要求在函数类 $\varphi =\lbrace \varphi _  0,\cdots ,\varphi _  n \rbrace $ 中找一个函数 $y=S^{\ast}(x)$，使误差平方和</p>
 <p>$$<br>\Vert \delta \Vert _  {2}^{2}=\sum _  {i=0}^{m}[S^{\ast}(x _  i)-y _  i]^2=\mathrm{min} _  {S(x)\in \varphi }\sum _  {i=0}^{m}[S(x _  i)-y _  i]^2<br>$$</p>
 <p>这里，$S(x)=a _  0\varphi _  0(x)+\cdots+a _  n\varphi _  n (x)$。这就是曲线拟合的最小二乘法。</p>
 <p>类似的，我们也可以写出法方程。</p>
@@ -793,7 +793,7 @@
 <p>$$<br>x _  {k+2}=\varphi (x _  {k+1})<br>$$</p>
 <p>计算</p>
 <p>$$<br>\overline{x _  {k+1} }=x _  k-\dfrac{(x _  {k+1}-x _  k)^2}{x _  k-2x _  {k+1}+x _  {k+2} }<br>$$</p>
-<p>这样，在原序列 $\lbrace x _  k \rbrace$ 的基础上，得到收敛速度更快的新的序列 $\lbrace \overline{x _  {k+1} } \rbrace$。</p>
+<p>这样，在原序列 $\lbrace x _  k \rbrace $ 的基础上，得到收敛速度更快的新的序列 $\lbrace \overline{x _  {k+1} } \rbrace $。</p>
 <p>Steffensen 迭代法：将埃特金方法与方程迭代求根方法结合：</p>
 <p>$$<br>y _  k=\varphi (x _  k)<br>$$</p>
 <p>$$<br>z _  k=\varphi (y _  k)<br>$$</p>
