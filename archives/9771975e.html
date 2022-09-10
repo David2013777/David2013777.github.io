@@ -353,7 +353,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      22
        分钟
     </span>
   
@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
@@ -404,8 +404,8 @@
 <span id="more"></span>
 
 <h1 id="抽象代数"><a href="#抽象代数" class="headerlink" title="抽象代数"></a>抽象代数</h1><h2 id="群论基础"><a href="#群论基础" class="headerlink" title="群论基础"></a>群论基础</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><h4 id="置换"><a href="#置换" class="headerlink" title="置换"></a>置换</h4><p>置换：集合 $X$ 的置换是 $X$ 到其自身的双射。</p>
-<p>对称群：称集合 $X$ 的全体置换的族为 $X$ 上的对称群，记为 $S _ {X}$。当 $X=\{ 1,2,\cdots,n \}$ 时，常用 $S _ n$ 来记 $S _ X$，并称之为 $n$ 个字母上的对称群。</p>
-<p>轮换：设 $i _ 1,\cdots,i _ r$ 是 $\{ 1,2,\cdots ,n \}$ 中的不同整数。如果 $\alpha \in S _ n$ 固定其他整数（如果有的话），且</p>
+<p>对称群：称集合 $X$ 的全体置换的族为 $X$ 上的对称群，记为 $S _ {X}$。当 $X=\lbrace 1,2,\cdots,n \rbrace$ 时，常用 $S _ n$ 来记 $S _ X$，并称之为 $n$ 个字母上的对称群。</p>
+<p>轮换：设 $i _ 1,\cdots,i _ r$ 是 $\lbrace 1,2,\cdots ,n \rbrace$ 中的不同整数。如果 $\alpha \in S _ n$ 固定其他整数（如果有的话），且</p>
 <p>$$<br>\alpha (i _ 1)=i _ 2,\cdots ,\alpha _ {i _ {r-1} }=i _ {r},\alpha (i _ r)=i _ 1<br>$$</p>
 <p>则称 $\alpha $ 为一个 $r-$ 轮换，也称 $\alpha $ 为长 $r$ 的轮换，记为</p>
 <p>$$<br>\alpha =(i _ 1i _ 2\cdots i _ r)<br>$$</p>
@@ -437,14 +437,14 @@
 <h3 id="子群和陪集"><a href="#子群和陪集" class="headerlink" title="子群和陪集"></a>子群和陪集</h3><p>子群：群 $G$ 的非空子集 $H$ 如果对于 $G$ 的运算也成一个群，则称 $H$ 为 $G$ 的子群。简记为 $H&lt;G$。</p>
 <p>$n$ 元对称群 $S _ n$ 的任一子群称为 $n$ 元置换群。</p>
 <p>非空集合 $\Omega $ 的全变换群 $S _ {\Omega }$ 的任一子群称为 $\Omega $ 的变换群。</p>
-<p>$\{ e \}$ 和 $G$ 称为 $G$ 的平凡子群。</p>
+<p>$\lbrace e \rbrace$ 和 $G$ 称为 $G$ 的平凡子群。</p>
 <p>子群的判定：设  是群 $G$ 的非空子集，如果 $H$ 满足：</p>
 <p>$$<br>a,b\in H\Rightarrow ab^{-1}\in H<br>$$</p>
 <p>则 $H$ 是 $G$ 的子群。</p>
-<p>群 $G$ 的任意子群族 $\{H _ i\vert i\in I\}$ 的交 $\bigcap _ {i\in I}H _ i$ 仍是 $G$ 的子群。</p>
+<p>群 $G$ 的任意子群族 $\lbraceH _ i\vert i\in I\rbrace$ 的交 $\bigcap _ {i\in I}H _ i$ 仍是 $G$ 的子群。</p>
 <p>考虑群 $G$ 的一个非空子集 $S$，可以构造出一个包含 $S$ 的最小的子群，取 $G$ 的包含 $S$ 的所有子群的交 $\bigcap _ {S\subseteq H&lt;G}^H$，得到这是一个 $G$ 的子群。称它是由 $S$ 生成的子群，记作 $\langle S \rangle $。此时称 $S$ 是子群 $\left\langle S \right\rangle $ 的生成元集。</p>
 <p>特别的，如果 $\left\langle S \right\rangle =G$，则称 $S$ 是群 $G$ 的生成元集，或者说 $S$ 的所有元素生成 $G$。</p>
-<p>如果群 $G$ 有一个生成元集是有限集，则称 $G$ 是有限生成的群。如果这个生成元集是 $\{ a _ 1,a _ 2,\cdots ,a _ i \}$，则记 $G=\left\langle a _ 1,a _ 2,\cdots,a _ i \right\rangle $。</p>
+<p>如果群 $G$ 有一个生成元集是有限集，则称 $G$ 是有限生成的群。如果这个生成元集是 $\lbrace a _ 1,a _ 2,\cdots ,a _ i \rbrace$，则记 $G=\left\langle a _ 1,a _ 2,\cdots,a _ i \right\rangle $。</p>
 <p>有限群一定是有限生成的，反之不对。</p>
 <p>群 $G$ 中，由一个元素 $a$ 生成的子群 $\left\langle a \right\rangle $ 是循环群。如果 $\left\langle a \right\rangle $ 是无限群，则称 $a$ 是无限阶元素，记作 $\left| a \right| =\infty $。如果 $\left\langle a \right\rangle $ 的阶为 $n$，则称元素 $a$ 的阶为 $n$，记作 $\left| a \right| =n$。</p>
 <p>群 $G$ 中元素 $a$ 的阶为 $\infty $ 当且仅当对一切正整数 $m$，都有 $a^m\neq e$。</p>
