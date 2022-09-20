@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：3 分钟前
                 
               </p>
             
@@ -566,10 +566,17 @@
 <p>则有</p>
 <p>Doolittle 分解法的计算公式：</p>
 <ol>
-<li>$$u _  {1i} = a _  {1i},i=1,\cdots,n，l _  {i1} = a _  {i1}/u _  {11},i=2,\cdots,n$$</li>
-<li>$$u _  {ri}=a _  {ri}-\sum _  {k=1}^{r-1}l _  {rk}u _  {ki}(i=r,\cdots,n)$$</li>
-<li>$$l _  {ir}=(a _  {ir}-\sum _  {k=1}^{r-1}l _  {ik}u _  {kr})/u _  {rr}(i=r+1,\cdots,n,r\neq n)$$</li>
+<li></li>
 </ol>
+<p>$$<br>u _  {1i} = a _  {1i},i=1,\cdots,n，l _  {i1} = a _  {i1}/u _  {11},i=2,\cdots,n<br>$$</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>$$<br>u _  {ri}=a _  {ri}-\sum _  {k=1}^{r-1}l _  {rk}u _  {ki}(i=r,\cdots,n)<br>$$</p>
+<ol start="3">
+<li></li>
+</ol>
+<p>$$<br>l _  {ir}=(a _  {ir}-\sum _  {k=1}^{r-1}l _  {ik}u _  {kr})/u _  {rr}(i=r+1,\cdots,n,r\neq n)<br>$$</p>
 <h4 id="平方根法"><a href="#平方根法" class="headerlink" title="平方根法"></a>平方根法</h4><p>定理：若 $A$ 是正定矩阵，则存在唯一的对角元素均为正数的下三角矩阵 $L$，使 $A=LL^{T}$。</p>
 <p>计算方法：</p>
 <p>对于 $j=1,2,\cdots,n$</p>
@@ -582,10 +589,17 @@
 <p>分解过程:</p>
 <p>对  </p>
 <ol>
-<li>对 $i=1,2,\cdots,n$<br>$$t _  {ij}=a _  {ij}-\sum _  {k=1}^{j-1}t _  {ik}l _  {jk}$$</li>
-<li>对 $j=1,2,\cdots,i-1$<br>$$l _  {ij}=t _  {ij}/d _  {j}$$</li>
-<li>$$d _  i=a _  {ii}-\sum _  {k=1}^{i-1}t _  {ik}l _  {ik}$$</li>
+<li>对 $i=1,2,\cdots,n$</li>
 </ol>
+<p>$$<br>t _  {ij}=a _  {ij}-\sum _  {k=1}^{j-1}t _  {ik}l _  {jk}<br>$$</p>
+<ol start="2">
+<li>对 $j=1,2,\cdots,i-1$</li>
+</ol>
+<p>$$<br>l _  {ij}=t _  {ij}/d _  {j}<br>$$</p>
+<ol start="3">
+<li></li>
+</ol>
+<p>$$<br>d _  i=a _  {ii}-\sum _  {k=1}^{i-1}t _  {ik}l _  {ik}<br>$$</p>
 <h4 id="追赶法"><a href="#追赶法" class="headerlink" title="追赶法"></a>追赶法</h4><p>当矩阵为三对角矩阵时，可以用追赶法计算。</p>
 <p>考虑三对角矩阵</p>
 <p>$$<br>A=\begin{bmatrix}<br>b _  1&amp;c _  1&amp;&amp;&amp;\\<br>a _  2&amp;b _  2&amp;c _  2&amp;&amp;\\<br>&amp;a _  3&amp;b _  3&amp;\ddots&amp;\\<br>&amp;&amp;\ddots&amp;\ddots&amp;c _  {n-1}\\<br>&amp;&amp;&amp;a _  n&amp;b _  n<br>\end{bmatrix}<br>$$</p>
@@ -631,10 +645,17 @@
 <p>当 $A$ 为对称矩阵时，$\operatorname{cond}(A) _  {2}=\dfrac{\lambda _  1}{\lambda _  n}$，其中 $\lambda _  1,\lambda _  n$ 为 $A$ 的绝对值最大，最小的特征值。</p>
 <p>条件数的性质：</p>
 <ol>
-<li>对任何的非奇异矩阵 $A$，都有 $\operatorname{cond}(A) _  {v}\geq 1$<br>$$\operatorname{cond}(A) _  {v}=\Vert A^{-1}\Vert _  {v}\Vert A\Vert _  {v}\geq\Vert A^{-1}A\Vert _  {v}=1$$</li>
-<li>设 $A$ 为非奇异矩阵，且 $c\neq 0$ （常数），则<br>$$\operatorname{cond}(cA) _  {v} = \operatorname{cond}(A) _  {v}$$</li>
-<li>如果 $A$ 为正交矩阵，则 $\operatorname{cond}(A) _  {2}=1$。如果 $A$ 为非奇异矩阵，$R$ 为正交矩阵，则<br>$$\operatorname{cond}(RA) _  {2}=\operatorname{cond}(AR) _  {2}=\operatorname{cond}(A) _  {2}$$</li>
+<li>对任何的非奇异矩阵 $A$，都有 $\operatorname{cond}(A) _  {v}\geq 1$</li>
 </ol>
+<p>$$<br>\operatorname{cond}(A) _  {v}=\Vert A^{-1}\Vert _  {v}\Vert A\Vert _  {v}\geq\Vert A^{-1}A\Vert _  {v}=1<br>$$</p>
+<ol start="2">
+<li>设 $A$ 为非奇异矩阵，且 $c\neq 0$ （常数），则</li>
+</ol>
+<p>$$<br>\operatorname{cond}(cA) _  {v} = \operatorname{cond}(A) _  {v}<br>$$</p>
+<ol start="3">
+<li>如果 $A$ 为正交矩阵，则 $\operatorname{cond}(A) _  {2}=1$。如果 $A$ 为非奇异矩阵，$R$ 为正交矩阵，则</li>
+</ol>
+<p>$$<br>\operatorname{cond}(RA) _  {2}=\operatorname{cond}(AR) _  {2}=\operatorname{cond}(A) _  {2}<br>$$</p>
 <p>近似的方法：</p>
 <ul>
 <li>$A$ 的三角约化时，出现小主元</li>

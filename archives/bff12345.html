@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：3 分钟前
                 
               </p>
             
@@ -527,7 +527,9 @@
 <p>都有</p>
 <p>$$<br>\left| J[y(x)]-J[y _ 0(x)] \right|&lt;\epsilon<br>$$</p>
 <p>成立，则 $J[y(x)]$ 称为在函数 $y _ 0(x)$ 处具有 $n$ 阶 $\delta $ 接近度的连续泛函。</p>
-<p>变分：对于任意定值 $x\in [x _ 0,x _ 1]$，可取函数 $y(x)$ 与另一可取函数 $y _ 0(x)$ 之差 $y(x)-y _ 0(x)$ 称为函数 $y(x)$ 在 $y _ 0(x)$ 处的变分，记作 $\delta y$，$\delta $ 称为变分符号，这时有<br>$$<br>\delta y=y(x)-y _ 0(x)=\epsilon \eta(x)<br>$$<br>式子中 $\epsilon $ 为一小参数，$\eta(x)$ 为 $x$ 的任意函数。</p>
+<p>变分：对于任意定值 $x\in [x _ 0,x _ 1]$，可取函数 $y(x)$ 与另一可取函数 $y _ 0(x)$ 之差 $y(x)-y _ 0(x)$ 称为函数 $y(x)$ 在 $y _ 0(x)$ 处的变分，记作 $\delta y$，$\delta $ 称为变分符号，这时有</p>
+<p>$$<br>\delta y=y(x)-y _ 0(x)=\epsilon \eta(x)<br>$$</p>
+<p>式子中 $\epsilon $ 为一小参数，$\eta(x)$ 为 $x$ 的任意函数。</p>
 <p>变分与微分的差别：</p>
 <p><img src="bff12345/%E5%8F%98%E5%88%86%E4%B8%8E%E5%BE%AE%E5%88%86%E5%B7%AE%E5%88%AB.jpg" srcset="/img/loading.gif" lazyload alt="变分与微分差别"></p>
 <p>特别的，变分符号与导数符号，哈密顿算子，拉普拉斯算子运算次序可交换，即</p>
@@ -538,22 +540,26 @@
 <p>$$<br>J[y(x)]=\int _ {x _ 0}^{x _ 1}F(x,y(x),y^{\prime}(x))\mathrm{d}x<br>$$</p>
 <p>称为最简单的积分型泛函，简称最简泛函。被积函数 $F$ 称为泛函的核。</p>
 <p>线性泛函：若连续泛函 $J[y(x)]$ 满足以下两个条件：</p>
-<ol>
-<li>$$ J[y _ 1(x)+y _ 2(x)]=J[y _ 1(x)+J[y _ 2(x)]] $$</li>
-<li>$$ J[Cy(x)]=CJ[y(x)] $$</li>
-</ol>
+<p>（1）</p>
+<p>$$<br> J[y _ 1(x)+y _ 2(x)]=J[y _ 1(x)+J[y _ 2(x)]]<br>$$</p>
+<p>（2）</p>
+<p>$$<br> J[Cy(x)]=CJ[y(x)]<br>$$</p>
 <p>式子中，$C$ 为任意常数，则 $J[y(x)]$ 称为关于 $y=y(x)$ 的线性泛函。</p>
 <p>可微与变分：若泛函具有一阶连续性，且其增量可以表示为 $\Delta J=L[y(x),\delta y]+\mathrm{d}[y(x),\delta y]$，其中 $\mathrm{d}[y,\delta y]$ 为 $\delta y$ 的高阶无穷小量，则这个泛函为在 $y=y(x)$ 处可微，并把 $L[y,\delta y]$ 称为泛函 $J[y(x)]$ 在 $y(x)$ 上的一阶变分或一次变分，简称变分，记作 $\delta J[y(x)]$ 或 $\delta J$，即</p>
 <p>$$<br>\delta J[y(x)]=\epsilon  \int _ {x _ 0}^{x _ 1}(F _ y\eta+F _ {y^{\prime} }\eta ^{\prime})\mathrm{d}x<br>$$</p>
 <p>设  是  的可微函数，则变分记号  有下列基本运算性质</p>
-<ol>
-<li>$$ \delta (F _ 1+F _ 2)=\delta F _ 1+\delta F _ 2 $$</li>
-<li>$$ \delta (F _ 1F _ 2)=F _ 1\delta F _ 1+F _ 2\delta F _ 1 $$</li>
-<li>$$ \delta (F^n)=nF^{n-1}\delta F $$</li>
-<li>$$ \delta (\dfrac{F _ 1}{F _ 2})=\dfrac{F _ 2\delta F _ 1-F _ 1\delta F _ 2}{F _ 2^2} $$</li>
-<li>$$ \delta (F^{(n)})=(\delta F)^{(n)} $$</li>
-<li>$$ \delta \int _ {x _ 0}^{x _ 1}F(x,y,y^\prime )\mathrm{d}x=\int _ {x _ 0}^{x _ 1} \delta F(x,y,y^\prime )\mathrm{d}x$$</li>
-</ol>
+<p>1.</p>
+<p>$$<br> \delta (F _ 1+F _ 2)=\delta F _ 1+\delta F _ 2<br>$$</p>
+<p>2.</p>
+<p>$$<br> \delta (F _ 1F _ 2)=F _ 1\delta F _ 1+F _ 2\delta F _ 1<br>$$</p>
+<p>3.</p>
+<p>$$<br> \delta (F^n)=nF^{n-1}\delta F<br>$$</p>
+<p>4.</p>
+<p>$$<br> \delta (\dfrac{F _ 1}{F _ 2})=\dfrac{F _ 2\delta F _ 1-F _ 1\delta F _ 2}{F _ 2^2}<br>$$</p>
+<p>5.</p>
+<p>$$<br> \delta (F^{(n)})=(\delta F)^{(n)}<br>$$</p>
+<p>6.</p>
+<p>$$<br> \delta \int _ {x _ 0}^{x _ 1}F(x,y,y^\prime )\mathrm{d}x=\int _ {x _ 0}^{x _ 1} \delta F(x,y,y^\prime )\mathrm{d}x<br>$$</p>
 <p>定理：如泛函 $J[y(x)]$ 在 $y=y(x)$ 上达到极值，则在它在 $y=y(x)$ 上的变分 $\delta J$ 等于零。</p>
 <h3 id="最简泛函的欧拉方程"><a href="#最简泛函的欧拉方程" class="headerlink" title="最简泛函的欧拉方程"></a>最简泛函的欧拉方程</h3><p>欧拉方程：使最简泛函</p>
 <p>$$<br>J[y(x)]=\int _ {x _ 0}^{x _ 1}F(x,y,y^\prime )\mathrm{d}x<br>$$</p>

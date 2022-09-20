@@ -395,7 +395,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：3 分钟前
                 
               </p>
             
@@ -437,15 +437,18 @@
 <li>补零需要改变用于存储序列的数组长度，这在大部分编程中都是较为困难的。</li>
 <li>如何处理序列变化长度需要自行研究<br>别忘了改变序列长度后，序列时间 index 也要做相应处理</li>
 </ul>
-<h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p>加法运算：<br>$$f(t)=g(t)+k(t)$$<br><img src="Adder.png" srcset="/img/loading.gif" lazyload alt="Adder"></p>
+<h4 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h4><p>加法运算：</p>
+<p>$$<br>f(t)=g(t)+k(t)<br>$$</p>
+<p><img src="Adder.png" srcset="/img/loading.gif" lazyload alt="Adder"></p>
 <p>加法运算的一个简单应用：去噪——总体平均</p>
 <p>假设 $d_i$ 表示干扰原资料向量 $s$ 的第 $i$ 次量测值的噪声序列：<br>$$<br>x_i[n]=s[n]+d_i[n]<br>$$</p>
 <p>在 $K$ 次量测后，计算一个平均数据向量，称为总体平均。</p>
 <p>$$<br>X_{ave}=\frac{1}{K}\sum_{i=1}^{K}X_i=\frac{1}{K}\sum_{i=1}^K(s+d_i)=S+\frac{1}{K}\sum_{i=1}^Kd_i<br>$$</p>
 <p>从噪音定义可以知道，$\sum_{i=1}^Kd_i\approx 0$。<br>对于一个非常大的 $K$ 值而言，$X_{ave}$ 通常相当程度近似于原资料向量 $s$。</p>
 <h4 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h4><ol>
-<li>数乘：<br>$$f(t)=k\cdot g(t)$$</li>
+<li>数乘：</li>
 </ol>
+<p>$$<br>f(t)=k\cdot g(t)<br>$$</p>
 <p><img src="ddac2bd0/Multiplier.png" srcset="/img/loading.gif" lazyload alt="Multiplier"></p>
 <p>乘法运算：放大器。</p>
 <ul>
@@ -456,7 +459,8 @@
 <li>两个信号相乘</li>
 </ol>
 <p>乘积 （调变，modulation) 运算：</p>
-<p>$$f(t)=k(t)\cdot g(t)$$<br><img src="ddac2bd0/Modulator.png" srcset="/img/loading.gif" lazyload alt="Modulator"></p>
+<p>$$<br>f(t)=k(t)\cdot g(t)<br>$$</p>
+<p><img src="ddac2bd0/Modulator.png" srcset="/img/loading.gif" lazyload alt="Modulator"></p>
 <ul>
 <li>乘法在 DSP 中有着特殊的作用，通常表明的某种操作。</li>
 <li>文字描述操作是无法量化计算的，例如屏蔽某频率的信号；放大某些局部信息；对当前时间点的信号，做延时间轴的弱化扩散处理</li>
